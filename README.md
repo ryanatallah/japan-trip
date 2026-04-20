@@ -7,10 +7,21 @@
 - 2 week trip
 - Preference: leave on Saturday/Sunday, return on Saturday/Sunday
 - Country-unique experiences (food, photography, wildlife, experiences)
-- Extremely healthy, high quality food
+- Healthy, high quality food with accomodations for gluten allegy (Ashly)
 - Extremely safe
 
 ## Ideas
+
+### Locations
+
+- Kyoto
+- Tokyo
+- More remote, smaller mountain, forest or beach towns
+
+### Restaurants
+
+- [Kikunoi Honten](https://www.google.com/viewer/place?mid=/g/11_rvhs7w&sa=X&ved=2ahUKEwjUx5PH4PuTAxXkAjQIHcSCAcgQqdYPegYIAQgEEAE)
+- [Kodaiji Jugyuan](https://www.google.com/viewer/place?mid=/g/11fzfd8j_q&sa=X&ved=2ahUKEwjUx5PH4PuTAxXkAjQIHcSCAcgQqdYPegYIAQgGEAE)
 
 ### Hotels
 
@@ -32,4 +43,5 @@
 - Raku pottery at Shoraku Kiln, Kyoto
 - [https://kyudojapan-jp.squarespace.com/](https://kyudojapan-jp.squarespace.com/) 👍
 - [https://www.cruisetrain-sevenstars.jp/english/train/](https://www.cruisetrain-sevenstars.jp/english/train/)
+- [https://www.sankarahotel-spa.com/](https://www.sankarahotel-spa.com/)
 
