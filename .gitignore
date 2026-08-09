@@ -1,0 +1,6 @@
+# Full-resolution downloads and QA screenshots — 660MB+, and not needed to view the site.
+# The web-sized images under itinerary-site/site/img/ ARE tracked, so any checkout is a
+# complete, working site.
+itinerary-site/.cache/
+
+.DS_Store

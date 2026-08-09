@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "itinerary-site",
+      "runtimeExecutable": "python3",
+      "runtimeArgs": ["-u", "-m", "http.server", "8765", "--directory", "/Users/ryanatallah/Documents/Trips/Japan 2026/itinerary-site/site"],
+      "port": 8765
+    }
+  ]
+}
