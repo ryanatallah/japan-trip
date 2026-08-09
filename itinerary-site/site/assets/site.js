@@ -19,6 +19,7 @@
   if (!lb) return;
   const lbImg = lb.querySelector('img');
   const lbCap = lb.querySelector('.lb-cap');
+  const lbCredit = lb.querySelector('.lb-credit');
   const lbSrc = lb.querySelector('.lb-src');
   let shots = [];
   let idx = 0;
@@ -31,6 +32,8 @@
     lbImg.src = el.dataset.full;
     lbImg.alt = el.dataset.caption || '';
     lbCap.textContent = el.dataset.caption || '';
+    // Credit is required for CC-licensed images, so show it whenever present.
+    lbCredit.textContent = el.dataset.credit ? `— ${el.dataset.credit}` : '';
     if (el.dataset.source) {
       lbSrc.href = el.dataset.source;
       lbSrc.hidden = false;

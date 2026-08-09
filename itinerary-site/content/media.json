@@ -1,4 +1,88 @@
 {
+ "akiba-fukurou": [
+  {
+   "file": "akiba-fukurou-01.jpg",
+   "thumb": "akiba-fukurou-01-t.jpg",
+   "w": 1000,
+   "h": 562,
+   "category": "exterior",
+   "caption": "The street frontage on a side street near Akihabara station: a white shopfront with sliding doors and no window into the room, papered with printed portraits of individual owls. The board lists hourly time slots from 12:00-13:00 to 18:00-19:00 with 'akiba2960.com Book Online', and the panel at right reads 'RESERVATION ONLY'.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2020/12/owlcafe-24-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-02.jpg",
+   "thumb": "akiba-fukurou-02-t.jpg",
+   "w": 1000,
+   "h": 563,
+   "category": "setting",
+   "caption": "The single room where sessions are held, photographed empty by the venue. White walls with pale blue panels, a chandelier, white cafe tables and chairs, pale wood-effect floor. Owls are perched around the edges of the room — on wall brackets near the ceiling, on a wooden A-frame stand, along a carpeted rail at right, and on low stands in the foreground; green oval tags on the wall name individual birds. No daylight is visible and the window at left is curtained. This is the venue's own professionally lit marketing photograph; the room reads brighter here than in third-party descriptions of the space.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/02/owlcafe-japan-room.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-03.jpg",
+   "thumb": "akiba-fukurou-03-t.jpg",
+   "w": 1000,
+   "h": 667,
+   "category": "activity",
+   "caption": "A staff member in the cafe's white uniform and Panama hat holds a large eagle-owl on her hand with its wings spread open; a child guest, seen from behind, watches while wearing a thick yellow falconry glove. More owls sit on wall-mounted perches around the pale blue and white room.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japanOWL02230-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-04.jpg",
+   "thumb": "akiba-fukurou-04-t.jpg",
+   "w": 1000,
+   "h": 667,
+   "category": "people",
+   "caption": "A young girl with a barn owl standing on her forearm. A pink leash is clipped to the leg strap on the owl's ankle and trails down out of the frame — birds are kept tethered while placed on a guest.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japan6D0A8103.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-05.jpg",
+   "thumb": "akiba-fukurou-05-t.jpg",
+   "w": 1000,
+   "h": 667,
+   "category": "detail",
+   "caption": "Two owls share an ornate scrolled wall bracket. Pink cords run from their leg straps and hang loose below the perch; a third owl on the pale blue wall behind is tethered the same way. A domed security camera is fixed to the ceiling at left.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japanOWL08108.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-06.jpg",
+   "thumb": "akiba-fukurou-06-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "wildlife",
+   "caption": "A long-eared owl standing on a white tabletop, facing the camera, with a coloured band visible at the base of its right leg. Behind it, out of focus, are the room's white furniture, pale blue wall and curtained window.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2020/12/owlcafe-01450.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-07.jpg",
+   "thumb": "akiba-fukurou-07-t.jpg",
+   "w": 1600,
+   "h": 1136,
+   "category": "wildlife",
+   "caption": "Species reference, not photographed at any cafe: a captive sugar glider (Petaurus breviceps) resting on a white fleece. Roughly the size of a small squirrel, with a dark stripe from nose to crown, oversized dark eyes suited to night activity, and thin membranous ears.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Petaurus_breviceps_Petauro_dello_zucchero.jpg",
+   "confidence": "high",
+   "credit": "Alessandro Di Grazia, Wikimedia Commons, CC BY-SA 4.0"
+  },
+  {
+   "file": "akiba-fukurou-08.jpg",
+   "thumb": "akiba-fukurou-08-t.jpg",
+   "w": 1600,
+   "h": 2008,
+   "category": "wildlife",
+   "caption": "Species reference, not photographed at any cafe: a wild sugar glider at night, clinging to a tree trunk and feeding at a run of sap. The loose flap of skin stretched between its front and hind legs — the membrane it uses to glide between trees — is clearly visible.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sugar_Glider_JCB.jpg",
+   "confidence": "high",
+   "credit": "Joseph C Boone, Wikimedia Commons, CC BY-SA 4.0"
+  }
+ ],
  "ana-the-room": [
   {
    "file": "ana-the-room-01.jpg",
@@ -3206,6 +3290,78 @@
    "category": "setting",
    "caption": "Honen-in's gate seen from inside the grounds: the thatched sanmon at the head of a broad flight of mossy stone steps, with the temple's two flat raked white-sand beds (byakusadan) flanking the flagstone path in the foreground. Foliage is green, so this is a spring photograph",
    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/86/Gate%2C_H%C5%8Dnen-in_temple%2C_Kyoto_-_Apr_22%2C_2015.jpg",
+   "confidence": "high"
+  }
+ ],
+ "picchio-musasabi": [
+  {
+   "file": "picchio-musasabi-01.jpg",
+   "thumb": "picchio-musasabi-01-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "wildlife",
+   "caption": "A musasabi filling the entrance hole of a wooden nest box, head and one clawed forefoot out, photographed in Nagakura, Karuizawa — grizzled grey-brown face, broad white cheek stripes, large pink nose and clearly protruding rounded ears, and a head wide enough to fill a fist-sized hole",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/c0/Petaurista_leucogenys_60369499.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "picchio-musasabi-02.jpg",
+   "thumb": "picchio-musasabi-02-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "wildlife",
+   "caption": "Close-up from Picchio's own tour page: a musasabi looking out over the lip of a nest box with both forefeet hooked over the weathered timber, long white whiskers fanned out and every claw visible",
+   "sourceUrl": "https://picchio.co.jp/cms/wp-content/uploads/2018/03/main.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "picchio-musasabi-03.jpg",
+   "thumb": "picchio-musasabi-03-t.jpg",
+   "w": 1200,
+   "h": 800,
+   "category": "wildlife",
+   "caption": "The whole animal at night, out on a lichen-covered branch against black forest: rufous-brown back, white belly and the loose fold of gliding membrane hanging along the flank — a cat-sized body next to a wrist-thick branch, which is the scale difference from the much smaller momonga",
+   "sourceUrl": "https://www.wildlife-picchio.com/wp-content/uploads/2020/04/squirrel-hero.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "picchio-musasabi-04.jpg",
+   "thumb": "picchio-musasabi-04-t.jpg",
+   "w": 1080,
+   "h": 600,
+   "category": "wildlife",
+   "caption": "Two musasabi in mid-glide at night over the tops of the conifers, patagium pulled taut into a square between wrists and ankles and the flat rudder-like tail trailing — the near animal lit from below, the far one already halfway to the next tree",
+   "sourceUrl": "https://picchio.co.jp/cms/wp-content/uploads/2018/03/point_n02_musasabi3.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "picchio-musasabi-05.jpg",
+   "thumb": "picchio-musasabi-05-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "activity",
+   "caption": "A frame off Picchio's nest-box camera, timestamp burned in, showing a musasabi curled asleep on shredded bark bedding inside the box with daylight coming through the entrance hole — this live feed is what the group watches on a monitor before the animal comes out",
+   "sourceUrl": "https://picchio.co.jp/cms/wp-content/uploads/2023/03/20230304_112746B.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "picchio-musasabi-06.jpg",
+   "thumb": "picchio-musasabi-06-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "people",
+   "caption": "A Picchio guide with a spotting scope over his shoulder walking two guests along a soft earth trail in the Karuizawa Wild Bird Forest, both guests wearing binoculars — the forest the flying-squirrel tour walks into, shown here in daylight",
+   "sourceUrl": "https://www.wildlife-picchio.com/wp-content/uploads/2026/04/NW_miyazaki.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "picchio-musasabi-07.jpg",
+   "thumb": "picchio-musasabi-07-t.jpg",
+   "w": 1440,
+   "h": 960,
+   "category": "people",
+   "caption": "The talk before the walk: a Picchio guide standing in the forest holding up a laminated photograph of a musasabi in the hand and pointing at it, a seated group of guests watching from the front",
+   "sourceUrl": "https://a3.cdn.japantravel.com/photo/21981-122203/1440x960%21/nagano-picchio-squirrels-122203.webp",
    "confidence": "high"
   }
  ],

@@ -12,7 +12,10 @@ const OUT = join(ROOT, 'site/img');
 const DISPLAY_W = 1600;
 const THUMB_W = 640;
 const MIN_W = 700;          // anything smaller is a thumbnail or a logo
-const MIN_BYTES = 30 * 1024;
+// Byte floor only catches icons and sprites. Some venues serve genuinely hard-compressed
+// photographs (Akiba Fukurou publishes ~1000px frames at 15–32KB with no larger variant),
+// so the dimension check above is what actually guards quality.
+const MIN_BYTES = 12 * 1024;
 
 mkdirSync(OUT, { recursive: true });
 
@@ -92,6 +95,7 @@ for (const slug of readdirSync(SRC).sort()) {
       caption: (entry.caption || '').trim(),
       sourceUrl: entry.sourceUrl || meta.officialUrl || '',
       confidence: entry.confidence || 'high',
+      ...(entry.credit ? { credit: entry.credit } : {}),   // required for CC-licensed images
     });
     report.ok++;
   }

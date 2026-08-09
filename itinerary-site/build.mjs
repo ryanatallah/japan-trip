@@ -53,7 +53,7 @@ const esc = (s = '') => String(s).replace(/&(?![a-z#]+;)/g, '&amp;').replace(/</
 function img(shot, { className = '', sizes = '(max-width: 700px) 100vw, 33vw', eager = false } = {}) {
   if (!shot) return '';
   const ratio = shot.w && shot.h ? (shot.h / shot.w) * 100 : 66;
-  return `<button class="shot ${className}" style="--ar:${ratio.toFixed(2)}%" data-full="img/${esc(shot.file)}" data-caption="${esc(shot.caption)}" data-source="${esc(shot.sourceUrl || '')}" aria-label="${esc(shot.caption)}">
+  return `<button class="shot ${className}" style="--ar:${ratio.toFixed(2)}%" data-full="img/${esc(shot.file)}" data-caption="${esc(shot.caption)}" data-credit="${esc(shot.credit || '')}" data-source="${esc(shot.sourceUrl || '')}" aria-label="${esc(shot.caption)}">
   <img src="img/${esc(shot.thumb || shot.file)}" srcset="img/${esc(shot.thumb || shot.file)} 640w, img/${esc(shot.file)} 1600w" sizes="${sizes}" width="${shot.w || 1600}" height="${shot.h || 1067}" alt="${esc(shot.caption)}" loading="${eager ? 'eager' : 'lazy'}" decoding="async">
 </button>`;
 }
@@ -173,7 +173,7 @@ ${body}
   <button class="lb-close" aria-label="Close">✕</button>
   <button class="lb-prev" aria-label="Previous">‹</button>
   <button class="lb-next" aria-label="Next">›</button>
-  <figure><img alt=""><figcaption><span class="lb-cap"></span> <a class="lb-src" target="_blank" rel="noopener">source ↗</a></figcaption></figure>
+  <figure><img alt=""><figcaption><span class="lb-cap"></span> <span class="lb-credit"></span> <a class="lb-src" target="_blank" rel="noopener">source ↗</a></figcaption></figure>
 </div>
 <script src="assets/site.js"></script>
 </body>
