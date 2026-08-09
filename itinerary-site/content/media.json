@@ -167,6 +167,96 @@
    "confidence": "high"
   }
  ],
+ "arashiyama-monkeys": [
+  {
+   "file": "arashiyama-monkeys-01.jpg",
+   "thumb": "arashiyama-monkeys-01-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "setting",
+   "caption": "The view from the summit lookout: a bank of evergreen and autumn-red trees in the foreground with a strip of bare earth and the rope fence at the right edge, the Katsura river winding across the middle distance and the whole Kyoto basin running back to the northern hills. This is the view the climb is for. No monkeys in this frame.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Monkey_Park_Iwatayama_(Arashiyama_,_Kyoto)_Landscape_hdsr_S5_02.jpg",
+   "confidence": "high",
+   "credit": "Hyppolyte de Saint-Rambert, CC BY 4.0"
+  },
+  {
+   "file": "arashiyama-monkeys-02.jpg",
+   "thumb": "arashiyama-monkeys-02-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "activity",
+   "caption": "A macaque clinging to the outside of the feeding hut's rusted wire mesh with one hand pushed against the frame, shot from inside the hut; a guest's smiling face shows through the mesh at lower left. The Japanese notice above reads: do not stare at the monkeys, and do not let go of the food — keep hold of it at all times.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_28.jpg",
+   "confidence": "high",
+   "credit": "Hyppolyte de Saint-Rambert, CC BY 4.0"
+  },
+  {
+   "file": "arashiyama-monkeys-03.jpg",
+   "thumb": "arashiyama-monkeys-03-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "setting",
+   "caption": "The timber feeding hut at the summit under a clear blue sky, its openings screened in wire mesh with a macaque sitting on the outer ledge and another on the roof ridge; a park warden in an orange hi-vis vest and sun hat stands in the foreground with a clipboard, and the wooded hillside behind is turning orange and rust.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_23.jpg",
+   "confidence": "high",
+   "credit": "Hyppolyte de Saint-Rambert, CC BY 4.0"
+  },
+  {
+   "file": "arashiyama-monkeys-04.jpg",
+   "thumb": "arashiyama-monkeys-04-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "wildlife",
+   "caption": "Two Japanese macaques on the dry, straw-littered dirt of the summit clearing in hard sunlight: one sits and grooms the chest of a second that has stretched out flat on its back with its arms flung above its head. No people in frame.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_21.jpg",
+   "confidence": "high",
+   "credit": "Hyppolyte de Saint-Rambert, CC BY 4.0"
+  },
+  {
+   "file": "arashiyama-monkeys-05.jpg",
+   "thumb": "arashiyama-monkeys-05-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "wildlife",
+   "caption": "A macaque sitting on the apex of the hut's weathered timber gable against a blue sky, looking back at the camera, with the russet and orange autumn hillside rising behind.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_22.jpg",
+   "confidence": "high",
+   "credit": "Hyppolyte de Saint-Rambert, CC BY 4.0"
+  },
+  {
+   "file": "arashiyama-monkeys-06.jpg",
+   "thumb": "arashiyama-monkeys-06-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "people",
+   "caption": "A macaque sitting on a split cut stump in low sun, one hand resting on the neighbouring stump top where grain has been scattered; a person in an orange cap bends over close by at right and two more figures stand out of focus by the hut behind — the working distance you actually get here.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwatayama_(Arashiyama_,_Kyoto)_Monkey_Park_hdsr_S5_30.jpg",
+   "confidence": "high",
+   "credit": "Hyppolyte de Saint-Rambert, CC BY 4.0"
+  },
+  {
+   "file": "arashiyama-monkeys-07.jpg",
+   "thumb": "arashiyama-monkeys-07-t.jpg",
+   "w": 1600,
+   "h": 824,
+   "category": "setting",
+   "caption": "The shot the climb is for: a macaque sitting on the low summit wall with its back to the camera, looking out over the rope fence at the whole Kyoto basin — the Katsura river across the middle distance and the city running to the hills.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Macaca_fuscata_in_Arashiyama_Monkey_Park_Iwatayama.jpg",
+   "confidence": "high",
+   "credit": "Marco Almbauer, CC BY-SA 4.0"
+  },
+  {
+   "file": "arashiyama-monkeys-08.jpg",
+   "thumb": "arashiyama-monkeys-08-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "wildlife",
+   "caption": "The troop on the summit plateau — roughly twenty macaques crossing the open dirt among visitors on the benches, with the city and the coin-operated viewers behind. Nobody is separated from anybody; this is what the top of the hill is actually like.",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwatayama_Monkey_Park,_Kyoto_3-25_(26396971592).jpg",
+   "confidence": "high",
+   "credit": "Kimon Berlin, CC BY-SA 2.0"
+  }
+ ],
  "aso-caldera": [
   {
    "file": "aso-caldera-01.jpg",
@@ -2983,6 +3073,59 @@
    "caption": "The shopfront at dusk on a Nihonbashi street: black timber facade, glowing interior and a white noren whose right panel reads 器 日本橋 武藤 本店 (Utsuwa Nihonbashi Mutoh Main Store)",
    "sourceUrl": "https://images.microcms-assets.io/assets/a061b71b7a084ccfa781f19d8659cbbd/9966bc31af244b2699df7ce3d6f5ee47/en_mutoh-2_AR00.jpg",
    "confidence": "high"
+  }
+ ],
+ "nara-deer": [
+  {
+   "file": "nara-deer-01.jpg",
+   "thumb": "nara-deer-01-t.jpg",
+   "w": 1280,
+   "h": 853,
+   "category": "wildlife",
+   "caption": "Peak autumn in the park: a doe and a yearling grazing head-down on a thick carpet of fallen orange and scarlet leaves, backlit, with a golden maple hanging into the top of the frame and more autumn colour blurred behind",
+   "sourceUrl": "https://narashikanko.or.jp/lsc/upfile/spot/0001/0089/10089_2_l.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nara-deer-02.jpg",
+   "thumb": "nara-deer-02-t.jpg",
+   "w": 1280,
+   "h": 853,
+   "category": "wildlife",
+   "caption": "A young deer standing on the open bare-earth ground looking straight into the lens, framed by a maple in full scarlet with yellow-leaved trees behind — winter coat coming through, no antlers",
+   "sourceUrl": "https://narashikanko.or.jp/lsc/upfile/spot/0001/0089/10089_9_l.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nara-deer-03.jpg",
+   "thumb": "nara-deer-03-t.jpg",
+   "w": 1280,
+   "h": 853,
+   "category": "people",
+   "caption": "Shika-senbei in practice: a visitor's hand holding out a cracker with eight or nine deer pressing in around it, one taking it from the fingers, crumbs flying, a spotted fawn wedged in at the front",
+   "sourceUrl": "https://narashikanko.or.jp/lsc/upfile/spot/0001/0089/10089_3_l.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nara-deer-04.jpg",
+   "thumb": "nara-deer-04-t.jpg",
+   "w": 1600,
+   "h": 1072,
+   "category": "setting",
+   "caption": "A stag in hard velvet close to the lens on the flagstone approach to Todai-ji, a second deer standing behind it, with Nandaimon — the Great South Gate, its gold plaque reading Daikegonji — framed between the pines and visitors walking through",
+   "sourceUrl": "https://narashikanko.or.jp/lsc/upfile/article/0000/0022/22_1_l.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nara-deer-05.jpg",
+   "thumb": "nara-deer-05-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The stone lantern avenue at Kasuga Taisha: a young spotted deer standing up on the moss-covered plinths between ranks of inscribed stone lanterns, the gravel approach path running along the left edge",
+   "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nara_deer_between_stone_lanterns.jpg",
+   "confidence": "high",
+   "credit": "LynUratani, CC BY-SA 4.0"
   }
  ],
  "okas-sankara": [

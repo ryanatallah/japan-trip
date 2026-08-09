@@ -653,8 +653,14 @@ export const entities = {
     name: 'Nara Park',
     type: 'place',
     location: 'Nara — 45 min from Kyoto',
+    badges: ['Wildlife'],
     blurb:
       'About a thousand sika deer wandering loose among the temples, and a Great Buddha hall that is one of the largest wooden buildings on earth. The deer bow for crackers, which is a learned behaviour and reliably funny. It is the obvious use of a freed Kyoto day: 45 minutes each way, real wildlife photography, and it empties the city on a crowded weekend.',
+    facts: [
+      ['Antlers', 'Do not expect the big antlered stags you see in photographs. Kasuga Taisha holds its antler-cutting ceremony in October precisely because autumn is the rut, so by late November most stags have been de-antlered.'],
+      ['One real caution', 'Rutting stags are the one time these deer are genuinely dangerous. Keep your distance from any that still have antlers, and don’t tease with crackers — hold them up and hand them over, or put them away.'],
+      ['Season', 'The two autumn photographs here are late-November conditions from Nara City’s own tourism board. The Nandaimon and Kasuga lantern frames are summer, and are captioned as such.'],
+    ],
   },
 
   teamlab: {
