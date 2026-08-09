@@ -427,6 +427,21 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .rec-why { color: var(--ink-3); font-size: .88rem; }
 @media (max-width: 700px) { .recs li { grid-template-columns: 1fr; } .rec-pick { grid-row: auto; margin-top: .3rem; } }
 
+/* ── cut from the plan ──────────────────────────────────────────── */
+.cuts { display: grid; gap: .8rem; }
+.cutcard {
+  display: grid; grid-template-columns: minmax(0, 320px) minmax(0, 1fr); gap: 1.2rem;
+  align-items: center; padding: 1rem 1.2rem; background: var(--card);
+  border: 1px solid var(--line); border-radius: var(--r-lg);
+}
+.cut-shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .3rem; }
+.cut-shots .shot { opacity: .55; filter: saturate(.55); transition: opacity .3s, filter .3s; }
+.cutcard:hover .cut-shots .shot { opacity: 1; filter: none; }
+.cut-text h3 { font-size: 1.15rem; }
+.cut-loc { font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); margin: .2rem 0 .5rem; }
+.cut-why { color: var(--ink-2); font-size: .94rem; margin: 0; }
+@media (max-width: 700px) { .cutcard { grid-template-columns: 1fr; gap: .8rem; } }
+
 /* ── pager + footer ─────────────────────────────────────────────── */
 .pager { max-width: var(--maxw); margin: 0 auto; padding: 2.5rem max(1rem, 3vw) 4rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: .6rem; }
 .pager a { display: grid; gap: .1rem; padding: 1rem 1.1rem; border: 1px solid var(--line); border-radius: var(--r-lg); text-decoration: none; background: var(--card); transition: border-color .25s, transform .25s var(--ease); }

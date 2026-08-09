@@ -241,6 +241,15 @@ function buildIndex() {
     return `<tr><th scope="row">${esc(w.label)}<small>${esc(w.note)}</small></th>${cells}</tr>`;
   }).join('');
 
+  const cutEntities = Object.entries(entities).filter(([, e]) => e.cut);
+  const cutHtml = cutEntities.map(([slug, e]) => {
+    const list = ordered(slug).slice(0, 3);
+    return `<article class="cutcard">
+      <div class="cut-shots">${list.length ? list.map((s) => img(s, { sizes: '(max-width:700px) 33vw, 140px' })).join('') : ''}</div>
+      <div class="cut-text"><h3>${esc(e.name)}</h3><p class="cut-loc">${esc(e.location || '')}${e.rate ? ` · ${esc(e.rate)}` : ''}</p><p class="cut-why">${e.cut}</p></div>
+    </article>`;
+  }).join('');
+
   const recs = recommendation.map(([want, why, n]) => {
     const it = itineraries.find((x) => x.num === n);
     return `<li><span class="rec-want">${esc(want)}</span><a class="rec-pick" href="${it.slug}.html">Itinerary ${n} — ${esc(it.title)}</a><span class="rec-why">${esc(why)}</span></li>`;
@@ -283,6 +292,12 @@ function buildIndex() {
 <section class="sec" id="choose">
   <h2>How to choose</h2>
   <ul class="recs">${recs}</ul>
+</section>
+
+<section class="sec" id="cut">
+  <h2>Cut from the plan</h2>
+  <p class="sec-sub">Removed at your request. Kept here with their photos so the decision is reversible — say the word and any of them goes back in.</p>
+  <div class="cuts">${cutHtml}</div>
 </section>
 
 <section class="sec sec-alt" id="foundations">

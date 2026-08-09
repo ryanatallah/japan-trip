@@ -31,7 +31,11 @@ for (const it of itineraries) {
   (it.heroCard || []).forEach((s) => referenced.add(s));
 }
 for (const s of referenced) if (!entities[s]) err.push(`itinerary references unknown entity "${s}"`);
-for (const s of Object.keys(entities)) if (!referenced.has(s)) warn.push(`entity "${s}" is never referenced by an itinerary`);
+// Entities marked `cut` are deliberately unreferenced — they live in the "Cut from the plan"
+// section on the index so the decision stays reversible.
+for (const [s, e] of Object.entries(entities)) {
+  if (!referenced.has(s) && !e.cut) warn.push(`entity "${s}" is never referenced by an itinerary`);
+}
 
 // 2. photo coverage
 for (const [slug, e] of Object.entries(entities)) {
