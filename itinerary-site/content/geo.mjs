@@ -9,6 +9,11 @@ export const places = {
   nagano:     { lon: 138.187, lat: 36.649, name: 'Nagano' },
   shibu:      { lon: 138.435, lat: 36.735, name: 'Shibu Onsen' },
   jigokudani: { lon: 138.463, lat: 36.733, name: 'Jigokudani' },
+  tobira:     { lon: 138.128, lat: 36.192, name: 'Tobira Onsen' },
+  matsumoto:  { lon: 137.972, lat: 36.238, name: 'Matsumoto' },
+  shinhotaka: { lon: 137.564, lat: 36.281, name: 'Shinhotaka' },
+  kinosaki:   { lon: 134.805, lat: 35.625, name: 'Kinosaki Onsen' },
+  toyooka:    { lon: 134.832, lat: 35.518, name: 'Toyooka storks' },
   kanazawa:   { lon: 136.656, lat: 36.561, name: 'Kanazawa' },
   kaga:       { lon: 136.349, lat: 36.301, name: 'Kaga' },
   kyoto:      { lon: 135.768, lat: 35.012, name: 'Kyoto' },
@@ -45,6 +50,37 @@ export const routes = {
       { from: 'kyoto', to: 'nara', mode: 'rail', at: 'bottom' },
     ],
     inOut: 'Fly in to Tokyo (HND), out of Osaka (KIX)',
+  },
+
+  'momiji-with-a-detour': {
+    stops: [
+      { id: 'tokyo', nights: 4, at: 'right' },
+      { id: 'hakone', nights: 2, mode: 'rail', at: 'bottom' },
+      { id: 'tobira', nights: 3, mode: 'rail', at: 'right' },
+      { id: 'kyoto', nights: 5, mode: 'rail', at: 'left' },
+    ],
+    trips: [
+      { from: 'tokyo', to: 'ome', mode: 'rail', at: 'left' },
+      { from: 'tokyo', to: 'karuizawa', mode: 'rail', at: 'top' },
+      { from: 'tobira', to: 'matsumoto', mode: 'road', at: 'top' },
+      { from: 'tobira', to: 'shinhotaka', mode: 'road', at: 'left' },
+    ],
+    inOut: 'Fly in to Tokyo (HND), out of Osaka (KIX) — both Alps legs route via Nagoya',
+  },
+
+  'momiji-then-the-coast': {
+    stops: [
+      { id: 'tokyo', nights: 4, at: 'right' },
+      { id: 'hakone', nights: 2, mode: 'rail', at: 'bottom' },
+      { id: 'kyoto', nights: 4, mode: 'rail', at: 'bottom' },
+      { id: 'kinosaki', nights: 4, mode: 'rail', at: 'left' },
+    ],
+    trips: [
+      { from: 'tokyo', to: 'ome', mode: 'rail', at: 'top' },
+      { from: 'tokyo', to: 'karuizawa', mode: 'rail', at: 'top' },
+      { from: 'kinosaki', to: 'toyooka', mode: 'road', at: 'bottom' },
+    ],
+    inOut: 'Fly in to Tokyo (HND), out of Osaka (KIX) — about 4 hours from Kinosaki on the last day',
   },
 
   'crafts-crab-snow-monkeys': {

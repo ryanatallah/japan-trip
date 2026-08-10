@@ -241,6 +241,86 @@ export const entities = {
     gf: 'Buffet-heavy — treat this as a simple night and eat carefully.',
   },
 
+  'tobira-myojinkan': {
+    name: 'Tobira Onsen Myojinkan',
+    type: 'stay',
+    location: 'Above Matsumoto, Nagano',
+    badges: ['Relais & Châteaux', 'The new stop'],
+    rate: '≈ $1,000 / night, half board (R&C lists $657–1,897)',
+    url: 'https://tobira-group.com/myojinkan/',
+    blurb:
+      'A 1931 ryokan at about 1,000m in the hills east of Matsumoto, inside the Yatsugatake-Chūshin Kōgen quasi-national park, and a Relais & Châteaux member since 2009. Forty rooms in both Japanese and Western styles, spring-fed tubs, and the nakai-san attendant service that makes a ryokan feel like a private house. It is the reason to break the run between Hakone and Kyoto: an entirely different landscape from anywhere else on this trip.',
+    facts: [
+      ['Why it is here', 'The intermediate stop that shortens the Kyoto block'],
+      ['Setting', 'About 1,000m up in the Northern Alps foothills, roughly 30 minutes from Matsumoto station'],
+      ['Rooms', '40 rooms, suites and villas across Japanese and Western styles; spring-water tubs'],
+      ['Getting there', 'Free shuttle from Matsumoto station, 35–45 min, booked in advance — fixed departures at 15:15 and 16:30. A taxi is 30 min and about ¥7,000.'],
+      ['Two kitchens', 'Traditional kaiseki <em>and</em> an organic French menu from a chef who specialises in macrobiotic cooking'],
+      ['Late-November reality', 'The high Alps are shut by the time you arrive — Kamikochi closes 15 November and <strong>the Venus Line closes on the 20th</strong>, the day before you land. The mountains are a backdrop here, not terrain.'],
+    ],
+    gf: 'Promising, with one procedural trap. Structurally it is the best bet after Sankara — a macrobiotic cook already builds menus around exclusions — and the FAQ states plainly that they accommodate allergies and dietary restrictions, arranged at booking. But there is no coeliac or gluten wording and no allergen chart, so it still needs a direct email. <strong>And you must choose the Japanese or the French dinner when you book, first-come-first-served — not on the day.</strong> Settle the gluten-free question and the menu choice in the same message.',
+  },
+
+  matsumoto: {
+    name: 'Matsumoto',
+    type: 'place',
+    location: 'Nagano',
+    badges: ['National Treasure castle'],
+    blurb:
+      'A castle town at the foot of the Northern Alps. Matsumoto Castle is one of only five keeps designated National Treasures and one of the few originals left standing — black and white, moated, with snow-capped mountains behind it. Add the Nakamachi street of white kura storehouses and the city art museum, which belongs largely to Yayoi Kusama, who was born here.',
+    facts: [
+      ['The castle', 'Original keep, completed around 1594 — not a post-war concrete reconstruction like most'],
+      ['Also', 'Nakamachi’s storehouse street, and the Matsumoto City Museum of Art for the Kusama collection'],
+      ['If you want the Alps', 'The Shinhotaka Ropeway runs year-round and climbs to about 2,150m — roughly two hours from Matsumoto, and the one way to get properly into the mountains in late November'],
+    ],
+  },
+
+  'nishimuraya-honkan': {
+    name: 'Nishimuraya Honkan',
+    type: 'stay',
+    location: 'Kinosaki Onsen, Hyogo',
+    badges: ['Relais & Châteaux', 'Seven generations', 'Crab season'],
+    rate: '≈ $900 / night, half board (R&C lists $507–1,190)',
+    url: 'https://www.relaischateaux.com/us/hotel/nishimuraya-honkan/',
+    blurb:
+      'A 26-room ryokan run by the same family for seven generations, at the head of the Kinosaki canal. Tatami, shoji, wooden verandas and a garden of moss-covered stone and ponds; baths set in a bamboo grove, and private open-air baths in many of the rooms. It is the classical Japanese inn in a way that even Gora Kadan, with its imperial-villa formality, is not.',
+    facts: [
+      ['Why it is here', 'The closing stay — the trip ends on the Sea of Japan rather than in a city'],
+      ['The town', 'Guests walk out in yukata and geta to Kinosaki’s <strong>seven public bathhouses</strong>; the ryokan is the base, the town is the bathhouse'],
+      ['The food', '<strong>Matsuba snow crab</strong>, which is what the coast is famous for and what the season is for — plus Tajima beef, the bloodline behind Kobe'],
+      ['Rooms', '26 rooms and suites; many with private open-air or semi-open-air baths'],
+      ['Getting out', 'Kinosaki → Shin-Osaka on the Limited Express Kounotori is about 2h40, then the Haruka to KIX — roughly 4 hours in total on departure day'],
+    ],
+    gf: 'Unverified and worth an early letter. Crab and Tajima beef are naturally gluten-free, which is a good start, but kaiseki here leans on soy and dashi like any other. This is a seven-generation family house rather than a hotel chain, so a specific, early, Japanese-language brief is likelier to land than a form.',
+  },
+
+  kinosaki: {
+    name: 'Kinosaki Onsen',
+    type: 'place',
+    location: 'Toyooka, Hyogo — 2h30 from Kyoto',
+    badges: ['Seven bathhouses'],
+    blurb:
+      'A willow-lined canal town where the convention is to leave your ryokan in a yukata and wooden geta and walk between seven public bathhouses, clacking over the stone bridges in the evening. It has been doing this for thirteen centuries. In winter it is also one of Japan’s great crab towns, which is precisely what early December is for.',
+    facts: [
+      ['The soto-yu', 'Seven public bathhouses, each with its own character; staying guests get a pass that covers them all'],
+      ['The season', 'Matsuba snow crab opens 6 November and runs through winter — early December is the heart of it'],
+      ['Nearby', 'The Toyooka stork park, the Genbudo basalt caves, and Izushi, a small castle town known for its soba'],
+    ],
+  },
+
+  'toyooka-storks': {
+    name: 'Oriental white storks, Toyooka',
+    type: 'place',
+    location: '20 min from Kinosaki',
+    badges: ['Wildlife'],
+    blurb:
+      'One of the better conservation stories in Japan, and it happens to be twenty minutes from the ryokan. The Oriental white stork went extinct in the wild here in 1971; Toyooka bred them back and began releasing birds in 2005, and they now nest on towers above the rice fields the town farms without pesticides to feed them. You can see them from the roadside as well as at the park.',
+    facts: [
+      ['Why it is here', 'The wildlife stop on a route that otherwise has none after Karuizawa'],
+      ['Not a crane', 'Storks, not the tancho cranes of Hokkaido — black bill, red skin around the eye, and they nest on platforms rather than gathering at feeding stations'],
+    ],
+  },
+
   'sankara-yakushima': {
     name: 'sankara hotel & spa Yakushima',
     type: 'stay',

@@ -215,7 +215,7 @@ function buildIndex() {
     return `<article class="card">
     <div class="card-shots">${shotsHtml}</div>
     <div class="card-text">
-      <p class="card-num">Itinerary ${it.num}</p>
+      <p class="card-num">Itinerary ${it.num}${it.variantOf ? ` <em>· fork of ${it.variantOf}</em>` : ''}</p>
       <h3><a href="${it.slug}.html">${esc(it.title)}</a></h3>
       <p class="card-tag">${esc(it.tagline)}</p>
       <p class="card-meta"><span>${esc(it.dates)}</span><i>·</i><span>${esc(it.length)}</span><i>·</i><span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span></p>
@@ -376,7 +376,7 @@ function buildItinerary(it) {
 <header class="hero hero-itin">
   ${heroShot ? `<img class="hero-bg" src="img/${esc(heroShot.file)}" alt="${esc(heroShot.caption)}" fetchpriority="high">` : '<div class="hero-bg hero-bg-empty"></div>'}
   <div class="hero-inner">
-    <p class="kicker">Itinerary ${it.num}</p>
+    <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''}</p>
     <h1>${esc(it.title)}</h1>
     <p class="hero-sub">${esc(it.tagline)}</p>
     <p class="hero-facts">
