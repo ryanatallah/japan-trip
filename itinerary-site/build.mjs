@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { entities } from './content/entities.mjs';
 import { itineraries, shared, recommendation, wishlist } from './content/itineraries.mjs';
+import { renderMap } from './tools/map.mjs';
 
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'site');
@@ -396,6 +397,7 @@ function buildItinerary(it) {
 
 <section class="sec" id="pitch">
   <div class="pitch"><p class="lede lede-big">${it.pitch}</p></div>
+  ${renderMap(it.slug)}
   <div class="transport">
     <h3><span class="mode">${esc(it.transport.mode)}</span></h3>
     <p>${it.transport.text}</p>
