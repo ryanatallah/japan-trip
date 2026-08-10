@@ -2225,6 +2225,78 @@
    "confidence": "high"
   }
  ],
+ "kinosaki": [
+  {
+   "file": "kinosaki-01.jpg",
+   "thumb": "kinosaki-01-t.jpg",
+   "w": 939,
+   "h": 609,
+   "category": "people",
+   "caption": "The signature Kinosaki scene: two women in patterned yukata and white tabi with geta, one carrying a small bamboo basket, walking the stone-railed canal path under weeping willows, with an arched stone bridge and the wooden ryokan fronts behind them.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2025/12/yukata.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-02.jpg",
+   "thumb": "kinosaki-02-t.jpg",
+   "w": 1500,
+   "h": 545,
+   "category": "people",
+   "caption": "The same stroll in deep winter — two guests in yukata under a floral haori and a padded jacket walking a ploughed street with snow piled on the canal parapet, on a snow-capped stone lantern and on the willows, with a street lamp lit at midday.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2023/04/top23_winter_slide1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-03.jpg",
+   "thumb": "kinosaki-03-t.jpg",
+   "w": 1400,
+   "h": 900,
+   "category": "setting",
+   "caption": "The Otani River canal in falling snow: the low arched stone bridge and its stone balustrade under snow, snow-loaded willows both banks, lantern light reflected in the black water, and people crossing the bridge under umbrellas.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/12/slide-winter-kinosaki.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-04.jpg",
+   "thumb": "kinosaki-04-t.jpg",
+   "w": 1500,
+   "h": 560,
+   "category": "setting",
+   "caption": "The canal at dusk with the willows lit from below by the row of stone lanterns along each bank, a couple in yukata standing on the arched stone bridge, and the whole scene doubled in the still water.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2021/08/Kinosaki-Onsen.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-05.jpg",
+   "thumb": "kinosaki-05-t.jpg",
+   "w": 1500,
+   "h": 844,
+   "category": "activity",
+   "caption": "Yanagi-yu, one of the seven public bathhouses, buried under snow — its curved gable and wooden 柳湯 signboard, the split noren curtain at the door, bathers in yukata and haori gathered outside, and the snow-covered canal wall in the foreground.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2020/01/slide-winter-yanagiyu.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-06.jpg",
+   "thumb": "kinosaki-06-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "activity",
+   "caption": "A Sea of Japan snow-crab auction floor: hundreds of wooden crates of live Matsuba crab, each crab with a coloured plastic port tag on a claw, laid out in rows on the wet concrete while buyers in waders and aprons work down the aisles.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2025/11/snowcrab2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-07.jpg",
+   "thumb": "kinosaki-07-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "setting",
+   "caption": "The view down the Kinosaki Ropeway line in winter — the cables and a lower pylon in the foreground, the snow-dusted town filling the valley below, the Maruyama River curving to the Sea of Japan beyond, and snow on the surrounding hills.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2024/08/ropewaywinter.jpg",
+   "confidence": "high"
+  }
+ ],
  "kirishima": [
   {
    "file": "kirishima-01.jpg",
@@ -3188,6 +3260,168 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nara_deer_between_stone_lanterns.jpg",
    "confidence": "high",
    "credit": "LynUratani, CC BY-SA 4.0"
+  }
+ ],
+ "nishimuraya-honkan": [
+  {
+   "file": "nishimuraya-honkan-01.jpg",
+   "thumb": "nishimuraya-honkan-01-t.jpg",
+   "w": 1600,
+   "h": 1062,
+   "category": "exterior",
+   "caption": "The main gate at dusk: a tiled-roof timber gate hung with two glowing globe lamps and a carved wooden signboard reading 西村屋, opening onto a wet cobbled approach that leads to the lit glass entrance doors.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/6244A7B3-B452-4984-B798A1D8B2DE04B1/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-02.jpg",
+   "thumb": "nishimuraya-honkan-02-t.jpg",
+   "w": 1570,
+   "h": 1140,
+   "category": "exterior",
+   "caption": "The ryokan from the street under deep snow — the long slatted timber wall, the 西村屋 gate with its lamps lit, and the two-storey wooden guest wing behind, with the forested hillside white above it.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/89BC80D4-830C-4185-B93EE369840C4ED3/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-03.jpg",
+   "thumb": "nishimuraya-honkan-03-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The inner Japanese garden: a moss-covered stone lantern in the foreground, a pond, clipped pines, a low stone arched bridge and a cobbled path, with the wooden guest wing and its ranks of windows rising behind.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/7597789C-9E23-47E2-93C4BC766C936681/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-04.jpg",
+   "thumb": "nishimuraya-honkan-04-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The same garden under snow — snow caps the stone lantern, the stone bridge and the clipped pines, yukitsuri rope cones protect the trees, and the guest-room windows glow yellow through the branches.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/9D4D990B-7AD5-4289-91B7575CF485173F/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-05.jpg",
+   "thumb": "nishimuraya-honkan-05-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "room",
+   "caption": "A tatami guest room with a deep-red lacquered low table and rattan legless chairs, a tokonoma alcove with a framed bird painting, and shoji screens slid open onto a timber veranda with two armchairs facing the garden's maples and pines.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/2AF05449-ABAB-44CC-A1C70963E7DA51D8/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-06.jpg",
+   "thumb": "nishimuraya-honkan-06-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "room",
+   "caption": "The Honjin suite (本陣の間), the top open-air-bath suite: coffered timber ceiling, a tokonoma with hanging scroll and ikebana, a long lacquered table on tatami, and beyond the full-height opening an oval wooden soaking tub on a private deck facing the wooded slope.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/honjinsuiteroomwithopenairbath0001.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-07.jpg",
+   "thumb": "nishimuraya-honkan-07-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "room",
+   "caption": "The Ginsen suite (銀扇の間) in the Hirata-kan annex: tatami sitting room with lacquered table under a hexagonal paper lantern, a Western twin-bed room visible through the open partition, split-bamboo screens and a window onto a small courtyard.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/ginsensuiteroom1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-08.jpg",
+   "thumb": "nishimuraya-honkan-08-t.jpg",
+   "w": 1600,
+   "h": 1070,
+   "category": "bath",
+   "caption": "The Asuka room's private open-air bath at dusk — a sunken tub on a timber deck under a low bamboo-framed roof, a wall lantern lit, stepping stones and ferns in the enclosed courtyard, and the room's lit interior across the garden.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/asuka03.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-09.jpg",
+   "thumb": "nishimuraya-honkan-09-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "bath",
+   "caption": "The private hinoki bath in the Kumoi suite (雲居の間), water running in from a plain wooden spout, the shutters opened onto the wooded hillside behind the ryokan.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/kumoisuiteroomwithopenairbath3.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-10.jpg",
+   "thumb": "nishimuraya-honkan-10-t.jpg",
+   "w": 1600,
+   "h": 1070,
+   "category": "bath",
+   "caption": "The communal open-air bath of Kichi-no-yu — a rectangular cypress-edged pool fed by a bamboo spout, walled in split-bamboo screens with a hanging lantern, and live bamboo culms growing at the edge of the frame.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/65EFF341-9EE4-4511-AA80524D58930B33/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-11.jpg",
+   "thumb": "nishimuraya-honkan-11-t.jpg",
+   "w": 1180,
+   "h": 750,
+   "category": "dining",
+   "caption": "Senrei-no-ma, the breakfast hall: a 100-mat room with a paulownia coffered ceiling and curved cove, walnut tables with red-seated chairs, and the calligraphy scroll 泉霊 hung on the end wall between shoji-screened windows.",
+   "sourceUrl": "https://www.nishimuraya.ne.jp/honkan/cuisine/images/img_cuisine_brakfast01.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-12.jpg",
+   "thumb": "nishimuraya-honkan-12-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "dining",
+   "caption": "A breakfast laid on a walnut table in Senrei-no-ma below the 泉霊 scroll — cedar tray boxes of grilled fish and vegetables, a bentwood steamer of rice, miso soup, pickles and a small copper hot pot.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/D8788D6D-EE4B-4052-9C17910963B88C26/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-13.jpg",
+   "thumb": "nishimuraya-honkan-13-t.jpg",
+   "w": 1600,
+   "h": 1068,
+   "category": "food",
+   "caption": "A full Matsuba snow-crab dinner: raw crab sashimi on ice, a whole boiled crab tagged at the claw with the port band, grilled legs and shells of crab miso, shabu-shabu vegetables with a broth pot, a crab nigiri and a charcoal grill box at the table.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/B887A8E4-6E0B-4B11-844AE14A1A996467/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-14.jpg",
+   "thumb": "nishimuraya-honkan-14-t.jpg",
+   "w": 1600,
+   "h": 1068,
+   "category": "food",
+   "caption": "Matsuba crab over charcoal — split legs and claws on the wire grill, the meat turning opaque, and the top shell filled with bubbling crab miso set alongside.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/C45052BF-4982-4424-AAA140449A6E7EFF/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-15.jpg",
+   "thumb": "nishimuraya-honkan-15-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "food",
+   "caption": "Two pieces of raw snow-crab nigiri topped with chives on a black lacquer plate with a gold rim, garnished with a crab claw and a camellia sprig.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/718B4744-21F3-4F6E-B582728539208C0D/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-16.jpg",
+   "thumb": "nishimuraya-honkan-16-t.jpg",
+   "w": 1600,
+   "h": 1070,
+   "category": "food",
+   "caption": "Tajima beef cooked at the table on a hot iron plate — marbled slices seared and lifted with chopsticks, with shishito pepper, shiitake, courgette and yellow pepper alongside.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/47E2AEEE-DAEF-4DF2-B41FF91EF3CDC884/",
+   "confidence": "high"
   }
  ],
  "okas-sankara": [
@@ -4795,6 +5029,48 @@
    "category": "setting",
    "caption": "The Hojo south garden from the veranda: four groups of upright stones set in raked gravel with moss mounds to the right, framed by the karamon gate and the temple roofs behind (official temple photograph)",
    "sourceUrl": "https://tofukuji.jp/wordpress/wp-content/themes/tofukuji/img/bg_guide-honbo_main.jpg",
+   "confidence": "high"
+  }
+ ],
+ "toyooka-storks": [
+  {
+   "file": "toyooka-storks-01.jpg",
+   "thumb": "toyooka-storks-01-t.jpg",
+   "w": 1500,
+   "h": 1000,
+   "category": "wildlife",
+   "caption": "An Oriental white stork foraging head-down in a rice field — the diagnostic features are all visible: the heavy straight BLACK bill, the bare red skin ringing the pale eye, white body with black scapulars and flight feathers, dark red legs, and a numbered colour ring on the left leg from the Toyooka reintroduction programme.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork09.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "toyooka-storks-02.jpg",
+   "thumb": "toyooka-storks-02-t.jpg",
+   "w": 1200,
+   "h": 853,
+   "category": "wildlife",
+   "caption": "Winter in the Toyooka basin: a ringed Oriental white stork wading a flooded, stubble-cut paddy with its reflection under it, a raft of whooper swans resting on the bund behind, and the edge of the town and the bare hills beyond.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork-gallery_winter-field.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "toyooka-storks-03.jpg",
+   "thumb": "toyooka-storks-03-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "wildlife",
+   "caption": "A pair of Oriental white storks on one of the region's artificial nesting towers — a stick nest built on a platform atop a pole above the treeline, one adult landing with wings spread, both birds colour-ringed, and a chick's head just showing over the rim of the nest.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork03.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "toyooka-storks-04.jpg",
+   "thumb": "toyooka-storks-04-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "people",
+   "caption": "Inside the breeding enclosures at the Hyogo Park of the Oriental White Stork: a keeper in waders and gloves tips a bucket of fish into a blue basin while a stork strides in with wings half-raised, a second bird waiting at another basin beside the pond behind the green mesh.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork02.jpg",
    "confidence": "high"
   }
  ],

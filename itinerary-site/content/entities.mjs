@@ -286,12 +286,13 @@ export const entities = {
       'A 26-room ryokan run by the same family for seven generations, at the head of the Kinosaki canal. Tatami, shoji, wooden verandas and a garden of moss-covered stone and ponds; baths set in a bamboo grove, and private open-air baths in many of the rooms. It is the classical Japanese inn in a way that even Gora Kadan, with its imperial-villa formality, is not.',
     facts: [
       ['Why it is here', 'The closing stay — the trip ends on the Sea of Japan rather than in a city'],
-      ['The town', 'Guests walk out in yukata and geta to Kinosaki’s <strong>seven public bathhouses</strong>; the ryokan is the base, the town is the bathhouse'],
+      ['The town', 'Guests walk out in yukata and geta to the town’s public bathhouses; the ryokan is the base, the town is the bathhouse. Staying guests get a free all-bathhouse pass at check-in, and all of them are tattoo-friendly.'],
       ['The food', '<strong>Matsuba snow crab</strong>, which is what the coast is famous for and what the season is for — plus Tajima beef, the bloodline behind Kobe'],
+      ['Book the crab deliberately', 'Crab is <strong>a separate plan, not an automatic inclusion</strong> — the booking engine has a distinct crab-season option running 7 Nov – 31 Mar, priced apart from the standard kaiseki. Courses using the branded Tsuiyama crab need an advance phone booking.'],
       ['Rooms', '26 rooms and suites; many with private open-air or semi-open-air baths'],
       ['Getting out', 'Kinosaki → Shin-Osaka on the Limited Express Kounotori is about 2h40, then the Haruka to KIX — roughly 4 hours in total on departure day'],
     ],
-    gf: 'Unverified and worth an early letter. Crab and Tajima beef are naturally gluten-free, which is a good start, but kaiseki here leans on soy and dashi like any other. This is a seven-generation family house rather than a hotel chain, so a specific, early, Japanese-language brief is likelier to land than a form.',
+    gf: 'The least documented stay in the whole plan: Nishimuraya publishes nothing at all on allergies — its FAQ is a chat widget with no crawlable page. Crab and Tajima beef are naturally gluten-free, which helps, but the kaiseki around them leans on soy and dashi like any other. <strong>Useful fallback: Visit Kinosaki, the town’s own tourism body, runs a “dietary inclusive” service that brokers exactly these requests with the ryokan on your behalf.</strong> Use it, and follow up directly.',
   },
 
   kinosaki: {
@@ -302,7 +303,7 @@ export const entities = {
     blurb:
       'A willow-lined canal town where the convention is to leave your ryokan in a yukata and wooden geta and walk between seven public bathhouses, clacking over the stone bridges in the evening. It has been doing this for thirteen centuries. In winter it is also one of Japan’s great crab towns, which is precisely what early December is for.',
     facts: [
-      ['The soto-yu', 'Seven public bathhouses, each with its own character; staying guests get a pass that covers them all'],
+      ['The soto-yu', '<strong>Six of the seven are currently open</strong> — Sato-no-yu has been closed for renovation since April 2024 and is off the town’s live crowd-status board. Kono-yu is closed separately until 30 Oct 2026, so it should be back before December; worth re-checking. Staying guests get a pass covering them all.'],
       ['The season', 'Matsuba snow crab opens 6 November and runs through winter — early December is the heart of it'],
       ['Nearby', 'The Toyooka stork park, the Genbudo basalt caves, and Izushi, a small castle town known for its soba'],
     ],
@@ -317,6 +318,7 @@ export const entities = {
       'One of the better conservation stories in Japan, and it happens to be twenty minutes from the ryokan. The Oriental white stork went extinct in the wild here in 1971; Toyooka bred them back and began releasing birds in 2005, and they now nest on towers above the rice fields the town farms without pesticides to feed them. You can see them from the roadside as well as at the park.',
     facts: [
       ['Why it is here', 'The wildlife stop on a route that otherwise has none after Karuizawa'],
+      ['December is the off-season', 'Toyooka’s own tourism office says stork-watching is best in April and May when the chicks hatch. In December there is no nest activity — you are looking at birds feeding in the flooded paddies, plus the captive birds at the park. Free, 09:00–17:00, <strong>closed Mondays</strong>.'],
       ['Not a crane', 'Storks, not the tancho cranes of Hokkaido — black bill, red skin around the eye, and they nest on platforms rather than gathering at feeding stations'],
     ],
   },
