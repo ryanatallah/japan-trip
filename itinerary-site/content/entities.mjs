@@ -261,6 +261,32 @@ export const entities = {
     gf: 'Promising, with one procedural trap. Structurally it is the best bet after Sankara — a macrobiotic cook already builds menus around exclusions — and the FAQ states plainly that they accommodate allergies and dietary restrictions, arranged at booking. But there is no coeliac or gluten wording and no allergen chart, so it still needs a direct email. <strong>And you must choose the Japanese or the French dinner when you book, first-come-first-served — not on the day.</strong> Settle the gluten-free question and the menu choice in the same message.',
   },
 
+  takao: {
+    name: 'Takao',
+    type: 'place',
+    location: 'North-west Kyoto — 40 min from the city',
+    badges: ['Peaks early-to-mid Nov'],
+    blurb:
+      'A wooded gorge on the Kiyotaki river with three temples in it — Jingo-ji up a long stone staircase, Saimyo-ji, and Kozan-ji, which is UNESCO-listed and holds the Choju-giga animal scrolls. It is one of the earliest places in Kyoto to turn, and on a mid-November trip it is the single best colour in the city while central Higashiyama is still coming on.',
+    facts: [
+      ['Why it matters now', 'Your Kyoto week moved to 17–21 November. Takao is at or near its peak then; Tofuku-ji and Eikandō are not.'],
+      ['Jingo-ji', 'Worth the climb for kawarake-nage — you throw small clay discs off the terrace into the valley'],
+    ],
+  },
+
+  'kurama-kibune': {
+    name: 'Kurama & Kibune',
+    type: 'place',
+    location: 'North of Kyoto, on the Eizan line',
+    badges: ['Peaks early-to-mid Nov'],
+    blurb:
+      'Two mountain villages linked by a walk over a ridge, reached on the little Eizan railway that runs through a tunnel of maples on the way up. Kibune-jinja’s stone staircase, lined with vermilion lanterns under red maples, is one of the best things in Kyoto and it colours a week or two ahead of the city.',
+    facts: [
+      ['Why it matters now', 'Like Takao, it turns early — which suits 17–21 November'],
+      ['Getting there', 'Eizan line from Demachiyanagi; the momiji tunnel stretch is lit in season'],
+    ],
+  },
+
   matsumoto: {
     name: 'Matsumoto',
     type: 'place',

@@ -7,6 +7,7 @@ import { entities } from './content/entities.mjs';
 import { itineraries, shared, recommendation, wishlist } from './content/itineraries.mjs';
 import { renderMap } from './tools/map.mjs';
 
+const WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'site');
 
@@ -97,9 +98,11 @@ function coverRow(slugs, sizes = '(max-width:700px) 100vw, 30vw') {
 
 /** Small inline photo row used on day cards. */
 function strip(refs) {
+  // cover() ranks wildlife and establishing shots first, which reads far better as a
+  // day-card lead than ordered()'s gallery sequence (that one leads with process shots).
   const picks = refs.flatMap((r) => {
-    const list = ordered(r);
-    return list.length ? [{ ...list[0], _slug: r }] : [];
+    const c = cover(r) || ordered(r)[0];
+    return c ? [{ ...c, _slug: r }] : [];
   }).slice(0, 4);
   if (!picks.length) return '';
   return `<div class="strip">${picks.map((s) => img(s, { className: 'stripshot', sizes: '(max-width: 700px) 45vw, 180px' })).join('')}</div>`;
@@ -203,7 +206,7 @@ function buildIndex() {
     <td class="c-route">${it.route.map((r) => esc(r)).join(' → ')}</td>
     <td class="c-cost">${esc(it.cost)}</td>
     <td><span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span></td>
-  </tr>`).join('');
+  </tr>${it.clash ? `<tr class="clashrow"><td></td><td colspan="5"><span class="clash">✕ ${esc(it.clash)}</span></td></tr>` : ''}`).join('');
 
   const cards = itineraries.map((it) => {
     const mos = it.heroCard.map((s) => cover(s)).filter(Boolean);
@@ -261,18 +264,19 @@ function buildIndex() {
   ${heroShots.length >= 3 ? `<div class="hero-collage" style="--cols:${Math.min(heroShots.length, 6)}">${heroShots.slice(0, 6).map((s) => img(s, { sizes: '17vw', eager: true })).join('')}</div>` : ''}
   <div class="hero-inner">
     <p class="kicker">Oct 25 – Dec 3, 2026 · two travellers · from SFO</p>
-    <h1>Five ways to see Japan</h1>
-    <p class="hero-sub">Same country, same fortnight-ish, five genuinely different trips. Every hotel, restaurant, workshop and temple below is photographed so you can judge it before you book it.</p>
+    <h1>${WORDS[itineraries.length] || itineraries.length} ways to see Japan</h1>
+    <p class="hero-sub">Same country, same fortnight-ish, ${WORDS[itineraries.length] || itineraries.length} genuinely different trips. Every hotel, restaurant, workshop and temple below is photographed so you can judge it before you book it.</p>
     <p class="hero-jump">${itineraries.map((it) => `<a href="${it.slug}.html">${it.num}. ${esc(it.title)}</a>`).join('')}</p>
   </div>
 </header>
 
 <section class="sec" id="glance">
-  <h2>The five at a glance</h2>
+  <h2>The ${WORDS[itineraries.length] || itineraries.length} at a glance</h2>
   <div class="tablewrap"><table class="glance">
     <thead><tr><th>#</th><th>Itinerary</th><th>Dates</th><th>Route</th><th>Est. total</th><th>Temp</th></tr></thead>
     <tbody>${glanceRows}</tbody>
   </table></div>
+  <div class="note note-warn"><h3>Thanksgiving constraint</h3><p>${shared.colorado}</p></div>
   <div class="note note-note"><h3>Why the dates matter</h3><p>${shared.dateLogic}</p></div>
 </section>
 
@@ -340,7 +344,7 @@ function buildIndex() {
   </div>
 </section>`;
 
-  return shell({ title: 'Japan 2026 — five itineraries', desc: 'Five illustrated Japan itineraries for Oct–Dec 2026.', body, page: 'index' });
+  return shell({ title: 'Japan 2026 — five itineraries', desc: `${itineraries.length} illustrated Japan itineraries for Oct–Dec 2026.`, body, page: 'index' });
 }
 
 // ── itinerary page ──────────────────────────────────────────────────
@@ -377,6 +381,7 @@ function buildItinerary(it) {
   ${heroShot ? `<img class="hero-bg" src="img/${esc(heroShot.file)}" alt="${esc(heroShot.caption)}" fetchpriority="high">` : '<div class="hero-bg hero-bg-empty"></div>'}
   <div class="hero-inner">
     <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''}</p>
+    ${it.clash ? `<p class="clash clash-hero">✕ ${esc(it.clash)}</p>` : ''}
     <h1>${esc(it.title)}</h1>
     <p class="hero-sub">${esc(it.tagline)}</p>
     <p class="hero-facts">
