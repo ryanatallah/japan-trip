@@ -17,10 +17,11 @@ export const revisions = [
   {
     date: '2026-08-16',
     when: '16 August 2026',
-    title: 'The runbook — a fourth page, and four corrections it turned up',
+    title: 'Three new pages — issues, bases and day sheets',
     tags: ['site', 'route'],
-    summary: `<a href="logistics.html">Logistics</a> is now its own page: a hotel-centred travel-time map for each of the four bases, a sheet for every one of the seventeen days with its fixed points, journeys and meal plan, and one table of every standing constraint. Leave-by times are <em>derived</em> — the fixed point minus the journey minus its buffer — so they cannot drift from the durations they are built on. The day-by-day on the plan borrows the same line.`,
+    summary: `The operational half of the trip is now three pages rather than a section: <a href="issues.html">Issues</a>, the live list of everything still undecided, unbooked or unanswered; <a href="bases.html">Bases</a>, a hotel-centred travel-time map for each of the four stops; and <a href="days.html">Day sheets</a>, one sheet per day carrying its fixed points, journeys and meal plan. Leave-by times are <em>derived</em> — the fixed point minus the journey minus its buffer — so they cannot drift from the durations they are built on, and the day-by-day on the itinerary borrows the same line.`,
     points: [
+      `<strong>"Still on the table" left the itinerary.</strong> The Tobira Myojinkan / Beniya Mukayu swap is an open question rather than a feature of the plan, so it now sits on the issues page with the rest of them, and the itinerary describes only what is actually decided.`,
       `<strong>The ANA flight leaves at 01:20 and lands at 04:50.</strong> NH107 is a small-hours departure, so "Friday 6 November" is really a Thursday-night airport run, and you reach Aman Tokyo around 06:00 against a 15:00 check-in. The nine-hour gap now has a plan: early check-in requested at booking, the spa, and the Imperial Palace East Gardens ten minutes away.`,
       `<strong>The last day is three hours looser than assumed.</strong> United's KIX–SFO service moves to 18:35 on the winter schedule that starts 25 October, not the 16:55 it runs in summer. Leaving Kyoto at 14:20 still gives a two-and-a-half-hour airport buffer — so 22 November now has a full final morning and a proper lunch.`,
       `<strong>Two of Gora Kadan's three half-board dinners are eaten elsewhere.</strong> Thursday is Itoh Dining and Friday is Sushi Kadan, a separate kitchen on the property. Thursday should be booked room-and-breakfast or the kaiseki is paid for twice, and Sushi Kadan needs its own gluten-free conversation.`,
