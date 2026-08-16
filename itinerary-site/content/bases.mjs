@@ -5,6 +5,8 @@
 // the map and another on the schedule.
 //
 // Conventions
+//   name      the PLACE, not the hotel — it is what the nav, the outline and the day sheets say
+//   hotel     the property you sleep in there
 //   at        [lon, lat] — same order as content/geo.mjs, which some entries import directly
 //   min       door-to-door minutes from that base's hotel, including the walk at both ends
 //   mode      walk | metro | rail | bus | boat | ropeway | car | air
@@ -21,7 +23,8 @@ export const bases = [
   {
     id: 'tokyo',
     entity: 'aman-tokyo',
-    name: 'Aman Tokyo',
+    name: 'Tokyo',
+    hotel: 'Aman Tokyo',
     where: 'Otemachi — floors 33 to 38 of Otemachi Tower',
     dates: 'Sat 7 – Tue 10 November · 4 nights',
     at: [139.7648, 35.6866],
@@ -45,7 +48,8 @@ export const bases = [
   {
     id: 'hakone',
     entity: 'gora-kadan',
-    name: 'Gora Kadan',
+    name: 'Hakone',
+    hotel: 'Gora Kadan',
     where: 'Gora — a former imperial villa estate, above the Tozan railway terminus',
     dates: 'Wed 11 – Fri 13 November · 3 nights',
     at: [139.0480, 35.2470],
@@ -68,7 +72,8 @@ export const bases = [
   {
     id: 'tobira',
     entity: 'tobira-myojinkan',
-    name: 'Tobira Onsen Myojinkan',
+    name: 'Tobira Onsen',
+    hotel: 'Tobira Onsen Myojinkan',
     where: 'Iriyamabe, up the valley east of Matsumoto — 1,050m',
     dates: 'Sat 14 – Mon 16 November · 3 nights',
     at: [places.tobira.lon, places.tobira.lat],
@@ -89,7 +94,8 @@ export const bases = [
   {
     id: 'kyoto',
     entity: 'sowaka',
-    name: 'SOWAKA',
+    name: 'Kyoto',
+    hotel: 'SOWAKA',
     where: 'Gion — Shimogawara-dori, below Kodai-ji',
     dates: 'Tue 17 – Sat 21 November · 5 nights',
     at: [135.7810, 35.0000],

@@ -678,14 +678,14 @@ function baseCard(base) {
   const e = entities[base.entity];
   return `<div class="base">
     <header class="base-head">
-      <p class="base-meta"><span>${esc(base.where)}</span><i>·</i><span>${esc(base.dates)}</span></p>
+      <p class="base-meta"><b>${esc(base.hotel)}</b><i>·</i><span>${esc(base.where)}</span><i>·</i><span>${esc(base.dates)}</span></p>
       <p class="base-times">Check in ${esc(base.checkIn)} · check out ${esc(base.checkOut)}${base.checkConfirm ? ' <span class="p-check">confirm</span>' : ''}${e ? ` · <a href="index.html#${esc(base.entity)}">see the hotel →</a>` : ''}</p>
     </header>
     <p class="base-lede">${base.lede}</p>
     <div class="base-grid">
       <figure class="rosefig">
         ${renderRose(base, placed)}
-        <figcaption><b>${esc(base.name)}</b> is the centre. Direction is true; distance out is <b>door-to-door travel time</b>, not kilometres. Hollow dots are walkable.</figcaption>
+        <figcaption><b>${esc(base.hotel)}</b> is the centre. Direction is true; distance out is <b>door-to-door travel time</b>, not kilometres. Hollow dots are walkable.</figcaption>
       </figure>
       <ol class="pois">${rows}</ol>
     </div>
@@ -734,7 +734,7 @@ function daySheet(d) {
     <header class="sheet-head">
       <h3><b class="sheet-date">${esc(d.date)}</b> <span class="sheet-title">${esc(d.title)}</span></h3>
       <p class="sheet-base"><span class="sheet-dow">${esc(d.dow)}</span>${base
-        ? ` · ${d.transfer ? 'ends at' : 'based at'} <a href="bases.html#base-${esc(base.id)}">${esc(base.name)}</a> · ${esc(d.where)}`
+        ? ` · ${d.transfer ? 'ends at' : 'based at'} <a href="bases.html#base-${esc(base.id)}">${esc(base.hotel)}</a> · ${esc(d.where)}`
         : ` · ${esc(d.where)}`}</p>
     </header>
     <div class="sheet-grid">
@@ -867,7 +867,7 @@ function buildDays() {
   const sections = legs().map((leg) => `<section class="sec${leg.base ? '' : ' sec-alt'}" id="leg-${esc(leg.id)}">
     <h2>${esc(leg.label)}</h2>
     <p class="sec-sub">${esc(leg.span)}${leg.days.length > 1 ? ` · ${leg.days.length} days` : ''}${leg.base
-      ? ` · <a href="bases.html#base-${esc(leg.base)}">${esc(bases.find((b) => b.id === leg.base)?.name || '')}</a>`
+      ? ` · <a href="bases.html#base-${esc(leg.base)}">${esc(bases.find((b) => b.id === leg.base)?.hotel || '')}</a>`
       : ''}</p>
     <div class="sheets">${leg.days.map(daySheet).join('')}</div>
   </section>`).join('');

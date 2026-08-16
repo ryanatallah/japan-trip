@@ -797,7 +797,9 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .basegrid { display: grid; gap: 2.4rem; }
 .base { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.2rem, 2.5vw, 1.8rem); }
 
-.base-meta { font-size: .88rem; color: var(--ink-3); margin: .25rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+/* The <h2> above is the place — Tokyo, Hakone — so the hotel leads this line instead. */
+.base-meta { font-size: .88rem; color: var(--ink-3); margin: .25rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; align-items: baseline; }
+.base-meta b { color: var(--ink); font-weight: 600; font-size: .98rem; }
 .base-meta i { font-style: normal; opacity: .5; }
 .base-times { font-size: .82rem; color: var(--ink-3); margin: .3rem 0 0; font-variant-numeric: tabular-nums; }
 .base-lede { color: var(--ink-2); max-width: var(--readw); margin: 1rem 0 1.4rem; font-size: .96rem; }
@@ -807,7 +809,12 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 
 /* The SVG is authored in a 560-unit box but displayed at ~380px, so every type size in here is
    set roughly 1.6x its apparent size. Getting this wrong once already made the figure unreadable. */
-.rosefig { margin: 0; position: sticky; top: calc(var(--nav-h) + var(--sub-h) + 12px); }
+/* Clears whatever sticky chrome is above it — the crumb bar below 1180px, nothing above it.
+   Mirrors .day-when. NB: this referenced a `--sub-h` that no longer exists once the horizontal
+   subnav became the outline rail, and an undefined variable makes the whole calc invalid, which
+   silently resolves `top` to `auto` and leaves sticky inert with no other symptom. */
+.rosefig { margin: 0; position: sticky; top: calc(var(--nav-h) + var(--crumb-h) + 14px); }
+@media (min-width: 1180px) { .rosefig { top: calc(var(--nav-h) + 14px); } }
 .rosefig figcaption { font-size: .75rem; color: var(--ink-3); text-align: center; margin-top: .5rem; line-height: 1.45; }
 .rose { display: block; width: 100%; height: auto; }
 .rose .ring { fill: none; stroke: var(--line-2); stroke-width: 1.2; stroke-dasharray: 3 6; opacity: .9; }
@@ -910,13 +917,23 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .day-run a:hover { color: var(--accent); }
 .run-tag { font-size: .6rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: var(--accent); border: 1px solid color-mix(in oklab, var(--accent) 35%, transparent); border-radius: 100px; padding: .05rem .4rem; }
 
-/* 1100, not 980 — the rail is still open at these widths and takes 272px off the content column,
-   so the two-up layouts run out of room sooner than the viewport figure suggests. */
-@media (max-width: 1100px) {
+@media (max-width: 980px) {
   .base-grid { grid-template-columns: 1fr; }
   .rosefig { position: static; max-width: 24rem; margin-inline: auto; }
   .sheet-grid { grid-template-columns: 1fr 1fr; }
   .sheet-col:last-child { grid-column: 1 / -1; }
+}
+
+/* The rail is the complication, not the viewport. It only opens at 1180 and up, and when it does
+   it takes 272px off the content column — so between 1180 and about 1260 the two-up layouts are
+   squeezed even though the viewport looks roomy. Collapsing on viewport width alone (this was
+   briefly `max-width: 1100`) also unstuck the rose at widths where the rail is shut and there is
+   plenty of room. Gate it on the rail actually being open instead. */
+@media (min-width: 981px) and (max-width: 1260px) {
+  [data-outline="on"] .base-grid { grid-template-columns: 1fr; }
+  [data-outline="on"] .rosefig { position: static; max-width: 24rem; margin-inline: auto; }
+  [data-outline="on"] .sheet-grid { grid-template-columns: 1fr 1fr; }
+  [data-outline="on"] .sheet-col:last-child { grid-column: 1 / -1; }
 }
 @media (max-width: 640px) {
   .sheet-grid { grid-template-columns: 1fr; gap: 1.3rem; }

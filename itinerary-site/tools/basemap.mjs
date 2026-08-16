@@ -130,7 +130,7 @@ export function renderRose(base, placed) {
 
   // The hotel is named in the heading directly above the figure, so the centre marker carries no
   // label of its own — one was there, and every short walk collided with it.
-  return `<svg class="rose" viewBox="0 0 ${W} ${H}" role="img" aria-label="Travel time from ${base.name} to each stop. ${names}.">
+  return `<svg class="rose" viewBox="0 0 ${W} ${H}" role="img" aria-label="Travel time from ${base.hotel || base.name} to each stop. ${names}.">
     <g class="rings">${ringCircles}${spokes}</g>
     <text class="compass" x="${CX}" y="${CY - R - 12}" text-anchor="middle">N</text>
     <g class="spurs">${dots}</g>
