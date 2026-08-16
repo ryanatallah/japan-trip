@@ -924,12 +924,13 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
   .sheet-col:last-child { grid-column: 1 / -1; }
 }
 
-/* The rail is the complication, not the viewport. It only opens at 1180 and up, and when it does
-   it takes 272px off the content column — so between 1180 and about 1260 the two-up layouts are
-   squeezed even though the viewport looks roomy. Collapsing on viewport width alone (this was
-   briefly `max-width: 1100`) also unstuck the rose at widths where the rail is shut and there is
-   plenty of room. Gate it on the rail actually being open instead. */
-@media (min-width: 981px) and (max-width: 1260px) {
+/* The rail is the complication, not the viewport. It only *pushes the page over* at 1180 and up
+   — below that it is an overlay drawer that costs the content column nothing — and when it does
+   push, it takes 272px, so between 1180 and about 1260 the two-up layouts are squeezed even
+   though the viewport looks roomy. Both bounds matter: collapsing on viewport width alone (this
+   was briefly `max-width: 1100`) unstuck the rose where the rail is shut and there is plenty of
+   room, and starting at 981 collapsed the layout merely for opening the drawer on a tablet. */
+@media (min-width: 1180px) and (max-width: 1260px) {
   [data-outline="on"] .base-grid { grid-template-columns: 1fr; }
   [data-outline="on"] .rosefig { position: static; max-width: 24rem; margin-inline: auto; }
   [data-outline="on"] .sheet-grid { grid-template-columns: 1fr 1fr; }

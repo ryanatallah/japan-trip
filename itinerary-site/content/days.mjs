@@ -405,10 +405,15 @@ export function legs() {
     if (last && last.base === d.base) { last.days.push(d); continue; }
     out.push({ base: d.base, days: [d] });
   }
+  // A base-less run is a travel day. The first and last are the flights out and home; any other
+  // — an overnight train, a gap between check-out and the next check-in — is neither, and must
+  // not reuse the 'return' id or two sections end up sharing a DOM id and an outline entry.
   return out.map((leg, i) => ({
     ...leg,
-    id: leg.base || (i === 0 ? 'depart' : 'return'),
-    label: leg.base ? LEG_LABEL[leg.base] : (i === 0 ? 'Getting there' : 'Getting home'),
+    id: leg.base || (i === 0 ? 'depart' : i === out.length - 1 ? 'return' : `transit-${i}`),
+    label: leg.base
+      ? LEG_LABEL[leg.base]
+      : i === 0 ? 'Getting there' : i === out.length - 1 ? 'Getting home' : 'In transit',
     span: leg.days.length === 1
       ? leg.days[0].date
       : `${leg.days[0].date} – ${leg.days[leg.days.length - 1].date}`,

@@ -1,6 +1,6 @@
 // Clock arithmetic for the runbook.
 //
-// The whole point of content/logistics.mjs is that leave-by times are not typed in — they are
+// The whole point of content/days.mjs is that leave-by times are not typed in — they are
 // subtracted from the fixed point they have to deliver you to. Change a journey duration and
 // every dependent time on the page moves with it. These are the pure functions that do it.
 
@@ -46,7 +46,7 @@ function journeys(day) {
 }
 
 /**
- * Resolve one journey to { legs, total, leaveBy, arriveAt, anchor }.
+ * Resolve one journey to { legs, travel, connect, total, leaveBy, anchor, derived }.
  * `leaveBy` is derived when the journey is anchored to a fixed point, and stated when the move
  * simply says what time you go. `null` means neither — an unanchored leg.
  */
@@ -72,8 +72,10 @@ export function resolveJourney(legs, day) {
     derived = legs.length > 1;
   }
 
-  const arriveAt = leaveBy == null ? null : leaveBy + total;
-  return { legs, travel, connect, total, leaveBy, arriveAt, anchor, derived };
+  // No `arriveAt`: it would be leaveBy + total, and leaveBy has already been floored to five
+  // minutes, so it disagreed with the journey's own anchor by a couple of minutes. Nothing read
+  // it. Derive it from the anchor if it is ever needed.
+  return { legs, travel, connect, total, leaveBy, anchor, derived };
 }
 
 export const dayJourneys = (day) => journeys(day).map((legs) => resolveJourney(legs, day));

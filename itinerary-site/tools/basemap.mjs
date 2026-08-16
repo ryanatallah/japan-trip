@@ -12,8 +12,13 @@
 // That makes the rings the useful thing on the page: everything inside the 15-minute ring needs
 // no planning, and everything outside the hour ring costs you a morning.
 //
+// Durations come from tools/schedule.mjs so the ring labels and the stop list beside the figure
+// are typeset identically — a local copy of this formatter drifted to "1 h" against the list's "1h".
+//
 // Dots are numbered and the detail lives in the list beside the figure — with ten to fourteen
 // stops per base, labelling in place would collide no matter how it was nudged.
+
+import { dur } from './schedule.mjs';
 
 const W = 560, H = 560;
 const CX = W / 2, CY = H / 2;
@@ -29,10 +34,6 @@ const toRad = (d) => (d * Math.PI) / 180;
 
 /** Log scale so walking distances stay legible next to two-hour day trips. */
 const radiusFor = (min, max) => Math.max(MIN_R, R * (Math.log(1 + min / T) / Math.log(1 + max / T)));
-
-const clock = (min) => (min < 60
-  ? `${min} min`
-  : min % 60 === 0 ? `${min / 60} h` : `${Math.floor(min / 60)}h ${min % 60}`);
 
 /** Unit vector from the hotel toward a stop. dy is positive northward. */
 function heading(from, to) {
@@ -110,7 +111,7 @@ export function renderRose(base, placed) {
   const ringCircles = rings.map((v) => `<circle class="ring" cx="${CX}" cy="${CY}" r="${radiusFor(v, max).toFixed(1)}"/>`).join('');
   const ringLabels = rings.map((v) => {
     const r = radiusFor(v, max);
-    return `<text class="ring-t" x="${CX + 5}" y="${(CY - r + 15).toFixed(1)}">${clock(v)}</text>`;
+    return `<text class="ring-t" x="${CX + 5}" y="${(CY - r + 15).toFixed(1)}">${dur(v)}</text>`;
   }).join('');
 
   // Four faint spokes, so a bearing can actually be read off the figure.
@@ -139,5 +140,3 @@ export function renderRose(base, placed) {
     <g class="ringlabels">${ringLabels}</g>
   </svg>`;
 }
-
-export { clock };

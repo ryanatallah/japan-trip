@@ -712,7 +712,7 @@ function daySheet(d) {
     const head = j.leaveBy == null ? '' : `<p class="j-leave">
         <span class="j-clock">${toClock(j.leaveBy)}</span>
         <span class="j-word">${j.derived ? 'leave by' : 'leave'}</span>
-        <span class="j-tail">${dur(j.total)}${j.anchor ? ` · for ${esc(j.anchor.t)} ${esc(j.anchor.what.replace(/^./, (c) => c.toLowerCase()))}` : ''}</span>
+        <span class="j-tail">${dur(j.total)}${j.anchor ? ` · for ${esc(j.anchor.t)} ${esc(j.anchor.what)}` : ''}</span>
       </p>`;
     return `<div class="journey${j.derived ? ' is-derived' : ''}">${head}<ul class="legs">${legs}</ul></div>`;
   }).join('') : `<p class="none">${esc(d.noMoves || 'You stay put.')}</p>`;
@@ -785,6 +785,16 @@ function buildIssues() {
   const open = issues.filter((i) => !i.resolved);
   const done = issues.filter((i) => i.resolved);
   const count = (k) => open.filter((i) => i.kind === k).length;
+
+  // An issue whose `kind` matches no group would render nowhere and go uncounted — a silent
+  // disappearance from the one page whose whole promise is that nothing is forgotten. Fail the
+  // build instead; a typo'd kind should never reach a deploy.
+  const known = new Set(ISSUE_GROUPS.map(([kind]) => kind));
+  const stray = issues.filter((i) => !known.has(i.kind));
+  if (stray.length) {
+    throw new Error(`content/issues.mjs: unknown kind on ${stray.map((i) => `${i.id} (${i.kind})`).join(', ')}`
+      + ` — must be one of ${[...known].join(', ')}, or the issue renders nowhere.`);
+  }
 
   const groups = ISSUE_GROUPS.map(([kind, label, sub]) => {
     const list = open.filter((i) => i.kind === kind);
