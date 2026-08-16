@@ -5,23 +5,24 @@
 export const entities = {
   // ─────────────────────────────────────────────────────────── STAYS ──
 
-  'palace-hotel-tokyo': {
-    name: 'Palace Hotel Tokyo',
+  'aman-tokyo': {
+    name: 'Aman Tokyo',
     type: 'stay',
-    location: 'Marunouchi, Tokyo',
-    badges: ['3 Michelin Keys'],
-    rate: '≈ $1,100 / night',
-    url: 'https://en.palacehoteltokyo.com/',
+    location: 'Otemachi, Tokyo',
+    badges: ['2 Michelin Keys', '71 m² entry-level rooms'],
+    rate: '≈ $1,600 / night',
+    url: 'https://www.aman.com/hotels/aman-tokyo',
     blurb:
-      'The one Tokyo hotel that feels like it has a garden. It sits directly on the Imperial Palace moat, and a large share of its rooms have actual balconies over the water — close to unheard of at this level in Tokyo. Quiet, adult, and a five-minute walk from Tokyo Station, which matters when you are moving on to the shinkansen.',
+      'Eighty-four rooms on the top six floors of Otemachi Tower, entered through a lobby atrium that runs the full height of the building under a ceiling of washi panels — one of the genuinely great rooms in Tokyo, and worth a drink even if you sleep elsewhere. The entry-level rooms are 71 m², roughly double what the city\'s other five-stars call a standard room, and most look over the Imperial Palace woods with Fuji on the horizon on a clear morning. Still a five-minute walk to Tokyo Station for the shinkansen, and the Chuo line out to Ome for the forge.',
     facts: [
       ['Why it is here', 'Base for the Tokyo half of itineraries 1, 2, 3 and 5'],
-      ['Setting', 'Imperial Palace moat and gardens; Marunouchi business district'],
-      ['Rooms', 'Balcony rooms overlooking the moat are the ones to book'],
-      ['Dining', 'Esterre (Ducasse), Wadakura kaiseki, Grand Kitchen, the Royal Bar'],
-      ['Spa', 'evian SPA with a 20m pool'],
+      ['Setting', 'Floors 33–38 of Otemachi Tower, over the Imperial Palace woods'],
+      ['Rooms', 'Ask for Palace-side; the city-side rooms face office towers'],
+      ['Dining', 'Musashi (8-seat Edomae sushi), Arva (Italian), The Lounge, The Café, La Pâtisserie'],
+      ['Spa', 'Two floors — onsen-style stone baths, a 30 m pool, yoga and pilates studios'],
+      ['The trade', 'About $500/night over the Palace Hotel, and one Michelin Key fewer'],
     ],
-    gf: 'Large international kitchen with the depth to handle a celiac brief — declare at booking. Grand Kitchen is the reliable everyday option.',
+    gf: 'Arva is the reliable everyday room — Italian kitchens handle coeliac well and gluten-free pasta is standard. Musashi is an eight-seat counter where the chef ferments his own miso and soy, so an advance conversation genuinely lands, but confirm rather than assume: house-made shoyu is usually still wheat-based, and nikiri is brushed onto most pieces. Declare at booking, not on arrival.',
   },
 
   'gora-kadan': {

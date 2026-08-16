@@ -6,11 +6,11 @@ Five self-guided itineraries built from [seeds](seeds.md) + fresh research (July
 
 | # | Itinerary | Dates (Sat/Sun anchored) | Regions | Est. total (couple) | Temp band | Best for |
 |---|-----------|--------------------------|---------|--------------------:|-----------|----------|
-| 1 | Peak Momiji Classic | Sat Nov 14 → Sun Nov 29 | Tokyo → Hakone → Kyoto | $31–37k | ✅ 45–65°F | Peak foliage + crafts + the two seed restaurants |
-| 2 | Crafts, Crab & Snow Monkeys | Sat Nov 7 → Sun Nov 22 | Tokyo → Nagano → Kanazawa/Kaga → Kyoto | $27–31k | ✅ mostly (Nagano 40s) | Hands-on crafts, crab season, monkeys |
-| 3 | Wildlife North + Momiji Finale | Sat Nov 14 → Sun Nov 29 | Tokyo → E. Hokkaido → Kyoto | $28–32k | ⚠️ Hokkaido 20–40°F (flexed) | Ezo flying squirrel + cranes + peak Kyoto |
+| 1 | Peak Momiji Classic | Sat Nov 14 → Sun Nov 29 | Tokyo → Hakone → Kyoto | $33–39k | ✅ 45–65°F | Peak foliage + crafts + the two seed restaurants |
+| 2 | Crafts, Crab & Snow Monkeys | Sat Nov 7 → Sun Nov 22 | Tokyo → Nagano → Kanazawa/Kaga → Kyoto | $29–33k | ✅ mostly (Nagano 40s) | Hands-on crafts, crab season, monkeys |
+| 3 | Wildlife North + Momiji Finale | Sat Nov 14 → Sun Nov 29 | Tokyo → E. Hokkaido → Kyoto | $29–33k | ⚠️ Hokkaido 20–40°F (flexed) | Ezo flying squirrel + cranes + peak Kyoto |
 | 4 | Southern Warmth | Sat Oct 31 → Sun Nov 15 | Fukuoka → Kurokawa/Aso → Yakushima → Kyoto | $27–30k | ✅✅ 55–70°F throughout | Warmest; road trip; most in-budget |
-| 5 | The Grand Tour (stretch) | Sat Nov 14 → Thu Dec 3 | Tokyo → Hokkaido → Kyoto → Hakone | $36–42k | ⚠️ mixed | Everything; breaks budget + Sat/Sun return |
+| 5 | The Grand Tour (stretch) | Sat Nov 14 → Thu Dec 3 | Tokyo → Hokkaido → Kyoto → Hakone | $38–44k | ⚠️ mixed | Everything; breaks budget + Sat/Sun return |
 
 **Date logic.** Kyoto's 2026 foliage is forecast to peak **Nov 25–Dec 7** (densest Nov 29–Dec 3) — later than average. So itineraries wanting peak Kyoto should end as late as possible, with Kyoto last. Kenrokuen (Kanazawa) peaks mid-Nov; Japan Alps peaked mid-Oct (Kamikochi closes Nov 15 — excluded); Kyushu runs early–late Nov; Hokkaido foliage is over — there it's pre-winter wildlife season. Crane feeding at Tsurui starts mid-to-late Nov; Ezo momonga are viewable year-round with a guide. Kyoto crowds are worst Nov 15–25 (incl. Nov 21–23 holiday weekend); the Nov 29–Dec 3 tail has peak color with the crowd wave passing.
 
@@ -59,7 +59,7 @@ Per-couple estimates: business flights $9–11k; ryokan rates include kaiseki di
 | Day | Where | Plan |
 |---|---|---|
 | Sat 14 | ✈ | SFO→HND, ANA The Room |
-| Sun 15 | Tokyo | Land, private transfer, gentle evening — Palace Hotel Tokyo (3 Michelin Keys, ~$1,100/n) |
+| Sun 15 | Tokyo | Land, private transfer, gentle evening — Aman Tokyo (2 Michelin Keys, ~$1,600/n) |
 | Mon 16 | Tokyo | Meiji Jingu + Omotesando; icho (ginkgo) starting to turn; evening yakitori shio counter |
 | Tue 17 | Tokyo (Ome) | **Hirata sword smithing** — forge a small katana with the husband-wife smiths, engraved + shipped home (150 min, ~$1,700/couple). The exact experience from seeds, Ashly-approved 👍 |
 | Wed 18 | Tokyo | **Mutoh modern kintsugi, Nihonbashi** (90 min, ~$460/couple) — take the repaired piece home same-day; teamLab or Yanaka stroll; **L'Effervescence** dinner (3★, printed GF menu, ~$1,200/couple) |
@@ -78,13 +78,13 @@ Per-couple estimates: business flights $9–11k; ryokan rates include kaiseki di
 | Cost (couple) | Est. |
 |---|---:|
 | Flights (open-jaw business) | $9,500 |
-| Hotels: Palace 4n + Gora Kadan 2n (HB) + Sowaka 7n | $16,300 |
+| Hotels: Aman 4n + Gora Kadan 2n (HB) + Sowaka 7n | $18,300 |
 | Dining (2 kaiseki ryokan nights incl. above) | $4,200 |
 | Experiences (sword, 2× kintsugi, Raku, kyudo, indigo, matcha) | $4,900 |
 | Ground (Green Car, transfers, takkyubin) | $1,300 |
-| **Total** | **≈ $36,200** |
+| **Total** | **≈ $38,200** |
 
-**Levers to ~$31k:** United/consolidator fares (−$2k), swap 2 craft modules out (−$2k), Hakone Gora Byakudan instead of Gora Kadan (−$1.3k). Kyoto at the Mitsui instead of Sowaka adds $7–20k. This is the trip the seeds describe most literally — it just lands at the top of budget because peak-Kyoto November is Japan's most expensive room-night of the year. **Book Kyoto hotels and Kikunoi immediately** (peak rooms sell ~12 weeks out, and desirable dates 9–12 months out).
+**Levers to ~$33k:** United/consolidator fares (−$2k), swap 2 craft modules out (−$2k), Hakone Gora Byakudan instead of Gora Kadan (−$1.3k). Kyoto at the Mitsui instead of Sowaka adds $7–20k. This is the trip the seeds describe most literally. It now lands about $8k over the top of budget: peak-Kyoto November is Japan's most expensive room-night of the year, and the Aman swap adds $2k on top of that. **Book Kyoto hotels and Kikunoi immediately** (peak rooms sell ~12 weeks out, and desirable dates 9–12 months out).
 
 ---
 
@@ -96,7 +96,7 @@ Per-couple estimates: business flights $9–11k; ryokan rates include kaiseki di
 | Day | Where | Plan |
 |---|---|---|
 | Sat 7 | ✈ | SFO→HND |
-| Sun 8 | Tokyo | Land; Palace Hotel Tokyo (~$1,100/n) |
+| Sun 8 | Tokyo | Land; Aman Tokyo (~$1,600/n) |
 | Mon 9 | Tokyo (Ome) | **Hirata sword smithing** (as It.1); izakaya evening with GF list |
 | Tue 10 | Tokyo | **Mutoh kintsugi Nihonbashi**; **L'Effervescence** dinner (GF menu) |
 | Wed 11 | Nagano | Gran Class Tokyo→Nagano (1h20); Zenko-ji; on to **Kokuya, Shibu Onsen** (400-year ryokan, ~$650/n HB) — master key to the town's nine bathhouses |
@@ -115,11 +115,11 @@ Per-couple estimates: business flights $9–11k; ryokan rates include kaiseki di
 | Cost (couple) | Est. |
 |---|---:|
 | Flights | $9,500 |
-| Hotels: Palace 3n + Kokuya 2n (HB) + Kanazawa 1n + Mukayu 2n (HB) + Sowaka 5n | $12,400 |
+| Hotels: Aman 3n + Kokuya 2n (HB) + Kanazawa 1n + Mukayu 2n (HB) + Sowaka 5n | $13,900 |
 | Dining | $3,800 |
 | Experiences | $3,900 |
 | Ground (Gran Class, expresses, transfers) | $1,200 |
-| **Total** | **≈ $30,800** |
+| **Total** | **≈ $32,300** |
 
 **Notes:** Kyoto days land Nov 17–22 — color building but likely just before the forecast peak, in exchange for ~$300/night cheaper rooms and the full Kanazawa crab-and-Kenrokuen alignment. The densest craft itinerary of the five. Watch: Nov 21–23 holiday weekend crowds at the tail.
 
@@ -133,7 +133,7 @@ Per-couple estimates: business flights $9–11k; ryokan rates include kaiseki di
 | Day | Where | Plan |
 |---|---|---|
 | Sat 14 | ✈ | SFO→HND |
-| Sun 15 | Tokyo | Land; Palace Hotel 1n; recovery evening |
+| Sun 15 | Tokyo | Land; Aman Tokyo 1n; recovery evening |
 | Mon 16 | Tokyo | **Mutoh kintsugi** morning; afternoon HND→Kushiro; pick up 4WD; **Akan Tsuruga Bessou Hinanoza**, Lake Akan (25 suites, all private onsen — the honest luxury ceiling out east, ~$850/n HB) |
 | Tue 17 | Akan/Tsurui | **Red-crowned cranes at Tsurui-Ito Sanctuary** — feeding season starts mid-to-late Nov; numbers building, not yet the Jan–Feb 300-bird spectacle. Ural owl roost + Ezo deer/fox with local guide |
 | Wed 18 | Kussharo | **Whooper swans arriving at Lake Kussharo** (Kotan/Sunayu lakeside onsen); Mt. Io; second Hinanoza night |
@@ -147,12 +147,12 @@ Per-couple estimates: business flights $9–11k; ryokan rates include kaiseki di
 |---|---:|
 | Flights international | $9,500 |
 | Domestic flights (HND–Kushiro, Kushiro–ITM via HND) | $900 |
-| Hotels: Tokyo 1n + Hinanoza 3n (HB) + Kushiro 1n + Sowaka 6n | $12,000 |
+| Hotels: Aman 1n + Hinanoza 3n (HB) + Kushiro 1n + Sowaka 6n | $12,500 |
 | Car (4WD 4 days + fuel/tolls) | $700 |
 | Dining | $3,600 |
 | Experiences + guides | $3,300 |
 | Ground | $900 |
-| **Total** | **≈ $30,900** |
+| **Total** | **≈ $31,400** |
 
 **Honesty box:** Shiretoko is deliberately absent — the pass closes early Nov, Five Lakes trails close late Nov, bear cruises are done, and drift-ice eagles are a February show. Late Nov delivers momonga, arriving cranes, swans, owls, foxes — genuinely good, but the iconic winter postcards (crane courtship in snow, Otowa Bridge mist) need a Jan–Feb trip. If squirrels alone justify Hokkaido for you, this itinerary works; if you want the full winter spectacle, do Itinerary 1 or 2 now and bank a dedicated February photo trip.
 
@@ -207,11 +207,11 @@ Day flow: Tokyo (Hirata sword, Mutoh kintsugi, L'Effervescence) → fly Kushiro,
 | Cost (couple) | Est. |
 |---|---:|
 | Flights intl + domestic | $10,800 |
-| Hotels (17 nights: Palace 3 + Hinanoza 3 + Sowaka 6 + Gora Kadan 2 + Tokyo 1, HB where noted) | $19,500 |
+| Hotels (17 nights: Aman 3 + Hinanoza 3 + Sowaka 6 + Gora Kadan 2 + Tokyo 1, HB where noted) | $21,000 |
 | Dining / experiences / car / ground | $9,200 |
-| **Total** | **≈ $39,500** |
+| **Total** | **≈ $41,000** |
 
-**Breaks two seed rules** — budget ($36–42k) and the Sat/Sun return (lands Thu Dec 3). Included because it's the only single-trip answer to "peak Kyoto + flying squirrels + Gora Kadan." Trim to budget by cutting Hakone (−$3.5k) and two craft modules (−$2k) → ~$34k.
+**Breaks two seed rules** — budget ($38–44k) and the Sat/Sun return (lands Thu Dec 3). Included because it's the only single-trip answer to "peak Kyoto + flying squirrels + Gora Kadan." Trim to budget by cutting Hakone (−$3.5k) and two craft modules (−$2k) → ~$35.5k.
 
 ---
 

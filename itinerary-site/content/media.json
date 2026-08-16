@@ -83,6 +83,168 @@
    "credit": "Joseph C Boone, Wikimedia Commons, CC BY-SA 4.0"
   }
  ],
+ "aman-tokyo": [
+  {
+   "file": "aman-tokyo-01.jpg",
+   "thumb": "aman-tokyo-01-t.jpg",
+   "w": 1600,
+   "h": 2105,
+   "category": "setting",
+   "caption": "The lobby atrium on the 33rd floor: a washi-panelled ceiling lifting the full height of the room, dark stone walls, and low seating running the length of the space under raking afternoon light",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2023-01/Aman%20Tokyo%20-%20Japan%20-%20Lobby.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-02.jpg",
+   "thumb": "aman-tokyo-02-t.jpg",
+   "w": 1600,
+   "h": 2106,
+   "category": "setting",
+   "caption": "The atrium at sunset, seen from the upper level — tall dark timber lattice screens filtering the low sun, guests seated at tables along the window wall",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2022-07/Ben_Richards_Aman_Tokyo_Autumn_026%20%281%29.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-03.jpg",
+   "thumb": "aman-tokyo-03-t.jpg",
+   "w": 1600,
+   "h": 987,
+   "category": "dining",
+   "caption": "The Lounge by Aman: double-height windows over the Imperial Palace woods with the Shinjuku skyline beyond, and the snow-capped cone of Mt Fuji visible on the horizon at left of centre",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2025-04/aman_tokyo_japan_-_the_lounge_by_aman_0.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-04.jpg",
+   "thumb": "aman-tokyo-04-t.jpg",
+   "w": 1600,
+   "h": 1600,
+   "category": "exterior",
+   "caption": "The Café by Aman — a low glass pavilion with a glowing amber ceiling band, set among the trees of the Otemachi Forest at the foot of Otemachi Tower",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2025-04/aman_tokyo_japan_-_fampb_the_cafe_by_aman_forest_exterior.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-05.jpg",
+   "thumb": "aman-tokyo-05-t.jpg",
+   "w": 1600,
+   "h": 987,
+   "category": "exterior",
+   "caption": "The same glass café pavilion seen at ground level through ferns and slender trunks, guests visible inside — the planted forest that wraps the tower's base",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2026-05/Aman-Tokyo--Japan---F-B---The-Cafe-by-Aman---Exterior-2.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-06.jpg",
+   "thumb": "aman-tokyo-06-t.jpg",
+   "w": 1600,
+   "h": 987,
+   "category": "room",
+   "caption": "A Deluxe Room: low platform bed against a pale washi-textured wall, light oak joinery, a single ink drawing, and a tatami-edged rug on oak floorboards",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2021-02/Deluxe%20Room%2C%20Aman%20Tokyo%2C%20Japan.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-07.jpg",
+   "thumb": "aman-tokyo-07-t.jpg",
+   "w": 1600,
+   "h": 987,
+   "category": "room",
+   "caption": "The window seat in a Deluxe Palace Garden View room — a round table and two chairs at floor-to-ceiling glass, looking down over the wooded Imperial Palace grounds and the moat",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2021-02/Deluxe%20Palace%20Garden%20View%20Room%2C%20Aman%20Tokyo%2C%20Japan.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-08.jpg",
+   "thumb": "aman-tokyo-08-t.jpg",
+   "w": 1600,
+   "h": 1601,
+   "category": "room",
+   "caption": "A twin suite bedroom with two beds facing a full-width window over the palace woods, shoji screens on the right wall and a long oak desk across the middle of the room",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2024-05/aman_tokyo_japan_-_twin_suite_bedroom_with_view.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-09.jpg",
+   "thumb": "aman-tokyo-09-t.jpg",
+   "w": 1600,
+   "h": 1600,
+   "category": "room",
+   "caption": "A suite sitting area: fluted oak panelling, a daybed built into the window ledge, and the Tokyo Skytree standing on the horizon to the right",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2023-08/aman_tokyo_tokyo_suite_lounge.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-10.jpg",
+   "thumb": "aman-tokyo-10-t.jpg",
+   "w": 1600,
+   "h": 2108,
+   "category": "bath",
+   "caption": "A dark granite soaking tub set into the corner window of a suite bathroom, filled and still, with the Otemachi towers dropping away directly below the glass",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2021-08/Aman_Tokyo_Suite.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-11.jpg",
+   "thumb": "aman-tokyo-11-t.jpg",
+   "w": 1600,
+   "h": 1600,
+   "category": "bath",
+   "caption": "The bathing room seen from the bedroom through a hinoki-framed opening — a square stone tub against grey stone walls, with sliding shoji that close the two rooms off from each other",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2023-11/aman_tokyo_tokyo_suite_bathroom.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-12.jpg",
+   "thumb": "aman-tokyo-12-t.jpg",
+   "w": 1600,
+   "h": 988,
+   "category": "bath",
+   "caption": "The 30-metre pool on the wellness floor at dusk, walled in grey stone, with a full moon rising over the mountains through the end window and Mt Fuji visible at far left",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2021-02/Aman-Tokyo_Gallery_26.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-13.jpg",
+   "thumb": "aman-tokyo-13-t.jpg",
+   "w": 1600,
+   "h": 1600,
+   "category": "setting",
+   "caption": "The pool by day, a guest walking the stone deck past stacked towels, the city spread out beyond the full-height window wall",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2023-07/ben_richards_aman_tokyo_autumn_007.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-14.jpg",
+   "thumb": "aman-tokyo-14-t.jpg",
+   "w": 1600,
+   "h": 2105,
+   "category": "dining",
+   "caption": "Musashi by Aman: the hinoki cypress counter set with lacquer trays, folded towels and chopsticks, the chef working alone at the far end under a lit washi panel",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2026-05/Aman-Tokyo--Japan---F-B--Musashi-by-Aman--8-.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-15.jpg",
+   "thumb": "aman-tokyo-15-t.jpg",
+   "w": 1600,
+   "h": 1600,
+   "category": "people",
+   "caption": "Master chef Hiroyuki Musashi at his counter in a white jacket embroidered with the restaurant's kanji, shaping a piece of nigiri on a dark board",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2025-10/Aman%20Tokyo%2C%20Japan%20-%20F%26B%2C%20Musashi%20by%20Aman.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "aman-tokyo-16.jpg",
+   "thumb": "aman-tokyo-16-t.jpg",
+   "w": 1600,
+   "h": 1600,
+   "category": "food",
+   "caption": "Afternoon tea in the atrium: a three-tier iron stand of savouries, pastries and berry tartlets with warm scones, two pink sparkling cocktails and grey stoneware cups against a raw concrete wall",
+   "sourceUrl": "https://www.aman.com/sites/default/files/2025-08/Aman%20Tokyo%2C%20Japan%20-%20F%26B%2C%20The%20Lounge%20by%20Aman%2C%20Afternoon%20Tea.webp",
+   "confidence": "high"
+  }
+ ],
  "ana-the-room": [
   {
    "file": "ana-the-room-01.jpg",
@@ -3229,168 +3391,6 @@
    "category": "setting",
    "caption": "Omotesando boulevard at dusk seen from the pedestrian bridge, the zelkova (keyaki) canopy arching over both sides of the street above the flagship stores and traffic. Foliage is green, so this is a warm-season photograph, not late November",
    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Omotesando_Avenue_at_sunset_from_pedestrian_bridge%2C_Jingumae%2C_Shibuya%2C_Tokyo.jpg",
-   "confidence": "high"
-  }
- ],
- "palace-hotel-tokyo": [
-  {
-   "file": "palace-hotel-tokyo-01.jpg",
-   "thumb": "palace-hotel-tokyo-01-t.jpg",
-   "w": 1600,
-   "h": 1062,
-   "category": "exterior",
-   "caption": "The hotel's white curved facade rising behind the Imperial Palace moat, with the Tatsumi watchtower and its stone rampart in the foreground and red autumn maples at right",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Exterior-with-Tatsumi-Watchtower-III-F2-1.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-02.jpg",
-   "thumb": "palace-hotel-tokyo-02-t.jpg",
-   "w": 1600,
-   "h": 931,
-   "category": "exterior",
-   "caption": "The hotel seen across the Imperial Palace moat, two swans on the water and the moat's stone embankment and tree line running the length of the frame",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Exterior-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-03.jpg",
-   "thumb": "palace-hotel-tokyo-03-t.jpg",
-   "w": 1600,
-   "h": 899,
-   "category": "setting",
-   "caption": "Autumn view from the hotel over the Imperial Palace outer gardens, maples in full red and gold colour, with the Marunouchi and Toranomon skyline and Tokyo Tower behind",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Autumn-View-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-04.jpg",
-   "thumb": "palace-hotel-tokyo-04-t.jpg",
-   "w": 1600,
-   "h": 800,
-   "category": "setting",
-   "caption": "The main lobby: a gold-leaf screen wall depicting pines and irises on the left, a round table with a large floral arrangement, and floor-to-ceiling glass looking out to a red maple against the moat's stone wall",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Main-Lobby-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-05.jpg",
-   "thumb": "palace-hotel-tokyo-05-t.jpg",
-   "w": 1600,
-   "h": 900,
-   "category": "room",
-   "caption": "Deluxe Room with Balcony: king bed, wood-panelled headboard wall, and a full-width sliding glass door onto a private balcony with chairs, overlooking the palace greenery",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Deluxe-Room-with-Balcony-King-Daytime-2023-F2-sm.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-06.jpg",
-   "thumb": "palace-hotel-tokyo-06-t.jpg",
-   "w": 1600,
-   "h": 900,
-   "category": "room",
-   "caption": "Grand Deluxe Room with Balcony seen from the bedside: armchairs and a tea service on a round table, with the balcony and the wooded Imperial Palace grounds through the glass",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Grand-Deluxe-Room-with-Balcony-King-Bedside-Image-Daytime-2023-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-07.jpg",
-   "thumb": "palace-hotel-tokyo-07-t.jpg",
-   "w": 1600,
-   "h": 900,
-   "category": "room",
-   "caption": "Chiyoda Suite bedroom at night: low platform bed in blond wood, slatted timber screen behind the headboard, and lit high-rise towers through the window",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Chiyoda-Suite-Bedroom-Evening-2023-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-08.jpg",
-   "thumb": "palace-hotel-tokyo-08-t.jpg",
-   "w": 1600,
-   "h": 900,
-   "category": "bath",
-   "caption": "Chiyoda Suite bathroom: green-marble deep soaking tub filling from a wall spout beside a window, glass walk-in rain shower, and a dark stone double vanity with amenities",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Chiyoda-Suite-Bathroom-Daytime-2023-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-09.jpg",
-   "thumb": "palace-hotel-tokyo-09-t.jpg",
-   "w": 1600,
-   "h": 1066,
-   "category": "bath",
-   "caption": "Grand Deluxe Room bathroom at night: limestone vanity with mirrored wall, separate glass shower, and a soaking tub set against a window over the lit city",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Grand-Deluxe-Room-Bathroom-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-10.jpg",
-   "thumb": "palace-hotel-tokyo-10-t.jpg",
-   "w": 1600,
-   "h": 828,
-   "category": "bath",
-   "caption": "The hotel's indoor swimming pool at dusk with a circular jacuzzi in the foreground, red loungers, and floor-to-ceiling windows over the palace grounds and Tokyo skyline",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Swimming-Pool-II-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-11.jpg",
-   "thumb": "palace-hotel-tokyo-11-t.jpg",
-   "w": 1580,
-   "h": 780,
-   "category": "dining",
-   "caption": "Wadakura, the hotel's Japanese restaurant: wood tables with lacquer trays and a black rough-hewn stone wall, glass on the left looking over the moat and palace gardens",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Wadakura-Main-Dining-Daytime-2023-Gallery.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-12.jpg",
-   "thumb": "palace-hotel-tokyo-12-t.jpg",
-   "w": 1580,
-   "h": 780,
-   "category": "dining",
-   "caption": "Esterre, the Alain Ducasse restaurant: round tables in cream linen with candle lamps, sculpted upholstered chairs, framed botanical studies on the wall and a lit fireplace at the back",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Esterre-Evening-G.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-13.jpg",
-   "thumb": "palace-hotel-tokyo-13-t.jpg",
-   "w": 1580,
-   "h": 780,
-   "category": "dining",
-   "caption": "The Royal Bar: plum velvet wingback armchairs around a figured-marble table, backed by lit glass shelves of whisky, cognac and cut-crystal glassware",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Royal-Bar-G.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-14.jpg",
-   "thumb": "palace-hotel-tokyo-14-t.jpg",
-   "w": 1600,
-   "h": 1068,
-   "category": "food",
-   "caption": "In-room dining breakfast served on a guest-room balcony: omelette with ham and salad, croissant and bread basket, juice and sparkling water, on a wooden table above the palace moat and gardens",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-In-Room-Dining-Breakfast-Balcony-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-15.jpg",
-   "thumb": "palace-hotel-tokyo-15-t.jpg",
-   "w": 1600,
-   "h": 900,
-   "category": "food",
-   "caption": "Crab course from a Wadakura kaiseki menu: steamed snow-crab legs and shoulder meat with picked crab and crab miso served in the shell, carved cucumber and radish garnish and sudachi, on a rustic glazed plate",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Wadakura-Christmas-2025-Prix-Fixe-Crab-Kaiseki-F2.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "palace-hotel-tokyo-16.jpg",
-   "thumb": "palace-hotel-tokyo-16-t.jpg",
-   "w": 1600,
-   "h": 900,
-   "category": "food",
-   "caption": "Esterre plate: poached lobster tail crowned with caviar, green asparagus and a herb foam in an orange lobster bisque, in a wide off-white bowl",
-   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Esterre-Christmas-2025-Lobster-Bisque-F2.jpg",
    "confidence": "high"
   }
  ],
