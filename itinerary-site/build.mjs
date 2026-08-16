@@ -1,12 +1,18 @@
 #!/usr/bin/env node
 // Static site builder — zero dependencies. Reads content/ and emits site/.
 //
-// Three top-level pages:
-//   index.html    the plan             buildPlan()      <- content/plan.mjs
-//   history.html  how it got here      buildHistory()   <- content/history.mjs
-//   archive.html  the six that lost    buildArchive()   <- content/alternates.mjs + shared.mjs
+// Four top-level pages:
+//   index.html      the plan           buildPlan()      <- content/plan.mjs
+//   logistics.html  how it runs        buildRunbook()   <- content/logistics.mjs
+//   history.html    how it got here    buildHistory()   <- content/history.mjs
+//   archive.html    the six that lost  buildArchive()   <- content/alternates.mjs + shared.mjs
 //
 // plus one page per archived alternate, and a redirect stub at the URL the plan used to live at.
+//
+// The split between plan.mjs and logistics.mjs is by reading mode, not by subject. The plan is
+// read once at a desk, before booking; the runbook is read on the day, on a phone. Both describe
+// the same fifteen nights, and the day-by-day on the plan borrows its leave-by line from the
+// runbook's arithmetic so the two can never drift.
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, copyFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -16,7 +22,10 @@ import { alternates, recommendation, wishlist } from './content/alternates.mjs';
 import { shared } from './content/shared.mjs';
 import { revisions } from './content/history.mjs';
 import { itineraries } from './content/itineraries.mjs';
+import { bases, days as runDays, standing, corrections } from './content/logistics.mjs';
 import { renderMap } from './tools/map.mjs';
+import { placeBase, renderRose } from './tools/basemap.mjs';
+import { dayJourneys, daySummary, sortedFixed, toClock, dur } from './tools/schedule.mjs';
 
 const WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
 const ROOT = dirname(fileURLToPath(import.meta.url));
@@ -177,6 +186,7 @@ function placeCard(slug) {
 // only to the archive. `active` marks the current itinerary within that strip.
 const TOP = [
   ['index.html', 'Itinerary', 'plan'],
+  ['logistics.html', 'Logistics', 'logistics'],
   ['history.html', 'Change history', 'history'],
   ['archive.html', 'Archive', 'archive'],
 ];
@@ -405,10 +415,19 @@ function buildArchive() {
 }
 
 // ── pieces shared by the plan page and the archived alternates ───────
-const daysHtml = (it) => it.days.map((d) => `<div class="day${d.span ? ' day-span' : ''}">
+// `runbook: true` threads the derived leave-by line onto each day card. Only the plan gets it —
+// the archived alternates run on different dates, so the runbook's arithmetic does not describe
+// them and a borrowed clock time would be a lie.
+const daysHtml = (it, { runbook = false } = {}) => it.days.map((d) => {
+  const rd = runbook ? runDays.find((r) => r.date === d.date) : null;
+  const line = rd ? daySummary(rd) : null;
+  return `<div class="day${d.span ? ' day-span' : ''}">
     <div class="day-when"><span class="day-date">${esc(d.date)}</span><span class="day-where">${esc(d.where)}</span></div>
-    <div class="day-what"><p>${d.text}</p>${strip(d.ref || [])}</div>
-  </div>`).join('');
+    <div class="day-what"><p>${d.text}</p>${line
+      ? `<p class="day-run"><a href="logistics.html#${dayId(rd)}"><span class="run-tag">Runs</span>${esc(line)}</a></p>`
+      : ''}${strip(d.ref || [])}</div>
+  </div>`;
+}).join('');
 
 function entitySection(id, title, sub, slugs, { level = 3, alt = false, lead = '' } = {}) {
   if (!slugs?.length) return '';
@@ -514,8 +533,8 @@ ${placesSection(it)}
 
 <section class="sec" id="days">
   <h2>Day by day</h2>
-  <p class="sec-sub">${esc(it.dates)} · ${esc(it.length)}</p>
-  <div class="days">${daysHtml(it)}</div>
+  <p class="sec-sub">${esc(it.dates)} · ${esc(it.length)} · leave-by times come from <a href="logistics.html">the runbook</a></p>
+  <div class="days">${daysHtml(it, { runbook: true })}</div>
 </section>
 
 <section class="sec sec-alt" id="cost">
@@ -540,6 +559,197 @@ ${placesSection(it)}
     title: `The plan — ${it.title} · Japan 2026`,
     desc: `${it.length}, ${it.dates}. ${it.tagline}`,
     body, page: 'plan', section: 'plan',
+  });
+}
+
+// ── the runbook ─────────────────────────────────────────────────────
+// Everything on this page derives from content/logistics.mjs. Nothing here should ever be a
+// clock time somebody typed: the leave-by figures come out of tools/schedule.mjs, and the
+// distances on the base maps come out of the same `min` values that drive those figures.
+const dayId = (d) => `d-${d.date.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+
+const MODE = {
+  walk: 'on foot', metro: 'metro', rail: 'rail', bus: 'bus',
+  boat: 'boat', ropeway: 'ropeway', car: 'car', air: 'air',
+};
+
+const MEAL_LABEL = { b: 'Breakfast', l: 'Lunch', d: 'Dinner' };
+const MEAL_STATUS = {
+  included: ['Included', 'in'],
+  booked: ['Booked', 'bk'],
+  open: ['Open', 'op'],
+  flight: ['On board', 'fl'],
+  none: ['None', 'no'],
+};
+
+/** One base: the isochrone rose, and the list that carries everything the rose cannot. */
+function baseCard(base) {
+  const placed = placeBase(base);
+  const rows = placed.pts.map((p) => {
+    const o = p.poi;
+    const bits = [
+      o.via ? `<span class="p-via">${o.via}</span>` : '',
+      o.hours ? `<span class="p-hours"><b>Hours</b> ${o.hours}</span>` : '',
+      o.book ? `<span class="p-book"><b>Booking</b> ${o.book}</span>` : '',
+      o.warn ? `<span class="p-warn">${o.warn}</span>` : '',
+      o.why ? `<span class="p-why">${o.why}</span>` : '',
+    ].filter(Boolean).join('');
+    return `<li class="poi${o.mode === 'walk' ? ' poi-walk' : ''}">
+      <span class="p-n">${p.n}</span>
+      <div class="p-body">
+        <p class="p-head"><b>${esc(o.name)}</b>
+          <span class="p-time">${dur(o.min)}</span>
+          <span class="p-mode">${esc(MODE[o.mode] || o.mode)}</span>
+          ${o.confirm ? '<span class="p-check">confirm</span>' : ''}</p>
+        ${bits ? `<p class="p-meta">${bits}</p>` : ''}
+      </div>
+    </li>`;
+  }).join('');
+
+  const e = entities[base.entity];
+  return `<article class="base" id="base-${esc(base.id)}">
+    <header class="base-head">
+      <h3>${esc(base.name)}</h3>
+      <p class="base-meta"><span>${esc(base.where)}</span><i>·</i><span>${esc(base.dates)}</span></p>
+      <p class="base-times">Check in ${esc(base.checkIn)} · check out ${esc(base.checkOut)}${base.checkConfirm ? ' <span class="p-check">confirm</span>' : ''}${e ? ` · <a href="index.html#${esc(base.entity)}">see the hotel →</a>` : ''}</p>
+    </header>
+    <p class="base-lede">${base.lede}</p>
+    <div class="base-grid">
+      <figure class="rosefig">
+        ${renderRose(base, placed)}
+        <figcaption><b>${esc(base.name)}</b> is the centre. Direction is true; distance out is <b>door-to-door travel time</b>, not kilometres. Hollow dots are walkable.</figcaption>
+      </figure>
+      <ol class="pois">${rows}</ol>
+    </div>
+  </article>`;
+}
+
+/** One day sheet: the spine of fixed points, the journeys between them, and the meal plan. */
+function daySheet(d) {
+  const base = bases.find((b) => b.id === d.base);
+  const fixed = sortedFixed(d);
+
+  const fixedHtml = fixed.length ? `<ol class="fixed">${fixed.map((f) => `<li class="fx fx-${esc(f.kind || 'note')}">
+      <span class="fx-t">${esc(f.t)}</span>
+      <span class="fx-w">${esc(f.what)}${f.confirm ? ' <span class="p-check">confirm</span>' : ''}${f.note ? `<em>${f.note}</em>` : ''}</span>
+    </li>`).join('')}</ol>` : '<p class="none">Nothing with a clock time.</p>';
+
+  const journeys = dayJourneys(d);
+  const movesHtml = journeys.length ? journeys.map((j) => {
+    const legs = j.legs.map((m) => `<li class="leg">
+        <span class="leg-mode">${esc(MODE[m.mode] || m.mode)}</span>
+        <span class="leg-route">${esc(m.from)} → ${esc(m.to)}<span class="leg-min">${dur(m.min)}</span></span>
+        ${m.note ? `<em>${m.note}</em>` : ''}
+      </li>`).join('');
+    const head = j.leaveBy == null ? '' : `<p class="j-leave">
+        <span class="j-clock">${toClock(j.leaveBy)}</span>
+        <span class="j-word">${j.derived ? 'leave by' : 'leave'}</span>
+        <span class="j-tail">${dur(j.total)}${j.anchor ? ` · for ${esc(j.anchor.t)} ${esc(j.anchor.what.replace(/^./, (c) => c.toLowerCase()))}` : ''}</span>
+      </p>`;
+    return `<div class="journey${j.derived ? ' is-derived' : ''}">${head}<ul class="legs">${legs}</ul></div>`;
+  }).join('') : `<p class="none">${esc(d.noMoves || 'You stay put.')}</p>`;
+
+  const mealsHtml = ['b', 'l', 'd'].map((k) => {
+    const m = d.meals?.[k];
+    if (!m) return '';
+    const [label, cls] = MEAL_STATUS[m.status] || MEAL_STATUS.open;
+    return `<li class="meal meal-${cls}">
+      <span class="m-k">${MEAL_LABEL[k]}</span>
+      <span class="m-w"><b>${esc(m.where || '—')}</b>${m.at ? ` <span class="m-at">${esc(m.at)}</span>` : ''}<span class="m-s">${label}</span>
+      ${m.note ? `<em>${m.note}</em>` : ''}${m.warn ? `<em class="m-warn">${m.warn}</em>` : ''}</span>
+    </li>`;
+  }).join('');
+
+  return `<article class="sheet${d.transfer ? ' sheet-move' : ''}" id="${dayId(d)}">
+    <header class="sheet-head">
+      <p class="sheet-when"><b>${esc(d.date)}</b><span>${esc(d.dow)}</span></p>
+      <h3>${esc(d.title)}</h3>
+      <p class="sheet-base">${base
+        ? `${d.transfer ? 'Ends at' : 'Based at'} <a href="#base-${esc(base.id)}">${esc(base.name)}</a> · ${esc(d.where)}`
+        : esc(d.where)}</p>
+    </header>
+    <div class="sheet-grid">
+      <div class="sheet-col">
+        <h4>Fixed points</h4>
+        ${fixedHtml}
+      </div>
+      <div class="sheet-col">
+        <h4>Getting there</h4>
+        ${movesHtml}
+      </div>
+      <div class="sheet-col">
+        <h4>Meals</h4>
+        <ul class="meals">${mealsHtml}</ul>
+      </div>
+    </div>
+    ${d.notes?.length ? `<div class="sheet-notes"><ul class="ticks">${d.notes.map((n) => `<li>${n}</li>`).join('')}</ul></div>` : ''}
+  </article>`;
+}
+
+function buildRunbook() {
+  const corr = corrections.map((c) => `<article class="corr">
+    <p class="corr-effect">${esc(c.effect)}</p>
+    <h3>${esc(c.title)}</h3>
+    <p>${c.body}</p>
+  </article>`).join('');
+
+  const standingRows = standing.rows.map(([what, rule, when]) => `<tr>
+    <th scope="row">${esc(what)}</th><td>${esc(rule)}</td><td class="c-when">${esc(when)}</td>
+  </tr>`).join('');
+
+  const jump = runDays.map((d) => `<a href="#${dayId(d)}"><b>${esc(d.date.split(' ')[1])}</b><span>${esc(d.date.split(' ')[0])}</span></a>`).join('');
+
+  const body = `
+<header class="hero hero-plain">
+  <div class="hero-inner">
+    <p class="kicker">The runbook · ${esc(plan.dates)}</p>
+    <h1>How each day actually runs</h1>
+    <p class="hero-sub">The operational half of <a href="index.html">the plan</a>: where every stop sits relative to the hotel you are sleeping in, how long the journey takes, what time you have to leave, and what all of that does to the meal plan. Written to be read on the day rather than at a desk.</p>
+  </div>
+</header>
+
+<nav class="subnav">
+  <a href="#corrections">What this changed</a><a href="#bases">The four bases</a>
+  <a href="#days">Day sheets</a><a href="#standing">Standing constraints</a>
+</nav>
+
+<section class="sec" id="corrections">
+  <h2>Four things this turned up</h2>
+  <p class="sec-sub">Working the timetables through end to end found four items that change a booking rather than just a clock time. They are here rather than buried in a day.</p>
+  <div class="corrs">${corr}</div>
+</section>
+
+<section class="sec sec-alt" id="bases">
+  <h2>The four bases</h2>
+  <p class="sec-sub">One map per hotel. <strong>Bearing is true and distance is time</strong> — each stop sits at its real compass direction from the hotel, but its distance from the centre is door-to-door travel minutes on a log scale, so a three-minute walk and a two-hour day trip can share a figure. It is the question you actually ask standing in a lobby.</p>
+  <div class="basegrid">${bases.map((b) => baseCard(b)).join('')}</div>
+</section>
+
+<section class="sec" id="days">
+  <h2>Day sheets</h2>
+  <p class="sec-sub">${esc(plan.dates)} · ${esc(plan.length)}. Times marked <em>leave by</em> are derived — the fixed point minus the journey minus its buffer — so they move on their own if a duration changes.</p>
+  <nav class="daynav">${jump}</nav>
+  <div class="sheets">${runDays.map((d) => daySheet(d)).join('')}</div>
+</section>
+
+<section class="sec sec-alt" id="standing">
+  <h2>${esc(standing.title)}</h2>
+  <p class="sec-sub">${esc(standing.sub)}</p>
+  <div class="tablewrap"><table class="standing">
+    <thead><tr><th>What</th><th>The constraint</th><th>Bites on</th></tr></thead>
+    <tbody>${standingRows}</tbody>
+  </table></div>
+</section>
+
+<nav class="pager pager-plan">
+  <a href="index.html"><span>The trip itself</span><b>Itinerary</b><em>${esc(plan.dates)} · ${esc(plan.cost)}</em></a>
+  <a href="history.html"><span>How it got here</span><b>Change history</b><em>${revisions.length} entries</em></a>
+</nav>`;
+
+  return shell({
+    title: 'Logistics — how each day runs · Japan 2026',
+    desc: `Day sheets, hotel-centred travel-time maps and leave-by times for ${plan.dates}.`,
+    body, page: 'logistics', section: 'logistics',
   });
 }
 
@@ -678,6 +888,7 @@ function buildRedirect() {
 mkdirSync(OUT, { recursive: true });
 mkdirSync(join(OUT, 'assets'), { recursive: true });
 writeFileSync(join(OUT, 'index.html'), buildPlan());
+writeFileSync(join(OUT, 'logistics.html'), buildRunbook());
 writeFileSync(join(OUT, 'history.html'), buildHistory());
 writeFileSync(join(OUT, 'archive.html'), buildArchive());
 for (const it of alternates) writeFileSync(join(OUT, `${it.slug}.html`), buildItinerary(it));
@@ -691,7 +902,8 @@ for (const f of readdirSync(join(ROOT, 'assets-src'))) {
 // search. Belt and braces: robots.txt here, plus a noindex meta on every page.
 writeFileSync(join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
-const pages = 3 + alternates.length + 1;
+const pages = 4 + alternates.length + 1;
 const total = Object.values(media).reduce((n, l) => n + l.length, 0);
 const withPhotos = Object.keys(entities).filter((s) => hasShots(s)).length;
-console.log(`built ${pages} pages — plan, history, archive, ${alternates.length} alternates, 1 redirect · ${total} photos across ${withPhotos}/${Object.keys(entities).length} entities`);
+const stops = bases.reduce((n, b) => n + b.pois.length, 0);
+console.log(`built ${pages} pages — plan, logistics, history, archive, ${alternates.length} alternates, 1 redirect · ${total} photos across ${withPhotos}/${Object.keys(entities).length} entities · ${runDays.length} day sheets, ${stops} stops across ${bases.length} bases`);

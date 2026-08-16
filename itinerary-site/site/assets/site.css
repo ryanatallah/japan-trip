@@ -623,11 +623,160 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
   .rev { grid-template-columns: 1fr; gap: .5rem; padding: 1.6rem 0; }
 }
 
+/* ── the runbook ────────────────────────────────────────────────── */
+/* Denser and more tabular than the rest of the site on purpose: this page is read standing up,
+   looking for one number, not read through. Everything is tabular-nums so clock times in
+   adjacent rows line up vertically. */
+
+/* what this turned up */
+.corrs { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr)); }
+.corr { background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--gold); border-radius: var(--r-lg); padding: 1.2rem 1.35rem; }
+.corr h3 { font-size: 1.05rem; margin: .35rem 0 .5rem; }
+.corr p { margin: 0; color: var(--ink-2); font-size: .93rem; }
+.corr-effect { font-size: .68rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: var(--gold); margin: 0; }
+
+/* a base: rose + list */
+.basegrid { display: grid; gap: 2.4rem; }
+.base { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.2rem, 2.5vw, 1.8rem); }
+.base-head h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); margin: 0; }
+.base-meta { font-size: .88rem; color: var(--ink-3); margin: .25rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; }
+.base-meta i { font-style: normal; opacity: .5; }
+.base-times { font-size: .82rem; color: var(--ink-3); margin: .3rem 0 0; font-variant-numeric: tabular-nums; }
+.base-lede { color: var(--ink-2); max-width: var(--readw); margin: 1rem 0 1.4rem; font-size: .96rem; }
+.base-grid { display: grid; grid-template-columns: minmax(0, 27rem) minmax(0, 1fr); gap: clamp(1rem, 3vw, 2.6rem); align-items: start; }
+
+/* The SVG is authored in a 560-unit box but displayed at ~380px, so every type size in here is
+   set roughly 1.6x its apparent size. Getting this wrong once already made the figure unreadable. */
+.rosefig { margin: 0; position: sticky; top: calc(var(--nav-h) + var(--sub-h) + 12px); }
+.rosefig figcaption { font-size: .75rem; color: var(--ink-3); text-align: center; margin-top: .5rem; line-height: 1.45; }
+.rose { display: block; width: 100%; height: auto; }
+.rose .ring { fill: none; stroke: var(--line-2); stroke-width: 1.2; stroke-dasharray: 3 6; opacity: .9; }
+.rose .ring-t { fill: var(--ink-3); font: 600 15px var(--sans); font-variant-numeric: tabular-nums; paint-order: stroke; stroke: var(--card); stroke-width: 4px; stroke-linejoin: round; }
+.rose .spoke { stroke: var(--line-2); stroke-width: 1.2; opacity: .35; }
+.rose .compass { fill: var(--ink-3); font: 700 15px var(--sans); letter-spacing: .1em; }
+.rose .b-spur { stroke: var(--line-2); stroke-width: 1.2; opacity: .6; }
+.rose .b-halo { fill: var(--card); }
+.rose .b-dot { fill: var(--accent); }
+.rose .b-num { fill: #fff; font: 700 15px var(--sans); }
+.rose .is-walk .b-dot { fill: var(--card); stroke: var(--accent); stroke-width: 2.6; }
+.rose .is-walk .b-num { fill: var(--accent); }
+.rose .b-home-halo { fill: var(--card); }
+.rose .b-home { fill: var(--ink); }
+.rose .b-home-t { fill: var(--ink); font: 700 17px var(--sans); paint-order: stroke; stroke: var(--card); stroke-width: 5px; stroke-linejoin: round; }
+
+.pois { list-style: none; margin: 0; padding: 0; display: grid; }
+.poi { display: grid; grid-template-columns: 1.7rem minmax(0, 1fr); gap: .7rem; padding: .7rem 0; border-top: 1px solid var(--line); }
+.poi:first-child { border-top: 0; padding-top: 0; }
+.p-n { font: 600 .72rem/1.55rem var(--sans); text-align: center; width: 1.55rem; height: 1.55rem; border-radius: 100px; background: var(--accent); color: #fff; }
+.poi-walk .p-n { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); line-height: 1.4rem; }
+.p-head { margin: 0; font-size: .95rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; }
+.p-head b { color: var(--ink); font-weight: 600; }
+.p-time { font-size: .82rem; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+.p-mode { font-size: .68rem; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-3); }
+.p-check { font-size: .62rem; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; color: var(--gold); border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent); border-radius: 100px; padding: .05rem .38rem; }
+.p-meta { margin: .3rem 0 0; display: grid; gap: .22rem; font-size: .85rem; color: var(--ink-3); }
+.p-meta b { font-weight: 600; color: var(--ink-2); }
+.p-warn { color: var(--accent); }
+.p-why { color: var(--ink-2); font-style: italic; }
+
+/* day sheets */
+.daynav { display: flex; flex-wrap: wrap; gap: .3rem; margin-bottom: 2rem; }
+.daynav a { display: grid; place-items: center; min-width: 3rem; padding: .32rem .4rem; border: 1px solid var(--line); border-radius: var(--r); text-decoration: none; background: var(--card); }
+.daynav a:hover { border-color: var(--accent); }
+.daynav b { font-size: .95rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.daynav span { font-size: .6rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); }
+
+.sheets { display: grid; gap: 1.2rem; }
+.sheet { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.1rem, 2.2vw, 1.6rem); scroll-margin-top: calc(var(--nav-h) + var(--sub-h) + 16px); }
+.sheet-move { border-left: 3px solid var(--accent); }
+.sheet-head { border-bottom: 1px solid var(--line); padding-bottom: .8rem; margin-bottom: 1.1rem; }
+.sheet-when { margin: 0; display: flex; gap: .5rem; align-items: baseline; }
+.sheet-when b { font-family: var(--serif); font-size: 1.3rem; }
+.sheet-when span { font-size: .7rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); }
+.sheet-head h3 { font-size: 1.15rem; margin: .1rem 0 .2rem; }
+.sheet-base { margin: 0; font-size: .82rem; color: var(--ink-3); }
+.sheet-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); }
+.sheet-col h4 { font-family: var(--sans); font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-3); margin: 0 0 .6rem; }
+.sheet-col .none { font-size: .87rem; color: var(--ink-3); font-style: italic; margin: 0; }
+
+.fixed { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.fx { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: .5rem; font-size: .89rem; }
+.fx-t { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+.fx-w { color: var(--ink-2); }
+.fx-w em { display: block; font-style: normal; color: var(--ink-3); font-size: .82rem; margin-top: .12rem; }
+.fx-booked .fx-t { color: var(--accent); }
+.fx-flight .fx-t, .fx-arrive .fx-t { color: var(--moss); }
+.fx-closes .fx-t, .fx-check .fx-t { color: var(--gold); }
+
+.journey { margin-bottom: .9rem; }
+.journey:last-child { margin-bottom: 0; }
+.j-leave { margin: 0 0 .35rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; }
+.j-clock { font-size: 1.15rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+.is-derived .j-clock { color: var(--accent); }
+.j-word { font-size: .64rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); }
+.j-tail { font-size: .78rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.legs { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; border-left: 1px solid var(--line); padding-left: .7rem; }
+.leg { font-size: .86rem; }
+.leg-mode { font-size: .62rem; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-3); display: block; }
+.leg-route { color: var(--ink-2); }
+.leg-min { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; margin-left: .4rem; }
+.leg em { display: block; font-style: normal; color: var(--ink-3); font-size: .8rem; margin-top: .1rem; }
+
+.meals { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+/* 5.4rem, not 4.6 — "BREAKFAST" in uppercase with letter-spacing is wider than it looks and
+   was overrunning its column into the value. */
+.meal { display: grid; grid-template-columns: 5.4rem minmax(0, 1fr); gap: .5rem; font-size: .89rem; }
+.m-k { font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); padding-top: .15rem; }
+.m-w b { font-weight: 600; color: var(--ink); }
+.m-at { font-variant-numeric: tabular-nums; color: var(--ink-3); font-size: .82rem; }
+.m-s { display: inline-block; margin-left: .35rem; font-size: .62rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; padding: .05rem .4rem; border-radius: 100px; background: var(--paper-3); color: var(--ink-3); vertical-align: .08em; }
+.meal-in .m-s { background: color-mix(in oklab, var(--moss) 18%, transparent); color: var(--moss); }
+.meal-bk .m-s { background: color-mix(in oklab, var(--accent) 14%, transparent); color: var(--accent); }
+.meal-fl .m-s { background: color-mix(in oklab, var(--gold) 18%, transparent); color: var(--gold); }
+.m-w em { display: block; font-style: normal; color: var(--ink-3); font-size: .81rem; margin-top: .15rem; }
+.m-warn { color: var(--accent) !important; }
+
+.sheet-notes { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.sheet-notes .ticks { max-width: none; gap: .6rem; }
+.sheet-notes .ticks li { font-size: .89rem; }
+
+/* standing constraints */
+.standing { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.standing th, .standing td { text-align: left; padding: .65rem .9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.standing thead th { font-family: var(--sans); font-size: .66rem; text-transform: uppercase; letter-spacing: .11em; color: var(--ink-3); }
+.standing tbody th { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.standing td { color: var(--ink-2); }
+.standing .c-when { white-space: nowrap; color: var(--accent); font-variant-numeric: tabular-nums; }
+
+/* the line the itinerary page borrows back */
+.day-run { margin: .5rem 0 0 !important; }
+.day-run a { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; text-decoration: none; font-size: .83rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.day-run a:hover { color: var(--accent); }
+.run-tag { font-size: .6rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: var(--accent); border: 1px solid color-mix(in oklab, var(--accent) 35%, transparent); border-radius: 100px; padding: .05rem .4rem; }
+
+@media (max-width: 980px) {
+  .base-grid { grid-template-columns: 1fr; }
+  .rosefig { position: static; max-width: 24rem; margin-inline: auto; }
+  .sheet-grid { grid-template-columns: 1fr 1fr; }
+  .sheet-col:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .sheet-grid { grid-template-columns: 1fr; gap: 1.3rem; }
+  .sheet-col:last-child { grid-column: auto; }
+  .corrs { grid-template-columns: 1fr; }
+  .daynav a { min-width: 2.6rem; }
+  /* Narrow enough that a label column costs more than it explains — stack instead. */
+  .meal, .fx { grid-template-columns: 1fr; gap: .1rem; }
+  .m-k { padding-top: 0; }
+}
+
 /* ── print ──────────────────────────────────────────────────────── */
 @media print {
-  .nav, .itinbar, .subnav, .pager, .theme, .lightbox, .hero-jump { display: none !important; }
+  .nav, .itinbar, .subnav, .pager, .theme, .lightbox, .hero-jump, .daynav { display: none !important; }
   body { background: #fff; color: #000; }
   .shot { break-inside: avoid; }
+  .sheet, .base { break-inside: avoid; border-color: #ccc; }
+  .rosefig { position: static; }
 }
 
 /* variant marker */
