@@ -1,5 +1,11 @@
 # Japan Trip Notes
 
+**The seven itineraries, illustrated: <https://ryanatallah.com/japan-trip/>**
+
+Published from `itinerary-site/site/` by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) —
+edit `itinerary-site/content/`, run `node build.mjs`, commit, and push to `main` to update it.
+The notes below are the original seed for the whole thing.
+
 ## Requirements
 
 - Temperature between 55-75ºF
