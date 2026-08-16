@@ -8,14 +8,20 @@
 <title>Change history — Japan 2026</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<!-- Theme and outline state decided before first paint: both move the layout, and applying
+     them from site.js at the end of <body> showed the wrong one for a frame. -->
+<script>(()=>{try{const r=document.documentElement,t=localStorage.getItem('jp26-theme');if(t)r.setAttribute('data-theme',t);
+r.setAttribute('data-outline',innerWidth>=1180?(localStorage.getItem('jp26-outline')||'on'):'off');}catch(e){}})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
   <div class="navtop"><a href="index.html">Itinerary</a><a href="history.html" class="on" aria-current="page">Change history</a><a href="archive.html">Archive</a></div>
+  
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
+
 
 <main id="main">
 
@@ -29,6 +35,14 @@
 
 <section class="sec" id="log">
   <div class="revs"><article class="rev">
+    <div class="rev-when"><time datetime="2026-08-15">15 August 2026</time></div>
+    <div class="rev-body">
+      <h3>The section bar becomes an outline</h3>
+      <p class="rev-tags"><span class="rtag rtag-site">site</span></p>
+      <p>The horizontal strip of section links at the top of the itinerary is replaced by a left-hand outline, the way a long document carries one. It lists the eleven sections <em>and</em> what is inside each — every hotel, restaurant, experience and place by name — and marks where you are as you read.</p>
+      <ul class="ticks"><li><strong>It is generated from the page, not maintained beside it.</strong> The old bar was a hand-written list of ten links, and it had already drifted: it never learned about <em>Still on the table</em>, so the Beniya Mukayu swap was unreachable from the navigation. The outline is read back out of the built HTML, so a section that is added, renamed or reordered appears on its own.</li><li><strong>Two tiers, not three.</strong> The third level of headings on these pages is the photo-category labels inside each gallery — "The building", "The setting", "The rooms" — about eighty of them. They are captions rather than structure, and listing them would bury the thirty entries that mean something.</li><li><strong>Only the section you are reading is expanded.</strong> Thirty sub-entries opened at once is a wall that always needs its own scrollbar; one section at a time fits on screen, and the expansion becomes a second signal of where you are. Any section can be pinned open or shut with its chevron, and that choice then outranks the automatic one.</li><li><strong>On a phone it becomes a drawer</strong>, with a slim bar under the header showing the section and sub-section you are currently in — so the "where am I" signal survives at a width that has no room for a sidebar.</li></ul>
+    </div>
+  </article><article class="rev">
     <div class="rev-when"><time datetime="2026-08-15">15 August 2026</time></div>
     <div class="rev-body">
       <h3>Itinerary 1B becomes the plan</h3>
