@@ -1,7 +1,8 @@
-# Japan 2026 — itinerary visualiser
+# Japan 2026 — the plan, illustrated
 
-A self-contained static site that puts photographs behind every line of `../Itinerary Designs.md`,
-so the five candidate trips can be judged by eye rather than by adjective.
+A self-contained static site for one trip: **Itinerary 1B, *The Classic, with the Alps*, 15 nights,
+6–22 November 2026**, chosen on 15 August 2026. The six routes it beat are kept alongside it, with
+their photographs and their verdicts, so the decision stays open to re-examination.
 
 ## Open it
 
@@ -16,27 +17,47 @@ python3 -m http.server 8765 --directory "site"
 The whole `site/` folder is portable: zip it, AirDrop it, drop it on any static host. It makes
 **zero external network requests**, so it renders identically offline and on a phone in a hotel lobby.
 
-## What's in it
+## The three pages
 
-- `site/index.html` — the five at a glance, a comparison table, five illustrated cards, how to choose,
-  and the shared foundations (flights, rail vs self-drive, the gluten-free playbook, the book-now list).
-- `site/<itinerary>.html` — one page per trip: **where you sleep** (each hotel photographed inside and
-  out), **where you eat**, **what you do**, **where you are**, **day by day**, and **what it costs**.
-- Every photo opens in a lightbox with its caption and a link to where it came from.
-  Arrow keys and swipe move through a gallery; `Esc` closes.
-- Light and dark themes; the ◐ button in the nav overrides your system setting.
-
-## Rebuilding after an edit
-
-Content lives in two files — edit those, not the HTML:
-
-| File | What it holds |
+| Page | What it is |
 |---|---|
-| `content/entities.mjs` | Every hotel, restaurant, experience, place: copy, rates, facts, gluten-free notes |
-| `content/itineraries.mjs` | The five trips: days, routes, costs, verdicts, and shared foundations |
-| `content/geo.mjs` | Map coordinates and each itinerary's route — stops, nights, day trips, travel mode |
-| `content/media.json` | Generated. The photo manifest — captions, categories, sources |
-| `content/japan-outline.json` | Generated once. Simplified coastline for the route maps |
+| `site/index.html` | **The plan.** The idea and route map, getting there, getting around, where you sleep / eat / do / are, day by day, what it costs, and the booking calendar. |
+| `site/history.html` | **Change history.** Every change to the plan, newest first, with the money and nights it moved. |
+| `site/archive.html` | **Archive.** The seven-way comparison: glance table, seven cards, the wish-list matrix, how the choice was framed, what was cut, and the shared foundations. |
+
+Plus `site/<itinerary>.html` for each of the six archived alternates, each banner-marked as *not*
+the plan, and `site/momiji-with-a-detour.html`, a redirect stub at the URL the plan was published
+at before it became the plan.
+
+Every photo opens in a lightbox with its caption and a link to where it came from. Arrow keys and
+swipe move through a gallery; `Esc` closes. Light and dark themes; the ◐ button overrides your system
+setting.
+
+## Changing the plan
+
+**Two files, every time.** Edit `content/plan.mjs`, then add an entry to the top of
+`content/history.mjs` describing what moved and why. Then `node build.mjs` and commit the rebuilt
+`site/`.
+
+| File | What it holds | How often it changes |
+|---|---|---|
+| `content/plan.mjs` | **The plan.** Days, route, stays, dining, experiences, costs — plus its own flights, transport, gluten-free brief and booking calendar | **Every plan PR** |
+| `content/history.mjs` | The change log rendered on `history.html` | **Every plan PR** |
+| `content/entities.mjs` | Every hotel, restaurant, experience, place: copy, rates, facts, gluten-free notes. Shared by the plan and the archive — copy here must read correctly in both | When a property changes |
+| `content/geo.mjs` | Map coordinates and each route's stops, nights, day trips and travel mode. The plan's key is `plan` | When the route changes |
+| `content/alternates.mjs` | The six archived routes, plus the wish-list and how-to-choose tables | **Frozen** — see below |
+| `content/shared.mjs` | The foundations as they read across all seven, for the archive only | Rarely |
+| `content/itineraries.mjs` | Compatibility shim: `[plan, ...alternates]`, for `tools/audit.mjs` and the archive's tables | Never |
+| `content/media.json` | Generated. The photo manifest — captions, categories, sources | `tools/process.mjs` |
+| `content/japan-outline.json` | Generated once. Simplified coastline for the route maps | Never |
+
+**`alternates.mjs` is deliberately frozen.** The six routes hold the dates, costs and verdicts they
+had on the day the decision was made; a comparison stops meaning anything if the losing options keep
+being revised. If a fact in it is wrong, fix the fact — don't re-plan the trip.
+
+**The plan does not import `shared.mjs`.** On a page about one trip nothing is "shared", so the same
+material is written trip-specific inside `plan.mjs` — flights that name the actual flights, a
+gluten-free brief that names the actual kitchens. If a fact changes in both, change it in both.
 
 Each itinerary page carries a **route map**, drawn as inline SVG from `content/geo.mjs` over that
 coastline — numbered overnight stops with night counts, solid lines for rail, dashes for flights,
@@ -45,9 +66,13 @@ dots for driving, and hollow markers for day trips. No tile server and no networ
 the coastline itself, see the header of `tools/build-geo.mjs`.
 
 ```bash
-node build.mjs          # content + media.json -> site/
-node tools/audit.mjs    # coverage gaps, broken links, external-asset check
+node build.mjs          # content + media.json -> site/ (10 pages)
+node tools/audit.mjs    # coverage gaps, broken links, external-asset check — must stay at 0 errors
 ```
+
+`tools/section-qa.mjs <page>` splits a built page into standalone `_s-<page>-<id>.html` files, one
+per section, so any part of a long page can be screenshotted from the top of a fresh document.
+Those are untracked scratch — `rm -f site/_s-*.html` when you are done.
 
 ## Adding or replacing photos
 
@@ -64,11 +89,11 @@ the site and can be deleted; keep it if you may want to re-crop or re-export lat
 
 ## Coverage
 
-All 65 entities are photographed — 450 images. Every one of the 13 hotels has 10–16 photos
-covering exterior, rooms, baths, the dining room, plated food and the setting. One known
-shortfall: Hyatt Centric Kanazawa has no bath photo, because hyatt.com blocks automated access
-and the substitute sources (Visit Kanazawa, the hotel's own restaurant booking page) don't
-publish one. It is a one-night city stop, so this doesn't affect a decision.
+All 76 entities are photographed — 539 images. Every hotel has 10–16 photos covering exterior,
+rooms, baths, the dining room, plated food and the setting. One known shortfall: Hyatt Centric
+Kanazawa has no bath photo, because hyatt.com blocks automated access and the substitute sources
+(Visit Kanazawa, the hotel's own restaurant booking page) don't publish one. It is a one-night stop
+on an archived route, so it affects nothing.
 
 ## Corrections this site makes to the source document
 

@@ -1,9 +1,21 @@
 # Japan Trip Notes
 
-**The seven itineraries, illustrated: <https://ryanatallah.com/japan-trip/>**
+**The plan, illustrated: <https://ryanatallah.com/japan-trip/>**
 
-Published from `itinerary-site/site/` by [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) —
-edit `itinerary-site/content/`, run `node build.mjs`, commit, and push to `main` to update it.
+Itinerary 1B — *The Classic, with the Alps*, 15 nights, 6–22 November 2026 — was chosen on
+15 August 2026. The site is three pages:
+
+| | |
+|---|---|
+| [`/`](https://ryanatallah.com/japan-trip/) | **The plan.** The trip that is happening, in full. |
+| [`/history.html`](https://ryanatallah.com/japan-trip/history.html) | **Change history.** Every change to the plan, newest first. |
+| [`/archive.html`](https://ryanatallah.com/japan-trip/archive.html) | **Archive.** The seven-way comparison behind the decision, frozen. |
+
+To change the plan: edit `itinerary-site/content/plan.mjs`, add an entry to
+`itinerary-site/content/history.mjs`, run `node build.mjs`, commit the rebuilt `site/`, and push
+to `main` — [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) publishes it.
+See [`itinerary-site/README.md`](itinerary-site/README.md) for the full map of what lives where.
+
 The notes below are the original seed for the whole thing.
 
 ## Requirements
