@@ -334,10 +334,10 @@ export const entities = {
     location: 'Toyooka, Hyogo — 2h30 from Kyoto',
     badges: ['Seven bathhouses'],
     blurb:
-      'A willow-lined canal town where the convention is to leave your ryokan in a yukata and wooden geta and walk between seven public bathhouses, clacking over the stone bridges in the evening. It has been doing this for thirteen centuries. In winter it is also one of Japan’s great crab towns, which is precisely what early December is for.',
+      'A willow-lined canal town where the convention is to leave your ryokan in a yukata and wooden geta and walk between seven public bathhouses, clacking over the stone bridges in the evening. It has been doing this for thirteen centuries. In winter it is also one of Japan’s great crab towns, which is precisely what late November is for — the season opens on the 6th.',
     facts: [
-      ['The soto-yu', '<strong>Six of the seven are currently open</strong> — Sato-no-yu has been closed for renovation since April 2024 and is off the town’s live crowd-status board. Kono-yu is closed separately until 30 Oct 2026, so it should be back before December; worth re-checking. Staying guests get a pass covering them all.'],
-      ['The season', 'Matsuba snow crab opens 6 November and runs through winter — early December is the heart of it'],
+      ['The soto-yu', '<strong>Six of the seven are currently open</strong> — Sato-no-yu has been closed for renovation since April 2024 and is off the town’s live crowd-status board. Kono-yu is closed separately until 30 Oct 2026, so it should be back before you arrive; worth re-checking. Staying guests get a pass covering them all.'],
+      ['The season', 'Matsuba snow crab opens 6 November and runs through winter — you would arrive on the 18th, comfortably inside it'],
       ['Nearby', 'The Toyooka stork park, the Genbudo basalt caves, and Izushi, a small castle town known for its soba'],
     ],
   },
@@ -351,7 +351,7 @@ export const entities = {
       'One of the better conservation stories in Japan, and it happens to be twenty minutes from the ryokan. The Oriental white stork went extinct in the wild here in 1971; Toyooka bred them back and began releasing birds in 2005, and they now nest on towers above the rice fields the town farms without pesticides to feed them. You can see them from the roadside as well as at the park.',
     facts: [
       ['Why it is here', 'The wildlife stop on a route that otherwise has none after Karuizawa'],
-      ['December is the off-season', 'Toyooka’s own tourism office says stork-watching is best in April and May when the chicks hatch. In December there is no nest activity — you are looking at birds feeding in the flooded paddies, plus the captive birds at the park. Free, 09:00–17:00, <strong>closed Mondays</strong>.'],
+      ['November is the off-season', 'Toyooka’s own tourism office says stork-watching is best in April and May when the chicks hatch. In November there is no nest activity — you are looking at birds feeding in the flooded paddies, plus the captive birds at the park. Free, 09:00–17:00, <strong>closed Mondays</strong>.'],
       ['Not a crane', 'Storks, not the tancho cranes of Hokkaido — black bill, red skin around the eye, and they nest on platforms rather than gathering at feeding stations'],
     ],
   },
@@ -805,7 +805,7 @@ export const entities = {
     type: 'place',
     location: 'Aoyama, Tokyo',
     blurb:
-      'Tokyo’s icho turn gold in the second half of November, and the Jingu Gaien avenue is the famous one — a straight corridor of yellow, usually at peak around 20 November to 5 December, which is exactly when itineraries 1, 3 and 5 are in town. Omotesando itself, a few minutes away, is lined with zelkova rather than ginkgo; its late-year spectacle is the winter illumination, not foliage.',
+      'Tokyo’s icho turn gold in the second half of November, and the Jingu Gaien avenue is the famous one — a straight corridor of yellow, usually at peak around 20 November to 5 December — which is just after every itinerary here has left Tokyo, so expect them turning rather than fully gold. Omotesando itself, a few minutes away, is lined with zelkova rather than ginkgo; its late-year spectacle is the winter illumination, not foliage.',
   },
   'yanaka-tokyo': {
     name: 'Yanaka',
