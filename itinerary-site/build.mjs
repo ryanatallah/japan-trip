@@ -1,15 +1,33 @@
 #!/usr/bin/env node
 // Static site builder — zero dependencies. Reads content/ and emits site/.
+//
+// Three top-level pages:
+//   index.html    the plan             buildPlan()      <- content/plan.mjs
+//   history.html  how it got here      buildHistory()   <- content/history.mjs
+//   archive.html  the six that lost    buildArchive()   <- content/alternates.mjs + shared.mjs
+//
+// plus one page per archived alternate, and a redirect stub at the URL the plan used to live at.
 import { readFileSync, writeFileSync, existsSync, mkdirSync, readdirSync, copyFileSync } from 'node:fs';
 import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { entities } from './content/entities.mjs';
-import { itineraries, shared, recommendation, wishlist } from './content/itineraries.mjs';
+import { plan } from './content/plan.mjs';
+import { alternates, recommendation, wishlist } from './content/alternates.mjs';
+import { shared } from './content/shared.mjs';
+import { revisions } from './content/history.mjs';
+import { itineraries } from './content/itineraries.mjs';
 import { renderMap } from './tools/map.mjs';
 
 const WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'site');
+
+// The URL the plan lived at while it was still "Itinerary 1B". Kept as a redirect stub so links
+// already shared do not dead-end.
+const OLD_PLAN_SLUG = 'momiji-with-a-detour';
+
+/** The plan is index.html; every archived alternate is <slug>.html. */
+const href = (it) => (it.slug === plan.slug ? 'index.html' : `${it.slug}.html`);
 
 // ── media ───────────────────────────────────────────────────────────
 let media = {};
@@ -96,6 +114,14 @@ function coverRow(slugs, sizes = '(max-width:700px) 100vw, 30vw') {
   return `<div class="grid grid-3">${picks.map((s) => img(s, { sizes })).join('')}</div>`;
 }
 
+/** Three photos drawn from one or more entities — used where a section has few refs but wants a
+ *  full band rather than coverRow's single, lonely image. */
+function photoRow(slugs, n = 3) {
+  const picks = slugs.flatMap((s) => ordered(s)).slice(0, n);
+  if (!picks.length) return '';
+  return `<div class="grid grid-3">${picks.map((s) => img(s, { sizes: '(max-width:700px) 100vw, 30vw' })).join('')}</div>`;
+}
+
 /** Small inline photo row used on day cards. */
 function strip(refs) {
   // cover() ranks wildlife and establishing shots first, which reads far better as a
@@ -146,10 +172,23 @@ function placeCard(slug) {
 }
 
 // ── page chrome ─────────────────────────────────────────────────────
-function shell({ title, desc, body, active = '', page = '' }) {
-  const nav = itineraries.map((it) =>
-    `<a href="${it.slug}.html" class="${active === it.slug ? 'on' : ''}"><b>${it.num}</b><span>${esc(it.title)}</span></a>`
+// `section` is which of the three top-level pages this is: 'plan' | 'history' | 'archive'.
+// `chips` adds the seven-itinerary strip — the navigation across the comparison, which belongs
+// only to the archive. `active` marks the current itinerary within that strip.
+const TOP = [
+  ['index.html', 'Itinerary', 'plan'],
+  ['history.html', 'Change history', 'history'],
+  ['archive.html', 'Archive', 'archive'],
+];
+
+function shell({ title, desc, body, active = '', page = '', section = 'plan', chips = false }) {
+  const top = TOP.map(([url, label, key]) =>
+    `<a href="${url}"${section === key ? ' class="on" aria-current="page"' : ''}>${label}</a>`
   ).join('');
+  const chipbar = chips ? `<nav class="itinbar" aria-label="The seven itineraries">
+  <span class="itinbar-label">Compare</span>
+  ${itineraries.map((it) => `<a href="${href(it)}" class="${active === it.slug ? 'on' : ''}${it.slug === plan.slug ? ' is-plan' : ''}"><b>${it.num}</b><span>${esc(it.title)}</span></a>`).join('')}
+</nav>` : '';
   return `<!doctype html>
 <html lang="en" data-page="${esc(page)}">
 <head>
@@ -164,10 +203,11 @@ function shell({ title, desc, body, active = '', page = '' }) {
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
-  <a href="index.html" class="nav-home ${active === '' ? 'on' : ''}"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
-  <div class="nav-links">${nav}</div>
+  <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
+  <div class="navtop">${top}</div>
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
+${chipbar}
 <main id="main">
 ${body}
 </main>
@@ -185,8 +225,10 @@ ${body}
 </html>`;
 }
 
-// ── index ───────────────────────────────────────────────────────────
-function buildIndex() {
+// ── archive ─────────────────────────────────────────────────────────
+// The old front page, reframed. It still compares all seven — a comparison with the winner
+// removed cannot be read — but the plan's row, card and column link to index.html and are badged.
+function buildArchive() {
   // Prefer these six; backfill from any wide shot so the band is always full.
   const heroPicks = ['eikando', 'gora-kadan', 'ezo-momonga', 'aso-caldera', 'kenrokuen', 'sankara-yakushima'];
   const heroShots = heroPicks.map((s) => cover(s)).filter(Boolean);
@@ -200,32 +242,34 @@ function buildIndex() {
     }
   }
 
-  const glanceRows = itineraries.map((it) => `<tr>
-    <td class="c-num"><a href="${it.slug}.html">${it.num}</a></td>
-    <td class="c-name"><a href="${it.slug}.html">${esc(it.title)}</a><small>${esc(it.bestFor)}</small></td>
+  const isPlan = (it) => it.slug === plan.slug;
+
+  const glanceRows = itineraries.map((it) => `<tr${isPlan(it) ? ' class="row-plan"' : ''}>
+    <td class="c-num"><a href="${href(it)}">${it.num}</a></td>
+    <td class="c-name"><a href="${href(it)}">${esc(it.title)}</a>${isPlan(it) ? '<b class="tag-plan">The plan</b>' : ''}<small>${esc(it.bestFor)}</small></td>
     <td>${esc(it.dates)}</td>
     <td class="c-route">${it.route.map((r) => esc(r)).join(' → ')}</td>
     <td class="c-cost">${esc(it.cost)}</td>
     <td><span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span></td>
   </tr>`).join('');
 
-  const cards = itineraries.map((it) => {
+  const cards = itineraries.map((it, i) => {
     const mos = it.heroCard.map((s) => cover(s)).filter(Boolean);
     const shotsHtml = mos.length
-      ? mos.slice(0, 3).map((s, i) => img(s, { className: i === 0 ? 'lead' : '', sizes: '(max-width: 700px) 100vw, 40vw', eager: it.num <= 2 })).join('')
+      ? mos.slice(0, 3).map((s, n) => img(s, { className: n === 0 ? 'lead' : '', sizes: '(max-width: 700px) 100vw, 40vw', eager: i < 2 })).join('')
       : placeholder('Photos being sourced');
     // A div, not an anchor: the shots are lightbox buttons, and a <button> inside an <a>
     // is invalid HTML and ambiguous for keyboard users. The title and "See it" already link.
-    return `<article class="card">
+    return `<article class="card${isPlan(it) ? ' card-plan' : ''}">
     <div class="card-shots">${shotsHtml}</div>
     <div class="card-text">
-      <p class="card-num">Itinerary ${it.num}${it.variantOf ? ` <em>· fork of ${it.variantOf}</em>` : ''}</p>
-      <h3><a href="${it.slug}.html">${esc(it.title)}</a></h3>
+      <p class="card-num">Itinerary ${it.num}${isPlan(it) ? ' <b class="tag-plan">The plan</b>' : it.variantOf ? ` <em>· fork of ${it.variantOf}</em>` : ''}</p>
+      <h3><a href="${href(it)}">${esc(it.title)}</a></h3>
       <p class="card-tag">${esc(it.tagline)}</p>
       <p class="card-meta"><span>${esc(it.dates)}</span><i>·</i><span>${esc(it.length)}</span><i>·</i><span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span></p>
       <p class="card-route">${it.route.map((r) => `<span>${esc(r)}</span>`).join('<i>→</i>')}</p>
       <p>${it.pitch}</p>
-      <p class="card-foot"><b>${esc(it.cost)}</b> <small>estimated, per couple</small> <a class="go" href="${it.slug}.html">See it →</a></p>
+      <p class="card-foot"><b>${esc(it.cost)}</b> <small>estimated, per couple</small> <a class="go" href="${href(it)}">${isPlan(it) ? 'Open the plan →' : 'See it →'}</a></p>
     </div>
   </article>`;
   }).join('');
@@ -241,7 +285,9 @@ function buildIndex() {
       }
       const [glyph, cls, label] = MARK[state];
       const why = w.why?.[it.num];
-      return `<td class="w w-${cls}"${why ? ` title="${esc(why)}"` : ''}><span aria-label="${label}">${glyph}</span>${why ? `<em>${esc(why)}</em>` : ''}</td>`;
+      // The plan's cells are marked per-cell rather than by column position, so the band stays
+      // on the right column if the array order ever changes.
+      return `<td class="w w-${cls}${isPlan(it) ? ' w-plan' : ''}"${why ? ` title="${esc(why)}"` : ''}><span aria-label="${label}">${glyph}</span>${why ? `<em>${esc(why)}</em>` : ''}</td>`;
     }).join('');
     return `<tr><th scope="row">${esc(w.label)}<small>${esc(w.note)}</small></th>${cells}</tr>`;
   }).join('');
@@ -257,19 +303,23 @@ function buildIndex() {
 
   const recs = recommendation.map(([want, why, n]) => {
     const it = itineraries.find((x) => x.num === n);
-    return `<li><span class="rec-want">${esc(want)}</span><a class="rec-pick" href="${it.slug}.html">Itinerary ${n} — ${esc(it.title)}</a><span class="rec-why">${esc(why)}</span></li>`;
+    return `<li${isPlan(it) ? ' class="rec-plan"' : ''}><span class="rec-want">${esc(want)}</span><a class="rec-pick" href="${href(it)}">Itinerary ${n} — ${esc(it.title)}${isPlan(it) ? ' ✓' : ''}</a><span class="rec-why">${esc(why)}</span></li>`;
   }).join('');
 
   const body = `
 <header class="hero hero-index">
   ${heroShots.length >= 3 ? `<div class="hero-collage" style="--cols:${Math.min(heroShots.length, 6)}">${heroShots.slice(0, 6).map((s) => img(s, { sizes: '17vw', eager: true })).join('')}</div>` : ''}
   <div class="hero-inner">
-    <p class="kicker">Oct 25 – Dec 3, 2026 · two travellers · from SFO</p>
+    <p class="kicker">The archive · decided ${esc(plan.decided)}</p>
     <h1>${WORDS[itineraries.length] || itineraries.length} ways to see Japan</h1>
-    <p class="hero-sub">Same country, same fortnight-ish, ${WORDS[itineraries.length] || itineraries.length} genuinely different trips. Every hotel, restaurant, workshop and temple below is photographed so you can judge it before you book it.</p>
-    <p class="hero-jump">${itineraries.map((it) => `<a href="${it.slug}.html">${it.num}. ${esc(it.title)}</a>`).join('')}</p>
+    <p class="hero-sub">The whole comparison, kept as it read on the day the choice was made. <strong>Itinerary ${plan.num} — ${esc(plan.title)}</strong> won; the other six are here with their photographs, their costs and their honest verdicts, because a decision you cannot re-examine is not a decision.</p>
+    <p class="hero-jump"><a class="jump-plan" href="index.html">→ Open the plan</a>${alternates.map((it) => `<a href="${href(it)}">${it.num}. ${esc(it.title)}</a>`).join('')}</p>
   </div>
 </header>
+
+<div class="archnote">
+  <p><b>This is the archive.</b> Nothing here is being kept up to date — the six routes below hold the dates, costs and verdicts they had on ${esc(plan.decided)}. For the trip that is actually happening, see <a href="index.html">the itinerary</a>; for what has changed since, <a href="history.html">the change history</a>.</p>
+</div>
 
 <section class="sec" id="glance">
   <h2>The ${WORDS[itineraries.length] || itineraries.length} at a glance</h2>
@@ -290,13 +340,14 @@ function buildIndex() {
   <h2>Against your wish list</h2>
   <p class="sec-sub">Every item from <code>seeds.md</code>, checked off trip by trip. Hover or tap a partial mark for the caveat.</p>
   <div class="tablewrap"><table class="wish">
-    <thead><tr><th>You asked for</th>${itineraries.map((it) => `<th class="wcol"><a href="${it.slug}.html"><b>${it.num}</b><span>${esc(it.title)}</span></a></th>`).join('')}</tr></thead>
+    <thead><tr><th>You asked for</th>${itineraries.map((it) => `<th class="wcol${isPlan(it) ? ' wcol-plan' : ''}"><a href="${href(it)}"><b>${it.num}</b><span>${esc(it.title)}</span></a></th>`).join('')}</tr></thead>
     <tbody>${wishHtml}</tbody>
   </table></div>
 </section>
 
 <section class="sec" id="choose">
-  <h2>How to choose</h2>
+  <h2>How the choice was framed</h2>
+  <p class="sec-sub">The question each itinerary answered best. The first line is the one that won.</p>
   <ul class="recs">${recs}</ul>
 </section>
 
@@ -308,7 +359,7 @@ function buildIndex() {
 
 <section class="sec sec-alt" id="foundations">
   <h2>Shared foundations</h2>
-  <p class="sec-sub">True of every itinerary above.</p>
+  <p class="sec-sub">True of all seven itineraries above. The plan states the same material in its own terms — named to its actual flights, kitchens and dates — on <a href="index.html">the itinerary page</a>.</p>
 
   <div class="found">
     <h3>${esc(shared.flights.title)}</h3>
@@ -341,56 +392,211 @@ function buildIndex() {
   <div class="found">
     <h3>${esc(shared.bookNow.title)}</h3>
     <p class="sub">${esc(shared.bookNow.sub)}</p>
-    <ol class="booknow">${shared.bookNow.groups.map(([w, t]) => `<li><b>${esc(w)}</b><span>${esc(t)}</span></li>`).join('')}</ol>
+    <!-- The text carries inline markup on purpose (the Picchio deadline is bolded): not escaped. -->
+    <ol class="booknow">${shared.bookNow.groups.map(([w, t]) => `<li><b>${esc(w)}</b><span>${t}</span></li>`).join('')}</ol>
   </div>
 </section>`;
 
-  return shell({ title: 'Japan 2026 — five itineraries', desc: `${itineraries.length} illustrated Japan itineraries for Oct–Dec 2026.`, body, page: 'index' });
+  return shell({
+    title: 'Archive — the seven itineraries · Japan 2026',
+    desc: `The ${itineraries.length}-way comparison behind the plan, kept as it read on ${plan.decided}.`,
+    body, page: 'archive', section: 'archive', chips: true,
+  });
 }
 
-// ── itinerary page ──────────────────────────────────────────────────
-function buildItinerary(it) {
-  const heroShot = cover(it.hero);
-  const dayRows = it.days.map((d) => `<div class="day${d.span ? ' day-span' : ''}">
+// ── pieces shared by the plan page and the archived alternates ───────
+const daysHtml = (it) => it.days.map((d) => `<div class="day${d.span ? ' day-span' : ''}">
     <div class="day-when"><span class="day-date">${esc(d.date)}</span><span class="day-where">${esc(d.where)}</span></div>
     <div class="day-what"><p>${d.text}</p>${strip(d.ref || [])}</div>
   </div>`).join('');
 
-  const section = (id, title, sub, slugs, level) => {
-    if (!slugs?.length) return '';
-    return `<section class="sec" id="${id}">
+function entitySection(id, title, sub, slugs, { level = 3, alt = false, lead = '' } = {}) {
+  if (!slugs?.length) return '';
+  return `<section class="sec${alt ? ' sec-alt' : ''}" id="${id}">
       <h2>${esc(title)}</h2>
       ${sub ? `<p class="sec-sub">${sub}</p>` : ''}
+      ${lead}
       ${slugs.map((s) => entityCard(s, { level })).join('')}
     </section>`;
-  };
+}
 
-  const placesSec = it.places?.length ? `<section class="sec sec-alt" id="places">
+const placesSection = (it) => (it.places?.length ? `<section class="sec sec-alt" id="places">
     <h2>Where you actually are</h2>
     <p class="sec-sub">The temples, gardens, lakes and landscapes this route passes through — shown in the season you would see them.</p>
     <div class="places">${it.places.map((s) => placeCard(s)).join('')}</div>
-  </section>` : '';
+  </section>` : '');
 
-  const altSec = it.altStays?.length ? `<section class="sec" id="alts">
-    <h2>The levers</h2>
-    <p class="sec-sub">Swaps that move the number materially, up or down.</p>
-    ${it.altStays.map((s) => entityCard(s, { level: 3 })).join('')}
-  </section>` : '';
+const heroBg = (shot) => (shot
+  ? `<img class="hero-bg" src="img/${esc(shot.file)}" alt="${esc(shot.caption)}" fetchpriority="high">`
+  : '<div class="hero-bg hero-bg-empty"></div>');
 
-  const body = `
-<header class="hero hero-itin">
-  ${heroShot ? `<img class="hero-bg" src="img/${esc(heroShot.file)}" alt="${esc(heroShot.caption)}" fetchpriority="high">` : '<div class="hero-bg hero-bg-empty"></div>'}
-  <div class="hero-inner">
-    <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''}</p>
-    <h1>${esc(it.title)}</h1>
-    <p class="hero-sub">${esc(it.tagline)}</p>
-    <p class="hero-facts">
+const heroFacts = (it) => `<p class="hero-facts">
       <span><b>${esc(it.dates)}</b></span>
       <span>${esc(it.length)}</span>
       <span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span>
       <span><b>${esc(it.cost)}</b> per couple</span>
     </p>
-    <p class="hero-route">${it.route.map((r) => `<span>${esc(r)}</span>`).join('<i>→</i>')}<em>${esc(it.routeNote)}</em></p>
+    <p class="hero-route">${it.route.map((r) => `<span>${esc(r)}</span>`).join('<i>→</i>')}<em>${esc(it.routeNote)}</em></p>`;
+
+const costTable = (it) => `<div class="tablewrap"><table class="costs">
+    <tbody>${it.costRows.map(([k, v]) => `<tr><th scope="row">${k}</th><td>${esc(v)}</td></tr>`).join('')}</tbody>
+    <tfoot><tr><th scope="row">Total, per couple</th><td>${esc(it.costTotal)}</td></tr></tfoot>
+  </table></div>`;
+
+// ── the plan ────────────────────────────────────────────────────────
+// Same furniture as an itinerary page, but the material that used to sit in a "shared
+// foundations" block on the old index is threaded into the sections it belongs to: flights
+// after the map, the gluten-free brief at the head of the dining list, the cost model under
+// the cost table, the booking calendar last, where it is actionable.
+function buildPlan() {
+  const it = plan;
+  const heroShot = cover(it.hero);
+
+  const body = `
+<header class="hero hero-itin hero-plan">
+  ${heroBg(heroShot)}
+  <div class="hero-inner">
+    <p class="kicker">The plan · decided ${esc(it.decided)}</p>
+    <h1>${esc(it.title)}</h1>
+    <p class="hero-sub">${esc(it.tagline)}</p>
+    ${heroFacts(it)}
+  </div>
+  ${heroShot ? `<p class="hero-credit">${esc(heroShot.caption)}</p>` : ''}
+</header>
+
+<nav class="subnav">
+  <a href="#pitch">The idea</a><a href="#flights">Getting there</a><a href="#transport">Getting around</a>
+  <a href="#stays">Where you sleep</a><a href="#dining">Where you eat</a><a href="#doing">What you do</a>
+  <a href="#places">Where you are</a><a href="#days">Day by day</a><a href="#cost">What it costs</a><a href="#book">Book now</a>
+</nav>
+
+<section class="sec" id="pitch">
+  <div class="pitch"><p class="lede lede-big">${it.pitch}</p></div>
+  ${renderMap(it.slug)}
+</section>
+
+<section class="sec sec-alt" id="flights">
+  <h2>${esc(it.flights.title)}</h2>
+  <p class="sec-sub">${esc(it.flights.sub)}</p>
+  <ul class="ticks">${it.flights.points.map((p) => `<li>${p}</li>`).join('')}</ul>
+  ${photoRow(it.flights.ref || [])}
+</section>
+
+<section class="sec" id="transport">
+  <h2>Getting around</h2>
+  <div class="transport">
+    <h3><span class="mode">${esc(it.transport.mode)}</span></h3>
+    <p>${it.transport.text}</p>
+  </div>
+  <ul class="ticks">${(it.transport.points || []).map((p) => `<li>${p}</li>`).join('')}</ul>
+  ${photoRow(it.transport.ref || [])}
+</section>
+
+${entitySection('stays', 'Where you sleep', 'The biggest single line in the budget, and the thing hardest to judge from a rate. Every property below is shown inside and out.', it.stays)}
+
+${it.altStays?.length ? `<section class="sec" id="alts">
+  <h2>Still on the table</h2>
+  <p class="sec-sub">The one swap not yet closed off.</p>
+  <div class="lever-note"><p>${it.levers}</p></div>
+  ${it.altStays.map((s) => entityCard(s, { level: 3 })).join('')}
+</section>` : ''}
+
+${entitySection('dining', 'Where you eat', 'Six of the fifteen dinners are set menus inside a hotel stay. These are the rest — and the gluten-free position on each, which decided more of this list than the stars did.', it.dining, {
+    lead: `<div class="brief" id="gf">
+      <h3>${esc(it.glutenFree.title)}</h3>
+      <p class="sub">${esc(it.glutenFree.sub)}</p>
+      <ul class="ticks">${it.glutenFree.points.map((p) => `<li>${p}</li>`).join('')}</ul>
+    </div>`,
+  })}
+
+${entitySection('doing', 'What you do', 'The experiences — mostly hands-on, mostly things you cannot do anywhere else.', it.doing)}
+${placesSection(it)}
+
+<section class="sec" id="days">
+  <h2>Day by day</h2>
+  <p class="sec-sub">${esc(it.dates)} · ${esc(it.length)}</p>
+  <div class="days">${daysHtml(it)}</div>
+</section>
+
+<section class="sec sec-alt" id="cost">
+  <h2>What it costs</h2>
+  ${costTable(it)}
+  <p class="after">${it.costModel}</p>
+  <div class="note note-${it.verdictTone}"><h3>Why this one</h3><p>${it.verdict}</p></div>
+</section>
+
+<section class="sec" id="book">
+  <h2>${esc(it.bookNow.title)}</h2>
+  <p class="sec-sub">${esc(it.bookNow.sub)}</p>
+  <ol class="booknow">${it.bookNow.groups.map(([w, t]) => `<li><b>${esc(w)}</b><span>${t}</span></li>`).join('')}</ol>
+</section>
+
+<nav class="pager pager-plan">
+  <a href="history.html"><span>How it got here</span><b>Change history</b><em>${revisions.length} entries · latest ${esc(revisions[0].when)}</em></a>
+  <a href="archive.html"><span>The six that lost</span><b>Archive</b><em>The full comparison, frozen</em></a>
+</nav>`;
+
+  return shell({
+    title: `The plan — ${it.title} · Japan 2026`,
+    desc: `${it.length}, ${it.dates}. ${it.tagline}`,
+    body, page: 'plan', section: 'plan',
+  });
+}
+
+// ── change history ──────────────────────────────────────────────────
+function buildHistory() {
+  const entries = revisions.map((r) => `<article class="rev">
+    <div class="rev-when"><time datetime="${esc(r.date)}">${esc(r.when)}</time></div>
+    <div class="rev-body">
+      <h3>${esc(r.title)}</h3>
+      <p class="rev-tags">${(r.tags || []).map((t) => `<span class="rtag rtag-${esc(t)}">${esc(t)}</span>`).join('')}${r.effect ? `<span class="rtag rtag-effect">${esc(r.effect)}</span>` : ''}</p>
+      <p>${r.summary}</p>
+      ${r.points?.length ? `<ul class="ticks">${r.points.map((p) => `<li>${p}</li>`).join('')}</ul>` : ''}
+    </div>
+  </article>`).join('');
+
+  const body = `
+<header class="hero hero-plain">
+  <div class="hero-inner">
+    <p class="kicker">Change history</p>
+    <h1>How the plan got here</h1>
+    <p class="hero-sub">Every change to the trip, newest first — what moved, why, and what it cost. The plan is a moving target between now and November; this is the page that keeps it legible.</p>
+  </div>
+</header>
+
+<section class="sec" id="log">
+  <div class="revs">${entries}</div>
+  <p class="after">The trip as it stands today is <a href="index.html">the itinerary</a>. The six routes that were considered and set aside are in <a href="archive.html">the archive</a>.</p>
+</section>
+
+<nav class="pager pager-plan">
+  <a href="index.html"><span>The trip as it stands</span><b>Itinerary</b><em>${esc(plan.dates)} · ${esc(plan.cost)}</em></a>
+  <a href="archive.html"><span>The six that lost</span><b>Archive</b><em>The full comparison, frozen</em></a>
+</nav>`;
+
+  return shell({
+    title: 'Change history — Japan 2026',
+    desc: 'Every change to the Japan 2026 plan, newest first.',
+    body, page: 'history', section: 'history',
+  });
+}
+
+// ── an archived alternate ───────────────────────────────────────────
+function buildItinerary(it) {
+  const heroShot = cover(it.hero);
+
+  const body = `
+<div class="archnote archnote-alt">
+  <p><b>Archived alternate — this is not the plan.</b> ${esc(it.title)} was one of seven routes considered; it was set aside on ${esc(plan.decided)} and has not been updated since. The trip that is happening is <a href="index.html">${esc(plan.title)}</a>, and the full comparison is in <a href="archive.html">the archive</a>.</p>
+</div>
+
+<header class="hero hero-itin">
+  ${heroBg(heroShot)}
+  <div class="hero-inner">
+    <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''} · archived</p>
+    <h1>${esc(it.title)}</h1>
+    <p class="hero-sub">${esc(it.tagline)}</p>
+    ${heroFacts(it)}
   </div>
   ${heroShot ? `<p class="hero-credit">${esc(heroShot.caption)}</p>` : ''}
 </header>
@@ -410,40 +616,72 @@ function buildItinerary(it) {
   </div>
 </section>
 
-${section('stays', 'Where you sleep', 'The biggest single line in the budget, and the thing hardest to judge from a rate. Every property below is shown inside and out.', it.stays, 3)}
-${altSec}
-${section('dining', 'Where you eat', 'Marquee dinners. Gluten-free status is stated for each, because that decides more of this list than the stars do.', it.dining, 3)}
-${section('doing', 'What you do', 'The experiences — mostly hands-on, mostly things you cannot do anywhere else.', it.doing, 3)}
-${placesSec}
+${entitySection('stays', 'Where you sleep', 'The biggest single line in the budget, and the thing hardest to judge from a rate. Every property below is shown inside and out.', it.stays)}
+${it.altStays?.length ? `<section class="sec" id="alts">
+    <h2>The levers</h2>
+    <p class="sec-sub">Swaps that move the number materially, up or down.</p>
+    ${it.altStays.map((s) => entityCard(s, { level: 3 })).join('')}
+  </section>` : ''}
+${entitySection('dining', 'Where you eat', 'Marquee dinners. Gluten-free status is stated for each, because that decides more of this list than the stars do.', it.dining)}
+${entitySection('doing', 'What you do', 'The experiences — mostly hands-on, mostly things you cannot do anywhere else.', it.doing)}
+${placesSection(it)}
 
 <section class="sec" id="days">
   <h2>Day by day</h2>
   <p class="sec-sub">${esc(it.dates)} · ${esc(it.length)}</p>
-  <div class="days">${dayRows}</div>
+  <div class="days">${daysHtml(it)}</div>
 </section>
 
 <section class="sec sec-alt" id="cost">
   <h2>What it costs</h2>
-  <div class="tablewrap"><table class="costs">
-    <tbody>${it.costRows.map(([k, v]) => `<tr><th scope="row">${k}</th><td>${esc(v)}</td></tr>`).join('')}</tbody>
-    <tfoot><tr><th scope="row">Total, per couple</th><td>${esc(it.costTotal)}</td></tr></tfoot>
-  </table></div>
+  ${costTable(it)}
   <p class="after">${it.levers}</p>
   <div class="note note-${it.verdictTone}"><h3>${it.verdictTone === 'warn' ? 'Read this before choosing' : 'The verdict'}</h3><p>${it.verdict}</p></div>
 </section>
 
 <nav class="pager">
-  ${itineraries.filter((x) => x.num !== it.num).map((x) => `<a href="${x.slug}.html"><span>Itinerary ${x.num}</span><b>${esc(x.title)}</b><em>${esc(x.cost)}</em></a>`).join('')}
+  <a class="pager-home" href="index.html"><span>The plan</span><b>${esc(plan.title)}</b><em>${esc(plan.dates)} · ${esc(plan.cost)}</em></a>
+  ${alternates.filter((x) => x.num !== it.num).map((x) => `<a href="${href(x)}"><span>Itinerary ${x.num}</span><b>${esc(x.title)}</b><em>${esc(x.cost)}</em></a>`).join('')}
 </nav>`;
 
-  return shell({ title: `${it.num}. ${it.title} — Japan 2026`, desc: it.tagline, body, active: it.slug, page: 'itinerary' });
+  return shell({
+    title: `${it.num}. ${it.title} — archived · Japan 2026`,
+    desc: `Archived alternate: ${it.tagline}`,
+    body, active: it.slug, page: 'itinerary', section: 'archive', chips: true,
+  });
+}
+
+// ── redirect stub ───────────────────────────────────────────────────
+// The plan was published at momiji-with-a-detour.html before it became the plan.
+function buildRedirect() {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="refresh" content="0; url=index.html">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="index.html">
+<title>Moved — this itinerary is now the plan</title>
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+<main id="main" class="sec">
+  <h1>This one won.</h1>
+  <p class="lede">Itinerary 1B is now <a href="index.html">the plan</a>, and it lives on the front page. Redirecting…</p>
+  <p><a href="index.html">Open the plan</a> · <a href="archive.html">the archive</a></p>
+</main>
+</body>
+</html>`;
 }
 
 // ── write ───────────────────────────────────────────────────────────
 mkdirSync(OUT, { recursive: true });
 mkdirSync(join(OUT, 'assets'), { recursive: true });
-writeFileSync(join(OUT, 'index.html'), buildIndex());
-for (const it of itineraries) writeFileSync(join(OUT, `${it.slug}.html`), buildItinerary(it));
+writeFileSync(join(OUT, 'index.html'), buildPlan());
+writeFileSync(join(OUT, 'history.html'), buildHistory());
+writeFileSync(join(OUT, 'archive.html'), buildArchive());
+for (const it of alternates) writeFileSync(join(OUT, `${it.slug}.html`), buildItinerary(it));
+writeFileSync(join(OUT, `${OLD_PLAN_SLUG}.html`), buildRedirect());
 
 for (const f of readdirSync(join(ROOT, 'assets-src'))) {
   copyFileSync(join(ROOT, 'assets-src', f), join(OUT, 'assets', f));
@@ -453,6 +691,7 @@ for (const f of readdirSync(join(ROOT, 'assets-src'))) {
 // search. Belt and braces: robots.txt here, plus a noindex meta on every page.
 writeFileSync(join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
+const pages = 3 + alternates.length + 1;
 const total = Object.values(media).reduce((n, l) => n + l.length, 0);
 const withPhotos = Object.keys(entities).filter((s) => hasShots(s)).length;
-console.log(`built ${itineraries.length + 1} pages · ${total} photos across ${withPhotos}/${Object.keys(entities).length} entities`);
+console.log(`built ${pages} pages — plan, history, archive, ${alternates.length} alternates, 1 redirect · ${total} photos across ${withPhotos}/${Object.keys(entities).length} entities`);

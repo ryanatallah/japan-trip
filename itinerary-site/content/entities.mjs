@@ -15,7 +15,7 @@ export const entities = {
     blurb:
       'Eighty-four rooms on the top six floors of Otemachi Tower, entered through a lobby atrium that runs the full height of the building under a ceiling of washi panels — one of the genuinely great rooms in Tokyo, and worth a drink even if you sleep elsewhere. The entry-level rooms are 71 m², roughly double what the city\'s other five-stars call a standard room, and most look over the Imperial Palace woods with Fuji on the horizon on a clear morning. Still a five-minute walk to Tokyo Station for the shinkansen, and the Chuo line out to Ome for the forge.',
     facts: [
-      ['Why it is here', 'Base for the Tokyo half of itineraries 1, 2, 3 and 5'],
+      ['Why it is here', 'The Tokyo base on the plan — four nights, 7–10 November — and in every archived route except Southern Warmth, which skips Tokyo'],
       ['Setting', 'Floors 33–38 of Otemachi Tower, over the Imperial Palace woods'],
       ['Rooms', 'Ask for Palace-side; the city-side rooms face office towers'],
       ['Dining', 'Musashi (8-seat Edomae sushi), Arva (Italian), The Lounge, The Café, La Pâtisserie'],
@@ -33,7 +33,7 @@ export const entities = {
     rate: '≈ $1,500 / night, half board',
     url: 'https://www.gorakadan.com/hakone/?lang=en',
     blurb:
-      'Built on the grounds of the Kan’in-no-miya imperial family’s summer villa, and still run like one. Rooms open onto the garden, most have their own cypress or stone open-air bath fed from the source, and dinner is a full kaiseki served in-room or in a private dining room. It is the hotel from your seeds list, and the reason itineraries 1 and 5 detour through Hakone at all.',
+      'Built on the grounds of the Kan’in-no-miya imperial family’s summer villa, and still run like one. Rooms open onto the garden, most have their own cypress or stone open-air bath fed from the source, and dinner is a full kaiseki served in-room or in a private dining room. It is the hotel from your seeds list, and the reason the trip detours through Hakone at all.',
     facts: [
       ['Why it is here', 'Named directly in the trip seeds'],
       ['Setting', 'A wooded former imperial villa estate in Gora, above Hakone'],
@@ -74,7 +74,7 @@ export const entities = {
     blurb:
       'A 1920s ryokan main house restored into a small hotel, with a modern annex behind it, one street off the Yasaka pagoda lane. This is where you sleep for five to seven nights in almost every version of this trip, so it carries more weight than any other room decision. You can walk to Kodai-ji, Kiyomizu and the Gion lanes without a taxi.',
     facts: [
-      ['Why it is here', 'The Kyoto base in itineraries 1, 2, 3, 4 and 5'],
+      ['Why it is here', 'The Kyoto base on the plan — five nights, 17–21 November — and in every archived route as well'],
       ['Setting', 'Gion, a short walk from Kodai-ji and the Yasaka pagoda'],
       ['Building', 'Restored Taisho-era ryokan main house + contemporary annex'],
       ['Dining', 'Restaurant Loka Gion on site, head chef Takaaki Kato. <em>Note: the trip document says the restaurant is La Bombance — that changed; Sowaka’s own site now lists Loka.</em>'],
@@ -147,7 +147,9 @@ export const entities = {
     blurb:
       'A modern ryokan that stripped the form back rather than dressing it up: 16 rooms, wide quiet spaces, morning yoga, a library, and private open-air baths. The kitchen is serious and the surrounding Kaga area is where Kutani porcelain and Kaga yuzen dyeing come from, which is why Itinerary 2 gives it two nights instead of one.',
     facts: [
-      ['Why it is here', 'The craft-country stay in Itinerary 2'],
+      // This card appears on the plan (as the standing alternative to Tobira) and in the archive
+      // (as Itinerary 2's craft-country stay), so the line has to be true in both places.
+      ['Why it is here', 'The standing alternative to the Alps stop on the plan — and the craft-country stay in the archived Itinerary 2'],
       ['Style', 'Minimalist modern ryokan — the anti-ornate version'],
       ['Extras', 'Morning yoga, library, private rotenburo'],
       ['Nearby', 'Kutani ware and Kaga yuzen workshops'],
@@ -491,7 +493,7 @@ export const entities = {
     blurb:
       'Wagyu teppanyaki with a Hakone view, and the meal that breaks up a run of ryokan kaiseki. Teppanyaki is one of the friendliest formats for a celiac guest — salt-grilled instead of sauced, and everything happens in front of you.',
     facts: [
-      ['Why it is here', 'Lunch on the Hakone free day in Itinerary 1; in 1B it moves to <strong>dinner</strong> on the loop day, so that three nights at Gora Kadan are not three kaiseki'],
+      ['Why it is here', 'On the plan it takes <strong>dinner</strong> on the Hakone loop day, so that three nights at Gora Kadan are not three kaiseki. The archived Itinerary 1 had it at lunch'],
       ['Format', 'Teppanyaki counter — food cooked in front of you'],
       ['The safety valve', 'The easiest night of the trip if a kaiseki course is not landing. Wagyu, seafood, vegetables, salt and a grill — nothing to brace for.'],
     ],
@@ -533,7 +535,7 @@ export const entities = {
       ['Length', 'About 150 minutes'],
       ['Output', 'An engraved small katana, shipped to you'],
       ['Booking', 'The Hirata calendar is irregular — ask early'],
-      ['Catch', 'It lives in Ome, west Tokyo — Itinerary 4 skips Tokyo, so it is not available there'],
+      ['Catch', 'It lives in Ome, west Tokyo, so the forge takes the day out of the Tokyo block — which is why L’Effervescence is the evening of the same Tuesday. The archived Southern Warmth route loses it entirely by skipping Tokyo'],
     ],
   },
 
@@ -723,8 +725,8 @@ export const entities = {
       ['Success rate', 'Better than 90%, from monitored nests with cameras'],
       ['Length', '90 minutes, from ¥3,500 per person'],
       ['November timing', 'Tours run at 16:00–17:30 because the sun sets early'],
-      ['Hard deadline', '<strong>The season ends 30 November 2026.</strong> Itinerary 4 misses it by skipping Tokyo; every other route can reach it'],
-      ['Getting there', 'Hokuriku shinkansen, Tokyo → Karuizawa, 1h10 — the same line Itinerary 2 already rides to Nagano'],
+      ['Hard deadline', '<strong>The season ends 30 November 2026.</strong> The plan books it for Monday 9 November — comfortably inside, but November dates are the last of the year, so the slots go first'],
+      ['Getting there', 'Hokuriku shinkansen, Tokyo → Karuizawa, 1h10 — out after lunch, back in Tokyo the same evening'],
     ],
   },
 
@@ -827,7 +829,7 @@ export const entities = {
     type: 'place',
     location: 'Hakone',
     blurb:
-      'The crater lake with the red torii standing in the water at Hakone Shrine, and — on a clear day — Mt Fuji at the far end. Foliage around the lake peaks in mid-November, which is when Itinerary 1 is there.',
+      'The crater lake with the red torii standing in the water at Hakone Shrine, and — on a clear day — Mt Fuji at the far end. Foliage around the lake peaks in mid-November.',
   },
   gion: {
     name: 'Gion',

@@ -52,7 +52,8 @@ export const routes = {
     inOut: 'Fly in to Tokyo (HND), out of Osaka (KIX)',
   },
 
-  'momiji-with-a-detour': {
+  // The plan. Keyed 'plan' to match plan.mjs's slug — the page it draws on is index.html.
+  plan: {
     stops: [
       { id: 'tokyo', nights: 4, at: 'right' },
       { id: 'hakone', nights: 3, mode: 'rail', at: 'bottom' },
