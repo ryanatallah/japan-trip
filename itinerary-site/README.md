@@ -34,7 +34,15 @@ Content lives in two files — edit those, not the HTML:
 |---|---|
 | `content/entities.mjs` | Every hotel, restaurant, experience, place: copy, rates, facts, gluten-free notes |
 | `content/itineraries.mjs` | The five trips: days, routes, costs, verdicts, and shared foundations |
+| `content/geo.mjs` | Map coordinates and each itinerary's route — stops, nights, day trips, travel mode |
 | `content/media.json` | Generated. The photo manifest — captions, categories, sources |
+| `content/japan-outline.json` | Generated once. Simplified coastline for the route maps |
+
+Each itinerary page carries a **route map**, drawn as inline SVG from `content/geo.mjs` over that
+coastline — numbered overnight stops with night counts, solid lines for rail, dashes for flights,
+dots for driving, and hollow markers for day trips. No tile server and no network, so it works from
+`file://` like everything else. To change a route, edit `content/geo.mjs` and rebuild. To regenerate
+the coastline itself, see the header of `tools/build-geo.mjs`.
 
 ```bash
 node build.mjs          # content + media.json -> site/

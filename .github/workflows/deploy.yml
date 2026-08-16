@@ -1,0 +1,37 @@
+name: Deploy site to GitHub Pages
+
+# The site is committed pre-built under itinerary-site/site/, so there is nothing to
+# compile here — this just publishes that folder. Rebuild locally with
+# `node build.mjs` and commit the result; pushing to main publishes it.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'itinerary-site/site/**'
+      - '.github/workflows/deploy.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let an in-flight deploy finish rather than cancelling it mid-upload.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: itinerary-site/site
+      - id: deployment
+        uses: actions/deploy-pages@v4

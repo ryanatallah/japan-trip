@@ -2387,6 +2387,78 @@
    "confidence": "high"
   }
  ],
+ "kinosaki": [
+  {
+   "file": "kinosaki-01.jpg",
+   "thumb": "kinosaki-01-t.jpg",
+   "w": 939,
+   "h": 609,
+   "category": "people",
+   "caption": "The signature Kinosaki scene: two women in patterned yukata and white tabi with geta, one carrying a small bamboo basket, walking the stone-railed canal path under weeping willows, with an arched stone bridge and the wooden ryokan fronts behind them.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2025/12/yukata.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-02.jpg",
+   "thumb": "kinosaki-02-t.jpg",
+   "w": 1500,
+   "h": 545,
+   "category": "people",
+   "caption": "The same stroll in deep winter — two guests in yukata under a floral haori and a padded jacket walking a ploughed street with snow piled on the canal parapet, on a snow-capped stone lantern and on the willows, with a street lamp lit at midday.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2023/04/top23_winter_slide1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-03.jpg",
+   "thumb": "kinosaki-03-t.jpg",
+   "w": 1400,
+   "h": 900,
+   "category": "setting",
+   "caption": "The Otani River canal in falling snow: the low arched stone bridge and its stone balustrade under snow, snow-loaded willows both banks, lantern light reflected in the black water, and people crossing the bridge under umbrellas.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/12/slide-winter-kinosaki.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-04.jpg",
+   "thumb": "kinosaki-04-t.jpg",
+   "w": 1500,
+   "h": 560,
+   "category": "setting",
+   "caption": "The canal at dusk with the willows lit from below by the row of stone lanterns along each bank, a couple in yukata standing on the arched stone bridge, and the whole scene doubled in the still water.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2021/08/Kinosaki-Onsen.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-05.jpg",
+   "thumb": "kinosaki-05-t.jpg",
+   "w": 1500,
+   "h": 844,
+   "category": "activity",
+   "caption": "Yanagi-yu, one of the seven public bathhouses, buried under snow — its curved gable and wooden 柳湯 signboard, the split noren curtain at the door, bathers in yukata and haori gathered outside, and the snow-covered canal wall in the foreground.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2020/01/slide-winter-yanagiyu.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-06.jpg",
+   "thumb": "kinosaki-06-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "activity",
+   "caption": "A Sea of Japan snow-crab auction floor: hundreds of wooden crates of live Matsuba crab, each crab with a coloured plastic port tag on a claw, laid out in rows on the wet concrete while buyers in waders and aprons work down the aisles.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2025/11/snowcrab2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kinosaki-07.jpg",
+   "thumb": "kinosaki-07-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "setting",
+   "caption": "The view down the Kinosaki Ropeway line in winter — the cables and a lower pylon in the foreground, the snow-dusted town filling the valley below, the Maruyama River curving to the Sea of Japan beyond, and snow on the surrounding hills.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2024/08/ropewaywinter.jpg",
+   "confidence": "high"
+  }
+ ],
  "kirishima": [
   {
    "file": "kirishima-01.jpg",
@@ -2692,6 +2764,58 @@
    "category": "food",
    "caption": "A KUON dinner setting: marbled beef with shredded leek on a black checkered plate beside a lit shabu-shabu burner, sashimi of tuna, prawn and white fish on a wooden block, an assorted appetiser plate, chawanmushi, rice, miso soup and pickles.",
    "sourceUrl": "https://cdn.jalan.jp/jalan/images/pict4L/Y2/Y363672/Y363672328.jpg",
+   "confidence": "high"
+  }
+ ],
+ "kurama-kibune": [
+  {
+   "file": "kurama-kibune-01.jpg",
+   "thumb": "kurama-kibune-01-t.jpg",
+   "w": 959,
+   "h": 640,
+   "category": "setting",
+   "caption": "The Kibune-jinja approach at night during the autumn light-up: the double file of vermilion posts carrying lit paper lanterns up either side of the rough stone staircase, the red handrail running up the middle, and gold and amber maples floodlit overhead against a black sky. Autumn.",
+   "sourceUrl": "https://ja.kyoto.travel/resource/event/13025-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-02.jpg",
+   "thumb": "kurama-kibune-02-t.jpg",
+   "w": 1600,
+   "h": 2261,
+   "category": "setting",
+   "caption": "The same staircase by day, seen through Kibune-jinja's second vermilion torii: the lantern posts climbing away in two rows, visitors on the steps, a huge moss-covered rock and a village building beside the path, and gold and rust maple over the torii beam. Photographed 26 November 2011, late autumn.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Kibune_%287058700873%29.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-03.jpg",
+   "thumb": "kurama-kibune-03-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "Kurama-dera's Nio-mon gate at the top of the entrance steps, its vermilion timbers and grey tiled roof above a crowd of visitors climbing, with rows of small vermilion lanterns and stone lanterns flanking the stair and red and orange maples on both sides. Photographed 26 November 2011, autumn.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kurama_%287057166303%29.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-04.jpg",
+   "thumb": "kurama-kibune-04-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "setting",
+   "caption": "The Eizan Railway 'momiji tunnel': an orange-and-cream two-car train coming down the single track between Ichihara and Ninose, hemmed in on both sides by maples in full scarlet and orange, with the overhead wires and wooden poles running through the canopy. Autumn.",
+   "sourceUrl": "https://eizandensha.co.jp/wp-content/uploads/2020/06/kabegami_momiji-no-tunnel_aki-01.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-05.jpg",
+   "thumb": "kurama-kibune-05-t.jpg",
+   "w": 1024,
+   "h": 1024,
+   "category": "setting",
+   "caption": "The village street at Kibune during the momiji-toro lantern nights: the road climbing between a stone retaining wall and the wooden ryokan frontages, small paper lanterns set along the verge, two people walking up, and the maples overhead floodlit red, orange and green. Autumn.",
+   "sourceUrl": "https://hanatouro.kyoto.travel/rental/wp-content/uploads/2023/11/%E8%B2%B4%E8%88%B9%E7%A5%9E%E7%A4%BE-1024x1024.png",
    "confidence": "high"
   }
  ],
@@ -3123,6 +3247,68 @@
    "confidence": "high"
   }
  ],
+ "matsumoto": [
+  {
+   "file": "matsumoto-01.jpg",
+   "thumb": "matsumoto-01-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "Matsumoto Castle across the moat under a cloudless cobalt sky, with the snow-covered Northern Alps running along the whole left horizon and the willows on the far bank stripped bare. The black-and-white keep sits at right on its stone base, reflected in still water. This is the cold-season look — bare trees, snow on the peaks — and the closest match in the official library to how the castle will read on a clear day in late November.",
+   "sourceUrl": "https://visitmatsumoto.com/lsc/upfile/spot/0000/1001/1001_1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "matsumoto-02.jpg",
+   "thumb": "matsumoto-02-t.jpg",
+   "w": 1600,
+   "h": 1068,
+   "category": "setting",
+   "caption": "The classic view: the vermilion-railed timber bridge arcing over the moat in the foreground, the jet-black keep and its adjoining turrets behind on their stone rampart, and forested hills on the horizon at right. Clear day, high cloud, summer foliage.",
+   "sourceUrl": "https://visitmatsumoto.com/lsc/upfile/spot/0000/1001/1001_6.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "matsumoto-03.jpg",
+   "thumb": "matsumoto-03-t.jpg",
+   "w": 1600,
+   "h": 1274,
+   "category": "setting",
+   "caption": "The whole castle at twilight, floodlit against a violet sky and mirrored full-length in the flat black water of the moat, with the red bridge visible small at the left edge and mountains on the far right horizon.",
+   "sourceUrl": "https://visitmatsumoto.com/lsc/upfile/spot/0000/1001/1001_3.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "matsumoto-04.jpg",
+   "thumb": "matsumoto-04-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "setting",
+   "caption": "Nakamachi Street in low golden light: white plastered kura storehouses with black-tiled roofs down both sides, their lower walls in the black-and-white namako lattice plasterwork the street is known for, timber shop signs and lantern-headed streetlamps, and the street running away empty toward hills at the far end. One tree mid-frame has turned autumn orange.",
+   "sourceUrl": "https://visitmatsumoto.com/lsc/upfile/spot/0000/1082/1082_1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "matsumoto-05.jpg",
+   "thumb": "matsumoto-05-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "setting",
+   "caption": "Nakamachi Street from street level under a deep blue sky — two facing rows of white kura storehouses with heavy grey-tiled roofs, black shuttered upper windows and white lattice namako bases, a carved gilt shop signboard on the right, a few people walking, and a green mountain closing the view at the end of the street.",
+   "sourceUrl": "https://visitmatsumoto.com/lsc/upfile/spot/0000/1082/1082_3.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "matsumoto-06.jpg",
+   "thumb": "matsumoto-06-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "detail",
+   "caption": "Matsumoto City Museum of Art: the long glazed street facade scattered with large red polka dots and signed YAYOI KUSAMA in the artist's handwriting, with her monumental tulip sculpture 'Phantom Flower' (2002) — spotted red, magenta, green and blue blooms on curling stems — standing in the forecourt beside the timber entrance canopy. Kusama was born in Matsumoto.",
+   "sourceUrl": "https://visitmatsumoto.com/lsc/upfile/spot/0000/1003/1003_1.jpg",
+   "confidence": "high"
+  }
+ ],
  "meiji-jingu": [
   {
    "file": "meiji-jingu-01.jpg",
@@ -3288,6 +3474,168 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Nara_deer_between_stone_lanterns.jpg",
    "confidence": "high",
    "credit": "LynUratani, CC BY-SA 4.0"
+  }
+ ],
+ "nishimuraya-honkan": [
+  {
+   "file": "nishimuraya-honkan-01.jpg",
+   "thumb": "nishimuraya-honkan-01-t.jpg",
+   "w": 1600,
+   "h": 1062,
+   "category": "exterior",
+   "caption": "The main gate at dusk: a tiled-roof timber gate hung with two glowing globe lamps and a carved wooden signboard reading 西村屋, opening onto a wet cobbled approach that leads to the lit glass entrance doors.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/6244A7B3-B452-4984-B798A1D8B2DE04B1/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-02.jpg",
+   "thumb": "nishimuraya-honkan-02-t.jpg",
+   "w": 1570,
+   "h": 1140,
+   "category": "exterior",
+   "caption": "The ryokan from the street under deep snow — the long slatted timber wall, the 西村屋 gate with its lamps lit, and the two-storey wooden guest wing behind, with the forested hillside white above it.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/89BC80D4-830C-4185-B93EE369840C4ED3/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-03.jpg",
+   "thumb": "nishimuraya-honkan-03-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The inner Japanese garden: a moss-covered stone lantern in the foreground, a pond, clipped pines, a low stone arched bridge and a cobbled path, with the wooden guest wing and its ranks of windows rising behind.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/7597789C-9E23-47E2-93C4BC766C936681/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-04.jpg",
+   "thumb": "nishimuraya-honkan-04-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The same garden under snow — snow caps the stone lantern, the stone bridge and the clipped pines, yukitsuri rope cones protect the trees, and the guest-room windows glow yellow through the branches.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/9D4D990B-7AD5-4289-91B7575CF485173F/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-05.jpg",
+   "thumb": "nishimuraya-honkan-05-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "room",
+   "caption": "A tatami guest room with a deep-red lacquered low table and rattan legless chairs, a tokonoma alcove with a framed bird painting, and shoji screens slid open onto a timber veranda with two armchairs facing the garden's maples and pines.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/2AF05449-ABAB-44CC-A1C70963E7DA51D8/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-06.jpg",
+   "thumb": "nishimuraya-honkan-06-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "room",
+   "caption": "The Honjin suite (本陣の間), the top open-air-bath suite: coffered timber ceiling, a tokonoma with hanging scroll and ikebana, a long lacquered table on tatami, and beyond the full-height opening an oval wooden soaking tub on a private deck facing the wooded slope.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/honjinsuiteroomwithopenairbath0001.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-07.jpg",
+   "thumb": "nishimuraya-honkan-07-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "room",
+   "caption": "The Ginsen suite (銀扇の間) in the Hirata-kan annex: tatami sitting room with lacquered table under a hexagonal paper lantern, a Western twin-bed room visible through the open partition, split-bamboo screens and a window onto a small courtyard.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/ginsensuiteroom1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-08.jpg",
+   "thumb": "nishimuraya-honkan-08-t.jpg",
+   "w": 1600,
+   "h": 1070,
+   "category": "bath",
+   "caption": "The Asuka room's private open-air bath at dusk — a sunken tub on a timber deck under a low bamboo-framed roof, a wall lantern lit, stepping stones and ferns in the enclosed courtyard, and the room's lit interior across the garden.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/asuka03.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-09.jpg",
+   "thumb": "nishimuraya-honkan-09-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "bath",
+   "caption": "The private hinoki bath in the Kumoi suite (雲居の間), water running in from a plain wooden spout, the shutters opened onto the wooded hillside behind the ryokan.",
+   "sourceUrl": "https://storage.googleapis.com/webimages-p1nishrd/hotel/75039/images/room/kumoisuiteroomwithopenairbath3.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-10.jpg",
+   "thumb": "nishimuraya-honkan-10-t.jpg",
+   "w": 1600,
+   "h": 1070,
+   "category": "bath",
+   "caption": "The communal open-air bath of Kichi-no-yu — a rectangular cypress-edged pool fed by a bamboo spout, walled in split-bamboo screens with a hanging lantern, and live bamboo culms growing at the edge of the frame.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/65EFF341-9EE4-4511-AA80524D58930B33/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-11.jpg",
+   "thumb": "nishimuraya-honkan-11-t.jpg",
+   "w": 1180,
+   "h": 750,
+   "category": "dining",
+   "caption": "Senrei-no-ma, the breakfast hall: a 100-mat room with a paulownia coffered ceiling and curved cove, walnut tables with red-seated chairs, and the calligraphy scroll 泉霊 hung on the end wall between shoji-screened windows.",
+   "sourceUrl": "https://www.nishimuraya.ne.jp/honkan/cuisine/images/img_cuisine_brakfast01.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-12.jpg",
+   "thumb": "nishimuraya-honkan-12-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "dining",
+   "caption": "A breakfast laid on a walnut table in Senrei-no-ma below the 泉霊 scroll — cedar tray boxes of grilled fish and vegetables, a bentwood steamer of rice, miso soup, pickles and a small copper hot pot.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/D8788D6D-EE4B-4052-9C17910963B88C26/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-13.jpg",
+   "thumb": "nishimuraya-honkan-13-t.jpg",
+   "w": 1600,
+   "h": 1068,
+   "category": "food",
+   "caption": "A full Matsuba snow-crab dinner: raw crab sashimi on ice, a whole boiled crab tagged at the claw with the port band, grilled legs and shells of crab miso, shabu-shabu vegetables with a broth pot, a crab nigiri and a charcoal grill box at the table.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/B887A8E4-6E0B-4B11-844AE14A1A996467/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-14.jpg",
+   "thumb": "nishimuraya-honkan-14-t.jpg",
+   "w": 1600,
+   "h": 1068,
+   "category": "food",
+   "caption": "Matsuba crab over charcoal — split legs and claws on the wire grill, the meat turning opaque, and the top shell filled with bubbling crab miso set alongside.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/C45052BF-4982-4424-AAA140449A6E7EFF/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-15.jpg",
+   "thumb": "nishimuraya-honkan-15-t.jpg",
+   "w": 1600,
+   "h": 1201,
+   "category": "food",
+   "caption": "Two pieces of raw snow-crab nigiri topped with chives on a black lacquer plate with a gold rim, garnished with a crab claw and a camellia sprig.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/718B4744-21F3-4F6E-B582728539208C0D/",
+   "confidence": "high"
+  },
+  {
+   "file": "nishimuraya-honkan-16.jpg",
+   "thumb": "nishimuraya-honkan-16-t.jpg",
+   "w": 1600,
+   "h": 1070,
+   "category": "food",
+   "caption": "Tajima beef cooked at the table on a hot iron plate — marbled slices seared and lifted with chopsticks, with shishito pepper, shiitake, courgette and yellow pepper alongside.",
+   "sourceUrl": "https://d1m7xnn75ypr6t.cloudfront.net/images/media/47E2AEEE-DAEF-4DF2-B41FF91EF3CDC884/",
+   "confidence": "high"
   }
  ],
  "okas-sankara": [
@@ -4480,6 +4828,78 @@
    "confidence": "high"
   }
  ],
+ "takao": [
+  {
+   "file": "takao-01.jpg",
+   "thumb": "takao-01-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "Jingo-ji's stone approach at peak autumn: the broad flight of worn stone steps climbing to the Kondo, the hall's tiled roof and vermilion beams showing over the crest, and banks of crimson maple pressing in from both sides against a clear blue sky. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Takao%2C_Kyoto%2C_Part_II_-_TakaoKyoto6140.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-02.jpg",
+   "thumb": "takao-02-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "A vermilion-railed bridge over the Kiyotaki river on the Takao valley floor, its low arch and plank deck seen from the bank, with the shallow gravel-bedded stream beneath and a wall of salmon-red and scarlet maple filling the hillside behind. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Takao%2C_Kyoto%2C_Part_II_-_TakaoKyoto6136.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-03.jpg",
+   "thumb": "takao-03-t.jpg",
+   "w": 1600,
+   "h": 2133,
+   "category": "setting",
+   "caption": "The Kiyotaki river gorge in full colour: the shallow stream curving between shingle bars, both banks packed with maples turning scarlet, orange and gold, and the red of the canopy reflected in the water. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Takao%2C_Kyoto%2C_Part_II_-_TakaoKyoto6149.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-04.jpg",
+   "thumb": "takao-04-t.jpg",
+   "w": 1600,
+   "h": 2133,
+   "category": "setting",
+   "caption": "Kozan-ji's Sekisui-in: looking out from inside the hall through its vermilion posts and lifted shutters onto a single large maple in full crimson and gold, with the polished veranda boards and the reddish floor matting in the foreground. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Takao%2C_Kyoto%2C_Part_I_-_TakaoKyoto6210.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-05.jpg",
+   "thumb": "takao-05-t.jpg",
+   "w": 1200,
+   "h": 800,
+   "category": "detail",
+   "caption": "Inside Kozan-ji's Sekisui-in from the other end: the dark plank floor and open timber frame, the small Zenzai-doji figure standing in silhouette against the lattice screen, and red and orange maples filling every opening along the veranda. Autumn.",
+   "sourceUrl": "https://totteoki.kyoto.travel/wp-content/uploads/2024/10/kosanji_eye.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-06.jpg",
+   "thumb": "takao-06-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "Saimyo-ji: the white-plastered, timber-framed hall on its moss-and-gravel terrace, half-hidden under a canopy of maple in deep orange, with more orange and red trees running back along the path. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Takao%2C_Kyoto%2C_Part_I_-_TakaoKyoto6201.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-07.jpg",
+   "thumb": "takao-07-t.jpg",
+   "w": 1200,
+   "h": 799,
+   "category": "activity",
+   "caption": "The kawarake-nage throwing point at Jingo-ji: two visitors at the railed terrace holding the small white clay discs, the wooden sign below them reading 高雄名勝 錦雲渓 かわらけ投げ, and the forested Kinunkei gorge dropping away behind. Photographed in the green summer season, not autumn.",
+   "sourceUrl": "https://totteoki.kyoto.travel/wp-content/uploads/2024/10/jingoji08.jpg",
+   "confidence": "high"
+  }
+ ],
  "teamlab": [
   {
    "file": "teamlab-01.jpg",
@@ -4532,6 +4952,168 @@
    "confidence": "high"
   }
  ],
+ "tobira-myojinkan": [
+  {
+   "file": "tobira-myojinkan-01.jpg",
+   "thumb": "tobira-myojinkan-01-t.jpg",
+   "w": 1600,
+   "h": 884,
+   "category": "exterior",
+   "caption": "The arrival marker at dusk: a carved timber name board reading 親湯 明神館 under its own small shingled gate roof, uplit and set into a bank of ferns and shrubs above a stone kerb, with the ryokan's dark vertical-timber wall rising behind and a paper lantern glowing at the edge of the drive.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/indx_main_img01.png",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-02.jpg",
+   "thumb": "tobira-myojinkan-02-t.jpg",
+   "w": 1600,
+   "h": 571,
+   "category": "exterior",
+   "caption": "Daytime at the entrance: the property's dark-green Toyota shuttle van lettered TOBIRA MYOJINKAN standing on the drive in front of the black timber-clad building, beside the stone name marker under its timber gate, hemmed in by forest. This is the van that runs the free 35-45 minute transfer from Matsumoto station.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/access/access_main_img01.png",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-03.jpg",
+   "thumb": "tobira-myojinkan-03-t.jpg",
+   "w": 1600,
+   "h": 571,
+   "category": "setting",
+   "caption": "Autumn on the Tobira river below the ryokan — backlit yellow and orange maple leaves on bare black branches, with the stream breaking white over rocks in the blurred background. The nearest thing in the official library to the late-November look of the valley.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/spend/spend_main_img01.png",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-04.jpg",
+   "thumb": "tobira-myojinkan-04-t.jpg",
+   "w": 1600,
+   "h": 852,
+   "category": "setting",
+   "caption": "The outdoor terrace at night: a gas fire pit burning in a low stone-clad table, ringed by dark wicker sofas with cream cushions on a timber deck, with the surrounding forest canopy uplit overhead. Shot in leaf, so summer.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/main_img12.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-05.jpg",
+   "thumb": "tobira-myojinkan-05-t.jpg",
+   "w": 1600,
+   "h": 852,
+   "category": "room",
+   "caption": "A Japanese-style guest room: tatami floor with a long black-lacquer low table and legless zaisu chairs, timber-coffered ceiling and a woven bamboo pendant lamp, shoji screens drawn back to a balcony room laid with a red carpet and two armchairs, opening onto the wooded slope opposite.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/main_img02.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-06.jpg",
+   "thumb": "tobira-myojinkan-06-t.jpg",
+   "w": 1600,
+   "h": 1068,
+   "category": "room",
+   "caption": "Otakato Japanese-style room (お鷹棟 和室): tatami with a black low table, four zabuton and zaisu chairs, reed-screen doors folded back to a timber-floored sitting bay with a spindle-back sofa and a paper globe floor lamp facing a picture window of green forest; folded yukata laid out on red cloth at the right.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/room/Otakato-jp_img1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-07.jpg",
+   "thumb": "tobira-myojinkan-07-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "room",
+   "caption": "A Western-style room: twin beds pushed together beneath a backlit straw-flecked plaster panel framed in pale timber, on a wide cedar plank floor, with glass pendant reading lamps, a live-edge slab artwork on the left wall and a carved timber bench holding rolled towels and robes on the right.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/indx_room_img01.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-08.jpg",
+   "thumb": "tobira-myojinkan-08-t.jpg",
+   "w": 1600,
+   "h": 1000,
+   "category": "bath",
+   "caption": "The standing bath \"Setsugekka\" (立ち湯 雪月花) — the ryokan's signature bath. A broad, mirror-still pool under a timber-boarded ceiling whose far wall is a full-width open frame straight onto the forest, so the water reads as a green mirror of the maples. Shot in full summer leaf.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/spa/spa_img01.png",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-09.jpg",
+   "thumb": "tobira-myojinkan-09-t.jpg",
+   "w": 1600,
+   "h": 1000,
+   "category": "bath",
+   "caption": "The large communal bath \"Hakuryu\" (露天風呂付き大浴場 白龍): an octagonal stone-rimmed tub sunk into a dark tiled floor under a ribbed timber ceiling, with glass walls onto the open-air section beyond — a stone-edged rotenburo backed by a rock face and conifers. Washing stations along the right-hand wall.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/spa/spa_img02.png",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-10.jpg",
+   "thumb": "tobira-myojinkan-10-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "bath",
+   "caption": "A Zen-wing suite's private open-air hot-spring bath: a large concrete-edged tub steaming on a stone terrace under a slatted timber pergola, screened by a vertical timber fence, with the hillside beyond in bare branches — this is the late-autumn/winter look, the season the trip arrives in. Inside, a raised tatami platform with cushions and a bundle of branches.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/room/zen-312_img1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-11.jpg",
+   "thumb": "tobira-myojinkan-11-t.jpg",
+   "w": 1600,
+   "h": 852,
+   "category": "dining",
+   "caption": "Nature French 菜 (SAI), the French restaurant: white-clothed tables with spindle-back timber chairs and cream seat cushions under a dark boarded vaulted ceiling, a glazed antique wine dresser at the back, a bare-branch arrangement in a bronze vessel, a black conical fireplace at right and a full glass wall onto the terrace and greenery at left.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/main_img05.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-12.jpg",
+   "thumb": "tobira-myojinkan-12-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "dining",
+   "caption": "Salon 1050, the café and bar: a cedar-clad double-height room opening onto a dark timber deck, furnished with black woven armchairs and tan leather cushions around low tables, red shaded lamps flanking a long window onto the forest, and an open spiral stair. A member of kitchen staff in whites crosses the frame carrying a tiered stand.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/indx_facility_img01.png",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-13.jpg",
+   "thumb": "tobira-myojinkan-13-t.jpg",
+   "w": 1600,
+   "h": 852,
+   "category": "food",
+   "caption": "A kaiseki course laid on a vermilion lacquer tray over a black table: a checkerboard-glazed square cup of dressed greens, a persimmon-coloured sphere, a small painted cup of dressed vegetables, and grilled salmon with a whole dried fish, all on cherry-blossom-printed paper and scattered with cherry petals. Japanese plating, spring styling.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/main_img16.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-14.jpg",
+   "thumb": "tobira-myojinkan-14-t.jpg",
+   "w": 1600,
+   "h": 852,
+   "category": "food",
+   "caption": "Grilled beef on a vermilion lacquer plate: a glazed slab of beef and a rolled beef parcel around a pale core, laid under a long strip of grilled burdock root, with a scorched baton of daikon and a sprig of nandina. Japanese plating.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/main_img18.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-15.jpg",
+   "thumb": "tobira-myojinkan-15-t.jpg",
+   "w": 1600,
+   "h": 852,
+   "category": "food",
+   "caption": "A vegetable terrine from the French kitchen: a long bar of vegetables pressed in visible layers — beetroot red, carrot orange, yellow, courgette and leek green — set on a white plate with pale mousse quenelles, a cream sauce, slivers of green bean and micro-leaves. Vegetable-led Western plating.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/main_img06.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "tobira-myojinkan-16.jpg",
+   "thumb": "tobira-myojinkan-16-t.jpg",
+   "w": 1600,
+   "h": 852,
+   "category": "food",
+   "caption": "An all-green vegetable plate from the French kitchen: mangetout, asparagus tips, broad beans, frisée and purslane piled on a wide white plate over a scatter of dark crumb and dots of green herb oil. The clearest single image of the organic, vegetable-forward cooking the kitchen is known for.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/main_img15.jpg",
+   "confidence": "high"
+  }
+ ],
  "tofukuji": [
   {
    "file": "tofukuji-01.jpg",
@@ -4571,6 +5153,48 @@
    "category": "setting",
    "caption": "The Hojo south garden from the veranda: four groups of upright stones set in raked gravel with moss mounds to the right, framed by the karamon gate and the temple roofs behind (official temple photograph)",
    "sourceUrl": "https://tofukuji.jp/wordpress/wp-content/themes/tofukuji/img/bg_guide-honbo_main.jpg",
+   "confidence": "high"
+  }
+ ],
+ "toyooka-storks": [
+  {
+   "file": "toyooka-storks-01.jpg",
+   "thumb": "toyooka-storks-01-t.jpg",
+   "w": 1500,
+   "h": 1000,
+   "category": "wildlife",
+   "caption": "An Oriental white stork foraging head-down in a rice field — the diagnostic features are all visible: the heavy straight BLACK bill, the bare red skin ringing the pale eye, white body with black scapulars and flight feathers, dark red legs, and a numbered colour ring on the left leg from the Toyooka reintroduction programme.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork09.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "toyooka-storks-02.jpg",
+   "thumb": "toyooka-storks-02-t.jpg",
+   "w": 1200,
+   "h": 853,
+   "category": "wildlife",
+   "caption": "Winter in the Toyooka basin: a ringed Oriental white stork wading a flooded, stubble-cut paddy with its reflection under it, a raft of whooper swans resting on the bund behind, and the edge of the town and the bare hills beyond.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork-gallery_winter-field.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "toyooka-storks-03.jpg",
+   "thumb": "toyooka-storks-03-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "wildlife",
+   "caption": "A pair of Oriental white storks on one of the region's artificial nesting towers — a stick nest built on a platform atop a pole above the treeline, one adult landing with wings spread, both birds colour-ringed, and a chick's head just showing over the rim of the nest.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork03.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "toyooka-storks-04.jpg",
+   "thumb": "toyooka-storks-04-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "people",
+   "caption": "Inside the breeding enclosures at the Hyogo Park of the Oriental White Stork: a keeper in waders and gloves tips a bucket of fish into a blue basin while a stork strides in with wings half-raised, a second bird waiting at another basin beside the pond behind the green mesh.",
+   "sourceUrl": "https://visitkinosaki.com/vkcore/wp-content/uploads/2018/06/stork02.jpg",
    "confidence": "high"
   }
  ],

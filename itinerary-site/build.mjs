@@ -5,7 +5,9 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { entities } from './content/entities.mjs';
 import { itineraries, shared, recommendation, wishlist } from './content/itineraries.mjs';
+import { renderMap } from './tools/map.mjs';
 
+const WORDS = ['zero','one','two','three','four','five','six','seven','eight','nine','ten'];
 const ROOT = dirname(fileURLToPath(import.meta.url));
 const OUT = join(ROOT, 'site');
 
@@ -96,9 +98,11 @@ function coverRow(slugs, sizes = '(max-width:700px) 100vw, 30vw') {
 
 /** Small inline photo row used on day cards. */
 function strip(refs) {
+  // cover() ranks wildlife and establishing shots first, which reads far better as a
+  // day-card lead than ordered()'s gallery sequence (that one leads with process shots).
   const picks = refs.flatMap((r) => {
-    const list = ordered(r);
-    return list.length ? [{ ...list[0], _slug: r }] : [];
+    const c = cover(r) || ordered(r)[0];
+    return c ? [{ ...c, _slug: r }] : [];
   }).slice(0, 4);
   if (!picks.length) return '';
   return `<div class="strip">${picks.map((s) => img(s, { className: 'stripshot', sizes: '(max-width: 700px) 45vw, 180px' })).join('')}</div>`;
@@ -152,6 +156,7 @@ function shell({ title, desc, body, active = '', page = '' }) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="${esc(desc)}">
+<meta name="robots" content="noindex, nofollow">
 <title>${esc(title)}</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
@@ -202,7 +207,7 @@ function buildIndex() {
     <td class="c-route">${it.route.map((r) => esc(r)).join(' → ')}</td>
     <td class="c-cost">${esc(it.cost)}</td>
     <td><span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span></td>
-  </tr>`).join('');
+  </tr>${it.clash ? `<tr class="clashrow"><td></td><td colspan="5"><span class="clash">✕ ${esc(it.clash)}</span></td></tr>` : ''}`).join('');
 
   const cards = itineraries.map((it) => {
     const mos = it.heroCard.map((s) => cover(s)).filter(Boolean);
@@ -214,7 +219,7 @@ function buildIndex() {
     return `<article class="card">
     <div class="card-shots">${shotsHtml}</div>
     <div class="card-text">
-      <p class="card-num">Itinerary ${it.num}</p>
+      <p class="card-num">Itinerary ${it.num}${it.variantOf ? ` <em>· fork of ${it.variantOf}</em>` : ''}</p>
       <h3><a href="${it.slug}.html">${esc(it.title)}</a></h3>
       <p class="card-tag">${esc(it.tagline)}</p>
       <p class="card-meta"><span>${esc(it.dates)}</span><i>·</i><span>${esc(it.length)}</span><i>·</i><span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span></p>
@@ -260,18 +265,19 @@ function buildIndex() {
   ${heroShots.length >= 3 ? `<div class="hero-collage" style="--cols:${Math.min(heroShots.length, 6)}">${heroShots.slice(0, 6).map((s) => img(s, { sizes: '17vw', eager: true })).join('')}</div>` : ''}
   <div class="hero-inner">
     <p class="kicker">Oct 25 – Dec 3, 2026 · two travellers · from SFO</p>
-    <h1>Five ways to see Japan</h1>
-    <p class="hero-sub">Same country, same fortnight-ish, five genuinely different trips. Every hotel, restaurant, workshop and temple below is photographed so you can judge it before you book it.</p>
+    <h1>${WORDS[itineraries.length] || itineraries.length} ways to see Japan</h1>
+    <p class="hero-sub">Same country, same fortnight-ish, ${WORDS[itineraries.length] || itineraries.length} genuinely different trips. Every hotel, restaurant, workshop and temple below is photographed so you can judge it before you book it.</p>
     <p class="hero-jump">${itineraries.map((it) => `<a href="${it.slug}.html">${it.num}. ${esc(it.title)}</a>`).join('')}</p>
   </div>
 </header>
 
 <section class="sec" id="glance">
-  <h2>The five at a glance</h2>
+  <h2>The ${WORDS[itineraries.length] || itineraries.length} at a glance</h2>
   <div class="tablewrap"><table class="glance">
     <thead><tr><th>#</th><th>Itinerary</th><th>Dates</th><th>Route</th><th>Est. total</th><th>Temp</th></tr></thead>
     <tbody>${glanceRows}</tbody>
   </table></div>
+  <div class="note note-warn"><h3>Thanksgiving constraint</h3><p>${shared.colorado}</p></div>
   <div class="note note-note"><h3>Why the dates matter</h3><p>${shared.dateLogic}</p></div>
 </section>
 
@@ -339,7 +345,7 @@ function buildIndex() {
   </div>
 </section>`;
 
-  return shell({ title: 'Japan 2026 — five itineraries', desc: 'Five illustrated Japan itineraries for Oct–Dec 2026.', body, page: 'index' });
+  return shell({ title: 'Japan 2026 — five itineraries', desc: `${itineraries.length} illustrated Japan itineraries for Oct–Dec 2026.`, body, page: 'index' });
 }
 
 // ── itinerary page ──────────────────────────────────────────────────
@@ -375,7 +381,8 @@ function buildItinerary(it) {
 <header class="hero hero-itin">
   ${heroShot ? `<img class="hero-bg" src="img/${esc(heroShot.file)}" alt="${esc(heroShot.caption)}" fetchpriority="high">` : '<div class="hero-bg hero-bg-empty"></div>'}
   <div class="hero-inner">
-    <p class="kicker">Itinerary ${it.num}</p>
+    <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''}</p>
+    ${it.clash ? `<p class="clash clash-hero">✕ ${esc(it.clash)}</p>` : ''}
     <h1>${esc(it.title)}</h1>
     <p class="hero-sub">${esc(it.tagline)}</p>
     <p class="hero-facts">
@@ -396,6 +403,7 @@ function buildItinerary(it) {
 
 <section class="sec" id="pitch">
   <div class="pitch"><p class="lede lede-big">${it.pitch}</p></div>
+  ${renderMap(it.slug)}
   <div class="transport">
     <h3><span class="mode">${esc(it.transport.mode)}</span></h3>
     <p>${it.transport.text}</p>
@@ -441,6 +449,10 @@ for (const it of itineraries) writeFileSync(join(OUT, `${it.slug}.html`), buildI
 for (const f of readdirSync(join(ROOT, 'assets-src'))) {
   copyFileSync(join(ROOT, 'assets-src', f), join(OUT, 'assets', f));
 }
+
+// The site is published to GitHub Pages so it can be shared by link, not found by
+// search. Belt and braces: robots.txt here, plus a noindex meta on every page.
+writeFileSync(join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
 const total = Object.values(media).reduce((n, l) => n + l.length, 0);
 const withPhotos = Object.keys(entities).filter((s) => hasShots(s)).length;
