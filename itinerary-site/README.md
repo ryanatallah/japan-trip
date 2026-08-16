@@ -84,6 +84,9 @@ All are fixed here and flagged on the relevant page:
 | Gekkoju | `gekkoju.jp` | Doesn't resolve. It is `gekkoujyu.com` — and the site lists **ten** villas, not eight |
 | Sowaka's restaurant | "La Bombance" | Now **Loka Gion**, head chef Takaaki Kato |
 | Goh, Fukuoka | 14 seats | The **restaurant relocated in 2023**; sources differ on 10 vs 14 seats — confirm at booking |
+| L'Effervescence | Scheduled on a Monday in four itineraries | **Closed Sundays and Mondays**, and dinner-only Tue/Wed. Every affected itinerary now books it on a Tuesday |
+| Gora Kadan, gluten-free | "Celiac reviews confirm full GF kaiseki" | True for **staying guests**, but the hotel's own restaurant page says "Vegan/Gluten-Free/Halal options are not available" — that page covers the à la carte restaurant sold to day visitors. Both facts are now on the page |
+| Gora Kadan, dining venues | One kaiseki restaurant | Also **Sushi Kadan**, on-site since Nov 2023, supervised by three-star Sushi Yoshitake — a separate kitchen with its own GF question |
 
 ## Where the photos come from
 

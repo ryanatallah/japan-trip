@@ -40,8 +40,11 @@ export const entities = {
       ['Rooms', 'Bettei and Annex rooms; open-air cypress baths, panoramic wooden baths, jacuzzi + steam sauna variants'],
       ['Onsen', 'Free-flowing from source, indoor and open-air; spa and pool on site'],
       ['Dinner', 'Kaiseki, half board — the rate assumes dinner and breakfast'],
+      ['Three nights without repetition', 'Multi-night guests are offered alternatives to the standard kaiseki — a charcoal-grilled beef course, shabu-shabu, sukiyaki — and the seasonal menu turns over monthly.'],
+      ['A second restaurant on site', '<strong>Sushi Kadan</strong> opened November 2023 in the old villa, supervised by <strong>Sushi Yoshitake</strong> — three Michelin stars in Ginza for twelve consecutive years. A 17-course omakase at a wooden counter. Non-guests can book it too, so reserve early.'],
+      ['Sources disagree on where you eat', 'The hotel’s own restaurant page describes a dedicated dining room; the R&C listing and several guest accounts describe in-room service. Probably room-type dependent — worth confirming with your room category.'],
     ],
-    gf: 'Strong signal: celiac guests have documented full gluten-free kaiseki and breakfast here. Staying guests only — this is not a walk-in restaurant.',
+    gf: 'Two answers, and you need the right one in writing. The public kaiseki-restaurant page states plainly that "Vegan/Gluten-Free/Halal options are not available" — but that page governs the à la carte restaurant, which sells priced courses to <em>day visitors</em>. For <em>staying guests who declare at reservation</em> the record is the opposite and it is excellent: independent celiac reviews describe full gluten-free kaiseki and breakfast, staff confirming each dish as it is set down, even gluten-free afternoon snacks and tea. <strong>Three things to settle in writing before booking three nights:</strong> that the accommodation covers the alternative courses (sukiyaki warishita and shabu-shabu ponzu are both soy-based and the two worst formats on the menu); that it extends to Sushi Kadan, which is a separate kitchen under outside supervision and inherits nothing automatically; and whether a room-and-breakfast night is possible at all, if you want a night out at Itoh Dining. Expect front-of-house to reflexively say no, because that is what their public page says.',
   },
 
   'gora-byakudan': {
@@ -256,10 +259,13 @@ export const entities = {
       ['Setting', 'About 1,000m up in the Northern Alps foothills, roughly 30 minutes from Matsumoto station'],
       ['Rooms', '40 rooms, suites and villas across Japanese and Western styles; spring-water tubs'],
       ['Getting there', 'Free shuttle from Matsumoto station, 35–45 min, booked in advance — fixed departures at 15:15 and 16:30. A taxi is 30 min and about ¥7,000.'],
-      ['Two kitchens', 'Traditional kaiseki <em>and</em> an organic French menu from a chef who specialises in macrobiotic cooking'],
+      ['Three venues, not one', '<strong>SHINSHU / DINING TOBIRA</strong> — Chef Edaki’s innovative Shinshu kaiseki. <strong>Nature French SAI</strong> — Chef Masahiro Tanabe, grilled vegetables from the Tobira farms and bone-in roast meats. <strong>Salon 1050</strong> — a pastry and drinks lounge. Three nights can be three different dinners, and breakfast alternates Japanese or a Natural French one.'],
+      ['If you want a night to feel bigger', 'Both restaurants have upgrade tiers — Shinshu Wagyu at about ¥2,500pp, a special course at about ¥5,000pp'],
+      ['The best dietary signal on the trip', 'Tanabe is a <strong>certified Kushi Macrobiotic</strong> chef, and there is a dedicated macrobiotic menu (≈ ¥2,000, one week’s notice). Macrobiotic kitchens are vegetable-forward, skip refined dairy and sugar, and typically already work in tamari rather than wheat shoyu.'],
+      ['The escape hatch', 'If a kaiseki course is not landing, the French restaurant is the answer — roast meat and vegetables, nothing to brace for.'],
       ['Late-November reality', 'The high Alps are shut by the time you arrive — Kamikochi closes 15 November and <strong>the Venus Line closes on the 20th</strong>, the day before you land. The mountains are a backdrop here, not terrain.'],
     ],
-    gf: 'Promising, with one procedural trap. Structurally it is the best bet after Sankara — a macrobiotic cook already builds menus around exclusions — and the FAQ states plainly that they accommodate allergies and dietary restrictions, arranged at booking. But there is no coeliac or gluten wording and no allergen chart, so it still needs a direct email. <strong>And you must choose the Japanese or the French dinner when you book, first-come-first-served — not on the day.</strong> Settle the gluten-free question and the menu choice in the same message.',
+    gf: 'Promising, with one procedural trap. Structurally it is the best bet after Sankara — a macrobiotic cook already builds menus around exclusions — and the FAQ states plainly that they accommodate allergies and dietary restrictions, arranged at booking. But there is no coeliac or gluten wording and no allergen chart, so it still needs a direct email. <strong>And you must choose the Japanese or the French dinner when you book, first-come-first-served — not on the day.</strong> Over three nights that means booking three dinners at once, so confirm explicitly that <em>the choice can differ per night</em> rather than applying to the whole stay — near-certain for multi-night guests, but it is framed as a single booking-time preference, so pin it. Settle the gluten-free question, the per-night menu choice and the macrobiotic option in the same message.',
   },
 
   takao: {
@@ -483,10 +489,11 @@ export const entities = {
     rate: '≈ $250 / couple',
     url: 'https://itoh-dining.co.jp/',
     blurb:
-      'Wagyu teppanyaki with a Hakone view, and the lunch that solves the middle day in Hakone. Teppanyaki is one of the friendliest formats for a celiac guest — salt-grilled instead of sauced, and everything happens in front of you.',
+      'Wagyu teppanyaki with a Hakone view, and the meal that breaks up a run of ryokan kaiseki. Teppanyaki is one of the friendliest formats for a celiac guest — salt-grilled instead of sauced, and everything happens in front of you.',
     facts: [
-      ['Why it is here', 'Lunch on the Hakone free day in Itinerary 1'],
+      ['Why it is here', 'Lunch on the Hakone free day in Itinerary 1; in 1B it moves to <strong>dinner</strong> on the loop day, so that three nights at Gora Kadan are not three kaiseki'],
       ['Format', 'Teppanyaki counter — food cooked in front of you'],
+      ['The safety valve', 'The easiest night of the trip if a kaiseki course is not landing. Wagyu, seafood, vegetables, salt and a grill — nothing to brace for.'],
     ],
     gf: 'Ask for salt-grilled preparation and no soy-based sauces; the format makes verification easy.',
   },

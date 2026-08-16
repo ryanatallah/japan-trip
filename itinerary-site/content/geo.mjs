@@ -55,7 +55,7 @@ export const routes = {
   'momiji-with-a-detour': {
     stops: [
       { id: 'tokyo', nights: 4, at: 'right' },
-      { id: 'hakone', nights: 2, mode: 'rail', at: 'bottom' },
+      { id: 'hakone', nights: 3, mode: 'rail', at: 'bottom' },
       { id: 'tobira', nights: 3, mode: 'rail', at: 'right' },
       { id: 'kyoto', nights: 5, mode: 'rail', at: 'left' },
     ],
