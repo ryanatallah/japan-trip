@@ -8,14 +8,20 @@
 <title>Change history — Japan 2026</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<!-- Theme and outline state decided before first paint: both move the layout, and applying
+     them from site.js at the end of <body> showed the wrong one for a frame. -->
+<script>(()=>{try{const r=document.documentElement,t=localStorage.getItem('jp26-theme');if(t)r.setAttribute('data-theme',t);
+r.setAttribute('data-outline',innerWidth>=1180?(localStorage.getItem('jp26-outline')||'on'):'off');}catch(e){}})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
   <div class="navtop"><a href="index.html">Itinerary</a><a href="logistics.html">Logistics</a><a href="history.html" class="on" aria-current="page">Change history</a><a href="archive.html">Archive</a></div>
+  
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
+
 
 <main id="main">
 
@@ -35,6 +41,14 @@
       <p class="rev-tags"><span class="rtag rtag-site">site</span><span class="rtag rtag-route">route</span></p>
       <p><a href="logistics.html">Logistics</a> is now its own page: a hotel-centred travel-time map for each of the four bases, a sheet for every one of the seventeen days with its fixed points, journeys and meal plan, and one table of every standing constraint. Leave-by times are <em>derived</em> — the fixed point minus the journey minus its buffer — so they cannot drift from the durations they are built on. The day-by-day on the plan borrows the same line.</p>
       <ul class="ticks"><li><strong>The ANA flight leaves at 01:20 and lands at 04:50.</strong> NH107 is a small-hours departure, so "Friday 6 November" is really a Thursday-night airport run, and you reach Aman Tokyo around 06:00 against a 15:00 check-in. The nine-hour gap now has a plan: early check-in requested at booking, the spa, and the Imperial Palace East Gardens ten minutes away.</li><li><strong>The last day is three hours looser than assumed.</strong> United's KIX–SFO service moves to 18:35 on the winter schedule that starts 25 October, not the 16:55 it runs in summer. Leaving Kyoto at 14:20 still gives a two-and-a-half-hour airport buffer — so 22 November now has a full final morning and a proper lunch.</li><li><strong>Two of Gora Kadan's three half-board dinners are eaten elsewhere.</strong> Thursday is Itoh Dining and Friday is Sushi Kadan, a separate kitchen on the property. Thursday should be booked room-and-breakfast or the kaiseki is paid for twice, and Sushi Kadan needs its own gluten-free conversation.</li><li><strong>Making the Myojinkan shuttle means leaving Hakone before check-out.</strong> The inn's shuttle runs at 15:15 and 16:30 only. The latest departure from Gora Kadan that still catches the 15:15 is 10:35 — twenty-five minutes before check-out, with no slack across three connections.</li><li><strong>Three closed days the plan gets right by luck.</strong> The Hakone Museum of Art shuts Thursdays, the Matsumoto City Museum of Art shuts Mondays, and Kikunoi Honten shuts the 1st and 3rd Tuesday — which in November 2026 is the 17th, the Kyoto arrival day. All three currently fall the right way. They are now written down so a later reshuffle cannot break them silently.</li><li>The Tobira Myojinkan entry said the Venus Line closed "the day before you land" — true of the itinerary's old dates, wrong since the Thanksgiving re-dating. Corrected: you arrive on the 14th and the road closes around the 20th.</li></ul>
+    </div>
+  </article><article class="rev">
+    <div class="rev-when"><time datetime="2026-08-15">15 August 2026</time></div>
+    <div class="rev-body">
+      <h3>The section bar becomes an outline</h3>
+      <p class="rev-tags"><span class="rtag rtag-site">site</span></p>
+      <p>The horizontal strip of section links at the top of the itinerary is replaced by a left-hand outline, the way a long document carries one. It lists the eleven sections <em>and</em> what is inside each — every hotel, restaurant, experience and place by name — and marks where you are as you read.</p>
+      <ul class="ticks"><li><strong>It is generated from the page, not maintained beside it.</strong> The old bar was a hand-written list of ten links, and it had already drifted: it never learned about <em>Still on the table</em>, so the Beniya Mukayu swap was unreachable from the navigation. The outline is read back out of the built HTML, so a section that is added, renamed or reordered appears on its own.</li><li><strong>Two tiers, not three.</strong> The third level of headings on these pages is the photo-category labels inside each gallery — "The building", "The setting", "The rooms" — about eighty of them. They are captions rather than structure, and listing them would bury the thirty entries that mean something.</li><li><strong>Only the section you are reading is expanded.</strong> Thirty sub-entries opened at once is a wall that always needs its own scrollbar; one section at a time fits on screen, and the expansion becomes a second signal of where you are. Any section can be pinned open or shut with its chevron, and that choice then outranks the automatic one.</li><li><strong>On a phone it becomes a drawer</strong>, with a slim bar under the header showing the section and sub-section you are currently in — so the "where am I" signal survives at a width that has no room for a sidebar.</li></ul>
     </div>
   </article><article class="rev">
     <div class="rev-when"><time datetime="2026-08-15">15 August 2026</time></div>

@@ -180,6 +180,69 @@ function placeCard(slug) {
 </article>`;
 }
 
+// ── the outline rail ────────────────────────────────────────────────
+// The left rail is read back out of the HTML the page just generated, rather than kept as a
+// second hand-written list beside it. The old horizontal subnav was that second list, and it
+// had already drifted: it never learned about the "Still on the table" section.
+//
+//   tier 1  <section class="sec" id>   labelled by its own <h2>
+//   tier 2  the id-bearing cards in it — .entity, .place, .brief — labelled by their <h3>
+//
+// There is a tier 3 on these pages (h4.galhead: "The building", "The setting", "The rooms") but
+// it is photo-category captions, repeated inside every gallery. It is furniture, not structure,
+// and putting eighty of them in a navigation would bury the thirty entries that mean something.
+const SECTION_LABEL = { pitch: 'The idea' };   // the one section with no heading of its own
+const CARD_OPEN = /<(?:article|div) class="(?:entity|place|brief)[^"]*" id="([^"]+)"[^>]*>/g;
+const stripTags = (s) => s.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
+
+/** Slice `html` at every match of `re`, returning [captured-id, chunk-up-to-the-next-match]. */
+function blocks(html, re) {
+  const hits = [...html.matchAll(re)];
+  return hits.map((m, i) => [m[1], html.slice(m.index, i + 1 < hits.length ? hits[i + 1].index : html.length)]);
+}
+
+function outlineOf(body) {
+  return blocks(body, /<section class="sec[^"]*" id="([^"]+)"[^>]*>/g).map(([id, sec]) => ({
+    id,
+    label: SECTION_LABEL[id] || stripTags(sec.match(/<h2[^>]*>([\s\S]*?)<\/h2>/)?.[1] || id),
+    kids: blocks(sec, CARD_OPEN).flatMap(([kid, card]) => {
+      const h3 = card.match(/<h3[^>]*>([\s\S]*?)<\/h3>/);
+      return h3 ? [{ id: kid, label: stripTags(h3[1]) }] : [];
+    }),
+  }));
+}
+
+// Reads as an indented outline at 15px, which "☰" does not.
+const OL_ICON = `<svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><circle cx="1.6" cy="3" r="1.3"/><rect x="4.6" y="2.25" width="9.8" height="1.5" rx=".75"/><circle cx="4.6" cy="8" r="1.3"/><rect x="7.6" y="7.25" width="6.8" height="1.5" rx=".75"/><circle cx="4.6" cy="13" r="1.3"/><rect x="7.6" y="12.25" width="6.8" height="1.5" rx=".75"/></svg>`;
+
+// Points right; CSS rotates it a quarter turn when the section is open.
+const CHEVRON = `<svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+// Labels arrive already HTML-escaped (they were escaped on the way into the page), so they are
+// emitted, not re-escaped — including into aria-label, where entities resolve the same way.
+function outlineNav(items) {
+  const rows = items.map((s) => {
+    const twisty = s.kids.length
+      ? `<button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside ${s.label}">${CHEVRON}</button>`
+      : '<span class="ol-tw" aria-hidden="true"></span>';
+    const sub = s.kids.length ? `<div class="ol-wrap"><ol class="ol-sub">${s.kids.map((k) =>
+      `<li><a href="#${esc(k.id)}" data-t="${esc(k.id)}">${k.label}</a></li>`).join('')}</ol></div>` : '';
+    return `<li class="ol-sec${s.kids.length ? ' has-sub' : ''}">
+      <div class="ol-row">${twisty}<a href="#${esc(s.id)}" data-t="${esc(s.id)}">${s.label}</a></div>${sub}
+    </li>`;
+  }).join('');
+  return `<nav class="outline" id="outline" aria-label="Outline">
+  <div class="ol-head"><span>Outline</span><button class="ol-close" type="button" aria-label="Close the outline">✕</button></div>
+  <ol class="ol-list">${rows}</ol>
+</nav>
+<div class="ol-scrim"></div>
+<button class="crumb" type="button" aria-controls="outline" aria-expanded="false">
+  <span class="ol-ic" aria-hidden="true">${OL_ICON}</span>
+  <span class="crumb-tx"><b>${items[0]?.label || 'Outline'}</b><em></em></span>
+  <span class="crumb-caret">${CHEVRON}</span>
+</button>`;
+}
+
 // ── page chrome ─────────────────────────────────────────────────────
 // `section` is which of the three top-level pages this is: 'plan' | 'history' | 'archive'.
 // `chips` adds the seven-itinerary strip — the navigation across the comparison, which belongs
@@ -191,7 +254,7 @@ const TOP = [
   ['archive.html', 'Archive', 'archive'],
 ];
 
-function shell({ title, desc, body, active = '', page = '', section = 'plan', chips = false }) {
+function shell({ title, desc, body, active = '', page = '', section = 'plan', chips = false, rail = false }) {
   const top = TOP.map(([url, label, key]) =>
     `<a href="${url}"${section === key ? ' class="on" aria-current="page"' : ''}>${label}</a>`
   ).join('');
@@ -200,7 +263,7 @@ function shell({ title, desc, body, active = '', page = '', section = 'plan', ch
   ${itineraries.map((it) => `<a href="${href(it)}" class="${active === it.slug ? 'on' : ''}${it.slug === plan.slug ? ' is-plan' : ''}"><b>${it.num}</b><span>${esc(it.title)}</span></a>`).join('')}
 </nav>` : '';
   return `<!doctype html>
-<html lang="en" data-page="${esc(page)}">
+<html lang="en" data-page="${esc(page)}"${rail ? ' data-rail' : ''}>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -209,15 +272,21 @@ function shell({ title, desc, body, active = '', page = '', section = 'plan', ch
 <title>${esc(title)}</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<!-- Theme and outline state decided before first paint: both move the layout, and applying
+     them from site.js at the end of <body> showed the wrong one for a frame. -->
+<script>(()=>{try{const r=document.documentElement,t=localStorage.getItem('jp26-theme');if(t)r.setAttribute('data-theme',t);
+r.setAttribute('data-outline',innerWidth>=1180?(localStorage.getItem('jp26-outline')||'on'):'off');}catch(e){}})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
   <div class="navtop">${top}</div>
+  ${rail ? `<button class="ol-toggle" type="button" aria-controls="outline" aria-expanded="true" aria-label="Toggle the outline"><span class="ol-ic">${OL_ICON}</span></button>` : ''}
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
 ${chipbar}
+${rail ? outlineNav(outlineOf(body)) : ''}
 <main id="main">
 ${body}
 </main>
@@ -483,12 +552,6 @@ function buildPlan() {
   ${heroShot ? `<p class="hero-credit">${esc(heroShot.caption)}</p>` : ''}
 </header>
 
-<nav class="subnav">
-  <a href="#pitch">The idea</a><a href="#flights">Getting there</a><a href="#transport">Getting around</a>
-  <a href="#stays">Where you sleep</a><a href="#dining">Where you eat</a><a href="#doing">What you do</a>
-  <a href="#places">Where you are</a><a href="#days">Day by day</a><a href="#cost">What it costs</a><a href="#book">Book now</a>
-</nav>
-
 <section class="sec" id="pitch">
   <div class="pitch"><p class="lede lede-big">${it.pitch}</p></div>
   ${renderMap(it.slug)}
@@ -558,7 +621,7 @@ ${placesSection(it)}
   return shell({
     title: `The plan — ${it.title} · Japan 2026`,
     desc: `${it.length}, ${it.dates}. ${it.tagline}`,
-    body, page: 'plan', section: 'plan',
+    body, page: 'plan', section: 'plan', rail: true,
   });
 }
 
@@ -811,11 +874,6 @@ function buildItinerary(it) {
   ${heroShot ? `<p class="hero-credit">${esc(heroShot.caption)}</p>` : ''}
 </header>
 
-<nav class="subnav">
-  <a href="#pitch">The idea</a><a href="#stays">Where you sleep</a><a href="#dining">Where you eat</a>
-  <a href="#doing">What you do</a><a href="#places">Where you are</a><a href="#days">Day by day</a><a href="#cost">What it costs</a>
-</nav>
-
 <section class="sec" id="pitch">
   <div class="pitch"><p class="lede lede-big">${it.pitch}</p></div>
   ${renderMap(it.slug)}
@@ -857,7 +915,7 @@ ${placesSection(it)}
   return shell({
     title: `${it.num}. ${it.title} — archived · Japan 2026`,
     desc: `Archived alternate: ${it.tagline}`,
-    body, active: it.slug, page: 'itinerary', section: 'archive', chips: true,
+    body, active: it.slug, page: 'itinerary', section: 'archive', chips: true, rail: true,
   });
 }
 

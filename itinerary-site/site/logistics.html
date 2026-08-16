@@ -8,14 +8,20 @@
 <title>Logistics — how each day runs · Japan 2026</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<!-- Theme and outline state decided before first paint: both move the layout, and applying
+     them from site.js at the end of <body> showed the wrong one for a frame. -->
+<script>(()=>{try{const r=document.documentElement,t=localStorage.getItem('jp26-theme');if(t)r.setAttribute('data-theme',t);
+r.setAttribute('data-outline',innerWidth>=1180?(localStorage.getItem('jp26-outline')||'on'):'off');}catch(e){}})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
   <div class="navtop"><a href="index.html">Itinerary</a><a href="logistics.html" class="on" aria-current="page">Logistics</a><a href="history.html">Change history</a><a href="archive.html">Archive</a></div>
+  
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
+
 
 <main id="main">
 
@@ -1628,7 +1634,7 @@
 
 <nav class="pager pager-plan">
   <a href="index.html"><span>The trip itself</span><b>Itinerary</b><em>Fri Nov 6 → Sun Nov 22, 2026 · $36,200</em></a>
-  <a href="history.html"><span>How it got here</span><b>Change history</b><em>8 entries</em></a>
+  <a href="history.html"><span>How it got here</span><b>Change history</b><em>9 entries</em></a>
 </nav>
 </main>
 <footer class="foot">

@@ -33,6 +33,19 @@ export const revisions = [
   {
     date: '2026-08-15',
     when: '15 August 2026',
+    title: 'The section bar becomes an outline',
+    tags: ['site'],
+    summary: `The horizontal strip of section links at the top of the itinerary is replaced by a left-hand outline, the way a long document carries one. It lists the eleven sections <em>and</em> what is inside each — every hotel, restaurant, experience and place by name — and marks where you are as you read.`,
+    points: [
+      `<strong>It is generated from the page, not maintained beside it.</strong> The old bar was a hand-written list of ten links, and it had already drifted: it never learned about <em>Still on the table</em>, so the Beniya Mukayu swap was unreachable from the navigation. The outline is read back out of the built HTML, so a section that is added, renamed or reordered appears on its own.`,
+      `<strong>Two tiers, not three.</strong> The third level of headings on these pages is the photo-category labels inside each gallery — "The building", "The setting", "The rooms" — about eighty of them. They are captions rather than structure, and listing them would bury the thirty entries that mean something.`,
+      `<strong>Only the section you are reading is expanded.</strong> Thirty sub-entries opened at once is a wall that always needs its own scrollbar; one section at a time fits on screen, and the expansion becomes a second signal of where you are. Any section can be pinned open or shut with its chevron, and that choice then outranks the automatic one.`,
+      `<strong>On a phone it becomes a drawer</strong>, with a slim bar under the header showing the section and sub-section you are currently in — so the "where am I" signal survives at a width that has no room for a sidebar.`,
+    ],
+  },
+  {
+    date: '2026-08-15',
+    when: '15 August 2026',
     title: 'Itinerary 1B becomes the plan',
     tags: ['decision', 'site'],
     summary: `The seven-way comparison is over. <strong>The Classic, with the Alps</strong> — 15 nights, 6–22 November, Tokyo / Hakone / Tobira Onsen / Kyoto — is the trip. The site is rebuilt around that: the plan is the front page, and the six routes that did not win move to the archive.`,

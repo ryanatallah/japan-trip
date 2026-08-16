@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-page="itinerary">
+<html lang="en" data-page="itinerary" data-rail>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,18 +8,47 @@
 <title>3. Wildlife North — archived · Japan 2026</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<!-- Theme and outline state decided before first paint: both move the layout, and applying
+     them from site.js at the end of <body> showed the wrong one for a frame. -->
+<script>(()=>{try{const r=document.documentElement,t=localStorage.getItem('jp26-theme');if(t)r.setAttribute('data-theme',t);
+r.setAttribute('data-outline',innerWidth>=1180?(localStorage.getItem('jp26-outline')||'on'):'off');}catch(e){}})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
   <div class="navtop"><a href="index.html">Itinerary</a><a href="logistics.html">Logistics</a><a href="history.html">Change history</a><a href="archive.html" class="on" aria-current="page">Archive</a></div>
+  <button class="ol-toggle" type="button" aria-controls="outline" aria-expanded="true" aria-label="Toggle the outline"><span class="ol-ic"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><circle cx="1.6" cy="3" r="1.3"/><rect x="4.6" y="2.25" width="9.8" height="1.5" rx=".75"/><circle cx="4.6" cy="8" r="1.3"/><rect x="7.6" y="7.25" width="6.8" height="1.5" rx=".75"/><circle cx="4.6" cy="13" r="1.3"/><rect x="7.6" y="12.25" width="6.8" height="1.5" rx=".75"/></svg></span></button>
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
 <nav class="itinbar" aria-label="The seven itineraries">
   <span class="itinbar-label">Compare</span>
   <a href="index.html" class=" is-plan"><b>1B</b><span>The Classic, with the Alps</span></a><a href="peak-momiji-classic.html" class=""><b>1</b><span>The Kyoto Classic</span></a><a href="momiji-then-the-coast.html" class=""><b>1C</b><span>The Classic, then the Crab Coast</span></a><a href="crafts-crab-snow-monkeys.html" class=""><b>2</b><span>Crafts, Crab &amp; Snow Monkeys</span></a><a href="wildlife-north.html" class="on"><b>3</b><span>Wildlife North</span></a><a href="southern-warmth.html" class=""><b>4</b><span>Southern Warmth</span></a><a href="grand-tour.html" class=""><b>5</b><span>The Grand Tour</span></a>
 </nav>
+<nav class="outline" id="outline" aria-label="Outline">
+  <div class="ol-head"><span>Outline</span><button class="ol-close" type="button" aria-label="Close the outline">✕</button></div>
+  <ol class="ol-list"><li class="ol-sec">
+      <div class="ol-row"><span class="ol-tw" aria-hidden="true"></span><a href="#pitch" data-t="pitch">The idea</a></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside Where you sleep"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#stays" data-t="stays">Where you sleep</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#aman-tokyo" data-t="aman-tokyo">Aman Tokyo</a></li><li><a href="#hinanoza" data-t="hinanoza">Akan Tsuruga Bessou Hinanoza</a></li><li><a href="#kushiro-stay" data-t="kushiro-stay">Kushiro (overnight)</a></li><li><a href="#sowaka" data-t="sowaka">SOWAKA</a></li></ol></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside Where you eat"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#dining" data-t="dining">Where you eat</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#kikunoi-honten" data-t="kikunoi-honten">Kikunoi Honten</a></li><li><a href="#kodaiji-jugyuan" data-t="kodaiji-jugyuan">Kodaiji Jugyuan</a></li><li><a href="#cenci-kyoto" data-t="cenci-kyoto">Cenci</a></li></ol></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside What you do"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#doing" data-t="doing">What you do</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#ezo-momonga" data-t="ezo-momonga">Ezo flying squirrel session</a></li><li><a href="#tsurui-cranes" data-t="tsurui-cranes">Red-crowned cranes at Tsurui-Ito</a></li><li><a href="#akiba-fukurou" data-t="akiba-fukurou">Owl café — Akiba Fukurou</a></li><li><a href="#heki-kintsugi" data-t="heki-kintsugi">Traditional kintsugi with Mio Heki</a></li><li><a href="#arashiyama-monkeys" data-t="arashiyama-monkeys">Iwatayama monkey park</a></li><li><a href="#kyudo" data-t="kyudo">Kyudo session</a></li></ol></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside Where you actually are"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#places" data-t="places">Where you actually are</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#lake-akan" data-t="lake-akan">Lake Akan</a></li><li><a href="#lake-kussharo" data-t="lake-kussharo">Lake Kussharo</a></li><li><a href="#kushiro-shitsugen" data-t="kushiro-shitsugen">Kushiro Marsh</a></li><li><a href="#nara-deer" data-t="nara-deer">Nara Park</a></li><li><a href="#eikando" data-t="eikando">Eikando Zenrin-ji</a></li><li><a href="#tofukuji" data-t="tofukuji">Tofuku-ji</a></li><li><a href="#rurikoin" data-t="rurikoin">Rurikoin</a></li><li><a href="#arashiyama" data-t="arashiyama">Arashiyama</a></li><li><a href="#gion" data-t="gion">Gion</a></li><li><a href="#kodaiji" data-t="kodaiji">Kodai-ji</a></li></ol></div>
+    </li><li class="ol-sec">
+      <div class="ol-row"><span class="ol-tw" aria-hidden="true"></span><a href="#days" data-t="days">Day by day</a></div>
+    </li><li class="ol-sec">
+      <div class="ol-row"><span class="ol-tw" aria-hidden="true"></span><a href="#cost" data-t="cost">What it costs</a></div>
+    </li></ol>
+</nav>
+<div class="ol-scrim"></div>
+<button class="crumb" type="button" aria-controls="outline" aria-expanded="false">
+  <span class="ol-ic" aria-hidden="true"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><circle cx="1.6" cy="3" r="1.3"/><rect x="4.6" y="2.25" width="9.8" height="1.5" rx=".75"/><circle cx="4.6" cy="8" r="1.3"/><rect x="7.6" y="7.25" width="6.8" height="1.5" rx=".75"/><circle cx="4.6" cy="13" r="1.3"/><rect x="7.6" y="12.25" width="6.8" height="1.5" rx=".75"/></svg></span>
+  <span class="crumb-tx"><b>The idea</b><em></em></span>
+  <span class="crumb-caret"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</button>
 <main id="main">
 
 <div class="archnote archnote-alt">
@@ -42,11 +71,6 @@
   </div>
   <p class="hero-credit">An Ezo momonga filling the mouth of its nest hole, front paws on the rim — the pale grey-buff winter coat, white cheeks and chin, enormous black eyes and short rounded ears that identify Pteromys volans orii</p>
 </header>
-
-<nav class="subnav">
-  <a href="#pitch">The idea</a><a href="#stays">Where you sleep</a><a href="#dining">Where you eat</a>
-  <a href="#doing">What you do</a><a href="#places">Where you are</a><a href="#days">Day by day</a><a href="#cost">What it costs</a>
-</nav>
 
 <section class="sec" id="pitch">
   <div class="pitch"><p class="lede lede-big">Ashly's most-wanted item on the entire wish list is the Ezo flying squirrel, marked with five thumbs up. This itinerary is the answer to that: four days in eastern Hokkaido with a guide, then nine nights in Kyoto. It is the cheapest route that delivers the momonga specifically — but the Thanksgiving re-date costs it more than it costs the others, and the honesty box below explains why.</p></div>
