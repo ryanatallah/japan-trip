@@ -156,6 +156,7 @@ function shell({ title, desc, body, active = '', page = '' }) {
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="description" content="${esc(desc)}">
+<meta name="robots" content="noindex, nofollow">
 <title>${esc(title)}</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
@@ -447,6 +448,10 @@ for (const it of itineraries) writeFileSync(join(OUT, `${it.slug}.html`), buildI
 for (const f of readdirSync(join(ROOT, 'assets-src'))) {
   copyFileSync(join(ROOT, 'assets-src', f), join(OUT, 'assets', f));
 }
+
+// The site is published to GitHub Pages so it can be shared by link, not found by
+// search. Belt and braces: robots.txt here, plus a noindex meta on every page.
+writeFileSync(join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
 const total = Object.values(media).reduce((n, l) => n + l.length, 0);
 const withPhotos = Object.keys(entities).filter((s) => hasShots(s)).length;
