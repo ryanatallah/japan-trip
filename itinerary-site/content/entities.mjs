@@ -269,8 +269,8 @@ export const entities = {
     blurb:
       'A wooded gorge on the Kiyotaki river with three temples in it — Jingo-ji up a long stone staircase, Saimyo-ji, and Kozan-ji, which is UNESCO-listed and holds the Choju-giga animal scrolls. It is one of the earliest places in Kyoto to turn, and on a mid-November trip it is the single best colour in the city while central Higashiyama is still coming on.',
     facts: [
-      ['Why it matters now', 'Your Kyoto week moved to 17–21 November. Takao is at or near its peak then; Tofuku-ji and Eikandō are not.'],
-      ['Jingo-ji', 'Worth the climb for kawarake-nage — you throw small clay discs off the terrace into the valley'],
+      ['Why it matters now', 'Kyoto City’s own tourism pages put the Takao area at <strong>mid-November</strong> — Kōzan-ji early-to-mid, Jingo-ji mid-to-late. Your Kyoto week is 17–21 November, so all three temples are at or near peak. The earlier dates are an advantage here, not a compromise.'],
+      ['Jingo-ji', 'Worth the climb for kawarake-nage — you throw small clay discs off the terrace into the valley. It is about 400 steps up from the river, so wear something you can climb in.'],
     ],
   },
 
@@ -283,7 +283,8 @@ export const entities = {
       'Two mountain villages linked by a walk over a ridge, reached on the little Eizan railway that runs through a tunnel of maples on the way up. Kibune-jinja’s stone staircase, lined with vermilion lanterns under red maples, is one of the best things in Kyoto and it colours a week or two ahead of the city.',
     facts: [
       ['Why it matters now', 'Like Takao, it turns early — which suits 17–21 November'],
-      ['Getting there', 'Eizan line from Demachiyanagi; the momiji tunnel stretch is lit in season'],
+      ['The light-up', 'Kibune’s <strong>momiji-tōrō</strong> illumination ran 7–24 November in 2025, sunset to about 21:00 — the shrine staircase, the village street and the maple tunnel all lit. <em>2026 dates are not published yet, but that window would cover your last Kyoto evening.</em>'],
+      ['Getting there', 'Eizan line from Demachiyanagi. On the momiji tunnel stretch the trains dim their lights and crawl through it during the light-up.'],
     ],
   },
 
