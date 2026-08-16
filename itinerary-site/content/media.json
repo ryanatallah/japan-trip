@@ -2605,6 +2605,58 @@
    "confidence": "high"
   }
  ],
+ "kurama-kibune": [
+  {
+   "file": "kurama-kibune-01.jpg",
+   "thumb": "kurama-kibune-01-t.jpg",
+   "w": 959,
+   "h": 640,
+   "category": "setting",
+   "caption": "The Kibune-jinja approach at night during the autumn light-up: the double file of vermilion posts carrying lit paper lanterns up either side of the rough stone staircase, the red handrail running up the middle, and gold and amber maples floodlit overhead against a black sky. Autumn.",
+   "sourceUrl": "https://ja.kyoto.travel/resource/event/13025-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-02.jpg",
+   "thumb": "kurama-kibune-02-t.jpg",
+   "w": 1600,
+   "h": 2261,
+   "category": "setting",
+   "caption": "The same staircase by day, seen through Kibune-jinja's second vermilion torii: the lantern posts climbing away in two rows, visitors on the steps, a huge moss-covered rock and a village building beside the path, and gold and rust maple over the torii beam. Photographed 26 November 2011, late autumn.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/03/Kibune_%287058700873%29.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-03.jpg",
+   "thumb": "kurama-kibune-03-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "Kurama-dera's Nio-mon gate at the top of the entrance steps, its vermilion timbers and grey tiled roof above a crowd of visitors climbing, with rows of small vermilion lanterns and stone lanterns flanking the stair and red and orange maples on both sides. Photographed 26 November 2011, autumn.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/f/fa/Kurama_%287057166303%29.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-04.jpg",
+   "thumb": "kurama-kibune-04-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "setting",
+   "caption": "The Eizan Railway 'momiji tunnel': an orange-and-cream two-car train coming down the single track between Ichihara and Ninose, hemmed in on both sides by maples in full scarlet and orange, with the overhead wires and wooden poles running through the canopy. Autumn.",
+   "sourceUrl": "https://eizandensha.co.jp/wp-content/uploads/2020/06/kabegami_momiji-no-tunnel_aki-01.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kurama-kibune-05.jpg",
+   "thumb": "kurama-kibune-05-t.jpg",
+   "w": 1024,
+   "h": 1024,
+   "category": "setting",
+   "caption": "The village street at Kibune during the momiji-toro lantern nights: the road climbing between a stone retaining wall and the wooden ryokan frontages, small paper lanterns set along the verge, two people walking up, and the maples overhead floodlit red, orange and green. Autumn.",
+   "sourceUrl": "https://hanatouro.kyoto.travel/rental/wp-content/uploads/2023/11/%E8%B2%B4%E8%88%B9%E7%A5%9E%E7%A4%BE-1024x1024.png",
+   "confidence": "high"
+  }
+ ],
  "kurokawa-onsen-town": [
   {
    "file": "kurokawa-onsen-town-01.jpg",
@@ -4773,6 +4825,78 @@
    "category": "food",
    "caption": "A hassun course served on a glass-topped cedar tray: bamboo shoots and greens under a domed lid, grilled fish in broth with myoga, beef rolls with mustard and flowering herbs, croquettes and a lacquered mould.",
    "sourceUrl": "https://cdn0.tablecheck.com/images/66bb0b79926918e1dd075dd8/images/original/e78a17ec.jpg",
+   "confidence": "high"
+  }
+ ],
+ "takao": [
+  {
+   "file": "takao-01.jpg",
+   "thumb": "takao-01-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "Jingo-ji's stone approach at peak autumn: the broad flight of worn stone steps climbing to the Kondo, the hall's tiled roof and vermilion beams showing over the crest, and banks of crimson maple pressing in from both sides against a clear blue sky. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/be/Takao%2C_Kyoto%2C_Part_II_-_TakaoKyoto6140.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-02.jpg",
+   "thumb": "takao-02-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "A vermilion-railed bridge over the Kiyotaki river on the Takao valley floor, its low arch and plank deck seen from the bank, with the shallow gravel-bedded stream beneath and a wall of salmon-red and scarlet maple filling the hillside behind. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Takao%2C_Kyoto%2C_Part_II_-_TakaoKyoto6136.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-03.jpg",
+   "thumb": "takao-03-t.jpg",
+   "w": 1600,
+   "h": 2133,
+   "category": "setting",
+   "caption": "The Kiyotaki river gorge in full colour: the shallow stream curving between shingle bars, both banks packed with maples turning scarlet, orange and gold, and the red of the canopy reflected in the water. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/b/b2/Takao%2C_Kyoto%2C_Part_II_-_TakaoKyoto6149.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-04.jpg",
+   "thumb": "takao-04-t.jpg",
+   "w": 1600,
+   "h": 2133,
+   "category": "setting",
+   "caption": "Kozan-ji's Sekisui-in: looking out from inside the hall through its vermilion posts and lifted shutters onto a single large maple in full crimson and gold, with the polished veranda boards and the reddish floor matting in the foreground. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/9/95/Takao%2C_Kyoto%2C_Part_I_-_TakaoKyoto6210.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-05.jpg",
+   "thumb": "takao-05-t.jpg",
+   "w": 1200,
+   "h": 800,
+   "category": "detail",
+   "caption": "Inside Kozan-ji's Sekisui-in from the other end: the dark plank floor and open timber frame, the small Zenzai-doji figure standing in silhouette against the lattice screen, and red and orange maples filling every opening along the veranda. Autumn.",
+   "sourceUrl": "https://totteoki.kyoto.travel/wp-content/uploads/2024/10/kosanji_eye.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-06.jpg",
+   "thumb": "takao-06-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "Saimyo-ji: the white-plastered, timber-framed hall on its moss-and-gravel terrace, half-hidden under a canopy of maple in deep orange, with more orange and red trees running back along the path. Photographed 21 November 2025.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/8/87/Takao%2C_Kyoto%2C_Part_I_-_TakaoKyoto6201.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "takao-07.jpg",
+   "thumb": "takao-07-t.jpg",
+   "w": 1200,
+   "h": 799,
+   "category": "activity",
+   "caption": "The kawarake-nage throwing point at Jingo-ji: two visitors at the railed terrace holding the small white clay discs, the wooden sign below them reading 高雄名勝 錦雲渓 かわらけ投げ, and the forested Kinunkei gorge dropping away behind. Photographed in the green summer season, not autumn.",
+   "sourceUrl": "https://totteoki.kyoto.travel/wp-content/uploads/2024/10/jingoji08.jpg",
    "confidence": "high"
   }
  ],

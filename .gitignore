@@ -3,4 +3,12 @@
 # complete, working site.
 itinerary-site/.cache/
 
+# QA scratch pages. Both tools write into site/ — the folder GitHub Pages publishes —
+# so committing them puts unstyled fragments of the trip on the live site. They are
+# regenerated on demand and each tool deletes its own output before rewriting.
+# tools/section-qa.mjs
+itinerary-site/site/_s-*.html
+# tools/contactsheet.mjs
+itinerary-site/site/_qa-*.html
+
 .DS_Store
