@@ -33,6 +33,13 @@ Every photo opens in a lightbox with its caption and a link to where it came fro
 swipe move through a gallery; `Esc` closes. Light and dark themes; the ◐ button overrides your system
 setting.
 
+The itinerary and each archived alternate carry an **outline** down the left — sections, and what is
+inside each of them — which tracks where you are as you scroll. It is generated from the built HTML
+by `outlineOf()` in `build.mjs`, so sections and entity cards appear in it automatically; nothing
+needs updating when the plan changes. Only the section you are reading is expanded, and any section
+can be pinned open or shut with its chevron. Below 1180px it becomes a drawer, opened from the bar
+under the header that names your current section. The list button beside ◐ hides and restores it.
+
 ## Changing the plan
 
 **Two files, every time.** Edit `content/plan.mjs`, then add an entry to the top of

@@ -8,18 +8,24 @@
 <title>Archive — the seven itineraries · Japan 2026</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<!-- Theme and outline state decided before first paint: both move the layout, and applying
+     them from site.js at the end of <body> showed the wrong one for a frame. -->
+<script>(()=>{try{const r=document.documentElement,t=localStorage.getItem('jp26-theme');if(t)r.setAttribute('data-theme',t);
+r.setAttribute('data-outline',innerWidth>=1180?(localStorage.getItem('jp26-outline')||'on'):'off');}catch(e){}})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
   <div class="navtop"><a href="index.html">Itinerary</a><a href="history.html">Change history</a><a href="archive.html" class="on" aria-current="page">Archive</a></div>
+  
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
 <nav class="itinbar" aria-label="The seven itineraries">
   <span class="itinbar-label">Compare</span>
   <a href="index.html" class=" is-plan"><b>1B</b><span>The Classic, with the Alps</span></a><a href="peak-momiji-classic.html" class=""><b>1</b><span>The Kyoto Classic</span></a><a href="momiji-then-the-coast.html" class=""><b>1C</b><span>The Classic, then the Crab Coast</span></a><a href="crafts-crab-snow-monkeys.html" class=""><b>2</b><span>Crafts, Crab &amp; Snow Monkeys</span></a><a href="wildlife-north.html" class=""><b>3</b><span>Wildlife North</span></a><a href="southern-warmth.html" class=""><b>4</b><span>Southern Warmth</span></a><a href="grand-tour.html" class=""><b>5</b><span>The Grand Tour</span></a>
 </nav>
+
 <main id="main">
 
 <header class="hero hero-index">

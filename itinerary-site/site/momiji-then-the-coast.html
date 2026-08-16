@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-page="itinerary">
+<html lang="en" data-page="itinerary" data-rail>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -8,18 +8,47 @@
 <title>1C. The Classic, then the Crab Coast — archived · Japan 2026</title>
 <link rel="stylesheet" href="assets/site.css">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍁</text></svg>">
+<!-- Theme and outline state decided before first paint: both move the layout, and applying
+     them from site.js at the end of <body> showed the wrong one for a frame. -->
+<script>(()=>{try{const r=document.documentElement,t=localStorage.getItem('jp26-theme');if(t)r.setAttribute('data-theme',t);
+r.setAttribute('data-outline',innerWidth>=1180?(localStorage.getItem('jp26-outline')||'on'):'off');}catch(e){}})()</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav class="nav">
   <a href="index.html" class="nav-home"><span class="mark">🍁</span><span class="nav-title">Japan 2026</span></a>
   <div class="navtop"><a href="index.html">Itinerary</a><a href="history.html">Change history</a><a href="archive.html" class="on" aria-current="page">Archive</a></div>
+  <button class="ol-toggle" type="button" aria-controls="outline" aria-expanded="true" aria-label="Toggle the outline"><span class="ol-ic"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><circle cx="1.6" cy="3" r="1.3"/><rect x="4.6" y="2.25" width="9.8" height="1.5" rx=".75"/><circle cx="4.6" cy="8" r="1.3"/><rect x="7.6" y="7.25" width="6.8" height="1.5" rx=".75"/><circle cx="4.6" cy="13" r="1.3"/><rect x="7.6" y="12.25" width="6.8" height="1.5" rx=".75"/></svg></span></button>
   <button class="theme" type="button" aria-label="Toggle light and dark">◐</button>
 </nav>
 <nav class="itinbar" aria-label="The seven itineraries">
   <span class="itinbar-label">Compare</span>
   <a href="index.html" class=" is-plan"><b>1B</b><span>The Classic, with the Alps</span></a><a href="peak-momiji-classic.html" class=""><b>1</b><span>The Kyoto Classic</span></a><a href="momiji-then-the-coast.html" class="on"><b>1C</b><span>The Classic, then the Crab Coast</span></a><a href="crafts-crab-snow-monkeys.html" class=""><b>2</b><span>Crafts, Crab &amp; Snow Monkeys</span></a><a href="wildlife-north.html" class=""><b>3</b><span>Wildlife North</span></a><a href="southern-warmth.html" class=""><b>4</b><span>Southern Warmth</span></a><a href="grand-tour.html" class=""><b>5</b><span>The Grand Tour</span></a>
 </nav>
+<nav class="outline" id="outline" aria-label="Outline">
+  <div class="ol-head"><span>Outline</span><button class="ol-close" type="button" aria-label="Close the outline">✕</button></div>
+  <ol class="ol-list"><li class="ol-sec">
+      <div class="ol-row"><span class="ol-tw" aria-hidden="true"></span><a href="#pitch" data-t="pitch">The idea</a></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside Where you sleep"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#stays" data-t="stays">Where you sleep</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#aman-tokyo" data-t="aman-tokyo">Aman Tokyo</a></li><li><a href="#gora-kadan" data-t="gora-kadan">Gora Kadan</a></li><li><a href="#sowaka" data-t="sowaka">SOWAKA</a></li><li><a href="#nishimuraya-honkan" data-t="nishimuraya-honkan">Nishimuraya Honkan</a></li></ol></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside Where you eat"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#dining" data-t="dining">Where you eat</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#leffervescence" data-t="leffervescence">L'Effervescence</a></li><li><a href="#kikunoi-honten" data-t="kikunoi-honten">Kikunoi Honten</a></li><li><a href="#kodaiji-jugyuan" data-t="kodaiji-jugyuan">Kodaiji Jugyuan</a></li><li><a href="#itoh-dining-nobu" data-t="itoh-dining-nobu">Itoh Dining by Nobu</a></li></ol></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside What you do"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#doing" data-t="doing">What you do</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#hirata-sword" data-t="hirata-sword">Hirata sword smithing</a></li><li><a href="#picchio-musasabi" data-t="picchio-musasabi">Flying squirrel watching, Karuizawa</a></li><li><a href="#akiba-fukurou" data-t="akiba-fukurou">Owl café — Akiba Fukurou</a></li><li><a href="#heki-kintsugi" data-t="heki-kintsugi">Traditional kintsugi with Mio Heki</a></li><li><a href="#arashiyama-monkeys" data-t="arashiyama-monkeys">Iwatayama monkey park</a></li><li><a href="#kyudo" data-t="kyudo">Kyudo session</a></li></ol></div>
+    </li><li class="ol-sec has-sub">
+      <div class="ol-row"><button class="ol-tw" type="button" aria-expanded="false" aria-label="Show what is inside Where you actually are"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></button><a href="#places" data-t="places">Where you actually are</a></div><div class="ol-wrap"><ol class="ol-sub"><li><a href="#kinosaki" data-t="kinosaki">Kinosaki Onsen</a></li><li><a href="#toyooka-storks" data-t="toyooka-storks">Oriental white storks, Toyooka</a></li><li><a href="#tofukuji" data-t="tofukuji">Tofuku-ji</a></li><li><a href="#eikando" data-t="eikando">Eikando Zenrin-ji</a></li><li><a href="#kodaiji" data-t="kodaiji">Kodai-ji</a></li><li><a href="#philosophers-path" data-t="philosophers-path">Philosopher's Path &amp; Honen-in</a></li><li><a href="#arashiyama" data-t="arashiyama">Arashiyama</a></li><li><a href="#rurikoin" data-t="rurikoin">Rurikoin</a></li><li><a href="#gion" data-t="gion">Gion</a></li><li><a href="#lake-ashi" data-t="lake-ashi">Lake Ashi</a></li><li><a href="#hakone-open-air-museum" data-t="hakone-open-air-museum">Hakone Open-Air Museum</a></li><li><a href="#meiji-jingu" data-t="meiji-jingu">Meiji Jingu</a></li><li><a href="#omotesando-ginkgo" data-t="omotesando-ginkgo">Jingu Gaien ginkgo avenue</a></li></ol></div>
+    </li><li class="ol-sec">
+      <div class="ol-row"><span class="ol-tw" aria-hidden="true"></span><a href="#days" data-t="days">Day by day</a></div>
+    </li><li class="ol-sec">
+      <div class="ol-row"><span class="ol-tw" aria-hidden="true"></span><a href="#cost" data-t="cost">What it costs</a></div>
+    </li></ol>
+</nav>
+<div class="ol-scrim"></div>
+<button class="crumb" type="button" aria-controls="outline" aria-expanded="false">
+  <span class="ol-ic" aria-hidden="true"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true" fill="currentColor"><circle cx="1.6" cy="3" r="1.3"/><rect x="4.6" y="2.25" width="9.8" height="1.5" rx=".75"/><circle cx="4.6" cy="8" r="1.3"/><rect x="7.6" y="7.25" width="6.8" height="1.5" rx=".75"/><circle cx="4.6" cy="13" r="1.3"/><rect x="7.6" y="12.25" width="6.8" height="1.5" rx=".75"/></svg></span>
+  <span class="crumb-tx"><b>The idea</b><em></em></span>
+  <span class="crumb-caret"><svg class="chev" viewBox="0 0 12 12" width="11" height="11" aria-hidden="true"><path d="M4.25 2.25 8 6l-3.75 3.75" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+</button>
 <main id="main">
 
 <div class="archnote archnote-alt">
@@ -42,11 +71,6 @@
   </div>
   <p class="hero-credit">The Otani River canal in falling snow: the low arched stone bridge and its stone balustrade under snow, snow-loaded willows both banks, lantern light reflected in the black water, and people crossing the bridge under umbrellas.</p>
 </header>
-
-<nav class="subnav">
-  <a href="#pitch">The idea</a><a href="#stays">Where you sleep</a><a href="#dining">Where you eat</a>
-  <a href="#doing">What you do</a><a href="#places">Where you are</a><a href="#days">Day by day</a><a href="#cost">What it costs</a>
-</nav>
 
 <section class="sec" id="pitch">
   <div class="pitch"><p class="lede lede-big">Kyoto cut to four nights, then straight past it to the Sea of Japan: <strong>Nishimuraya Honkan</strong>, a Relais &amp; Châteaux ryokan seven generations deep, in a canal town where you walk between the public bathhouses in a yukata. The trip ends in an onsen town instead of a city.<br><br>Re-dated to 7–22 November so it clears Thanksgiving. That puts Kyoto on <strong>14–17 November</strong> — the earliest Kyoto block of any option, which means the northern hills are your colour and the central temples are still coming on. It also puts Kinosaki on 18–21 November, and <strong>Matsuba crab season opens on the 6th</strong>, so you are comfortably inside it.</p></div>

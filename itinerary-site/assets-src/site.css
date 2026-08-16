@@ -30,7 +30,8 @@
      from these — they were hardcoded once and drifted, leaving the bars overlapping by 6–10px. */
   --nav-h: 54px;
   --bar-h: 46px;
-  --sub-h: 48px;
+  --crumb-h: 44px;
+  --rail-w: 272px;
   color-scheme: light;
 }
 
@@ -82,9 +83,10 @@
 /* ── base ───────────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--nav-h) + 12px); }
-/* Pages with a section subnav, and archived alternates which also carry the itinerary strip. */
-[data-page="plan"] { scroll-padding-top: calc(var(--nav-h) + var(--sub-h) + 12px); }
-[data-page="itinerary"] { scroll-padding-top: calc(var(--nav-h) + var(--bar-h) + var(--sub-h) + 12px); }
+/* Outline pages clear the crumb bar too, and archived alternates the itinerary strip as well.
+   Above 1180px the outline is a side rail and the crumb bar is gone — see the rail block. */
+[data-rail] { scroll-padding-top: calc(var(--nav-h) + var(--crumb-h) + 12px); }
+[data-rail][data-page="itinerary"] { scroll-padding-top: calc(var(--nav-h) + var(--bar-h) + var(--crumb-h) + 12px); }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
 
 body {
@@ -253,18 +255,129 @@ code { font: .88em/1 ui-monospace, SFMono-Regular, Menlo, monospace; background:
 }
 @media (max-width: 1000px) { .hero-credit { display: none; } }
 
-/* ── subnav ─────────────────────────────────────────────────────── */
-.subnav {
-  position: sticky; top: var(--nav-h); z-index: 80;
-  display: flex; gap: .1rem; overflow-x: auto; scrollbar-width: none;
-  padding: .4rem max(1rem, 3vw);
-  background: color-mix(in oklab, var(--paper) 88%, transparent);
-  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
-  border-bottom: 1px solid var(--line);
+/* ── the outline rail ───────────────────────────────────────────── */
+/* One piece of markup, two shapes. Narrow: a drawer over the page, opened from the crumb bar.
+   From 1180px up: a fixed left column and the page shifts over to make room for it. */
+.outline {
+  position: fixed; z-index: 110; inset: 0 auto 0 0;
+  width: min(320px, 86vw);
+  display: flex; flex-direction: column;
+  background: var(--paper-2); border-right: 1px solid var(--line);
+  transform: translateX(-101%);
+  transition: transform .28s var(--ease);
 }
-.subnav::-webkit-scrollbar { display: none; }
-.subnav a { white-space: nowrap; padding: .35rem .7rem; border-radius: var(--r); font-size: .85rem; color: var(--ink-2); text-decoration: none; }
-.subnav a:hover { background: var(--paper-2); color: var(--ink); }
+[data-outline="on"] .outline { transform: none; }
+@media (prefers-reduced-motion: reduce) { .outline { transition: none; } }
+
+.ol-head {
+  flex: none; display: flex; align-items: center; gap: .5rem;
+  padding: .85rem 1rem .6rem; border-bottom: 1px solid var(--line);
+}
+.ol-head span { font-size: .68rem; text-transform: uppercase; letter-spacing: .14em; color: var(--ink-3); font-weight: 600; }
+.ol-close { margin-left: auto; border: 0; background: transparent; color: var(--ink-3); cursor: pointer; font-size: .9rem; line-height: 1; padding: .3rem; }
+.ol-close:hover { color: var(--ink); }
+
+.ol-list, .ol-sub { list-style: none; margin: 0; padding: 0; }
+.ol-list { flex: 1 1 auto; overflow-y: auto; overscroll-behavior: contain; padding: .5rem 0 2rem; }
+/* The rule the current-position bar is painted on. */
+.ol-list { background: linear-gradient(var(--line), var(--line)) 0 0 / 1px 100% no-repeat; }
+
+.ol-row { display: flex; align-items: stretch; }
+.ol-tw {
+  flex: none; width: 22px; border: 0; background: transparent; cursor: pointer; padding: 0;
+  color: var(--ink-3); line-height: 1;
+  display: grid; place-items: center;
+}
+.chev { display: block; transition: transform .24s var(--ease); }
+.is-open > .ol-row > .ol-tw .chev { transform: rotate(90deg); }
+button.ol-tw:hover { color: var(--ink); }
+@media (prefers-reduced-motion: reduce) { .chev { transition: none; } }
+
+/* Both tiers start their box at x=0 so the position bar lands on the rule; the indent is
+   padding inside the link, not margin on the row. */
+.ol-row > a, .ol-sub a {
+  position: relative; display: block; text-decoration: none; color: var(--ink-2);
+  padding: .3rem .9rem .3rem 0; font-size: .855rem; line-height: 1.35;
+}
+.ol-row > a { flex: 1 1 auto; min-width: 0; }
+/* Flex rather than an absolute offset or vertical-align: both of those centre the dot against
+   font metrics — half-leading, x-height — and land it a pixel or two off. This centres it
+   against the row itself, which is what it should line up with, and needs no magic number. */
+.ol-sub a {
+  display: flex; align-items: center; gap: .8rem;
+  padding-left: 1.5rem; font-size: .8rem; color: var(--ink-3);
+}
+.ol-sub a::before { content: ''; flex: none; width: 4px; height: 4px; border-radius: 50%; background: var(--line-2); }
+.ol-row:hover, .ol-sub a:hover { background: color-mix(in oklab, var(--ink) 5%, transparent); }
+.ol-row:hover > a, .ol-sub a:hover { color: var(--ink); }
+
+/* Where you are. Three signals, weakest to strongest: the section holding the current heading
+   is the one left expanded, its own line goes dark, and the current heading itself takes the
+   accent bar on the rule. The tier-1 bar goes on the row, not the link — the link starts after
+   the twisty, and a bar indented by 22px would miss the rule it is meant to sit on. */
+.ol-sec.is-cur > .ol-row > a { color: var(--ink); font-weight: 600; }
+.ol-row:has(> a.on), .ol-sub a.on {
+  box-shadow: inset 2.5px 0 0 var(--accent);
+  background: color-mix(in oklab, var(--accent) 8%, transparent);
+}
+.ol-row > a.on, .ol-sub a.on { color: var(--accent); font-weight: 600; }
+.ol-sub a.on::before { background: var(--accent); }
+
+/* Collapsing to 0fr rather than a max-height guess, so the row count never has to be known. */
+.ol-wrap {
+  display: grid; grid-template-rows: 0fr; visibility: hidden;
+  transition: grid-template-rows .26s var(--ease), visibility 0s linear .26s;
+}
+.ol-wrap > .ol-sub { overflow: hidden; }
+.is-open > .ol-wrap { grid-template-rows: 1fr; visibility: visible; transition: grid-template-rows .26s var(--ease), visibility 0s; }
+@media (prefers-reduced-motion: reduce) { .ol-wrap { transition: none; } }
+
+.ol-scrim { position: fixed; inset: 0; z-index: 105; background: rgba(10,8,6,.45); opacity: 0; pointer-events: none; transition: opacity .28s; }
+[data-outline="on"] .ol-scrim { opacity: 1; pointer-events: auto; }
+
+/* The crumb bar — the narrow-screen stand-in for the rail. It is the position signal when the
+   rail is off-screen, and the button that brings it back. */
+.crumb {
+  position: sticky; top: var(--nav-h); z-index: 80;
+  display: flex; align-items: center; gap: .55rem; width: 100%; height: var(--crumb-h);
+  padding: 0 max(1rem, 3vw); border: 0; border-bottom: 1px solid var(--line);
+  background: color-mix(in oklab, var(--paper) 90%, transparent);
+  backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  font: inherit; color: var(--ink-2); text-align: left; cursor: pointer;
+}
+[data-page="itinerary"] .crumb { top: calc(var(--nav-h) + var(--bar-h)); }
+.crumb .ol-ic { flex: none; display: grid; place-items: center; color: var(--ink-3); }
+.crumb-tx { flex: 1 1 auto; min-width: 0; display: flex; align-items: baseline; gap: .45rem; }
+.crumb-tx b { font-weight: 600; font-size: .86rem; color: var(--ink); white-space: nowrap; }
+.crumb-tx em { font-style: normal; font-size: .8rem; color: var(--ink-3); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.crumb-tx em:not(:empty)::before { content: '›'; margin-right: .45rem; opacity: .6; }
+.crumb-caret { flex: none; display: grid; place-items: center; color: var(--ink-3); }
+.crumb-caret .chev { transform: rotate(90deg); }
+[data-outline="on"] .crumb-caret .chev { transform: rotate(-90deg); }
+
+.ol-toggle {
+  display: none; flex: none; place-items: center;
+  width: 32px; height: 32px; border-radius: var(--r);
+  border: 1px solid var(--line); background: transparent; color: var(--ink-2); cursor: pointer;
+}
+.ol-toggle:hover { color: var(--ink); border-color: var(--line-2); }
+[data-outline="on"] .ol-toggle { background: var(--paper-3); color: var(--ink); }
+
+@media (min-width: 1180px) {
+  .crumb, .ol-close, .ol-scrim { display: none; }
+  .ol-toggle { display: grid; }
+  .outline { top: var(--nav-h); bottom: 0; width: var(--rail-w); }
+  [data-page="itinerary"] .outline { top: calc(var(--nav-h) + var(--bar-h)); }
+  /* The page moves over; the top bars are pulled back to full width so the site's own header
+     still spans the window and the rail reads as sitting under it. */
+  [data-rail] body { transition: padding-left .28s var(--ease); }
+  [data-rail][data-outline="on"] body { padding-left: var(--rail-w); }
+  [data-rail][data-outline="on"] .nav,
+  [data-rail][data-outline="on"] .itinbar { margin-left: calc(-1 * var(--rail-w)); }
+  [data-rail] { scroll-padding-top: calc(var(--nav-h) + 14px); }
+  [data-rail][data-page="itinerary"] { scroll-padding-top: calc(var(--nav-h) + var(--bar-h) + 14px); }
+  @media (prefers-reduced-motion: reduce) { [data-rail] body { transition: none; } }
+}
 
 /* ── photos ─────────────────────────────────────────────────────── */
 .shot {
@@ -442,7 +555,14 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .days { border-top: 1px solid var(--line); }
 .day { display: grid; grid-template-columns: 11rem 1fr; gap: clamp(1rem, 3vw, 2.2rem); padding: 1.3rem 0; border-bottom: 1px solid var(--line); }
 .day-span { background: linear-gradient(90deg, color-mix(in oklab, var(--accent) 4%, transparent), transparent 60%); }
-.day-when { position: sticky; top: 96px; align-self: start; }
+/* Clears whatever sticky chrome is above it: the crumb bar below 1180px, and on an archived
+   alternate the itinerary strip as well. */
+.day-when { position: sticky; top: calc(var(--nav-h) + var(--crumb-h) + 14px); align-self: start; }
+[data-page="itinerary"] .day-when { top: calc(var(--nav-h) + var(--bar-h) + var(--crumb-h) + 14px); }
+@media (min-width: 1180px) {
+  .day-when { top: calc(var(--nav-h) + 14px); }
+  [data-page="itinerary"] .day-when { top: calc(var(--nav-h) + var(--bar-h) + 14px); }
+}
 .day-date { display: block; font-family: var(--serif); font-size: 1.2rem; font-weight: 600; }
 .day-where { display: block; font-size: .78rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); margin-top: .15rem; }
 .day-what p { margin: 0; color: var(--ink-2); }
@@ -564,10 +684,6 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 }
 
 /* ── plan vs archive ────────────────────────────────────────────── */
-/* Archived alternates carry both the itinerary chip strip and their own section subnav, so the
-   subnav has to clear the strip. */
-[data-page="itinerary"] .subnav { top: calc(var(--nav-h) + var(--bar-h)); }
-
 /* The banner at the top of the archive and of every archived alternate. */
 .archnote { background: color-mix(in oklab, var(--gold) 9%, var(--paper-2)); border-bottom: 1px solid color-mix(in oklab, var(--gold) 28%, var(--line)); }
 .archnote p { max-width: var(--maxw); margin: 0 auto; padding: .85rem max(1rem, 3vw); font-size: .88rem; color: var(--ink-2); }
@@ -625,8 +741,8 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 
 /* ── print ──────────────────────────────────────────────────────── */
 @media print {
-  .nav, .itinbar, .subnav, .pager, .theme, .lightbox, .hero-jump { display: none !important; }
-  body { background: #fff; color: #000; }
+  .nav, .itinbar, .outline, .ol-scrim, .crumb, .pager, .theme, .lightbox, .hero-jump { display: none !important; }
+  body { background: #fff; color: #000; padding-left: 0 !important; }
   .shot { break-inside: avoid; }
 }
 
