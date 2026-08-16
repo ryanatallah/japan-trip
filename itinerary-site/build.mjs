@@ -207,7 +207,7 @@ function buildIndex() {
     <td class="c-route">${it.route.map((r) => esc(r)).join(' → ')}</td>
     <td class="c-cost">${esc(it.cost)}</td>
     <td><span class="temp temp-${it.tempStatus}">${esc(it.temp)}</span></td>
-  </tr>${it.clash ? `<tr class="clashrow"><td></td><td colspan="5"><span class="clash">✕ ${esc(it.clash)}</span></td></tr>` : ''}`).join('');
+  </tr>`).join('');
 
   const cards = itineraries.map((it) => {
     const mos = it.heroCard.map((s) => cover(s)).filter(Boolean);
@@ -277,7 +277,7 @@ function buildIndex() {
     <thead><tr><th>#</th><th>Itinerary</th><th>Dates</th><th>Route</th><th>Est. total</th><th>Temp</th></tr></thead>
     <tbody>${glanceRows}</tbody>
   </table></div>
-  <div class="note note-warn"><h3>Thanksgiving constraint</h3><p>${shared.colorado}</p></div>
+  <div class="note note-good"><h3>Dated around Thanksgiving</h3><p>${shared.colorado}</p></div>
   <div class="note note-note"><h3>Why the dates matter</h3><p>${shared.dateLogic}</p></div>
 </section>
 
@@ -382,7 +382,6 @@ function buildItinerary(it) {
   ${heroShot ? `<img class="hero-bg" src="img/${esc(heroShot.file)}" alt="${esc(heroShot.caption)}" fetchpriority="high">` : '<div class="hero-bg hero-bg-empty"></div>'}
   <div class="hero-inner">
     <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''}</p>
-    ${it.clash ? `<p class="clash clash-hero">✕ ${esc(it.clash)}</p>` : ''}
     <h1>${esc(it.title)}</h1>
     <p class="hero-sub">${esc(it.tagline)}</p>
     <p class="hero-facts">
