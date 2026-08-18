@@ -15,6 +15,21 @@
 
 export const revisions = [
   {
+    date: '2026-08-17',
+    when: '17 August 2026',
+    title: 'The Alps stop is settled, and so is the shape of its Monday',
+    tags: ['decision', 'route', 'hotel'],
+    summary: `Three of the open questions closed. <strong>The Alps over the crab coast</strong>, <strong>Monday 16 November stays put at the inn</strong>, and <strong>the gained final morning becomes a relaxed lunch downstairs at SOWAKA</strong>. Two of the three threw off a booking instruction on the way out, so the issues page loses three items and gains two.`,
+    points: [
+      `<strong>The Alps, and the reading of the coast was right.</strong> Kaga's own tourism board leads Yamashiro Onsen with its two public bathhouses, Sōyu and Ko-Sōyu — in that town the bathhouses <em>are</em> the sight. The rest of the Kaga case was Kutani porcelain and Kaga yuzen, and those craft modules had already been cut from this itinerary, which left crab, Kenrokuen and a shorter train.`,
+      `<strong>But private onsen was the wrong argument, and it runs the other way.</strong> Beniya Mukayu is 16 rooms with private outdoor tubs on its terrace suites; Myojinkan is 40 rooms whose three named baths are all communal, with a <strong>mixed-gender</strong> riverside rotenburo that is women-only for just two hours an evening. There is no reservable kashikiri bath there. A private bath at Myojinkan means booking a room that has one — now its own item on the issues page, and folded into the booking calendar.`,
+      `<strong>Monday stays put, and the day sheet now says what that is.</strong> Four baths to rotate, the inn's own path along the Usukawa, the property hung as a gallery, and Treatment Room Natura. Tobira is a one-inn onsen, so that is close to the entire list — the Bases page now carries the three things reachable on foot, including the Hachibuse-yama trailhead 300m up the road, listed precisely so it can be ruled out.`,
+      `<strong>Two things the inn advertises are out of season on the 16th.</strong> Kitchen-garden vegetable picking is finished at 1,050m by mid-November, and iwana fishing is closed outright — Nagano's mountain-stream season runs 16 February to 30 September. Written down so a brochure cannot suggest otherwise on the day.`,
+      `<strong>The last lunch is downstairs.</strong> Gion Loka, SOWAKA's own restaurant, serves 12:00–15:00 with last order 13:30 and no regular closing day, at about ¥7,800 a head. A 12:00 seating finishes by 13:30 and leaves at 14:20 with no train or taxi in between. It is a set kaiseki course, so it joins the gluten-free brief.`,
+      `<strong>Utsukushigahara and Shinhotaka were not deleted.</strong> Neither needs booking, so both survive on the Bases page as a fair-weather impulse; the Skyline still closes around the 20th. What changed is that the day is no longer built on either, so the Venus Line has stopped being an argument for these dates in the verdict.`,
+    ],
+  },
+  {
     date: '2026-08-16',
     when: '16 August 2026',
     title: 'Three new pages — issues, bases and day sheets',

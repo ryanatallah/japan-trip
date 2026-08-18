@@ -220,21 +220,22 @@ export const days = [
     ],
   },
   {
-    date: 'Mon 16', dow: 'Monday', base: 'tobira', where: 'The Alps, or not', title: 'The optional day',
+    date: 'Mon 16', dow: 'Monday', base: 'tobira', where: 'Tobira Onsen', title: 'The day that stays put',
     fixed: [
-      { t: '08:00', what: 'Check the Utsukushigahara Skyline is open', kind: 'check', note: 'The mountain roads close for winter around 20 November and snow can shut them sooner.' },
+      { t: '19:30', what: 'Riverside bath turns women-only', kind: 'opens', note: 'It is mixed-gender the rest of the day, sunrise to 23:00. This two-hour window is the only time it is not.' },
     ],
-    moves: [
-      { from: 'Myojinkan', to: 'Utsukushigahara plateau', min: 60, mode: 'car', at: '09:30', note: '17 km and an hour of switchbacks. A taxi or a hired car — there is no bus.' },
-    ],
+    moves: [],
+    noMoves: 'Nothing today. The only day of the seventeen with nothing to catch.',
     meals: {
       b: { status: 'included', where: 'Myojinkan' },
-      l: { status: 'open', where: 'Take it with you', note: 'There is very little open on the plateau this late in the season.' },
+      l: { status: 'open', where: 'The inn — arrange it at breakfast', note: 'There is nothing else in the valley; this is a one-inn onsen. Salon 1050 does pastry and drinks, but a real lunch has to be asked for.' },
       d: { status: 'included', where: 'Myojinkan — back to the first kitchen', note: 'Third of three. Ask at booking what changes across the three menus.' },
     },
     notes: [
-      `<strong>Two versions of this day, and they are not close in cost.</strong> Utsukushigahara is an hour away by road. <strong>Shinhotaka is two and a half hours each way</strong> — down to Matsumoto, Alpico bus to Hirayu Onsen, then the Okuhida bus — which is five hours of buses before you have looked at anything. The ropeway is spectacular and runs to 2,150m, but treat it as the whole day or not at all.`,
-      `The third version is to stay put, which is a real answer at a ryokan like this one and the reason the plan says so out loud.`,
+      `<strong>Decided: stay put.</strong> The two mountain versions — Utsukushigahara an hour of switchbacks away, Shinhotaka two and a half hours <em>each way</em> — are no longer what the day is built on. Neither needs booking, so either survives as a fair-weather impulse; but the third night of three is the wrong one to spend five hours on buses.`,
+      `<strong>Four baths, and rotating them is most of the day.</strong> The standing bath <strong>Setsugetsuka</strong>, where you stand chest-deep rather than sit; the large indoor-and-outdoor <strong>Hakuryu</strong>, gender-separated and open 24 hours; the reclining bath <strong>Kuuyama</strong>; and the riverside open-air bath below the entrance, which is the mixed one.`,
+      `<strong>On foot, that is close to the whole list.</strong> The inn's own path along the <strong>Usukawa</strong>, benches and tables set along it. The property hung as a gallery, Japanese painting and modern sculpture, which is a real hour indoors. <strong>Treatment Room Natura</strong> for a massage — book it on arrival, not today. The library, the river terraces, the rooftop tea service, and the lobby shop, 08:00–12:00 and 16:30–21:30.`,
+      `<strong>Two things the inn advertises that are out of season.</strong> Picking vegetables in its kitchen garden is finished at 1,050m by now, and <strong>iwana fishing is closed outright</strong> — Nagano's mountain-stream season ends 30 September. The <strong>Hachibuse-yama</strong> trailhead 300m up the road is real, but it is 5½ hours to a 1,929m summit in near-winter conditions. Not today.`,
     ],
   },
   {
@@ -355,12 +356,12 @@ export const days = [
     ],
     meals: {
       b: { status: 'included', where: 'SOWAKA' },
-      l: { status: 'open', where: 'Kyoto, before you go', note: 'There is time for a proper last lunch. This is the gift of an 18:35 departure.' },
+      l: { status: 'booked', where: 'Gion Loka, downstairs at SOWAKA', at: '12:00', note: 'Lunch 12:00–15:00, last order 13:30, no regular closing day, about ¥7,800 a head. Decided: the least-travel version of a proper last lunch — book it, and declare gluten-free in the reservation.' },
       d: { status: 'flight', where: 'On board' },
     },
     notes: [
       `<strong>The last day is far easier than the plan assumes.</strong> United’s KIX–SFO service moves to <strong>18:35</strong> on the winter schedule that starts 25 October — not the 16:55 it runs through the summer. Leaving SOWAKA at <strong>14:20</strong> puts you at the gate two and a half hours out, which means <strong>a full final morning in Kyoto and a proper lunch before you go</strong>.`,
-      `Check-out is 11:00 but the hotel will hold bags. Use the morning for whatever the week rained off.`,
+      `<strong>The morning stays empty and the lunch is downstairs.</strong> Check-out is 11:00 and the hotel holds the bags; Kodai-ji and the Yasaka lanes are three minutes on foot. Then Gion Loka at 12:00, finished by 13:30 without anyone hurrying it, and out to the car at 14:20 — no train and no taxi between the last meal and the airport run.`,
       `The flight lands at SFO around midday <em>on the same Sunday</em>, which is what buys the three clear days before Colorado.`,
     ],
   },
@@ -378,13 +379,14 @@ export const standing = {
     ['Hakone Museum of Art', 'Closed Thursdays. Fixes the art day to Friday.', 'Fri 13'],
     ['Myojinkan shuttle', 'Departs Matsumoto Station at 15:15 and 16:30 only, advance reservation. Taxi is the escape hatch — 30 min, ¥7,000.', 'Sat 14, Sun 15, Tue 17'],
     ['Matsumoto City Museum of Art', 'Closed Mondays. Fixes the Kusama collection to Sunday.', 'Sun 15'],
-    ['Utsukushigahara Skyline', 'Winter closure around 20 November; snow can shut it sooner.', 'Mon 16'],
+    ['Myojinkan riverside bath', 'Mixed-gender, sunrise to 23:00. Women-only 19:30–21:30 — the only private-ish window unless the room has its own bath.', 'Sat 14 – Mon 16'],
     ['Kikunoi Honten', 'Closed the 1st and 3rd Tuesday — 3 and 17 November 2026. Formal gluten-free intake on the reservation form.', 'Thu 19'],
     ['Rurikoin', 'Autumn season is reservation-only and sells out. Booking opens in early October.', 'Thu 19'],
     ['Iwatayama monkey park', '9:00–16:30, last entry 16:00, plus a 20-minute climb from the gate.', 'Fri 20'],
     ['Eikando', 'Day and light-up are separate tickets; the grounds clear between them. Light-up 17:30–21:00, last entry 20:30.', 'Fri 20'],
     ['Kodai-ji illumination', '17:00–22:00, last entry 21:30. Next door to Jugyuan.', 'Sat 21'],
     ['Kyudo studio', 'Location and dates unpublished. Email to confirm before fixing the Saturday.', 'Sat 21'],
+    ['Gion Loka', 'Lunch 12:00–15:00, last order 13:30. No regular closing day. The last lunch — book it, gluten-free declared at reservation.', 'Sun 22'],
   ],
 };
 
