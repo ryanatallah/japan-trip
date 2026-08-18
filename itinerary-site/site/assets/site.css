@@ -128,15 +128,22 @@ code { font: .88em/1 ui-monospace, SFMono-Regular, Menlo, monospace; background:
 .nav-home .mark { font-size: 1.15rem; }
 .nav-title { font-family: var(--serif); font-size: 1.02rem; letter-spacing: -.01em; }
 
-/* The three top-level pages. Labels stay visible at every width — there are only three, and
-   an icon-only version of "Change history" would be a guess. */
-.navtop { display: flex; gap: .2rem; margin-left: auto; }
+/* The six top-level pages. Six full labels do not fit a phone, so each carries a short form and
+   the bar scrolls as a backstop — an icon-only version of "Change history" would be a guess. */
+.navtop { display: flex; gap: .2rem; margin-left: auto; min-width: 0; overflow-x: auto; scrollbar-width: none; }
+.navtop::-webkit-scrollbar { display: none; }
 .navtop a {
   white-space: nowrap; padding: .38rem .75rem; border-radius: var(--r);
   color: var(--ink-2); text-decoration: none; font-size: .86rem;
 }
 .navtop a:hover { background: var(--paper-2); color: var(--ink); }
 .navtop a.on { background: var(--accent); color: #fff; font-weight: 600; }
+.t-short { display: none; }
+@media (max-width: 1080px) {
+  .t-long { display: none; }
+  .t-short { display: inline; }
+  .navtop a { padding: .38rem .6rem; }
+}
 
 /* The seven-itinerary strip. Archive pages only — this is the comparison's own navigation. */
 .itinbar {
@@ -185,9 +192,12 @@ code { font: .88em/1 ui-monospace, SFMono-Regular, Menlo, monospace; background:
   .itinbar a b { font-size: .88rem; color: inherit; }
 }
 @media (max-width: 560px) {
-  .nav { gap: .5rem; padding: .5rem .75rem; }
+  .nav { gap: .4rem; padding: .5rem .6rem; }
   .nav-title { display: none; }
-  .navtop a { padding: .34rem .5rem; font-size: .8rem; }
+  /* Six short labels have to clear 390px without scrolling, or the last one sits under the
+     theme button and reads as broken rather than as scrollable. */
+  .navtop { gap: .05rem; }
+  .navtop a { padding: .32rem .38rem; font-size: .76rem; }
 }
 
 /* ── layout ─────────────────────────────────────────────────────── */
@@ -710,14 +720,12 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 
 /* The gluten-free brief, which opens the plan's dining section, and the swap note above the
    one alternative stay. Both are "read this before the cards below" blocks. */
-.brief, .lever-note {
+.brief {
   padding: clamp(1.3rem, 2.5vw, 1.8rem); margin-bottom: 2.4rem;
   background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent); border-radius: var(--r-lg);
 }
 .brief h3 { margin-bottom: .35rem; }
 .brief .sub { color: var(--ink-3); font-size: .92rem; margin-bottom: 1.1rem; max-width: var(--readw); }
-.lever-note { border-left-color: var(--gold); }
-.lever-note p { margin: 0; color: var(--ink-2); max-width: var(--readw); }
 
 /* ── change history ─────────────────────────────────────────────── */
 .hero-plain { border-bottom: 1px solid var(--line); background: var(--paper-2); }
@@ -739,11 +747,210 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
   .rev { grid-template-columns: 1fr; gap: .5rem; padding: 1.6rem 0; }
 }
 
+/* ── the runbook ────────────────────────────────────────────────── */
+/* Denser and more tabular than the rest of the site on purpose: this page is read standing up,
+   looking for one number, not read through. Everything is tabular-nums so clock times in
+   adjacent rows line up vertically. */
+
+/* ── issues ─────────────────────────────────────────────────────── */
+/* The working list. Wider measure and fewer ornaments than the rest of the site: this is the one
+   page you read to do something rather than to look at something. */
+.tally { display: flex; flex-wrap: wrap; gap: .4rem .5rem; margin-top: 1.4rem; }
+.ty { font-size: .78rem; color: var(--ink-3); border: 1px solid var(--line); background: var(--card); border-radius: 100px; padding: .25rem .75rem; }
+.ty b { color: var(--ink); font-size: .92rem; font-variant-numeric: tabular-nums; margin-right: .12rem; }
+.ty-decide b { color: var(--accent); }
+.ty-book b { color: var(--gold); }
+.ty-waiting b { color: var(--ink-2); }
+.ty-done b { color: var(--moss); }
+
+.issues { display: grid; gap: 1rem; }
+.issue {
+  background: var(--card); border: 1px solid var(--line); border-left: 3px solid var(--accent);
+  border-radius: var(--r-lg); padding: clamp(1.1rem, 2.2vw, 1.6rem);
+  scroll-margin-top: calc(var(--nav-h) + 16px);
+}
+.issue-head h3 { font-size: clamp(1.1rem, 1.9vw, 1.32rem); margin: .3rem 0 0; }
+.issue-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: 0; }
+.itag { font-size: .66rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; padding: .16rem .5rem; border-radius: 100px; background: var(--paper-3); color: var(--ink-3); }
+.itag-decide { background: color-mix(in oklab, var(--accent) 14%, transparent); color: var(--accent); }
+.itag-book { background: color-mix(in oklab, var(--gold) 18%, transparent); color: var(--gold); }
+.itag-waiting { background: color-mix(in oklab, var(--moss) 16%, transparent); color: var(--moss); }
+.itag-by { letter-spacing: .04em; text-transform: none; font-weight: 500; }
+.itag-days { letter-spacing: .04em; text-transform: none; font-weight: 500; font-variant-numeric: tabular-nums; }
+.issue-body { margin-top: .8rem; }
+.issue-body > p { margin: 0; color: var(--ink-2); max-width: var(--readw); font-size: .96rem; }
+.issue-next, .issue-res { margin-top: .9rem !important; padding-top: .8rem; border-top: 1px solid var(--line); font-size: .92rem !important; }
+.issue-next b, .issue-res b {
+  display: inline-block; font-size: .64rem; text-transform: uppercase; letter-spacing: .11em;
+  color: var(--accent); margin-right: .45rem; vertical-align: .08em;
+}
+.issue-res b { color: var(--moss); }
+.issue-entity { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.issue-entity .entity { border: 0; padding: 0; margin: 0; background: none; }
+/* Resolved items stay on the page but stop competing for attention. */
+.issue-done { border-left-color: var(--moss); opacity: .82; }
+.issue-done .itag-decide, .issue-done .itag-book, .issue-done .itag-waiting {
+  background: color-mix(in oklab, var(--moss) 16%, transparent); color: var(--moss);
+}
+
+/* a base: rose + list */
+.basegrid { display: grid; gap: 2.4rem; }
+.base { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.2rem, 2.5vw, 1.8rem); }
+
+/* The <h2> above is the place — Tokyo, Hakone — so the hotel leads this line instead. */
+.base-meta { font-size: .88rem; color: var(--ink-3); margin: .25rem 0 0; display: flex; flex-wrap: wrap; gap: .4rem; align-items: baseline; }
+.base-meta b { color: var(--ink); font-weight: 600; font-size: .98rem; }
+.base-meta i { font-style: normal; opacity: .5; }
+.base-times { font-size: .82rem; color: var(--ink-3); margin: .3rem 0 0; font-variant-numeric: tabular-nums; }
+.base-lede { color: var(--ink-2); max-width: var(--readw); margin: 1rem 0 1.4rem; font-size: .96rem; }
+/* 23rem, not 27: with the outline rail open the content column loses 272px, and the stop list
+   carries all of the text while the rose only has to stay legible. */
+.base-grid { display: grid; grid-template-columns: minmax(0, 23rem) minmax(0, 1fr); gap: clamp(1rem, 3vw, 2.6rem); align-items: start; }
+
+/* The SVG is authored in a 560-unit box but displayed at ~380px, so every type size in here is
+   set roughly 1.6x its apparent size. Getting this wrong once already made the figure unreadable. */
+/* Clears whatever sticky chrome is above it — the crumb bar below 1180px, nothing above it.
+   Mirrors .day-when. NB: this referenced a `--sub-h` that no longer exists once the horizontal
+   subnav became the outline rail, and an undefined variable makes the whole calc invalid, which
+   silently resolves `top` to `auto` and leaves sticky inert with no other symptom. */
+.rosefig { margin: 0; position: sticky; top: calc(var(--nav-h) + var(--crumb-h) + 14px); }
+@media (min-width: 1180px) { .rosefig { top: calc(var(--nav-h) + 14px); } }
+.rosefig figcaption { font-size: .75rem; color: var(--ink-3); text-align: center; margin-top: .5rem; line-height: 1.45; }
+.rose { display: block; width: 100%; height: auto; }
+.rose .ring { fill: none; stroke: var(--line-2); stroke-width: 1.2; stroke-dasharray: 3 6; opacity: .9; }
+.rose .ring-t { fill: var(--ink-3); font: 600 15px var(--sans); font-variant-numeric: tabular-nums; paint-order: stroke; stroke: var(--card); stroke-width: 4px; stroke-linejoin: round; }
+.rose .spoke { stroke: var(--line-2); stroke-width: 1.2; opacity: .35; }
+.rose .compass { fill: var(--ink-3); font: 700 15px var(--sans); letter-spacing: .1em; }
+.rose .b-spur { stroke: var(--line-2); stroke-width: 1.2; opacity: .6; }
+.rose .b-halo { fill: var(--card); }
+.rose .b-dot { fill: var(--accent); }
+.rose .b-num { fill: #fff; font: 700 15px var(--sans); }
+.rose .is-walk .b-dot { fill: var(--card); stroke: var(--accent); stroke-width: 2.6; }
+.rose .is-walk .b-num { fill: var(--accent); }
+.rose .b-home-halo { fill: var(--card); }
+.rose .b-home { fill: var(--ink); }
+.rose .b-home-t { fill: var(--ink); font: 700 17px var(--sans); paint-order: stroke; stroke: var(--card); stroke-width: 5px; stroke-linejoin: round; }
+
+.pois { list-style: none; margin: 0; padding: 0; display: grid; }
+.poi { display: grid; grid-template-columns: 1.7rem minmax(0, 1fr); gap: .7rem; padding: .7rem 0; border-top: 1px solid var(--line); }
+.poi:first-child { border-top: 0; padding-top: 0; }
+.p-n { font: 600 .72rem/1.55rem var(--sans); text-align: center; width: 1.55rem; height: 1.55rem; border-radius: 100px; background: var(--accent); color: #fff; }
+.poi-walk .p-n { background: transparent; color: var(--accent); border: 1.5px solid var(--accent); line-height: 1.4rem; }
+.p-head { margin: 0; font-size: .95rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; }
+.p-head b { color: var(--ink); font-weight: 600; }
+.p-time { font-size: .82rem; font-weight: 600; color: var(--accent); font-variant-numeric: tabular-nums; }
+.p-mode { font-size: .68rem; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-3); }
+.p-check { font-size: .62rem; text-transform: uppercase; letter-spacing: .09em; font-weight: 600; color: var(--gold); border: 1px solid color-mix(in oklab, var(--gold) 45%, transparent); border-radius: 100px; padding: .05rem .38rem; }
+.p-meta { margin: .3rem 0 0; display: grid; gap: .22rem; font-size: .85rem; color: var(--ink-3); }
+.p-meta b { font-weight: 600; color: var(--ink-2); }
+.p-warn { color: var(--accent); }
+.p-why { color: var(--ink-2); font-style: italic; }
+
+/* day sheets */
+.sheets { display: grid; gap: 1.2rem; }
+.sheet { background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg); padding: clamp(1.1rem, 2.2vw, 1.6rem); scroll-margin-top: calc(var(--nav-h) + 16px); }
+.sheet-move { border-left: 3px solid var(--accent); }
+.sheet-head { border-bottom: 1px solid var(--line); padding-bottom: .8rem; margin-bottom: 1.1rem; }
+/* The date sits inside the <h3> so the outline rail can label seventeen sheets distinguishably;
+   the two spans are what keep it reading as a date and a title rather than one run-on heading. */
+.sheet-head h3 { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: .6rem; font-size: 1.15rem; }
+.sheet-date { font-family: var(--serif); font-size: 1.32rem; font-weight: 600; color: var(--ink); }
+.sheet-title { font-weight: 600; }
+.sheet-base { margin: .2rem 0 0; font-size: .8rem; color: var(--ink-3); }
+.sheet-dow { text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; }
+.sheet-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); }
+.sheet-col h4 { font-family: var(--sans); font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-3); margin: 0 0 .6rem; }
+.sheet-col .none { font-size: .87rem; color: var(--ink-3); font-style: italic; margin: 0; }
+
+.fixed { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+.fx { display: grid; grid-template-columns: 3.2rem minmax(0, 1fr); gap: .5rem; font-size: .89rem; }
+.fx-t { font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+.fx-w { color: var(--ink-2); }
+.fx-w em { display: block; font-style: normal; color: var(--ink-3); font-size: .82rem; margin-top: .12rem; }
+.fx-booked .fx-t { color: var(--accent); }
+.fx-flight .fx-t, .fx-arrive .fx-t { color: var(--moss); }
+.fx-closes .fx-t, .fx-check .fx-t { color: var(--gold); }
+
+.journey { margin-bottom: .9rem; }
+.journey:last-child { margin-bottom: 0; }
+.j-leave { margin: 0 0 .35rem; display: flex; flex-wrap: wrap; align-items: baseline; gap: .4rem; }
+.j-clock { font-size: 1.15rem; font-weight: 600; font-variant-numeric: tabular-nums; color: var(--ink); }
+.is-derived .j-clock { color: var(--accent); }
+.j-word { font-size: .64rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); }
+.j-tail { font-size: .78rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.legs { list-style: none; margin: 0; padding: 0; display: grid; gap: .4rem; border-left: 1px solid var(--line); padding-left: .7rem; }
+.leg { font-size: .86rem; }
+.leg-mode { font-size: .62rem; text-transform: uppercase; letter-spacing: .09em; color: var(--ink-3); display: block; }
+.leg-route { color: var(--ink-2); }
+.leg-min { color: var(--accent); font-weight: 600; font-variant-numeric: tabular-nums; margin-left: .4rem; }
+.leg em { display: block; font-style: normal; color: var(--ink-3); font-size: .8rem; margin-top: .1rem; }
+
+.meals { list-style: none; margin: 0; padding: 0; display: grid; gap: .55rem; }
+/* 5.4rem, not 4.6 — "BREAKFAST" in uppercase with letter-spacing is wider than it looks and
+   was overrunning its column into the value. */
+.meal { display: grid; grid-template-columns: 5.4rem minmax(0, 1fr); gap: .5rem; font-size: .89rem; }
+.m-k { font-size: .68rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); padding-top: .15rem; }
+.m-w b { font-weight: 600; color: var(--ink); }
+.m-at { font-variant-numeric: tabular-nums; color: var(--ink-3); font-size: .82rem; }
+.m-s { display: inline-block; margin-left: .35rem; font-size: .62rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 600; padding: .05rem .4rem; border-radius: 100px; background: var(--paper-3); color: var(--ink-3); vertical-align: .08em; }
+.meal-in .m-s { background: color-mix(in oklab, var(--moss) 18%, transparent); color: var(--moss); }
+.meal-bk .m-s { background: color-mix(in oklab, var(--accent) 14%, transparent); color: var(--accent); }
+.meal-fl .m-s { background: color-mix(in oklab, var(--gold) 18%, transparent); color: var(--gold); }
+.m-w em { display: block; font-style: normal; color: var(--ink-3); font-size: .81rem; margin-top: .15rem; }
+.m-warn { color: var(--accent) !important; }
+
+.sheet-notes { margin-top: 1.2rem; padding-top: 1rem; border-top: 1px solid var(--line); }
+.sheet-notes .ticks { max-width: none; gap: .6rem; }
+.sheet-notes .ticks li { font-size: .89rem; }
+
+/* standing constraints */
+.standing { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.standing th, .standing td { text-align: left; padding: .65rem .9rem; border-bottom: 1px solid var(--line); vertical-align: top; }
+.standing thead th { font-family: var(--sans); font-size: .66rem; text-transform: uppercase; letter-spacing: .11em; color: var(--ink-3); }
+.standing tbody th { font-weight: 600; color: var(--ink); white-space: nowrap; }
+.standing td { color: var(--ink-2); }
+.standing .c-when { white-space: nowrap; color: var(--accent); font-variant-numeric: tabular-nums; }
+
+/* the line the itinerary page borrows back */
+.day-run { margin: .5rem 0 0 !important; }
+.day-run a { display: inline-flex; flex-wrap: wrap; align-items: baseline; gap: .45rem; text-decoration: none; font-size: .83rem; color: var(--ink-3); font-variant-numeric: tabular-nums; }
+.day-run a:hover { color: var(--accent); }
+.run-tag { font-size: .6rem; text-transform: uppercase; letter-spacing: .1em; font-weight: 600; color: var(--accent); border: 1px solid color-mix(in oklab, var(--accent) 35%, transparent); border-radius: 100px; padding: .05rem .4rem; }
+
+@media (max-width: 980px) {
+  .base-grid { grid-template-columns: 1fr; }
+  .rosefig { position: static; max-width: 24rem; margin-inline: auto; }
+  .sheet-grid { grid-template-columns: 1fr 1fr; }
+  .sheet-col:last-child { grid-column: 1 / -1; }
+}
+
+/* The rail is the complication, not the viewport. It only *pushes the page over* at 1180 and up
+   — below that it is an overlay drawer that costs the content column nothing — and when it does
+   push, it takes 272px, so between 1180 and about 1260 the two-up layouts are squeezed even
+   though the viewport looks roomy. Both bounds matter: collapsing on viewport width alone (this
+   was briefly `max-width: 1100`) unstuck the rose where the rail is shut and there is plenty of
+   room, and starting at 981 collapsed the layout merely for opening the drawer on a tablet. */
+@media (min-width: 1180px) and (max-width: 1260px) {
+  [data-outline="on"] .base-grid { grid-template-columns: 1fr; }
+  [data-outline="on"] .rosefig { position: static; max-width: 24rem; margin-inline: auto; }
+  [data-outline="on"] .sheet-grid { grid-template-columns: 1fr 1fr; }
+  [data-outline="on"] .sheet-col:last-child { grid-column: 1 / -1; }
+}
+@media (max-width: 640px) {
+  .sheet-grid { grid-template-columns: 1fr; gap: 1.3rem; }
+  .sheet-col:last-child { grid-column: auto; }
+  /* Narrow enough that a label column costs more than it explains — stack instead. */
+  .meal, .fx { grid-template-columns: 1fr; gap: .1rem; }
+  .m-k { padding-top: 0; }
+}
+
 /* ── print ──────────────────────────────────────────────────────── */
 @media print {
-  .nav, .itinbar, .outline, .ol-scrim, .crumb, .pager, .theme, .lightbox, .hero-jump { display: none !important; }
+  .nav, .itinbar, .outline, .ol-scrim, .crumb, .subnav, .pager, .theme, .lightbox, .hero-jump { display: none !important; }
   body { background: #fff; color: #000; padding-left: 0 !important; }
   .shot { break-inside: avoid; }
+  .sheet, .base { break-inside: avoid; border-color: #ccc; }
+  .rosefig { position: static; }
 }
 
 /* variant marker */
