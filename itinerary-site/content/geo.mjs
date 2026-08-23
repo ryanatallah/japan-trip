@@ -6,6 +6,10 @@ export const places = {
   ome:        { lon: 139.238, lat: 35.788, name: 'Ome' },
   karuizawa:  { lon: 138.633, lat: 36.348, name: 'Karuizawa' },
   hakone:     { lon: 139.052, lat: 35.244, name: 'Hakone' },
+  chuzenji:   { lon: 139.478, lat: 36.744, name: 'Okunikko' },
+  nikko:      { lon: 139.599, lat: 36.758, name: 'Nikko' },
+  shuzenji:   { lon: 138.925, lat: 34.971, name: 'Shuzenji' },
+  mishima:    { lon: 138.911, lat: 35.127, name: 'Mishima' },
   nagano:     { lon: 138.187, lat: 36.649, name: 'Nagano' },
   shibu:      { lon: 138.435, lat: 36.735, name: 'Shibu Onsen' },
   jigokudani: { lon: 138.463, lat: 36.733, name: 'Jigokudani' },
@@ -54,6 +58,24 @@ export const routes = {
 
   // The plan. Keyed 'plan' to match plan.mjs's slug — the page it draws on is index.html.
   plan: {
+    stops: [
+      { id: 'tokyo', nights: 4, at: 'right' },
+      { id: 'chuzenji', nights: 4, mode: 'rail', at: 'top' },
+      { id: 'shuzenji', nights: 2, mode: 'rail', at: 'bottom' },
+      { id: 'kyoto', nights: 5, mode: 'rail', at: 'left' },
+    ],
+    trips: [
+      { from: 'tokyo', to: 'ome', mode: 'rail', at: 'left' },
+      { from: 'tokyo', to: 'karuizawa', mode: 'rail', at: 'top' },
+      { from: 'chuzenji', to: 'nikko', mode: 'road', at: 'right' },
+      { from: 'shuzenji', to: 'mishima', mode: 'rail', at: 'right' },
+    ],
+    inOut: 'Fly in to Tokyo (HND), out of Osaka (KIX) — the Nikko→Izu leg crosses the whole Kanto plain',
+  },
+
+  // Superseded 23 August 2026. This was the plan's route until Gora Kadan came back full;
+  // it draws content/superseded.mjs's page. Frozen, like the alternates.
+  'classic-with-the-alps': {
     stops: [
       { id: 'tokyo', nights: 4, at: 'right' },
       { id: 'hakone', nights: 3, mode: 'rail', at: 'bottom' },

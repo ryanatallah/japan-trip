@@ -9,6 +9,9 @@
 //   history.html  how it got here     buildHistory()   <- content/history.mjs
 //   archive.html  the six that lost   buildArchive()   <- content/alternates.mjs + shared.mjs
 //
+// plus one page per SUPERSEDED plan (content/superseded.mjs) — a trip that was the plan and was
+// then displaced. Those are not alternates: they never lost the comparison, they lost a booking.
+//
 // plus one page per archived alternate, and a redirect stub at the URL the plan used to live at.
 //
 // The split is by reading mode, not by subject. The plan is read once at a desk before booking;
@@ -21,6 +24,7 @@ import { fileURLToPath } from 'node:url';
 import { entities } from './content/entities.mjs';
 import { plan } from './content/plan.mjs';
 import { alternates, recommendation, wishlist } from './content/alternates.mjs';
+import { superseded } from './content/superseded.mjs';
 import { shared } from './content/shared.mjs';
 import { revisions } from './content/history.mjs';
 import { itineraries } from './content/itineraries.mjs';
@@ -332,7 +336,12 @@ function buildArchive() {
     }
   }
 
-  const isPlan = (it) => it.slug === plan.slug;
+  const isPlan = (it) => !!it && it.slug === plan.slug;
+  // The frozen tables key off `num`. When a plan is superseded its number leaves `itineraries`
+  // and reappears in `superseded`, so a lookup that only walks `itineraries` starts returning
+  // undefined — resolve across both, and mark the superseded ones rather than dropping them.
+  const byNum = (n) => itineraries.find((x) => x.num === n) || superseded.find((x) => x.num === n);
+  const isPast = (it) => !!it && superseded.some((x) => x.slug === it.slug);
 
   const glanceRows = itineraries.map((it) => `<tr${isPlan(it) ? ' class="row-plan"' : ''}>
     <td class="c-num"><a href="${href(it)}">${it.num}</a></td>
@@ -392,8 +401,11 @@ function buildArchive() {
   }).join('');
 
   const recs = recommendation.map(([want, why, n]) => {
-    const it = itineraries.find((x) => x.num === n);
-    return `<li${isPlan(it) ? ' class="rec-plan"' : ''}><span class="rec-want">${esc(want)}</span><a class="rec-pick" href="${href(it)}">Itinerary ${n} — ${esc(it.title)}${isPlan(it) ? ' ✓' : ''}</a><span class="rec-why">${esc(why)}</span></li>`;
+    const it = byNum(n);
+    if (!it) return `<li><span class="rec-want">${esc(want)}</span><span class="rec-pick">Itinerary ${esc(String(n))}</span><span class="rec-why">${esc(why)}</span></li>`;
+    const tag = isPlan(it) ? ' ✓' : isPast(it) ? ' — superseded' : '';
+    const cls = isPlan(it) ? ' class="rec-plan"' : isPast(it) ? ' class="rec-past"' : '';
+    return `<li${cls}><span class="rec-want">${esc(want)}</span><a class="rec-pick" href="${href(it)}">Itinerary ${esc(String(n))} — ${esc(it.title)}${tag}</a><span class="rec-why">${esc(why)}</span></li>`;
   }).join('');
 
   const body = `
@@ -403,13 +415,24 @@ function buildArchive() {
     <p class="kicker">The archive · decided ${esc(plan.decided)}</p>
     <h1>${WORDS[itineraries.length] || itineraries.length} ways to see Japan</h1>
     <p class="hero-sub">The whole comparison, kept as it read on the day the choice was made. <strong>Itinerary ${plan.num} — ${esc(plan.title)}</strong> won; the other six are here with their photographs, their costs and their honest verdicts, because a decision you cannot re-examine is not a decision.</p>
-    <p class="hero-jump"><a class="jump-plan" href="index.html">→ Open the plan</a>${alternates.map((it) => `<a href="${href(it)}">${it.num}. ${esc(it.title)}</a>`).join('')}</p>
+    <p class="hero-jump"><a class="jump-plan" href="index.html">→ Open the plan</a>${alternates.map((it) => `<a href="${href(it)}">${it.num}. ${esc(it.title)}</a>`).join('')}${superseded.map((it) => `<a class="jump-past" href="${href(it)}">${it.num}. ${esc(it.title)} — superseded</a>`).join('')}</p>
   </div>
 </header>
 
 <div class="archnote">
   <p><b>This is the archive.</b> Nothing here is being kept up to date — the six routes below hold the dates, costs and verdicts they had on ${esc(plan.decided)}. For the trip that is actually happening, see <a href="index.html">the itinerary</a>; for what has changed since, <a href="history.html">the change history</a>.</p>
 </div>
+
+${superseded.length ? `<section class="sec" id="superseded">
+  <h2>${superseded.length === 1 ? 'A plan that was superseded' : 'Plans that were superseded'}</h2>
+  <p class="sec-sub">A different kind of archive entry. ${superseded.length === 1 ? 'This route did not lose the comparison below — it won it' : 'These routes did not lose the comparison below — they won it'}, ${superseded.length === 1 ? 'was' : 'were'} the trip for a while, and ${superseded.length === 1 ? 'was' : 'were'} then displaced by something that happened afterwards. Kept whole, at the date ${superseded.length === 1 ? 'it' : 'they'} stopped being true.</p>
+  <div class="superlist">${superseded.map((it) => `<a class="supercard" href="${href(it)}">
+    <span class="supercard-when">${esc(it.decided)} → ${esc(it.supersededOn)}</span>
+    <b>${esc(it.num)}. ${esc(it.title)}</b>
+    <em>${esc(it.dates)} · ${esc(it.length)} · ${esc(it.route.join(' · '))}</em>
+    <span class="supercard-cost">${esc(it.cost)} est.</span>
+  </a>`).join('')}</div>
+</section>` : ''}
 
 <section class="sec" id="glance">
   <h2>The ${WORDS[itineraries.length] || itineraries.length} at a glance</h2>
@@ -939,7 +962,7 @@ function buildHistory() {
 
 <section class="sec" id="log">
   <div class="revs">${entries}</div>
-  <p class="after">The trip as it stands today is <a href="index.html">the itinerary</a>. The six routes that were considered and set aside are in <a href="archive.html">the archive</a>.</p>
+  <p class="after">The trip as it stands today is <a href="index.html">the itinerary</a>. The six routes that were considered and set aside are in <a href="archive.html">the archive</a>${superseded.length ? `, alongside ${superseded.length === 1 ? 'the plan that was superseded' : 'the plans that were superseded'} — ${superseded.map((it) => `<a href="${href(it)}">${esc(it.title)}</a>`).join(', ')}` : ''}.</p>
 </section>
 
 <nav class="pager pager-plan">
@@ -954,25 +977,39 @@ function buildHistory() {
   });
 }
 
-// ── an archived alternate ───────────────────────────────────────────
-function buildItinerary(it) {
+// ── an archived alternate, or a superseded plan ──────────────────────
+// Same page furniture either way; only the banner and the kicker differ. An *alternate* lost the
+// comparison on 15 August. A *superseded* plan won it, was the trip for a while, and was then
+// displaced by something that happened afterwards — so its banner has to say which.
+function buildItinerary(it, { past = false } = {}) {
   const heroShot = cover(it.hero);
 
-  const body = `
-<div class="archnote archnote-alt">
+  const banner = past
+    ? `<div class="archnote archnote-past">
+  <p><b>Superseded — this was the plan, and is not any more.</b> ${esc(it.title)} was the trip from ${esc(it.decided)} until ${esc(it.supersededOn)}. It is kept exactly as it read on its last day and is not being updated. The trip that is happening now is <a href="index.html">${esc(plan.title)}</a>; what changed and why is on <a href="history.html">the change history</a>.</p>
+</div>`
+    : `<div class="archnote archnote-alt">
   <p><b>Archived alternate — this is not the plan.</b> ${esc(it.title)} was one of seven routes considered; it was set aside on ${esc(plan.decided)} and has not been updated since. The trip that is happening is <a href="index.html">${esc(plan.title)}</a>, and the full comparison is in <a href="archive.html">the archive</a>.</p>
-</div>
+</div>`;
+
+  const body = `
+${banner}
 
 <header class="hero hero-itin">
   ${heroBg(heroShot)}
   <div class="hero-inner">
-    <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''} · archived</p>
+    <p class="kicker">Itinerary ${it.num}${it.variantOf ? ` · a fork of Itinerary ${it.variantOf}` : ''} · ${past ? esc(it.supersededLabel) : 'archived'}</p>
     <h1>${esc(it.title)}</h1>
     <p class="hero-sub">${esc(it.tagline)}</p>
     ${heroFacts(it)}
   </div>
   ${heroShot ? `<p class="hero-credit">${esc(heroShot.caption)}</p>` : ''}
 </header>
+
+${past ? `<section class="sec sec-alt" id="why">
+  <h2>Why this stopped being the plan</h2>
+  <p class="lede">${it.supersededBy}</p>
+</section>` : ''}
 
 <section class="sec" id="pitch">
   <div class="pitch"><p class="lede lede-big">${it.pitch}</p></div>
@@ -1013,8 +1050,8 @@ ${placesSection(it)}
 </nav>`;
 
   return shell({
-    title: `${it.num}. ${it.title} — archived · Japan 2026`,
-    desc: `Archived alternate: ${it.tagline}`,
+    title: `${it.num}. ${it.title} — ${past ? 'superseded' : 'archived'} · Japan 2026`,
+    desc: past ? `Superseded plan: ${it.tagline}` : `Archived alternate: ${it.tagline}`,
     body, active: it.slug, page: 'itinerary', section: 'archive', chips: true, rail: true,
   });
 }
@@ -1052,6 +1089,7 @@ writeFileSync(join(OUT, 'days.html'), buildDays());
 writeFileSync(join(OUT, 'history.html'), buildHistory());
 writeFileSync(join(OUT, 'archive.html'), buildArchive());
 for (const it of alternates) writeFileSync(join(OUT, `${it.slug}.html`), buildItinerary(it));
+for (const it of superseded) writeFileSync(join(OUT, `${it.slug}.html`), buildItinerary(it, { past: true }));
 writeFileSync(join(OUT, `${OLD_PLAN_SLUG}.html`), buildRedirect());
 
 for (const f of readdirSync(join(ROOT, 'assets-src'))) {
@@ -1062,8 +1100,8 @@ for (const f of readdirSync(join(ROOT, 'assets-src'))) {
 // search. Belt and braces: robots.txt here, plus a noindex meta on every page.
 writeFileSync(join(OUT, 'robots.txt'), 'User-agent: *\nDisallow: /\n');
 
-const pages = 6 + alternates.length + 1;
+const pages = 6 + alternates.length + superseded.length + 1;
 const total = Object.values(media).reduce((n, l) => n + l.length, 0);
 const withPhotos = Object.keys(entities).filter((s) => hasShots(s)).length;
 const stops = bases.reduce((n, b) => n + b.pois.length, 0);
-console.log(`built ${pages} pages — plan, issues, bases, days, history, archive, ${alternates.length} alternates, 1 redirect · ${total} photos across ${withPhotos}/${Object.keys(entities).length} entities · ${runDays.length} day sheets, ${stops} stops across ${bases.length} bases`);
+console.log(`built ${pages} pages — plan, issues, bases, days, history, archive, ${alternates.length} alternates, ${superseded.length} superseded, 1 redirect · ${total} photos across ${withPhotos}/${Object.keys(entities).length} entities · ${runDays.length} day sheets, ${stops} stops across ${bases.length} bases`);
