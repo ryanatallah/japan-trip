@@ -131,6 +131,107 @@
     addEventListener('resize', () => { measure(); active = -1; spy(); }, { passive: true });
   }
 
+  // ── link previews ─────────────────────────────────────────────────
+  // Every cross-page link ships what is at the other end — a photograph and two sentences —
+  // so following it is a choice rather than the only way to find out. Hover or keyboard focus
+  // only: on touch there is no hover, and the link itself is the answer.
+  const xdata = document.getElementById('xref-data');
+  if (xdata && matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    let MAP = {};
+    try { MAP = JSON.parse(xdata.textContent); } catch (e) { MAP = {}; }
+
+    const card = document.createElement('div');
+    card.className = 'xcard';
+    card.id = 'xcard';
+    card.setAttribute('role', 'tooltip');
+    card.hidden = true;
+    card.innerHTML = '<img class="xc-img" alt="" hidden><div class="xc-body">'
+      + '<p class="xc-t"></p><p class="xc-s"></p><p class="xc-x"></p><p class="xc-m"></p></div>';
+    document.body.appendChild(card);
+    const parts = {
+      img: card.querySelector('.xc-img'), t: card.querySelector('.xc-t'),
+      s: card.querySelector('.xc-s'), x: card.querySelector('.xc-x'), m: card.querySelector('.xc-m'),
+    };
+
+    // The card replaces the native tooltip rather than sitting on top of one. Kept in the markup
+    // so a reader without JS still gets the hint.
+    const links = [...document.querySelectorAll('a[href*="#"]')].filter((a) => MAP[a.getAttribute('href')]);
+    for (const a of links) if (a.title) { a.dataset.title = a.title; a.removeAttribute('title'); }
+
+    let cur = null;
+    let timer = 0;
+
+    function place(a) {
+      const r = a.getBoundingClientRect();
+      const c = card.getBoundingClientRect();
+      const pad = 10;
+      const vw = root.clientWidth, vh = root.clientHeight;
+      const left = Math.max(pad, Math.min(r.left + r.width / 2 - c.width / 2, vw - c.width - pad));
+      // Below the link by default, flipped above when there is no room under it — then clamped
+      // into the viewport regardless. The clamp is the part that matters: a card you cannot see
+      // is worse than one that overlaps its link, and the flip alone does not guarantee it.
+      let top = r.bottom + 9;
+      if (top + c.height > vh - pad) top = r.top - c.height - 9;
+      const lowest = Math.max(pad, vh - c.height - pad);
+      card.style.left = `${Math.round(left)}px`;
+      card.style.top = `${Math.round(Math.max(pad, Math.min(top, lowest)))}px`;
+    }
+
+    function show(a) {
+      const d = MAP[a.getAttribute('href')];
+      if (!d) return;
+      cur = a;
+      const set = (el, v) => { el.textContent = v || ''; el.hidden = !v; };
+      if (d.img) {
+        parts.img.src = d.img.src;
+        parts.img.width = d.img.w;
+        parts.img.height = d.img.h;
+      }
+      parts.img.hidden = !d.img;
+      set(parts.t, d.title);
+      set(parts.s, d.sub);
+      set(parts.x, d.text);
+      set(parts.m, d.meta);
+      card.hidden = false;
+      place(a);                       // measured only once it is laid out
+      a.setAttribute('aria-describedby', 'xcard');
+    }
+
+    function hide() {
+      clearTimeout(timer);
+      card.hidden = true;
+      cur?.removeAttribute('aria-describedby');
+      cur = null;
+    }
+
+    const target = (e) => {
+      const a = e.target.closest?.('a[href*="#"]');
+      return a && MAP[a.getAttribute('href')] ? a : null;
+    };
+
+    document.addEventListener('pointerover', (e) => {
+      if (e.pointerType && e.pointerType !== 'mouse') return;
+      const a = target(e);
+      if (!a || a === cur) return;
+      clearTimeout(timer);
+      // Long enough that skimming a paragraph of links does not strobe, short enough that a
+      // deliberate hover feels immediate.
+      timer = setTimeout(() => show(a), 220);
+    });
+    document.addEventListener('pointerout', (e) => {
+      const a = target(e);
+      // Some previewable links wrap a span — the itinerary's "Runs …" line does — and moving
+      // between a link's own children fires pointerout. Only leaving the link should close it.
+      if (a && !a.contains(e.relatedTarget)) hide();
+    });
+    document.addEventListener('focusin', (e) => { const a = target(e); if (a) show(a); });
+    document.addEventListener('focusout', (e) => { if (target(e)) hide(); });
+    document.addEventListener('click', hide);
+    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') hide(); });
+    addEventListener('scroll', hide, { passive: true });
+    addEventListener('resize', hide, { passive: true });
+  }
+
   // ── lightbox ──────────────────────────────────────────────────────
   const lb = document.querySelector('.lightbox');
   if (!lb) return;
