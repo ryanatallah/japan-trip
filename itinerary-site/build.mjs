@@ -27,6 +27,7 @@ import { itineraries } from './content/itineraries.mjs';
 import { bases } from './content/bases.mjs';
 import { days as runDays, standing, legs } from './content/days.mjs';
 import { issues, summary as issueSummary, GROUPS as ISSUE_GROUPS } from './content/issues.mjs';
+import { crossrefs } from './content/crossrefs.mjs';
 import { renderMap } from './tools/map.mjs';
 import { placeBase, renderRose } from './tools/basemap.mjs';
 import { dayJourneys, daySummary, sortedFixed, toClock, dur } from './tools/schedule.mjs';
@@ -265,6 +266,23 @@ const TOP = [
   ['archive.html', 'Archive', 'archive', 'Archive'],
 ];
 
+/**
+ * The preview payload for one page: only the targets it actually links to, so a page that links
+ * to four things does not ship eighty-five. Keyed by href, which is what site.js has in hand.
+ */
+function previewData(body) {
+  const used = {};
+  for (const m of body.matchAll(/href="((?:index|days|bases)\.html#[^"]+)"/g)) {
+    if (PREVIEWS[m[1]]) used[m[1]] = PREVIEWS[m[1]];
+  }
+  // The trailing newline belongs to the payload, so a page with nothing to preview emits nothing
+  // at all rather than a stray blank line.
+  if (!Object.keys(used).length) return '';
+  // `</script>` inside a JSON string would close this block early, so neuter every '<'.
+  const json = JSON.stringify(used).replace(/</g, '\\u003c');
+  return `<script type="application/json" id="xref-data">${json}</script>\n`;
+}
+
 function shell({ title, desc, body, active = '', page = '', section = 'plan', chips = false, rail = false }) {
   const top = TOP.map(([url, label, key, short]) =>
     `<a href="${url}"${section === key ? ' class="on" aria-current="page"' : ''}><span class="t-long">${label}</span><span class="t-short">${short}</span></a>`
@@ -310,7 +328,7 @@ ${body}
   <button class="lb-next" aria-label="Next">›</button>
   <figure><img alt=""><figcaption><span class="lb-cap"></span> <span class="lb-credit"></span> <a class="lb-src" target="_blank" rel="noopener">source ↗</a></figcaption></figure>
 </div>
-<script src="assets/site.js"></script>
+${previewData(body)}<script src="assets/site.js"></script>
 </body>
 </html>`;
 }
@@ -635,6 +653,108 @@ ${placesSection(it)}
 // distances on the base maps come out of the same `min` values that drive those figures.
 const dayId = (d) => `d-${d.date.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 
+// ── cross-references ────────────────────────────────────────────────
+// The runbook is two pages describing the same fifteen nights from different angles, so a name on
+// one of them nearly always has a fuller answer on the other, or on the itinerary. These resolve
+// content/crossrefs.mjs into real hrefs once, then linkNames() threads them through the short
+// label fields on a day sheet.
+const slugify = (s) => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+/** A stop's own anchor on bases.html, so a day sheet can land on the row rather than the section. */
+const stopId = (baseId, name) => `stop-${baseId}-${slugify(name)}`;
+
+const REFS = Object.entries(crossrefs).map(([phrase, t]) => {
+  if (t.entity) return { phrase, href: `index.html#${t.entity}`, label: entities[t.entity]?.name, t };
+  const [baseId, name] = t.stop;
+  return { phrase, href: `bases.html#${stopId(baseId, name)}`, label: `${name}, from ${bases.find((b) => b.id === baseId)?.name}`, t };
+// Longest first: 'Matsumoto Station' has to beat 'Matsumoto', and 'Kansai (KIX)' has to beat 'KIX'.
+}).sort((a, b) => b.phrase.length - a.phrase.length);
+
+const matched = new Set();
+const alnum = (c) => c !== undefined && /[A-Za-z0-9]/.test(c);
+
+/**
+ * Escape a short label and link the crossref phrases in it. Matches are non-overlapping and
+ * word-bounded, so one label can carry two links — "Myojinkan shuttle departs Matsumoto Station"
+ * resolves both halves — without 'Ome' ever firing inside 'Omotesando'.
+ *
+ * `seen` is per day sheet, and only the first mention of a thing on that sheet becomes a link.
+ * Without it a single day underlines Gora Kadan four times and Owakudani three, which is a page
+ * of red rather than a page you can scan — the sheet is one card, so one link is enough. It is
+ * keyed on the destination rather than the phrase, because two phrases can mean the same thing:
+ * "Gion Loka, downstairs at SOWAKA" is one restaurant and wants one link, not two.
+ */
+function linkNames(text = '', seen = null) {
+  let out = '', i = 0;
+  outer: while (i < text.length) {
+    for (const r of REFS) {
+      if (!text.startsWith(r.phrase, i)) continue;
+      if (alnum(text[i - 1]) || alnum(text[i + r.phrase.length])) continue;
+      matched.add(r.phrase);
+      const first = !seen || !seen.has(r.href);
+      if (seen) seen.add(r.href);
+      out += first
+        ? `<a class="xref" href="${r.href}" title="${esc(r.label)}">${esc(r.phrase)}</a>`
+        : esc(r.phrase);
+      i += r.phrase.length;
+      continue outer;
+    }
+    out += esc(text[i]);
+    i += 1;
+  }
+  return out;
+}
+
+const DAY_REFS = runDays
+  .map((d) => ({ date: d.date, href: `days.html#${dayId(d)}` }))
+  .sort((a, b) => b.date.length - a.date.length);
+
+/**
+ * Link every date in a "bites on" cell, leaving the cell's own punctuation alone — the column
+ * carries lists ('Sat 14, Sun 15, Tue 17') and ranges ('Sat 14 – Mon 16') and should read as it
+ * was written. Scanning rather than splitting is what makes both work.
+ */
+function linkDates(list) {
+  // A date-shaped token that is not a day sheet is a typo, and would otherwise just fail to link.
+  for (const m of String(list).matchAll(/\b(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun) \d{1,2}\b/g)) {
+    if (!runDays.some((r) => r.date === m[0])) {
+      throw new Error(`content/days.mjs: standing constraint cites '${m[0]}', which is not a day sheet`);
+    }
+  }
+  let out = '', i = 0;
+  outer: while (i < list.length) {
+    for (const r of DAY_REFS) {
+      if (!list.startsWith(r.date, i)) continue;
+      if (alnum(list[i - 1]) || alnum(list[i + r.date.length])) continue;
+      out += `<a href="${r.href}">${esc(r.date)}</a>`;
+      i += r.date.length;
+      continue outer;
+    }
+    out += esc(list[i]);
+    i += 1;
+  }
+  return out;
+}
+
+/** Every phrase has to point somewhere real, and has to still appear somewhere on the runbook. */
+function checkCrossrefs() {
+  const bad = [];
+  for (const r of REFS) {
+    if (r.t.entity && !PLAN_ANCHORS.has(r.t.entity)) {
+      bad.push(`'${r.phrase}' -> entity '${r.t.entity}', which the itinerary never renders`);
+    }
+    if (r.t.stop) {
+      const [baseId, name] = r.t.stop;
+      const base = bases.find((b) => b.id === baseId);
+      if (!base) bad.push(`'${r.phrase}' -> no base '${baseId}'`);
+      else if (!base.pois.some((o) => o.name === name)) bad.push(`'${r.phrase}' -> no stop named '${name}' at ${baseId}`);
+    }
+    if (!matched.has(r.phrase)) {
+      bad.push(`'${r.phrase}' never appears on a day sheet — a typo, or wording that has since changed`);
+    }
+  }
+  if (bad.length) throw new Error(`content/crossrefs.mjs: unusable entries\n  ${bad.join('\n  ')}`);
+}
+
 const MODE = {
   walk: 'on foot', metro: 'metro', rail: 'rail', bus: 'bus',
   boat: 'boat', ropeway: 'ropeway', car: 'car', air: 'air',
@@ -649,22 +769,95 @@ const MEAL_STATUS = {
   none: ['None', 'no'],
 };
 
+// ── link previews ───────────────────────────────────────────────────
+// A cross-reference is only worth following if you know what is at the other end, and following
+// it costs you your place on the page. So every link that leaves a page also ships the answer:
+// a photograph and a couple of sentences, shown on hover. shell() emits the subset each page
+// actually links to; assets-src/site.js positions the card.
+
+/** Blurbs carry inline markup and run several sentences. A card wants plain text and one idea. */
+function summarise(html = '', max = 190) {
+  const text = String(html)
+    .replace(/<[^>]+>/g, '')
+    .replace(/&(amp|lt|gt|quot|#39|nbsp);/g, (_, e) => ({ amp: '&', lt: '<', gt: '>', quot: '"', '#39': "'", nbsp: ' ' }[e]))
+    .replace(/\s+/g, ' ')
+    .trim();
+  if (text.length <= max) return text;
+  // Prefer a sentence end, and only fall back to a word boundary if the first sentence is long.
+  const cut = text.slice(0, max);
+  const stop = cut.lastIndexOf('. ');
+  return stop > max * 0.5 ? cut.slice(0, stop + 1) : `${cut.slice(0, cut.lastIndexOf(' '))}…`;
+}
+
+/** The photo a card leads with — the same establishing shot the itinerary uses. */
+function cardShot(slug) {
+  const c = cover(slug);
+  return c ? { src: `img/${c.thumb || c.file}`, w: c.w || 1600, h: c.h || 1067 } : null;
+}
+
+const PREVIEWS = {};
+for (const [slug, e] of Object.entries(entities)) {
+  PREVIEWS[`index.html#${slug}`] = {
+    title: e.name, sub: [e.location, e.rate].filter(Boolean).join(' · '),
+    text: summarise(e.blurb), img: cardShot(slug),
+  };
+}
+for (const b of bases) {
+  PREVIEWS[`bases.html#base-${b.id}`] = {
+    title: b.hotel, sub: `${b.where} · ${b.dates}`, text: summarise(b.lede), img: cardShot(b.entity),
+  };
+  for (const o of b.pois) {
+    PREVIEWS[`bases.html#${stopId(b.id, o.name)}`] = {
+      title: o.name,
+      sub: `${dur(o.min)} ${MODE[o.mode] || o.mode} from ${b.hotel}`,
+      text: summarise(o.why || o.warn || o.via || ''),
+      meta: o.hours ? `Hours ${summarise(o.hours, 80)}` : '',
+      // A stop with a card of its own borrows its photograph; a station simply has none.
+      img: o.entity ? cardShot(o.entity) : null,
+    };
+  }
+}
+for (const d of runDays) {
+  const b = bases.find((x) => x.id === d.base);
+  PREVIEWS[`days.html#${dayId(d)}`] = {
+    title: `${d.date} · ${d.title}`,
+    sub: [d.dow, b?.hotel || d.where].filter(Boolean).join(' · '),
+    text: summarise(d.notes?.[0] || d.noMoves || ''),
+    meta: daySummary(d) || '',
+    img: null,
+  };
+}
+
 /** One base: the isochrone rose, and the list that carries everything the rose cannot. */
 function baseCard(base) {
   const placed = placeBase(base);
   const rows = placed.pts.map((p) => {
     const o = p.poi;
+    // Two ways off this page, and a stop should have at least one. The name links to the entity
+    // card on the itinerary — the thing with the photographs and the paragraph saying what it is.
+    // The day chips link to the sheets that use it, which is the only answer a station has.
+    const when = (o.days || []).map((date) => {
+      const d = runDays.find((r) => r.date === date);
+      return `<a href="days.html#${dayId(d)}">${esc(date)}</a>`;
+    }).join('<i>·</i>');
     const bits = [
       o.via ? `<span class="p-via">${o.via}</span>` : '',
       o.hours ? `<span class="p-hours"><b>Hours</b> ${o.hours}</span>` : '',
       o.book ? `<span class="p-book"><b>Booking</b> ${o.book}</span>` : '',
       o.warn ? `<span class="p-warn">${o.warn}</span>` : '',
       o.why ? `<span class="p-why">${o.why}</span>` : '',
+      when ? `<span class="p-when"><b>On</b> ${when}</span>` : '',
     ].filter(Boolean).join('');
-    return `<li class="poi${o.mode === 'walk' ? ' poi-walk' : ''}">
+    // The tooltip names the card you land on, not the stop you clicked — several stops share one
+    // (all three Matsumoto sights are on the Matsumoto card), and knowing that before you click
+    // is the difference between a useful link and a surprising one.
+    const name = o.entity
+      ? `<a class="xref" href="index.html#${esc(o.entity)}" title="${esc(entities[o.entity].name)} on the itinerary">${esc(o.name)}</a>`
+      : esc(o.name);
+    return `<li class="poi${o.mode === 'walk' ? ' poi-walk' : ''}" id="${esc(stopId(base.id, o.name))}">
       <span class="p-n">${p.n}</span>
       <div class="p-body">
-        <p class="p-head"><b>${esc(o.name)}</b>
+        <p class="p-head"><b>${name}</b>
           <span class="p-time">${dur(o.min)}</span>
           <span class="p-mode">${esc(MODE[o.mode] || o.mode)}</span>
           ${o.confirm ? '<span class="p-check">confirm</span>' : ''}</p>
@@ -696,17 +889,20 @@ function baseCard(base) {
 function daySheet(d) {
   const base = bases.find((b) => b.id === d.base);
   const fixed = sortedFixed(d);
+  // One card, one link per name. The columns render left to right, so the earliest mention a
+  // reader's eye reaches is the one that carries it.
+  const seen = new Set();
 
   const fixedHtml = fixed.length ? `<ol class="fixed">${fixed.map((f) => `<li class="fx fx-${esc(f.kind || 'note')}">
       <span class="fx-t">${esc(f.t)}</span>
-      <span class="fx-w">${esc(f.what)}${f.confirm ? ' <span class="p-check">confirm</span>' : ''}${f.note ? `<em>${f.note}</em>` : ''}</span>
+      <span class="fx-w">${linkNames(f.what, seen)}${f.confirm ? ' <span class="p-check">confirm</span>' : ''}${f.note ? `<em>${f.note}</em>` : ''}</span>
     </li>`).join('')}</ol>` : '<p class="none">Nothing with a clock time.</p>';
 
   const journeys = dayJourneys(d);
   const movesHtml = journeys.length ? journeys.map((j) => {
     const legs = j.legs.map((m) => `<li class="leg">
         <span class="leg-mode">${esc(MODE[m.mode] || m.mode)}</span>
-        <span class="leg-route">${esc(m.from)} → ${esc(m.to)}<span class="leg-min">${dur(m.min)}</span></span>
+        <span class="leg-route">${linkNames(m.from, seen)} → ${linkNames(m.to, seen)}<span class="leg-min">${dur(m.min)}</span></span>
         ${m.note ? `<em>${m.note}</em>` : ''}
       </li>`).join('');
     const head = j.leaveBy == null ? '' : `<p class="j-leave">
@@ -723,7 +919,7 @@ function daySheet(d) {
     const [label, cls] = MEAL_STATUS[m.status] || MEAL_STATUS.open;
     return `<li class="meal meal-${cls}">
       <span class="m-k">${MEAL_LABEL[k]}</span>
-      <span class="m-w"><b>${esc(m.where || '—')}</b>${m.at ? ` <span class="m-at">${esc(m.at)}</span>` : ''}<span class="m-s">${label}</span>
+      <span class="m-w"><b>${linkNames(m.where || '—', seen)}</b>${m.at ? ` <span class="m-at">${esc(m.at)}</span>` : ''}<span class="m-s">${label}</span>
       ${m.note ? `<em>${m.note}</em>` : ''}${m.warn ? `<em class="m-warn">${m.warn}</em>` : ''}</span>
     </li>`;
   }).join('');
@@ -843,7 +1039,34 @@ ${done.length ? `<section class="sec sec-alt" id="resolved">
 
 // ── bases ───────────────────────────────────────────────────────────
 // One section per hotel, so the outline rail lists the four of them.
+
+// Every stop links out — to its entity card on the itinerary, to the day sheets that use it, or
+// both. A link is only worth anything if the anchor is really on the far page, and an entity that
+// is defined but never rendered has no anchor: index.html only emits cards for the four lists
+// below. So resolve the targets here and fail the build on a dead one, rather than shipping a
+// name that looks clickable and lands at the top of the wrong page.
+const PLAN_ANCHORS = new Set([...plan.stays, ...plan.dining, ...plan.doing, ...plan.places]);
+
+function checkBaseLinks() {
+  const bad = [];
+  for (const b of bases) {
+    for (const o of b.pois) {
+      const at = `${b.id}/${o.name}`;
+      if (o.entity && !entities[o.entity]) bad.push(`${at}: no entity '${o.entity}'`);
+      else if (o.entity && !PLAN_ANCHORS.has(o.entity)) {
+        bad.push(`${at}: entity '${o.entity}' exists but the itinerary never renders it, so index.html#${o.entity} is a dead anchor`);
+      }
+      for (const date of o.days || []) {
+        if (!runDays.some((r) => r.date === date)) bad.push(`${at}: no day sheet dated '${date}'`);
+      }
+      if (!o.entity && !(o.days || []).length) bad.push(`${at}: no entity and no days — nothing to click through to`);
+    }
+  }
+  if (bad.length) throw new Error(`content/bases.mjs: broken cross-references\n  ${bad.join('\n  ')}`);
+}
+
 function buildBases() {
+  checkBaseLinks();
   const body = `
 <header class="hero hero-plain">
   <div class="hero-inner">
@@ -881,7 +1104,6 @@ function buildDays() {
       : ''}</p>
     <div class="sheets">${leg.days.map(daySheet).join('')}</div>
   </section>`).join('');
-
   const body = `
 <header class="hero hero-plain">
   <div class="hero-inner">
@@ -899,7 +1121,7 @@ ${sections}
   <div class="tablewrap"><table class="standing">
     <thead><tr><th>What</th><th>The constraint</th><th>Bites on</th></tr></thead>
     <tbody>${standing.rows.map(([what, rule, when]) => `<tr>
-      <th scope="row">${esc(what)}</th><td>${esc(rule)}</td><td class="c-when">${esc(when)}</td>
+      <th scope="row">${linkNames(what)}</th><td>${esc(rule)}</td><td class="c-when">${linkDates(when)}</td>
     </tr>`).join('')}</tbody>
   </table></div>
 </section>
@@ -908,6 +1130,10 @@ ${sections}
   <a href="bases.html"><span>How far everything is</span><b>Bases</b><em>${bases.length} hotels</em></a>
   <a href="issues.html"><span>What is still open</span><b>Issues</b><em>${issues.filter((i) => !i.resolved).length} outstanding</em></a>
 </nav>`;
+
+  // Only meaningful once every sheet and the standing table have been through linkNames — that is
+  // what records which phrases actually fired, and an unfired phrase is the failure this catches.
+  checkCrossrefs();
 
   return shell({
     title: 'Day sheets — Japan 2026',

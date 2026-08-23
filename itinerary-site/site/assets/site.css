@@ -848,6 +848,46 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .p-meta b { font-weight: 600; color: var(--ink-2); }
 .p-warn { color: var(--accent); }
 .p-why { color: var(--ink-2); font-style: italic; }
+/* A name that is also a thing with a page — a stop on this list, a fixed point or a journey end
+   on a day sheet. It keeps the colour of whatever it sits in, because it is the subject of the
+   line rather than a link in a sentence, and carries a faint accent underline so it reads as
+   clickable without turning either page into a wall of red. */
+.xref { color: inherit; text-decoration: underline; text-decoration-thickness: 1px;
+  text-decoration-color: color-mix(in oklab, var(--accent) 55%, transparent); text-underline-offset: .2em;
+  transition: color .2s, text-decoration-color .2s; }
+.xref:hover { color: var(--accent); text-decoration-color: currentColor; }
+/* Day-sheet references: the days a base stop is used on, and the days a standing constraint
+   bites on. Undecorated, because a row of three dates reads as a date list, not as three links. */
+.p-when a, .c-when a { text-decoration: none; font-variant-numeric: tabular-nums; }
+.p-when a:hover, .c-when a:hover { text-decoration: underline; text-underline-offset: .18em; }
+.p-when i, .c-when i { font-style: normal; opacity: .6; margin: 0 .28rem; }
+/* Arriving from a day sheet lands on one row of a list of nine or fourteen, so say which one.
+   Clears the sticky chrome the same way a day sheet does. */
+.poi { scroll-margin-top: calc(var(--nav-h) + var(--crumb-h) + 20px); }
+@media (min-width: 1180px) { .poi { scroll-margin-top: calc(var(--nav-h) + 20px); } }
+.poi:target { background: color-mix(in oklab, var(--accent) 7%, transparent);
+  box-shadow: -.6rem 0 0 color-mix(in oklab, var(--accent) 7%, transparent), inset 2px 0 0 var(--accent); }
+
+/* ── link previews ────────────────────────────────────────────────────
+   The card a cross-reference shows on hover, so you can find out what something is without
+   losing your place. Fixed positioning: site.js measures against the viewport. Never
+   interactive — it is an answer, not a destination, and a hoverable card only causes flicker. */
+.xcard { position: fixed; z-index: 60; width: 21rem; max-width: calc(100vw - 20px);
+  background: var(--card); border: 1px solid var(--line); border-radius: var(--r-lg);
+  box-shadow: var(--shadow-lg); overflow: hidden; pointer-events: none; }
+/* Deliberately no fade. Visibility is the `hidden` attribute and nothing else: an opacity
+   transition or a keyframed entrance both leave the card stranded at opacity 0 wherever the
+   animation clock does not advance — a throttled background tab, a frozen compositor — and an
+   invisible tooltip is a broken one. It is already delayed 220ms by the hover, so appearing at
+   once reads as responsive rather than abrupt. */
+/* A fixed height rather than an aspect ratio, so the card is the same size before the photo
+   loads as after — otherwise it is measured short and placed in the wrong half of the screen. */
+.xc-img { display: block; width: 100%; height: 8.6rem; object-fit: cover; background: var(--line); }
+.xc-body { padding: .7rem .8rem .75rem; }
+.xc-t { margin: 0; font-weight: 600; color: var(--ink); font-size: .95rem; line-height: 1.3; }
+.xc-s { margin: .15rem 0 0; font-size: .76rem; color: var(--ink-3); }
+.xc-x { margin: .4rem 0 0; font-size: .84rem; color: var(--ink-2); line-height: 1.5; }
+.xc-m { margin: .4rem 0 0; font-size: .76rem; color: var(--accent); font-variant-numeric: tabular-nums; }
 
 /* day sheets */
 .sheets { display: grid; gap: 1.2rem; }
