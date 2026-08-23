@@ -84,12 +84,15 @@
       list.scrollTo({ top: list.scrollTop + (r.top + r.height / 2) - (box.top + box.height / 2), behavior: 'smooth' });
     };
 
-    // The line the reading position is measured against: just under the sticky chrome, wherever
-    // that currently is. Re-measured on resize because the crumb bar comes and goes.
+    // The line the reading position is measured against. It has to sit at exactly the place a
+    // jump parks a heading, or clicking an entry scrolls somewhere the spy still reads as the
+    // entry above. That place is the page's scroll-padding-top, so read it back rather than
+    // re-adding up the sticky bars — the two sums drifted apart, and the second one lost. Still
+    // re-measured on resize: the padding changes with the breakpoint. The few px of slack absorb
+    // fractional scroll positions.
     let line = 0;
     const measure = () => {
-      const vis = (el) => (el && getComputedStyle(el).display !== 'none' ? el.offsetHeight : 0);
-      line = vis(document.querySelector('.nav')) + vis(document.querySelector('.itinbar')) + vis(crumb) + 16;
+      line = (parseFloat(getComputedStyle(root).scrollPaddingTop) || 0) + 4;
     };
 
     let active = -1;
