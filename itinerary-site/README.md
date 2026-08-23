@@ -101,6 +101,17 @@ Those are untracked scratch — `rm -f site/_s-*.html` when you are done.
    caption and a per-entity coverage check. This is the page to review before trusting a gallery.
 4. `node build.mjs`
 
+**`process.mjs` regenerates `media.json` from `.cache/originals/`, so a full run deletes any entity
+whose originals folder is gone.** `.cache/` is untracked and disposable; `media.json` is tracked and
+is the only record of what has been processed. A scoped run (`node tools/process.mjs slug-a slug-b`)
+touches only those slugs and is safe. A bare run rewrites the whole manifest — and on 23 August 2026
+that silently dropped all 16 `aman-tokyo` entries, whose originals had been deleted at some point,
+while orphaning their files in `site/img/`. **Prefer scoped runs. After any bare run, diff
+`content/media.json` against `git HEAD` and check for entities whose count went to zero** — the
+display copies are still on disk, so the fix is to restore the manifest entries, not to re-source.
+The same run also picked up `palace-hotel-tokyo`, whose originals predate the current entity list;
+that is why `tools/audit.mjs` reports 83 keys against 82 entities.
+
 `.cache/originals/` holds the full-resolution downloads (a few hundred MB). It is not needed to view
 the site and can be deleted; keep it if you may want to re-crop or re-export later.
 
