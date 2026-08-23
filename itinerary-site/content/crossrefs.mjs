@@ -31,6 +31,10 @@ export const crossrefs = {
   'Aman Tokyo': { entity: 'aman-tokyo' },
   'Gora Kadan': { entity: 'gora-kadan' },
   SOWAKA: { entity: 'sowaka' },
+  // Gion Loka is SOWAKA's own restaurant and has no card; the hotel's does name it under Dining.
+  // Listed above the bare 'Gion' entry's reach on purpose — longest match wins, so the last lunch
+  // points at the hotel rather than at the district it happens to be named after.
+  'Gion Loka': { entity: 'sowaka' },
   Myojinkan: { entity: 'tobira-myojinkan' },
   // Sushi Kadan is on the Gora Kadan property and has no card of its own, but the hotel's card
   // carries a fact row about it — including that it is a separate kitchen for the GF brief.
@@ -87,8 +91,9 @@ export const crossrefs = {
   'Hakone-Yumoto': { stop: ['hakone', 'Hakone-Yumoto'] },
   Odawara: { stop: ['hakone', 'Odawara Station'] },
   'Matsumoto Station': { stop: ['tobira', 'Matsumoto Station'] },
-  'Utsukushigahara plateau': { stop: ['tobira', 'Utsukushigahara plateau'] },
-  'Utsukushigahara Skyline': { stop: ['tobira', 'Utsukushigahara plateau'] },
+  // No Utsukushigahara entry: Monday resolved to staying put, so the plateau survives only as a
+  // stop on the bases page and a line in Monday's prose. Nothing on a day sheet names it any more,
+  // and a phrase that matches nothing fails the build rather than sitting here rotting.
   'Kyoto Station': { stop: ['kyoto', 'Kyoto Station'] },
   'Kansai (KIX)': { stop: ['kyoto', 'Kansai (KIX)'] },
   KIX: { stop: ['kyoto', 'Kansai (KIX)'] },

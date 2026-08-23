@@ -677,9 +677,11 @@ const alnum = (c) => c !== undefined && /[A-Za-z0-9]/.test(c);
  * word-bounded, so one label can carry two links — "Myojinkan shuttle departs Matsumoto Station"
  * resolves both halves — without 'Ome' ever firing inside 'Omotesando'.
  *
- * `seen` is per day sheet, and only the first mention of a name on that sheet becomes a link.
+ * `seen` is per day sheet, and only the first mention of a thing on that sheet becomes a link.
  * Without it a single day underlines Gora Kadan four times and Owakudani three, which is a page
- * of red rather than a page you can scan — the sheet is one card, so one link is enough.
+ * of red rather than a page you can scan — the sheet is one card, so one link is enough. It is
+ * keyed on the destination rather than the phrase, because two phrases can mean the same thing:
+ * "Gion Loka, downstairs at SOWAKA" is one restaurant and wants one link, not two.
  */
 function linkNames(text = '', seen = null) {
   let out = '', i = 0;
@@ -688,8 +690,8 @@ function linkNames(text = '', seen = null) {
       if (!text.startsWith(r.phrase, i)) continue;
       if (alnum(text[i - 1]) || alnum(text[i + r.phrase.length])) continue;
       matched.add(r.phrase);
-      const first = !seen || !seen.has(r.phrase);
-      if (seen) seen.add(r.phrase);
+      const first = !seen || !seen.has(r.href);
+      if (seen) seen.add(r.href);
       out += first
         ? `<a class="xref" href="${r.href}" title="${esc(r.label)}">${esc(r.phrase)}</a>`
         : esc(r.phrase);
@@ -702,13 +704,35 @@ function linkNames(text = '', seen = null) {
   return out;
 }
 
-/** 'Sat 14, Sun 15, Tue 17' -> three links. Throws on a date no day sheet carries. */
+const DAY_REFS = runDays
+  .map((d) => ({ date: d.date, href: `days.html#${dayId(d)}` }))
+  .sort((a, b) => b.date.length - a.date.length);
+
+/**
+ * Link every date in a "bites on" cell, leaving the cell's own punctuation alone — the column
+ * carries lists ('Sat 14, Sun 15, Tue 17') and ranges ('Sat 14 – Mon 16') and should read as it
+ * was written. Scanning rather than splitting is what makes both work.
+ */
 function linkDates(list) {
-  return list.split(/,\s*/).map((date) => {
-    const d = runDays.find((r) => r.date === date);
-    if (!d) throw new Error(`content/days.mjs: standing constraint cites '${date}', which is not a day sheet`);
-    return `<a href="days.html#${dayId(d)}">${esc(date)}</a>`;
-  }).join('<i>·</i>');
+  // A date-shaped token that is not a day sheet is a typo, and would otherwise just fail to link.
+  for (const m of String(list).matchAll(/\b(?:Mon|Tue|Wed|Thu|Fri|Sat|Sun) \d{1,2}\b/g)) {
+    if (!runDays.some((r) => r.date === m[0])) {
+      throw new Error(`content/days.mjs: standing constraint cites '${m[0]}', which is not a day sheet`);
+    }
+  }
+  let out = '', i = 0;
+  outer: while (i < list.length) {
+    for (const r of DAY_REFS) {
+      if (!list.startsWith(r.date, i)) continue;
+      if (alnum(list[i - 1]) || alnum(list[i + r.date.length])) continue;
+      out += `<a href="${r.href}">${esc(r.date)}</a>`;
+      i += r.date.length;
+      continue outer;
+    }
+    out += esc(list[i]);
+    i += 1;
+  }
+  return out;
 }
 
 /** Every phrase has to point somewhere real, and has to still appear somewhere on the runbook. */
