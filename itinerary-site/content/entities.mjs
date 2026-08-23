@@ -63,7 +63,7 @@ export const entities = {
       'Founded in <strong>1484</strong> and run by the same family for ten generations. A roofed <strong>Noh stage stands across the pond</strong> from the guest wing — not a decoration but a working stage, with live performances — and the whole inn is arranged to look at it. Relais &amp; Châteaux since 1989, and promoted to <strong>three Michelin Keys in October 2025</strong>, one of only seven in Japan. Twelve rooms. Dinner is served in your room. The Katsura river runs past the door and the town\'s bamboo path is effectively the back garden, which makes this the one stop on the trip where the walking starts where you are standing.',
     facts: [
       ['Why it is here', 'The replacement for the Alps leg — two nights between Nikko and Kyoto, on the only dates the ryokan could offer'],
-      ['The signature', 'A roofed Noh stage standing across the pond from the guest wing, lit at night. It is the reason the place is famous'],
+      ['The signature', 'A roofed Noh stage — the <strong>Gekkeiden</strong> — standing across the pond from the guest wing, lit at night. Not a decoration: it is a working stage with live performances, and it is the reason the place is famous'],
       ['Michelin', 'Three Keys as of October 2025 — one of only seven in Japan. Hotel The Mitsui Kyoto is another, so this trip holds two of the seven'],
       ['Villa Tenko (天鼓)', '220 m², detached. The only room with a true private open-air bath — a Towadaishi stone rotenburo plus an indoor koyamaki tub. Two queen beds, garden view'],
       ['Moegi (萌葱)', '152 m², second floor, looking over the pond and the Noh stage. Oval koyamaki tub. Two queen beds'],

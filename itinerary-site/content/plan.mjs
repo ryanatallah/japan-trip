@@ -56,7 +56,7 @@ export const plan = {
     ],
     ref: ['shinkansen-green-car'],
   },
-  hero: 'shuzenji-onsen',
+  hero: 'asaba-ryokan',
   heroCard: ['ritz-carlton-nikko', 'asaba-ryokan', 'hotel-the-mitsui-kyoto'],
   pitch: `<strong>This is the first version of the trip in which every bed is booked rather than estimated.</strong> Aman Tokyo, the Ritz-Carlton on Lake Chuzenji, Asaba in Shuzenji and Hotel The Mitsui in Kyoto — four confirmations, fifteen nights, the same flights and the same shape as before. What changed is the middle: Gora Kadan came back full for 11–13 November, and rebuilding around what could actually be held moved the trip from Hakone and the Northern Alps to <strong>Okunikko and the Izu peninsula</strong>.<br><br><strong>Two of Japan's seven three-Michelin-Key properties are on it.</strong> Asaba, founded in 1484 and run by the same family for ten generations, with a working Noh stage across its pond; and Hotel The Mitsui, on three hundred years of family land facing Nijo Castle, with a hot spring drawn from a thousand metres beneath the building. They are also the two best-evidenced kitchens on the trip for a coeliac guest.<br><br><strong>The Tokyo week survived intact</strong> — the flying squirrels at Karuizawa, the Hirata forge at Ome, L'Effervescence on the only night it opens. <strong>And the Kyoto week still points north</strong>, at Takao, Ohara, Rurikoin, Kurama and Kibune, which colour one to two weeks before the city floor. From the new base that week is <em>better</em> served, not worse: Takao is forty minutes closer and Nijo Castle is across the street.<br><br><strong>What it costs is the headline.</strong> $66,700 against $36,200 — the lodging line alone nearly tripled, and six half-board dinners became two.`,
   days: [
