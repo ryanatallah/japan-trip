@@ -28,18 +28,20 @@ export const entities = {
   'ritz-carlton-nikko': {
     name: 'The Ritz-Carlton, Nikko',
     type: 'stay',
-    location: 'Chugushi, Lake Chuzenji — Okunikko, 1,270m',
-    badges: ['Booked · conf. 89324734', '4 nights, 11–15 Nov', 'Natural hot spring'],
-    rate: '¥1,683,650 for the stay — about $11,225, ≈ $2,800 / night',
+    location: 'Chugushi, Lake Chuzenji — Okunikko, 1,269m',
+    badges: ['Booked · conf. 89324734', '3 nights, 11–14 Nov', 'One night to cancel', 'Natural hot spring'],
+    rate: '≈ ¥1,262,700 for three nights — about $8,420, once the fourth night comes off',
     url: 'https://www.ritzcarlton.com/en/hotels/japan/nikko',
     blurb:
       'Ninety-four rooms on the north shore of Lake Chuzenji at 1,269m, opened in 2020, with Mount Nantai standing straight out of the water behind it. <strong>The first and only Ritz-Carlton anywhere with an onsen</strong> — the water is piped from Nikko Yumoto, a 1,200-year-old sulphur source, milky white and smelling of it. Your suite is 115 m² with the glazed <em>engawa</em> veranda the property is known for. The consulting chef at Lakehouse is Kanji Kobayashi of villa aida, two Michelin stars in Wakayama. <strong>None of this cares what month it is</strong>, which matters, because the landscape outside very much does.',
     facts: [
       ['Why it is here', 'It is booked. It replaced three nights at Gora Kadan when Hakone came back full for 11–13 November'],
+      ['⚠ The fourth night is an error', 'The confirmation runs Wed 11 to <strong>Sun 15</strong> — four nights. But Asaba is booked and paid from <strong>Sat 14</strong>, so the night of the 14th is double-booked. <strong>Call Marriott and cut the stay to three nights, checking out Saturday 14 November.</strong> Do it before 14 October, while the booking is still free to change'],
       ['Address', '2482 Chugushi, Nikko, Tochigi 321-1661 — on the south shore of Lake Chuzenji, inside Nikko National Park'],
       ['Booked', '1 King Bed, Lake View, Suite, Balcony · 2 adults · Member Flexible Rate'],
-      ['The bill', '¥1,330,000 room + ¥199,500 service + ¥154,150 tax = ¥1,683,650. Nightly: 342,000 / 323,000 / 332,500 / 332,500'],
-      ['Cancellation', 'Free until 23:59 local on 14 October 2026. After that the penalty is the full ¥1,330,000 — every night of the stay'],
+      ['The bill, as booked', '¥1,330,000 room + ¥199,500 service + ¥154,150 tax = ¥1,683,650 for four nights. Nightly: 11th ¥342,000 · 12th ¥323,000 · 13th ¥332,500 · <em>14th ¥332,500 — the one to remove</em>'],
+      ['The bill, corrected', 'Three nights is ¥997,500 of room, ¥149,625 service and about ¥115,600 of tax — roughly <strong>¥1,262,700</strong>, saving about ¥420,900 ($2,806). Treat the tax as computed rather than quoted until Marriott re-issues'],
+      ['Cancellation', 'Free until 23:59 local on 14 October 2026. After that the penalty is the full ¥1,330,000 — every night of the stay. That deadline governs the fourth-night correction too'],
       ['The onsen', 'Piped from the Nikko Yumoto source at 78.6°C. 05:30–23:00, closed 12:00–14:00 to clean. Separate men\'s and women\'s, each with indoor bath, outdoor rotenburo, cold plunge and a hinoki sauna. Free and unlimited'],
       ['But not in the room', '<strong>The Lake View Suite bath is ordinary hot water</strong>, not onsen, and there is no balcony bath. There is no bookable private onsen either — the only way to have the spring water to yourselves is a ¥10,000 30-minute add-on before a spa treatment'],
       ['Dining', 'The Japanese Restaurant runs three separate counters — kaiseki, Edomae sushi and teppanyaki — chosen when you book. Lakehouse is western farm-to-table. Dinner runs ¥24,000–35,000 a head; breakfast is ¥7,800 and is <em>not</em> in your rate'],
@@ -56,19 +58,20 @@ export const entities = {
     name: 'Asaba',
     type: 'stay',
     location: 'Shuzenji Onsen, Izu Peninsula, Shizuoka',
-    badges: ['Relais & Châteaux', '3 Michelin Keys', '12 rooms', 'Not yet confirmed'],
-    rate: '¥364,800 pp/night (Villa Tenko) · ¥232,800 pp/night (Moegi) — half board',
+    badges: ['Booked and paid', 'Relais & Châteaux', '3 Michelin Keys', '3 nights, 14–17 Nov'],
+    rate: '¥1,585,450 for the stay — about $10,570, half board',
     url: 'https://www.asaba-ryokan.com/',
     blurb:
       'Founded in <strong>1484</strong> and run by the same family for ten generations. A roofed <strong>Noh stage stands across the pond</strong> from the guest wing — not a decoration but a working stage, with live performances — and the whole inn is arranged to look at it. Relais &amp; Châteaux since 1989, and promoted to <strong>three Michelin Keys in October 2025</strong>, one of only seven in Japan. Twelve rooms. Dinner is served in your room. The Katsura river runs past the door and the town\'s bamboo path is effectively the back garden, which makes this the one stop on the trip where the walking starts where you are standing.',
     facts: [
-      ['Why it is here', 'The replacement for the Alps leg — two nights between Nikko and Kyoto, on the only dates the ryokan could offer'],
+      ['Why it is here', 'The replacement for the Alps leg. It began as an offer of one night or the other; it ended as three, 14–17 November, which is more than was ever asked for'],
+      ['Booked', 'Paid in full on 27 August 2026 through JTB — ¥1,585,450, receipt JTBBP0011266918, transaction 0016516263. Check-in Saturday 14 November, out Tuesday the 17th'],
       ['The signature', 'A roofed Noh stage — the <strong>Gekkeiden</strong> — standing across the pond from the guest wing, lit at night. Not a decoration: it is a working stage with live performances, and it is the reason the place is famous'],
       ['Michelin', 'Three Keys as of October 2025 — one of only seven in Japan. Hotel The Mitsui Kyoto is another, so this trip holds two of the seven'],
       ['Villa Tenko (天鼓)', '220 m², detached. The only room with a true private open-air bath — a Towadaishi stone rotenburo plus an indoor koyamaki tub. Two queen beds, garden view'],
       ['Moegi (萌葱)', '152 m², second floor, looking over the pond and the Noh stage. Oval koyamaki tub. Two queen beds'],
       ['Rate includes', 'Omakase kaiseki dinner, Japanese or western breakfast, in-room and outdoor public onsen, 15% service, 10% consumption tax, ¥150/night bath tax'],
-      ['Booking terms', 'Full prepayment required at reservation, via their payment link'],
+      ['Booking terms', 'Full prepayment was required at reservation and has been made. The money is committed'],
       ['Cancellation', 'Free to 15 days out · 30% at 14–8 days · 50% at 7–4 days · 100% inside 3 days. Japan time'],
       ['Disclosed at quote', 'Renovation may be ongoing, with daytime noise; the indoor public baths are closed, leaving only in-room baths and the outdoor public bath'],
       ['The renovation, checked', 'Asaba published the work as running 7 August – 19 October 2026. Being warned about it for mid-November means the schedule has slipped, and by an unstated amount'],
@@ -340,7 +343,7 @@ export const entities = {
     blurb:
       'The mausoleum of Tokugawa Ieyasu, and the most ornate thing in Japan — a shrine complex of some fifty-five buildings under a cryptomeria forest, carved and gilded to a degree that the rest of Japanese architecture spent four centuries reacting against. The Yomeimon gate alone carries five hundred carvings. Rinnoji, Futarasan and Ieyasu\'s grandson\'s mausoleum at Taiyuin are all inside the same walk, and the red Shinkyo bridge stands over the Daiya river at the entrance to the whole thing.',
     facts: [
-      ['Why it matters now', 'This is where the autumn colour actually is on these dates. Lower Nikko sits around <strong>600m and peaks early-to-mid November</strong>; the lake, where you are sleeping, is 1,270m and finished in October. The forty-minute bus down the Irohazaka is not a chore on this trip — it is the sightseeing.'],
+      ['Why it matters now', 'This is where the autumn colour actually is on these dates. Lower Nikko sits around <strong>600m and peaks early-to-mid November</strong>; the lake, where you are sleeping, is 1,269m and finished in October. The forty-minute run down the Irohazaka is not a chore on this trip — it is the sightseeing.'],
       ['Kanmangafuchi', 'Ten minutes further on: a lava gorge on the Daiya with a row of about seventy Jizo figures in red bibs along it. Quiet, free, and the best photograph in Nikko that is not a shrine.'],
       ['The crowds', 'Toshogu is the busiest thing in Tochigi. Go early — the Irohazaka is clear before 09:00 and thickens after 10:00 on a fine day.'],
     ],
@@ -367,7 +370,7 @@ export const entities = {
     blurb:
       'A caldera lake dammed by an eruption of Mount Nantai twenty thousand years ago, sitting at 1,269m with the mountain standing straight out of its north shore. Kegon Falls drops 97m off its eastern lip, reached by an elevator down through the rock to an observation deck at the plunge pool. The Irohazaka, the switchback road up from Nikko town, has forty-eight hairpins, each labelled with a character of the Japanese syllabary. In the Meiji era the foreign legations built their summer villas along the south shore to escape Tokyo, and the Italian and British ones are open as museums.',
     facts: [
-      ['The honest note about November', 'Okunikko\'s colour peaks <strong>early-to-mid October</strong>, five weeks before you arrive. On 11–15 November the trees at lake level are bare, the nights are near freezing, and the landscape is stark rather than golden. That is worth knowing rather than discovering: the hotel is a warm room with a hot spring in a winter setting, and the foliage is six hundred metres downhill.'],
+      ['The honest note about November', 'Okunikko\'s colour peaks <strong>early-to-mid October</strong>, five weeks before you arrive. On 11–14 November the trees at lake level are bare, the nights are near freezing, and the landscape is stark rather than golden. That is worth knowing rather than discovering: the hotel is a warm room with a hot spring in a winter setting, and the foliage is six hundred metres downhill.'],
       ['The upside of being late', 'The Irohazaka is notorious for foliage-season gridlock — Nikko\'s own tourism authority documents a twenty-minute stretch taking three hours, on weekdays. That is an <strong>October</strong> problem. By mid-November it is gone, which is a real scheduling gift on a trip with a six-hour transfer at the end of it.'],
       ['Further up', 'The road continues past Ryuzu Falls to the Senjogahara marsh plateau and Yumoto Onsen. Several Okunikko facilities close for winter around this time — check before committing a morning to anything above the lake.'],
     ],
@@ -381,7 +384,7 @@ export const entities = {
     blurb:
       'The oldest hot spring on the Izu peninsula, wrapped around a bend of the Katsura river, with a Sōtō Zen temple founded traditionally by Kūkai in 807 at its centre. Minamoto no Yoriie was assassinated here in 1204 and the town has been telling the story ever since — the Noh play about it gives Asaba\'s stage its name, and the masks are in the temple treasure hall. Five red bridges cross the river in a twenty-minute loop, a bamboo path runs along its bank lit until 23:00, and the whole of it is inside ten minutes of the ryokan door.',
     facts: [
-      ['Timing, honestly', 'Shuzenji peaks <strong>late November into early December</strong> — the 2024 season did not crest until the first week of December. On 15–17 November expect ten to thirty per cent: early-turning trees among green ones. What you get instead is thin crowds, weekday rates and a ryokan that is the point of the stop regardless.'],
+      ['Timing, honestly', 'Shuzenji peaks <strong>late November into early December</strong> — the 2024 season did not crest until the first week of December. On 14–17 November expect ten to thirty per cent: early-turning trees among green ones. What you get instead is thin crowds, weekday rates and a ryokan that is the point of the stop regardless.'],
       ['Tokko-no-yu', 'The rock-set bath in the middle of the riverbed is the town\'s emblem and you <strong>cannot get into it</strong> — it lost its legal status as a bathhouse and bathing is prohibited. It is not a foot bath either. The free foot baths are Kawara-yu and Sugi-no-yu on the opposite bank.'],
       ['After dark', 'Sixty lamps light the bamboo path from sunset to 23:00, year-round, and from 20:00 a cut-paper projection by an artist born in the town is thrown onto the round bamboo bench at its centre. It is free, it is three minutes from the door, and it is the best thing in Shuzenji after dinner.'],
       ['The wasabi', 'Izu has the largest wasabi cultivation area in Japan and the tatami-ishi terracing method was invented here in the nineteenth century — a stratified bed of stone, gravel and sand that filters and oxygenates the spring water. It is a <strong>UNESCO-recognised agricultural heritage system</strong>, and the terraces at Ikadaba run to fifteen hectares.'],

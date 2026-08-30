@@ -15,6 +15,24 @@
 
 export const revisions = [
   {
+    date: '2026-08-27',
+    when: '27 August 2026',
+    title: 'Asaba came back with three nights, so Nikko loses one — and one night is currently booked twice',
+    tags: ['dates', 'nights', 'hotel', 'cost'],
+    effect: '3n + 3n · −$2,806 at Nikko · flight out ticketed',
+    summary: `Asaba was asked for two nights and offered <strong>three</strong> — 14 to 17 November, including the 14th, which had been reported full. It is <strong>booked and paid</strong>: ¥1,585,450 through JTB on 27 August. The Izu stop goes from two nights to three and <strong>Okunikko drops from four to three</strong>, which keeps the trip at fifteen nights. The hard transfer moves off Sunday onto <strong>Saturday the 14th</strong>. Tobira Onsen, already off the plan, is now off the table entirely.`,
+    points: [
+      `<strong>The shape is 4 + 3 + 3 + 5.</strong> Tokyo 7–11, Okunikko 11–14, Shuzenji 14–17, Kyoto 17–22. Same fifteen nights, same envelope, same flights — the middle just rebalanced.`,
+      `<strong>One night is currently booked twice, and it is the most urgent thing on the trip.</strong> The Ritz-Carlton confirmation still runs Wed 11 to <strong>Sun 15</strong> — four nights, with the 14th at ¥332,500 — while Asaba is paid for from the 14th. <strong>Marriott has to be called and the stay cut to three nights.</strong> It is free to change until 14 October and costs the full ¥1,330,000 after. The correction is worth about <strong>¥420,900, roughly $2,806</strong>: three nights is ¥997,500 room, ¥149,625 service and about ¥115,600 tax, so around ¥1,262,700.`,
+      `<strong>Three nights at Asaba is materially better than two.</strong> It turns one crowded car day into two unhurried ones and gives the trip its only genuinely open day — Monday the 16th now has nothing on it, deliberately. It also lands <strong>Sunday the 15th</strong> as the one day <em>Vieni KANDA</em> opens, which is the only dedicated gluten-free kitchen in Shuzenji and is shut Mondays and Tuesdays.`,
+      `<strong>Three nights at Okunikko is better proportioned too.</strong> The lake's colour is finished by early November and the stay was always going to be a warm room with a hot spring in a stark landscape, with the sightseeing forty minutes downhill. Four nights of that was generous; three is right. The cost is that Friday the 13th becomes the <em>only</em> full day up there, so the wildlife bus and the lake cruise now compete rather than each having a day.`,
+      `<strong>The flight out is ticketed, and it is a one-way.</strong> NH107, SFO→HND, Friday 6 November, <strong>00:20 → 04:50+1</strong>, business on a 777-300ER, PNR E4HX5B, <strong>$9,482.60</strong> for the two — $8,430 fare plus $1,052.60 tax, two 32kg bags each, <strong>non-refundable</strong>. Note the departure is 12:20 a.m., not the 01:20 the old plan carried.`,
+      `<strong>But the return was not bought with it.</strong> The old plan assumed a single United multi-city ticket, SFO→HND out and KIX→SFO back. Because the outbound went out one-way on ANA instead, <strong>the flight home has to be bought separately and has not been</strong> — the last uncosted line in the budget, which is why the total now reads <em>$66,200 plus the return flight</em> rather than a single number.`,
+      `<strong>Two issues closed, two opened.</strong> "Asaba offered one night, the trip needs two" and the 22%-rate question both resolve into the booking. The double-booked night and the unbought return replace them. <em>The renovation question survives unanswered</em> — nobody has said what will still be under work on 14–17 November, and the money is now committed.`,
+      `<strong>Everything downstream followed the dates rather than being retyped.</strong> The route map, the four bases, the leg groupings on the day sheets and every derived leave-by time come off the same data, so moving the transfer from Sunday to Saturday moved them all together. Monday the 16th is deliberately blank.`,
+    ],
+  },
+  {
     date: '2026-08-23',
     when: '23 August 2026',
     title: 'Gora Kadan had no room, and the middle of the trip moved 300km south',

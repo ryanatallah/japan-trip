@@ -60,8 +60,8 @@ export const routes = {
   plan: {
     stops: [
       { id: 'tokyo', nights: 4, at: 'right' },
-      { id: 'chuzenji', nights: 4, mode: 'rail', at: 'top' },
-      { id: 'shuzenji', nights: 2, mode: 'rail', at: 'bottom' },
+      { id: 'chuzenji', nights: 3, mode: 'rail', at: 'top' },
+      { id: 'shuzenji', nights: 3, mode: 'rail', at: 'bottom' },
       { id: 'kyoto', nights: 5, mode: 'rail', at: 'left' },
     ],
     trips: [
