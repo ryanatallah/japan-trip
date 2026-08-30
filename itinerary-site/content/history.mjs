@@ -15,6 +15,22 @@
 
 export const revisions = [
   {
+    date: '2026-08-30',
+    when: '30 August 2026',
+    title: 'The flight home is bought, and the trip finally costs a single number',
+    tags: ['cost'],
+    effect: '+$9,830 · total $76,000 · 0 uncosted lines',
+    summary: `<strong>UA34, Sunday 22 November, KIX→SFO, 18:35 → 11:50 the same day.</strong> United Polaris business on a 777-200, confirmation <strong>NGWXMK</strong>, seats 6D and 6G, <strong>$9,830.26</strong> for the two of you. It was the last unbought thing on the trip and the only line in the cost table with no number in it. <strong>Nothing else moves</strong> — the ticket confirms the 18:35 the whole last day was already built on.`,
+    points: [
+      `<strong>The 18:35 was the risk, and it held.</strong> United's KIX–SFO service runs 18:35 on the winter schedule that starts 25 October and 16:55 in summer, and the entire last day was derived from the winter time by lookup rather than by ticket — the 11:30 lunch at FORNI, the 12:00 check-out, the 13:30 car, the Haruka. Three hours the other way would have moved all four together. <em>It is now a ticketed fact, so Sunday 22 November is unchanged.</em>`,
+      `<strong>The fare, in full.</strong> $9,663.80 plus $166.46 in taxes and fees, $9,830.26 charged. Fare class Z, 10h15 in the air, two checked bags each at 32kg, and a <strong>gluten-free meal requested on Ashly's ticket</strong> — worth re-confirming at check-in, because a request on a booking is not a tray on the cart. The $400 statement credit printed on the confirmation is a <em>United Explorer card sign-up offer</em>, not a discount on this fare.`,
+      `<strong>The total is now $76,000, and for the first time it is one number.</strong> It read <em>$66,200 plus the return flight</em> for three days. Six of the seven cost lines are now facts rather than forecasts — both flights ticketed, all four hotels confirmed — and only dining, experiences and ground are still estimated. A 5–8% buffer is still not included.`,
+      `<strong>It also makes the comparison honest.</strong> The plan this one replaced came to $36,200 <em>including</em> a round-trip flight estimate, so the headline gap was never really $30,500 against a total that was missing its own return leg. On the same basis it is <strong>$76,000 against $36,200</strong>.`,
+      `<strong>One issue closes and nothing opens.</strong> "The flight home is the last unbought thing" resolves into the booking. The double-booked Nikko night is now the only thing on the list with money riding on a date — <strong>14 October</strong>, when ¥1,330,000 stops being refundable.`,
+      `<strong>A correction that came out of checking the flights.</strong> The day sheet and the open arrival-gap issue both still had NH107 leaving SFO at <strong>01:20</strong>; the ticketed time is <strong>00:20</strong>, as the plan page and the 27 August entry have said since it was bought. Both are now 00:20. The arrival is unaffected — it always landed 04:50 — so the nine-hour wait for the Aman room is exactly as it was.`,
+    ],
+  },
+  {
     date: '2026-08-27',
     when: '27 August 2026',
     title: 'Asaba came back with three nights, so Nikko loses one — and one night is currently booked twice',
