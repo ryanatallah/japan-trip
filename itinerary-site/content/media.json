@@ -1,88 +1,4 @@
 {
- "akiba-fukurou": [
-  {
-   "file": "akiba-fukurou-01.jpg",
-   "thumb": "akiba-fukurou-01-t.jpg",
-   "w": 1000,
-   "h": 562,
-   "category": "exterior",
-   "caption": "The street frontage on a side street near Akihabara station: a white shopfront with sliding doors and no window into the room, papered with printed portraits of individual owls. The board lists hourly time slots from 12:00-13:00 to 18:00-19:00 with 'akiba2960.com Book Online', and the panel at right reads 'RESERVATION ONLY'.",
-   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2020/12/owlcafe-24-1.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "akiba-fukurou-02.jpg",
-   "thumb": "akiba-fukurou-02-t.jpg",
-   "w": 1000,
-   "h": 563,
-   "category": "setting",
-   "caption": "The single room where sessions are held, photographed empty by the venue. White walls with pale blue panels, a chandelier, white cafe tables and chairs, pale wood-effect floor. Owls are perched around the edges of the room — on wall brackets near the ceiling, on a wooden A-frame stand, along a carpeted rail at right, and on low stands in the foreground; green oval tags on the wall name individual birds. No daylight is visible and the window at left is curtained. This is the venue's own professionally lit marketing photograph; the room reads brighter here than in third-party descriptions of the space.",
-   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/02/owlcafe-japan-room.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "akiba-fukurou-03.jpg",
-   "thumb": "akiba-fukurou-03-t.jpg",
-   "w": 1000,
-   "h": 667,
-   "category": "activity",
-   "caption": "A staff member in the cafe's white uniform and Panama hat holds a large eagle-owl on her hand with its wings spread open; a child guest, seen from behind, watches while wearing a thick yellow falconry glove. More owls sit on wall-mounted perches around the pale blue and white room.",
-   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japanOWL02230-1.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "akiba-fukurou-04.jpg",
-   "thumb": "akiba-fukurou-04-t.jpg",
-   "w": 1000,
-   "h": 667,
-   "category": "people",
-   "caption": "A young girl with a barn owl standing on her forearm. A pink leash is clipped to the leg strap on the owl's ankle and trails down out of the frame — birds are kept tethered while placed on a guest.",
-   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japan6D0A8103.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "akiba-fukurou-05.jpg",
-   "thumb": "akiba-fukurou-05-t.jpg",
-   "w": 1000,
-   "h": 667,
-   "category": "detail",
-   "caption": "Two owls share an ornate scrolled wall bracket. Pink cords run from their leg straps and hang loose below the perch; a third owl on the pale blue wall behind is tethered the same way. A domed security camera is fixed to the ceiling at left.",
-   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japanOWL08108.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "akiba-fukurou-06.jpg",
-   "thumb": "akiba-fukurou-06-t.jpg",
-   "w": 1024,
-   "h": 683,
-   "category": "wildlife",
-   "caption": "A long-eared owl standing on a white tabletop, facing the camera, with a coloured band visible at the base of its right leg. Behind it, out of focus, are the room's white furniture, pale blue wall and curtained window.",
-   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2020/12/owlcafe-01450.jpg",
-   "confidence": "high"
-  },
-  {
-   "file": "akiba-fukurou-07.jpg",
-   "thumb": "akiba-fukurou-07-t.jpg",
-   "w": 1600,
-   "h": 1136,
-   "category": "wildlife",
-   "caption": "Species reference, not photographed at any cafe: a captive sugar glider (Petaurus breviceps) resting on a white fleece. Roughly the size of a small squirrel, with a dark stripe from nose to crown, oversized dark eyes suited to night activity, and thin membranous ears.",
-   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Petaurus_breviceps_Petauro_dello_zucchero.jpg",
-   "confidence": "high",
-   "credit": "Alessandro Di Grazia, Wikimedia Commons, CC BY-SA 4.0"
-  },
-  {
-   "file": "akiba-fukurou-08.jpg",
-   "thumb": "akiba-fukurou-08-t.jpg",
-   "w": 1600,
-   "h": 2008,
-   "category": "wildlife",
-   "caption": "Species reference, not photographed at any cafe: a wild sugar glider at night, clinging to a tree trunk and feeding at a run of sap. The loose flap of skin stretched between its front and hind legs — the membrane it uses to glide between trees — is clearly visible.",
-   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sugar_Glider_JCB.jpg",
-   "confidence": "high",
-   "credit": "Joseph C Boone, Wikimedia Commons, CC BY-SA 4.0"
-  }
- ],
  "aman-tokyo": [
   {
    "file": "aman-tokyo-01.jpg",
@@ -243,6 +159,90 @@
    "caption": "Afternoon tea in the atrium: a three-tier iron stand of savouries, pastries and berry tartlets with warm scones, two pink sparkling cocktails and grey stoneware cups against a raw concrete wall",
    "sourceUrl": "https://www.aman.com/sites/default/files/2025-08/Aman%20Tokyo%2C%20Japan%20-%20F%26B%2C%20The%20Lounge%20by%20Aman%2C%20Afternoon%20Tea.webp",
    "confidence": "high"
+  }
+ ],
+ "akiba-fukurou": [
+  {
+   "file": "akiba-fukurou-01.jpg",
+   "thumb": "akiba-fukurou-01-t.jpg",
+   "w": 1000,
+   "h": 562,
+   "category": "exterior",
+   "caption": "The street frontage on a side street near Akihabara station: a white shopfront with sliding doors and no window into the room, papered with printed portraits of individual owls. The board lists hourly time slots from 12:00-13:00 to 18:00-19:00 with 'akiba2960.com Book Online', and the panel at right reads 'RESERVATION ONLY'.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2020/12/owlcafe-24-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-02.jpg",
+   "thumb": "akiba-fukurou-02-t.jpg",
+   "w": 1000,
+   "h": 563,
+   "category": "setting",
+   "caption": "The single room where sessions are held, photographed empty by the venue. White walls with pale blue panels, a chandelier, white cafe tables and chairs, pale wood-effect floor. Owls are perched around the edges of the room — on wall brackets near the ceiling, on a wooden A-frame stand, along a carpeted rail at right, and on low stands in the foreground; green oval tags on the wall name individual birds. No daylight is visible and the window at left is curtained. This is the venue's own professionally lit marketing photograph; the room reads brighter here than in third-party descriptions of the space.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/02/owlcafe-japan-room.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-03.jpg",
+   "thumb": "akiba-fukurou-03-t.jpg",
+   "w": 1000,
+   "h": 667,
+   "category": "activity",
+   "caption": "A staff member in the cafe's white uniform and Panama hat holds a large eagle-owl on her hand with its wings spread open; a child guest, seen from behind, watches while wearing a thick yellow falconry glove. More owls sit on wall-mounted perches around the pale blue and white room.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japanOWL02230-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-04.jpg",
+   "thumb": "akiba-fukurou-04-t.jpg",
+   "w": 1000,
+   "h": 667,
+   "category": "people",
+   "caption": "A young girl with a barn owl standing on her forearm. A pink leash is clipped to the leg strap on the owl's ankle and trails down out of the frame — birds are kept tethered while placed on a guest.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japan6D0A8103.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-05.jpg",
+   "thumb": "akiba-fukurou-05-t.jpg",
+   "w": 1000,
+   "h": 667,
+   "category": "detail",
+   "caption": "Two owls share an ornate scrolled wall bracket. Pink cords run from their leg straps and hang loose below the perch; a third owl on the pale blue wall behind is tethered the same way. A domed security camera is fixed to the ceiling at left.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2021/03/owlcafe-japanOWL08108.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-06.jpg",
+   "thumb": "akiba-fukurou-06-t.jpg",
+   "w": 1024,
+   "h": 683,
+   "category": "wildlife",
+   "caption": "A long-eared owl standing on a white tabletop, facing the camera, with a coloured band visible at the base of its right leg. Behind it, out of focus, are the room's white furniture, pale blue wall and curtained window.",
+   "sourceUrl": "https://akiba2960.com/wp-content/uploads/2020/12/owlcafe-01450.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "akiba-fukurou-07.jpg",
+   "thumb": "akiba-fukurou-07-t.jpg",
+   "w": 1600,
+   "h": 1136,
+   "category": "wildlife",
+   "caption": "Species reference, not photographed at any cafe: a captive sugar glider (Petaurus breviceps) resting on a white fleece. Roughly the size of a small squirrel, with a dark stripe from nose to crown, oversized dark eyes suited to night activity, and thin membranous ears.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/a/a8/Petaurus_breviceps_Petauro_dello_zucchero.jpg",
+   "confidence": "high",
+   "credit": "Alessandro Di Grazia, Wikimedia Commons, CC BY-SA 4.0"
+  },
+  {
+   "file": "akiba-fukurou-08.jpg",
+   "thumb": "akiba-fukurou-08-t.jpg",
+   "w": 1600,
+   "h": 2008,
+   "category": "wildlife",
+   "caption": "Species reference, not photographed at any cafe: a wild sugar glider at night, clinging to a tree trunk and feeding at a run of sap. The loose flap of skin stretched between its front and hind legs — the membrane it uses to glide between trees — is clearly visible.",
+   "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/5/59/Sugar_Glider_JCB.jpg",
+   "confidence": "high",
+   "credit": "Joseph C Boone, Wikimedia Commons, CC BY-SA 4.0"
   }
  ],
  "ana-the-room": [
@@ -417,6 +417,168 @@
    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Iwatayama_Monkey_Park,_Kyoto_3-25_(26396971592).jpg",
    "confidence": "high",
    "credit": "Kimon Berlin, CC BY-SA 2.0"
+  }
+ ],
+ "asaba-ryokan": [
+  {
+   "file": "asaba-ryokan-01.jpg",
+   "thumb": "asaba-ryokan-01-t.jpg",
+   "w": 1600,
+   "h": 899,
+   "category": "setting",
+   "caption": "The signature view: the Gekkeiden Noh stage lit at dusk on the far bank of the ryokan's pond, its cypress-bark-and-tile roof and open pillared front glowing against black forest, a performer in white on the boards with musicians seated behind, a covered bridge running off to the left, and a low concrete platform laid with a red carpet standing out in the middle of the water, lanterns doubled in the still surface.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/home/fv-02-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-02.jpg",
+   "thumb": "asaba-ryokan-02-t.jpg",
+   "w": 1600,
+   "h": 899,
+   "category": "exterior",
+   "caption": "The street entrance in Shuzenji: a deep copper-green karahafu gable with a carved wooden tympanum over a timber porch, a small black signboard hung under the beam, an indigo-and-white noren across the doorway, tatami-edged stepping stones on the gravel, and a latticed cedar screen wall to the left under maples.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/home/fv-01-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-03.jpg",
+   "thumb": "asaba-ryokan-03-t.jpg",
+   "w": 1600,
+   "h": 899,
+   "category": "exterior",
+   "caption": "The main guest wings at blue hour seen along the pond: two storeys of white plaster and tile with rows of lit windows and timber verandas stepping down to the water, a stone lantern glow at the bank, the whole building reflected upside down in the black pond, and a hanging lantern under the eave in the near foreground.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/home/fv-05-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-04.jpg",
+   "thumb": "asaba-ryokan-04-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "exterior",
+   "caption": "Villa Tenko, the detached 220m2 villa suite, seen across the stream that runs below it: a single-storey building under a broad silver tiled roof, its sliding walls pulled fully open to show the tatami sitting room and a bed inside, with the stone outdoor bath visible in its own recess at the left end and moss lawn between the building and the water.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/rooms/tenko/gallery-02-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-05.jpg",
+   "thumb": "asaba-ryokan-05-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "people",
+   "caption": "A Noh performance on the stage at dusk: the masked shite in a green hakama holding an open gold fan mid-step on the polished boards, four musicians and a drum in a row along the back, the painted pine on the rear panel, shide paper streamers on a rope across the front, and lanterns burning under the eaves.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/art-journey/image-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-06.jpg",
+   "thumb": "asaba-ryokan-06-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "setting",
+   "caption": "The Noh stage in daylight from the garden, close enough to read the painted pine on its back wall and the shimenawa rope with paper streamers across the opening; the stone-faced plinth rises straight out of the pond bank and maples on both sides are just turning orange and red.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/rooms/ugetsu/gallery-04-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-07.jpg",
+   "thumb": "asaba-ryokan-07-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "room",
+   "caption": "The Moegi suite (152m2): a wide tatami room whose entire pond wall is glazed in a grid of timber-framed windows under a woven bamboo ceiling, looking straight across the water at the Noh stage and its covered bridge with a bamboo grove on the hill behind; a single small pendant lamp hangs at the far end.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/rooms/moegi/gallery-04-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-08.jpg",
+   "thumb": "asaba-ryokan-08-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "room",
+   "caption": "Kocho, the ground-floor room directly in front of the Noh stage: tatami with a low black lacquer table and a floor chair, a tokonoma alcove with a hanging scroll and a built-in bench seat, and the entire left wall slid open onto a mat-floored veranda with the pond and the stage a few metres away.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/rooms/kocho/gallery-01-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-09.jpg",
+   "thumb": "asaba-ryokan-09-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "room",
+   "caption": "Matsukaze, the purely Japanese-style room on the second floor: two tatami rooms opened into one by sliding screens, exposed beams and a paper-shaded pendant lantern, a calligraphy scroll and a low table with a single flower in the far alcove, and rattan armchairs on the boarded veranda behind bamboo blinds at right.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/rooms/matsukaze/gallery-02-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-10.jpg",
+   "thumb": "asaba-ryokan-10-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "bath",
+   "caption": "The half-open-air bath in the Hagoromo suite: a rectangular koyamaki wood-lined tub sunk into a pale stone floor and filled to the brim, water running in over a timber spout, in a room panelled entirely in cypress with a shower on the right and a picture window that looks out over the pond to the Noh stage.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/rooms/hagoromo/gallery-02-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-11.jpg",
+   "thumb": "asaba-ryokan-11-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "bath",
+   "caption": "Villa Tenko's outdoor Towadaishi stone bath in late autumn: a sunken grey stone tub open to the air behind a low wall, water sliding in over a dark timber lip, looking across a moss bank to a hillside of scarlet and orange maples and a single pale-trunked tree.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/rooms/tenko/gallery-05-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-12.jpg",
+   "thumb": "asaba-ryokan-12-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "bath",
+   "caption": "The public open-air hot-spring bath: a broad pool of clear Shuzenji water over a pebbled floor, rimmed by big rounded boulders, with a reed-screened bathhouse wall and a stone spout at the right, and beyond it a long low wisteria trellis, a moss bank and the bamboo-and-cedar hillside.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/facilities/hot-spring-01-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-13.jpg",
+   "thumb": "asaba-ryokan-13-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "dining",
+   "caption": "One of the ryokan's dining halls laid for a meal: a long white-clothed table with light bentwood chairs down both sides, each place set with a black lacquer tray, a lidded bowl and chopsticks, a paper table lamp and a woven gold screen at the head, and a wall of timber-gridded windows onto the trees and the tiled roofs across the pond.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/facilities/wedding-02-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-14.jpg",
+   "thumb": "asaba-ryokan-14-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "dining",
+   "caption": "The Salon, the ryokan's drinks lounge: an all-white room with a raised platform running across the back, low white armchairs grouped around small round tables on a pale carpet, a recessed bookshelf on the left wall and one small lit alcove holding a single artwork.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/facilities/salon-02-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-15.jpg",
+   "thumb": "asaba-ryokan-15-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "food",
+   "caption": "Whole ayu threaded onto metal skewers and salted at the fins, grilling in two ranks over glowing charcoal.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/cuisine/image-04-lg.webp",
+   "confidence": "high"
+  },
+  {
+   "file": "asaba-ryokan-16.jpg",
+   "thumb": "asaba-ryokan-16-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "food",
+   "caption": "A kaiseki course in a blue-and-white brushwork bowl: pieces of spiny lobster in the shell and translucent white fish in a clear dashi broth, with a sprig of rape blossom laid across the middle.",
+   "sourceUrl": "https://www.asaba-ryokan.com/wp/wp-content/themes/asaba/assets/img/cuisine/image-01-lg.webp",
+   "confidence": "high"
   }
  ],
  "aso-caldera": [
@@ -2283,6 +2445,68 @@
    "confidence": "high"
   }
  ],
+ "kanmangafuchi": [
+  {
+   "file": "kanmangafuchi-01.jpg",
+   "thumb": "kanmangafuchi-01-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "The Narabi-jizo in autumn: the line of moss-covered stone Jizo in red knitted caps and red bibs receding along the low wall on the right of the gravel path, with an orange maple blazing above them and blue sky over the gorge on the left.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143140_25-3.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kanmangafuchi-02.jpg",
+   "thumb": "kanmangafuchi-02-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "detail",
+   "caption": "One Jizo close up in profile — lichen-stained granite face, eyes closed, in a red crocheted cap and a red cotton bib — with the rest of the row falling away out of focus behind it along the moss-topped wall.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143155_25-9.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kanmangafuchi-03.jpg",
+   "thumb": "kanmangafuchi-03-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "The abyss itself in autumn: the Daiya river running fast and pale over shelves of grey lava rock in a narrow gorge, with russet and yellow foliage overhanging both banks and a fallen trunk bridging the rocks on the right.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143144_25-5.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kanmangafuchi-04.jpg",
+   "thumb": "kanmangafuchi-04-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The row of Jizo in deep summer green: dozens of moss-grown seated figures in red caps and bibs stepped along the stone plinth beside the dirt path, under dense forest.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143148_25-7.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kanmangafuchi-05.jpg",
+   "thumb": "kanmangafuchi-05-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The full length of the Jizo row seen down the path with a child and an adult walking past it, which gives the scale — roughly seventy figures, each about waist height, running the whole length of the wall under the trees.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143136_25-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "kanmangafuchi-06.jpg",
+   "thumb": "kanmangafuchi-06-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "The little precinct at the head of the row in autumn: the white-walled, black-timbered hall on the left, the first Jizo lined up beside it, upright boulders edging the gravel, and yellow and orange maples arching over the whole path.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143142_25-4.jpg",
+   "confidence": "high"
+  }
+ ],
  "kenrokuen": [
   {
    "file": "kenrokuen-01.jpg",
@@ -3111,6 +3335,78 @@
    "confidence": "high"
   }
  ],
+ "lake-chuzenji": [
+  {
+   "file": "lake-chuzenji-01.jpg",
+   "thumb": "lake-chuzenji-01-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "Lake Chuzenji from above in early-October colour: the cone of Mt Nantai with cloud snagged on the summit, the deep blue lake filling the caldera below it, Hachimantai and Shobugahama running out as wooded spits into the water, and the surrounding slopes in orange, rust and yellow. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018142242_12-5.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "lake-chuzenji-02.jpg",
+   "thumb": "lake-chuzenji-02-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The lake at water level on a still autumn morning: Mt Nantai and the whole gold-and-scarlet shoreline mirrored in glassy water, with the pebbled lake bed visible through the shallows in the foreground. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://api.visitnikko.jp/api/media/file/img_spot_010-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "lake-chuzenji-03.jpg",
+   "thumb": "lake-chuzenji-03-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "Kegon Falls seen from the Akechidaira side at the height of the autumn colour: the 97-metre column of water dropping into its black lava amphitheatre, the observation platform at its foot, the roofs of Chuzenji town along the rim and the blue lake beyond, with the entire gorge in orange and red. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143935_5-7.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "lake-chuzenji-04.jpg",
+   "thumb": "lake-chuzenji-04-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "Kegon Falls head-on from the observation deck at the base of the gorge: the main fall pouring off the lip of a columnar basalt cliff, with the twelve smaller side-falls seeping out of the rock face to the right, everything else in fresh green.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143932_5-6.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "lake-chuzenji-05.jpg",
+   "thumb": "lake-chuzenji-05-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The Irohazaka switchback road from directly above in peak autumn: three tight hairpins of grey asphalt stacked one below another with a car on each bend, cut through a hillside of orange, yellow, scarlet and green. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018145008_9-5.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "lake-chuzenji-06.jpg",
+   "thumb": "lake-chuzenji-06-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "Ryuzu Falls in full autumn: the Yukawa spilling in long white cascades over stepped black rock, split around a mossy island of conifers, with crimson and orange maples crowding both banks. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018144334_6-3.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "lake-chuzenji-07.jpg",
+   "thumb": "lake-chuzenji-07-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "setting",
+   "caption": "Dawn mist lifting off Lake Chuzenji in autumn, backlit gold, in front of a wooded headland turning yellow and pink, with two boulders standing out of the shallows. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018142248_12-8.jpg",
+   "confidence": "high"
+  }
+ ],
  "lake-kussharo": [
   {
    "file": "lake-kussharo-01.jpg",
@@ -3476,6 +3772,78 @@
    "credit": "LynUratani, CC BY-SA 4.0"
   }
  ],
+ "nikko-toshogu": [
+  {
+   "file": "nikko-toshogu-01.jpg",
+   "thumb": "nikko-toshogu-01-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The approach to the shrine in late autumn: the granite Ishidorii at the head of the stone stairway, a tall inscribed pillar carved 東照宮 with the Tokugawa hollyhock crest on its face, visitors climbing towards the red gate, and huge cryptomeria trunks with yellow and orange maples turning between them.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143031_2-8.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nikko-toshogu-02.jpg",
+   "thumb": "nikko-toshogu-02-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "The Yomeimon gate head-on from the foot of its stone steps: two tiers of gold-leafed brackets crowded with white dragons, sages and painted carvings under a black tiled roof with gilded gable boards, flanked by the corridor walls, with cryptomeria rising behind.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143011_2-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nikko-toshogu-03.jpg",
+   "thumb": "nikko-toshogu-03-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "setting",
+   "caption": "The bronze Karadorii torii framing the Yomeimon at the top of the stone stairs, with the drum tower and belfry to either side, a few visitors on the steps and dark cedars closing in behind the gate.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143021_2-4.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nikko-toshogu-04.jpg",
+   "thumb": "nikko-toshogu-04-t.jpg",
+   "w": 1600,
+   "h": 2133,
+   "category": "setting",
+   "caption": "The five-storey pagoda: vermilion balconies and green-and-gold bracketing on each of the five diminishing roofs, a nine-ring bronze finial on top, standing on a stone-walled terrace behind a painted railing and ringed by tall cryptomeria.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143730_410-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nikko-toshogu-05.jpg",
+   "thumb": "nikko-toshogu-05-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "detail",
+   "caption": "The Nemuri-neko, the sleeping cat: a small white-and-grey cat curled up asleep among carved peonies in a gilt-edged panel set in a green and vermilion gable, on the gate to the path up to Ieyasu's tomb.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143029_2-7.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nikko-toshogu-06.jpg",
+   "thumb": "nikko-toshogu-06-t.jpg",
+   "w": 1600,
+   "h": 1200,
+   "category": "detail",
+   "caption": "The three wise monkeys — see no evil, hear no evil, speak no evil — carved and painted in a gilt-framed panel on the weathered timber wall of the Shinkyusha sacred stable, with green stylised clouds around them.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143026_2-6.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "nikko-toshogu-07.jpg",
+   "thumb": "nikko-toshogu-07-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The Shinkyo sacred bridge in full autumn: the vermilion lacquered arch on two stone piers spanning the Daiya river, white water running over boulders beneath it, and the whole gorge behind it in red, orange, yellow and green.",
+   "sourceUrl": "https://www.nikko-kankou.org/storage/post_picture/20231018143043_21-4.jpg",
+   "confidence": "high"
+  }
+ ],
  "nishimuraya-honkan": [
   {
    "file": "nishimuraya-honkan-01.jpg",
@@ -3739,6 +4107,168 @@
    "category": "setting",
    "caption": "Omotesando boulevard at dusk seen from the pedestrian bridge, the zelkova (keyaki) canopy arching over both sides of the street above the flagship stores and traffic. Foliage is green, so this is a warm-season photograph, not late November",
    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Omotesando_Avenue_at_sunset_from_pedestrian_bridge%2C_Jingumae%2C_Shibuya%2C_Tokyo.jpg",
+   "confidence": "high"
+  }
+ ],
+ "palace-hotel-tokyo": [
+  {
+   "file": "palace-hotel-tokyo-01.jpg",
+   "thumb": "palace-hotel-tokyo-01-t.jpg",
+   "w": 1600,
+   "h": 1062,
+   "category": "exterior",
+   "caption": "The hotel's white curved facade rising behind the Imperial Palace moat, with the Tatsumi watchtower and its stone rampart in the foreground and red autumn maples at right",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Exterior-with-Tatsumi-Watchtower-III-F2-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-02.jpg",
+   "thumb": "palace-hotel-tokyo-02-t.jpg",
+   "w": 1600,
+   "h": 931,
+   "category": "exterior",
+   "caption": "The hotel seen across the Imperial Palace moat, two swans on the water and the moat's stone embankment and tree line running the length of the frame",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Exterior-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-03.jpg",
+   "thumb": "palace-hotel-tokyo-03-t.jpg",
+   "w": 1600,
+   "h": 899,
+   "category": "setting",
+   "caption": "Autumn view from the hotel over the Imperial Palace outer gardens, maples in full red and gold colour, with the Marunouchi and Toranomon skyline and Tokyo Tower behind",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Autumn-View-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-04.jpg",
+   "thumb": "palace-hotel-tokyo-04-t.jpg",
+   "w": 1600,
+   "h": 800,
+   "category": "setting",
+   "caption": "The main lobby: a gold-leaf screen wall depicting pines and irises on the left, a round table with a large floral arrangement, and floor-to-ceiling glass looking out to a red maple against the moat's stone wall",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Main-Lobby-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-05.jpg",
+   "thumb": "palace-hotel-tokyo-05-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "room",
+   "caption": "Deluxe Room with Balcony: king bed, wood-panelled headboard wall, and a full-width sliding glass door onto a private balcony with chairs, overlooking the palace greenery",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Deluxe-Room-with-Balcony-King-Daytime-2023-F2-sm.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-06.jpg",
+   "thumb": "palace-hotel-tokyo-06-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "room",
+   "caption": "Grand Deluxe Room with Balcony seen from the bedside: armchairs and a tea service on a round table, with the balcony and the wooded Imperial Palace grounds through the glass",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Grand-Deluxe-Room-with-Balcony-King-Bedside-Image-Daytime-2023-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-07.jpg",
+   "thumb": "palace-hotel-tokyo-07-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "room",
+   "caption": "Chiyoda Suite bedroom at night: low platform bed in blond wood, slatted timber screen behind the headboard, and lit high-rise towers through the window",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Chiyoda-Suite-Bedroom-Evening-2023-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-08.jpg",
+   "thumb": "palace-hotel-tokyo-08-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "bath",
+   "caption": "Chiyoda Suite bathroom: green-marble deep soaking tub filling from a wall spout beside a window, glass walk-in rain shower, and a dark stone double vanity with amenities",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Chiyoda-Suite-Bathroom-Daytime-2023-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-09.jpg",
+   "thumb": "palace-hotel-tokyo-09-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "bath",
+   "caption": "Grand Deluxe Room bathroom at night: limestone vanity with mirrored wall, separate glass shower, and a soaking tub set against a window over the lit city",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Grand-Deluxe-Room-Bathroom-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-10.jpg",
+   "thumb": "palace-hotel-tokyo-10-t.jpg",
+   "w": 1600,
+   "h": 828,
+   "category": "bath",
+   "caption": "The hotel's indoor swimming pool at dusk with a circular jacuzzi in the foreground, red loungers, and floor-to-ceiling windows over the palace grounds and Tokyo skyline",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Swimming-Pool-II-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-11.jpg",
+   "thumb": "palace-hotel-tokyo-11-t.jpg",
+   "w": 1580,
+   "h": 780,
+   "category": "dining",
+   "caption": "Wadakura, the hotel's Japanese restaurant: wood tables with lacquer trays and a black rough-hewn stone wall, glass on the left looking over the moat and palace gardens",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Wadakura-Main-Dining-Daytime-2023-Gallery.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-12.jpg",
+   "thumb": "palace-hotel-tokyo-12-t.jpg",
+   "w": 1580,
+   "h": 780,
+   "category": "dining",
+   "caption": "Esterre, the Alain Ducasse restaurant: round tables in cream linen with candle lamps, sculpted upholstered chairs, framed botanical studies on the wall and a lit fireplace at the back",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Esterre-Evening-G.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-13.jpg",
+   "thumb": "palace-hotel-tokyo-13-t.jpg",
+   "w": 1580,
+   "h": 780,
+   "category": "dining",
+   "caption": "The Royal Bar: plum velvet wingback armchairs around a figured-marble table, backed by lit glass shelves of whisky, cognac and cut-crystal glassware",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Royal-Bar-G.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-14.jpg",
+   "thumb": "palace-hotel-tokyo-14-t.jpg",
+   "w": 1600,
+   "h": 1068,
+   "category": "food",
+   "caption": "In-room dining breakfast served on a guest-room balcony: omelette with ham and salad, croissant and bread basket, juice and sparkling water, on a wooden table above the palace moat and gardens",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-In-Room-Dining-Breakfast-Balcony-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-15.jpg",
+   "thumb": "palace-hotel-tokyo-15-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "food",
+   "caption": "Crab course from a Wadakura kaiseki menu: steamed snow-crab legs and shoulder meat with picked crab and crab miso served in the shell, carved cucumber and radish garnish and sudachi, on a rustic glazed plate",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Wadakura-Christmas-2025-Prix-Fixe-Crab-Kaiseki-F2.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "palace-hotel-tokyo-16.jpg",
+   "thumb": "palace-hotel-tokyo-16-t.jpg",
+   "w": 1600,
+   "h": 900,
+   "category": "food",
+   "caption": "Esterre plate: poached lobster tail crowned with caviar, green asparagus and a herb foam in an orange lobster bisque, in a wide off-white bowl",
+   "sourceUrl": "https://en.palacehoteltokyo.com/wp-content/uploads/Palace-Hotel-Tokyo-Esterre-Christmas-2025-Lobster-Bisque-F2.jpg",
    "confidence": "high"
   }
  ],
@@ -4015,6 +4545,168 @@
    "category": "food",
    "caption": "A lacquer bowl of white-miso soup with sea bream, daikon, carrot, greens and a dot of mustard, shot from above on a lacquered table with the restaurant's printed chopstick sleeve in front",
    "sourceUrl": "https://cache.marriott.com/is/image/marriotts7prod/rz-fukrz-genjyu-special-dish-24301?wid=2400&fit=constrain",
+   "confidence": "high"
+  }
+ ],
+ "ritz-carlton-nikko": [
+  {
+   "file": "ritz-carlton-nikko-01.jpg",
+   "thumb": "ritz-carlton-nikko-01-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "exterior",
+   "caption": "The hotel from its arrival drive on a clear summer day: three low storeys of dark timber and stone set among tall pines and birches, with the green cone of Mt Nantai rising directly behind the roofline.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-exterior-9076.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-02.jpg",
+   "thumb": "ritz-carlton-nikko-02-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "exterior",
+   "caption": "The lake-facing elevation at dusk across the lawn: three tiers of glazed guest-room balconies lit warm from within, over a ground-floor lounge wall of full-height glass, with a single spreading pine on the grass in front.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-exterior-9080.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-03.jpg",
+   "thumb": "ritz-carlton-nikko-03-t.jpg",
+   "w": 1600,
+   "h": 1199,
+   "category": "setting",
+   "caption": "Looking down on the hotel in full autumn colour: the dark timber building sits on the wooded eastern shore of Lake Chuzenji, with orange, red and yellow hillsides running down to the blue water and the ridges of Okunikko beyond. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-exterior-7954.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-04.jpg",
+   "thumb": "ritz-carlton-nikko-04-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The view from a guest-room balcony at the peak of the Okunikko autumn: Mt Nantai's bare cone above a hillside of gold, orange and scarlet, with the vermilion torii of Chugushi shrine just visible at lower left and a black side table on the deck in the foreground. <em>Okunikko peaks in early October — five weeks before this trip. On 11–15 November the lake-level trees are bare.</em>",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-guestroom-7961.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-05.jpg",
+   "thumb": "ritz-carlton-nikko-05-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "setting",
+   "caption": "The double-height library lounge at night, with a long open gas fireplace burning at each side under upholstered window seats, book-filled shelves running the full height of both walls, and a single walnut table with spindle-back chairs down the middle.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-library-6278.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-06.jpg",
+   "thumb": "ritz-carlton-nikko-06-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "room",
+   "caption": "A guest room with a king bed under a pale cedar plank ceiling, walls of embossed white washi-patterned panels and a glass lantern pendant at the bedside; sliding glass opens onto a balcony with two chairs and a round table, and the lake and far ridge beyond.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-lake-chuzenji-6271.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-07.jpg",
+   "thumb": "ritz-carlton-nikko-07-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "room",
+   "caption": "The living room of a lake-view suite: a long ivory sofa, a mustard leather armchair and a live-edge slab coffee table on a grey rug, with the bedroom behind a sliding bamboo-slat screen at left and a glazed corner opening onto a balcony over Lake Chuzenji.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-lake-suite-6776.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-08.jpg",
+   "thumb": "ritz-carlton-nikko-08-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "room",
+   "caption": "A tatami sitting room in a suite: two low daybeds facing each other across a black lacquer table set with a tea tray, and a full-width black-framed window that frames a lone pine, the lake and the mountains on the far shore.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-suite-9470.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-09.jpg",
+   "thumb": "ritz-carlton-nikko-09-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "bath",
+   "caption": "The indoor hot-spring bath at night: a long stone-lined pool of pale green sulphur water fed by a wide sheet of water falling from a slab in the end wall, with a glazed wall onto a lit rock-and-moss garden.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-onsen-9069.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-10.jpg",
+   "thumb": "ritz-carlton-nikko-10-t.jpg",
+   "w": 1600,
+   "h": 1024,
+   "category": "bath",
+   "caption": "The open-air hot-spring bath in winter: a single bather in steaming milky-blue water under a timber eave, looking out at snow-covered boulders and bare birches with the mountain lost in cloud behind. <em>A deep-winter photograph. In mid-November there is snowfall but no lying snow — 3cm falls across the whole month.</em>",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-spa-onsen-6078.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-11.jpg",
+   "thumb": "ritz-carlton-nikko-11-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "bath",
+   "caption": "A guest room's private hot-spring tub seen from the window seat inside: a square grey stone bath steaming on a terrace, water pouring in over a metal spout, set into a garden of large mossy boulders, river cobbles and a wall of dark charred timber.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-open-air-6265.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-12.jpg",
+   "thumb": "ritz-carlton-nikko-12-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "dining",
+   "caption": "A restaurant dining room under a vaulted ceiling of woven copper-toned lattice panels: banquettes and dark wood tables on an inlaid parquet floor, a tall branch arrangement on the central table, and a glazed wall onto the lawn and woods.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-restaurant-6280.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-13.jpg",
+   "thumb": "ritz-carlton-nikko-13-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "dining",
+   "caption": "The sushi counter in the hotel's Japanese restaurant: a single plank of pale hinoki with six leather-backed swivel chairs, a gold-leaf panel and kumiko lattice screens behind, and an open sliding wall onto the lawn; the doorway is framed by deeply carved floral wooden panels.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-sushi-counter-8491.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-14.jpg",
+   "thumb": "ritz-carlton-nikko-14-t.jpg",
+   "w": 1600,
+   "h": 1066,
+   "category": "dining",
+   "caption": "Lakehouse, the western restaurant: tan leather banquettes and rust-red armchairs along a wall of black steel-framed windows looking out to the trees, under a timber-battened ceiling hung with large drum pendants filled with dried botanicals.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-lakehouse-6281.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-15.jpg",
+   "thumb": "ritz-carlton-nikko-15-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "food",
+   "caption": "Sukiyaki set for two: a black iron pot filled with marbled beef slices, shiitake, enoki, tofu, negi and greens, with a second plate of raw wagyu, sheets of yuba, a chilled appetiser in a stemmed ice bowl and a cast-iron teapot alongside.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-sukiyaki-6087.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "ritz-carlton-nikko-16.jpg",
+   "thumb": "ritz-carlton-nikko-16-t.jpg",
+   "w": 1600,
+   "h": 1067,
+   "category": "food",
+   "caption": "Three pieces of nigiri — chutoro, a white-fleshed fish and a whole boiled prawn — lined up on a clear crystal block on the hinoki counter, with the sushi chef's hands out of focus behind.",
+   "sourceUrl": "https://cache.marriott.com/content/dam/marriott-digital/rz/apec/hws/t/tyonz/en_us/photo/unlimited/assets/tyonz-sushi-6762.jpg",
    "confidence": "high"
   }
  ],
@@ -4604,6 +5296,78 @@
    "confidence": "high"
   }
  ],
+ "shuzenji-onsen": [
+  {
+   "file": "shuzenji-onsen-01.jpg",
+   "thumb": "shuzenji-onsen-01-t.jpg",
+   "w": 1200,
+   "h": 900,
+   "category": "setting",
+   "caption": "The sanmon gate of Shuzen-ji temple at the top of its broad stone stairway, with two big maples in vivid scarlet on either side against a deep blue sky, white plastered walls running out left and right and an inscribed stone pillar at the foot of the steps. <em>Peak colour, which at Shuzenji is late November into early December. On 15–17 November expect early-turning trees among green ones.</em>",
+   "sourceUrl": "https://kanko.city.izu.shizuoka.jp/wp/wp-content/uploads/2026/04/p3764_7.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "shuzenji-onsen-02.jpg",
+   "thumb": "shuzenji-onsen-02-t.jpg",
+   "w": 1200,
+   "h": 789,
+   "category": "setting",
+   "caption": "The main hall of Shuzen-ji framed by autumn maples: a grey tiled roof with an elaborate carved gable over a dark timber porch, clipped pines and a stone lantern in front, and branches of orange and red leaves closing in from both sides. <em>Peak colour, which at Shuzenji is late November into early December. On 15–17 November expect early-turning trees among green ones.</em>",
+   "sourceUrl": "https://kanko.city.izu.shizuoka.jp/wp/wp-content/uploads/2026/04/p3764_4.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "shuzenji-onsen-03.jpg",
+   "thumb": "shuzenji-onsen-03-t.jpg",
+   "w": 1200,
+   "h": 900,
+   "category": "setting",
+   "caption": "Tokko-no-yu, the hot spring on the rocks in the middle of the Katsura river: a small shingled pavilion on timber posts standing over the boulders in the stream bed, ringed by a bamboo fence with a maple-leaf banner strung across it, and a branch of flaming orange maple across the top of the frame. <em>Peak colour, which at Shuzenji is late November into early December. On 15–17 November expect early-turning trees among green ones.</em>",
+   "sourceUrl": "https://kanko.city.izu.shizuoka.jp/wp/wp-content/uploads/2026/04/p3764_10.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "shuzenji-onsen-04.jpg",
+   "thumb": "shuzenji-onsen-04-t.jpg",
+   "w": 1200,
+   "h": 900,
+   "category": "setting",
+   "caption": "Katsura-bashi, the vermilion arched footbridge over the Katsura river, seen from downstream under a full canopy of orange, red and gold maples, with the shallow rocky river running towards the camera and fallen leaves banked on the stones. <em>Peak colour, which at Shuzenji is late November into early December. On 15–17 November expect early-turning trees among green ones.</em>",
+   "sourceUrl": "https://kanko.city.izu.shizuoka.jp/wp/wp-content/uploads/2026/04/p3764_5.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "shuzenji-onsen-05.jpg",
+   "thumb": "shuzenji-onsen-05-t.jpg",
+   "w": 1200,
+   "h": 900,
+   "category": "setting",
+   "caption": "The round bamboo bench on the Chikurin-no-komichi: a large circular slatted platform set in the middle of the path, with a single maple in orange leaf rising straight out of the bamboo grove above it and green culms on every side. <em>Peak colour, which at Shuzenji is late November into early December. On 15–17 November expect early-turning trees among green ones.</em>",
+   "sourceUrl": "https://kanko.city.izu.shizuoka.jp/wp/wp-content/uploads/2026/04/p2796_19-scaled-1.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "shuzenji-onsen-06.jpg",
+   "thumb": "shuzenji-onsen-06-t.jpg",
+   "w": 1200,
+   "h": 900,
+   "category": "setting",
+   "caption": "The entrance to the Chikurin-no-komichi bamboo path: a flagstone walk edged with bent-bamboo hoops running away between dense green culms, red maple leaves fallen thick along both sides of the paving, a black lamp post part-way down and a maple turning red overhead. <em>Peak colour, which at Shuzenji is late November into early December. On 15–17 November expect early-turning trees among green ones.</em>",
+   "sourceUrl": "https://kanko.city.izu.shizuoka.jp/wp/wp-content/uploads/2026/04/p3764_6.jpg",
+   "confidence": "high"
+  },
+  {
+   "file": "shuzenji-onsen-07.jpg",
+   "thumb": "shuzenji-onsen-07-t.jpg",
+   "w": 1200,
+   "h": 900,
+   "category": "detail",
+   "caption": "The chozuya at Shuzen-ji: a bronze dragon reared over the stone basin with hot spring water running from its mouth, under the timber eave of the little roofed shelter, with the temple grounds and a stand of orange maples out of focus behind. <em>Peak colour, which at Shuzenji is late November into early December. On 15–17 November expect early-turning trees among green ones.</em>",
+   "sourceUrl": "https://kanko.city.izu.shizuoka.jp/wp/wp-content/uploads/2026/04/p3764_15.jpg",
+   "confidence": "high"
+  }
+ ],
  "snow-monkeys": [
   {
    "file": "snow-monkeys-01.jpg",
@@ -4969,9 +5733,8 @@
    "w": 1600,
    "h": 1066,
    "category": "exterior",
-   "caption": "The ryokan seen from the bed of the Tobira river it is built over: shallow rapids breaking white between mossy boulders, a steep leaf-littered bank of maples on the left, and on the right a stone-faced retaining wall carrying a lamp-lit timber walkway, with the buildings stacked up through the canopy above. This is how close the water runs to the rooms. Shot in full summer leaf.",
-   "sourceUrl": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnnLGasD1GiBKsywT15jZ5u6djAGkOWNm55JfKGfrbEs4Qribn9WaJepwYZk7AyN1xn7UNTSgTnGXSEY67JRgLBfCSc9CeGCtFwR6OYnQd-67UW5c7KWtg6K1xH5b6XardhBlm4Xg=s0",
-   "credit": "Google Maps contributor photo",
+   "caption": "Daytime at the entrance: the property's dark-green Toyota shuttle van lettered TOBIRA MYOJINKAN standing on the drive in front of the black timber-clad building, beside the stone name marker under its timber gate, hemmed in by forest. This is the van that runs the free 35-45 minute transfer from Matsumoto station.",
+   "sourceUrl": "https://www.tobira-group.com/myojinkan/wp-manager/wp-content/themes/myojinkan/images/access/access_main_img01.png",
    "confidence": "high"
   },
   {

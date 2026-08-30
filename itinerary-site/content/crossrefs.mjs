@@ -29,22 +29,16 @@
 export const crossrefs = {
   // ── where you sleep ───────────────────────────────────────────────
   'Aman Tokyo': { entity: 'aman-tokyo' },
-  'Gora Kadan': { entity: 'gora-kadan' },
-  SOWAKA: { entity: 'sowaka' },
-  // Gion Loka is SOWAKA's own restaurant and has no card; the hotel's does name it under Dining.
-  // Listed above the bare 'Gion' entry's reach on purpose — longest match wins, so the last lunch
-  // points at the hotel rather than at the district it happens to be named after.
-  'Gion Loka': { entity: 'sowaka' },
-  Myojinkan: { entity: 'tobira-myojinkan' },
-  // Sushi Kadan is on the Gora Kadan property and has no card of its own, but the hotel's card
-  // carries a fact row about it — including that it is a separate kitchen for the GF brief.
-  'Sushi Kadan': { entity: 'gora-kadan' },
+  'Ritz-Carlton Nikko': { entity: 'ritz-carlton-nikko' },
+  Asaba: { entity: 'asaba-ryokan' },
+  'Hotel The Mitsui': { entity: 'hotel-the-mitsui-kyoto' },
+  // FORNI is the Mitsui's own Italian room and has no card; the hotel's names it under Dining.
+  FORNI: { entity: 'hotel-the-mitsui-kyoto' },
 
   // ── where you eat ─────────────────────────────────────────────────
   "L'Effervescence": { entity: 'leffervescence' },
   'Kikunoi Honten': { entity: 'kikunoi-honten' },
   'Kodaiji Jugyuan': { entity: 'kodaiji-jugyuan' },
-  'Itoh Dining by Nobu': { entity: 'itoh-dining-nobu' },
 
   // ── what you do ───────────────────────────────────────────────────
   'Owl café': { entity: 'akiba-fukurou' },
@@ -55,47 +49,40 @@ export const crossrefs = {
   // The workshop is held in the Akagane villa, so on the day this is the name you travel to.
   'Akagane Resort': { entity: 'heki-kintsugi' },
   'Iwatayama monkey park': { entity: 'arashiyama-monkeys' },
-  'Kyudo studio': { entity: 'kyudo' },
+  Iwatayama: { entity: 'arashiyama-monkeys' },
+  'Kyudo session': { entity: 'kyudo' },
 
   // ── where you actually are ────────────────────────────────────────
   'Meiji Jingu': { entity: 'meiji-jingu' },
-  'Hakone Open-Air Museum': { entity: 'hakone-open-air-museum' },
-  'Open-Air Museum': { entity: 'hakone-open-air-museum' },
-  // Both ends of the lake crossing are the Lake Ashi card — the torii in the water is on it.
-  Togendai: { entity: 'lake-ashi' },
-  'Moto-Hakone': { entity: 'lake-ashi' },
-  // The Matsumoto card covers the castle, the storehouse street and the Kusama museum together.
-  'Matsumoto Castle': { entity: 'matsumoto' },
-  'Matsumoto City Museum of Art': { entity: 'matsumoto' },
-  'City Museum of Art': { entity: 'matsumoto' },
-  Nakamachi: { entity: 'matsumoto' },
-  Matsumoto: { entity: 'matsumoto' },
+  // The Toshogu card covers the whole shrine precinct — Rinnoji, Taiyuin and Shinkyo included.
+  Toshogu: { entity: 'nikko-toshogu' },
   Takao: { entity: 'takao' },
   'Jingo-ji': { entity: 'takao' },
   'Sanzen-in, Ohara': { entity: 'sanzen-in-ohara' },
   Ohara: { entity: 'sanzen-in-ohara' },
   Rurikoin: { entity: 'rurikoin' },
-  'Kurama & Kibune': { entity: 'kurama-kibune' },
+  Kurama: { entity: 'kurama-kibune' },
   Kibune: { entity: 'kurama-kibune' },
   Arashiyama: { entity: 'arashiyama' },
-  Eikando: { entity: 'eikando' },
+  Eikandō: { entity: 'eikando' },
   'Kodai-ji': { entity: 'kodaiji' },
-  Gion: { entity: 'gion' },
 
   // ── the ones with no card — send them to their row on the bases page ──
-  Owakudani: { stop: ['hakone', 'Owakudani'] },
-  'Hakone Museum of Art': { stop: ['hakone', 'Hakone Museum of Art (moss garden)'] },
-  'Pola Museum of Art': { stop: ['hakone', 'Pola Museum of Art'] },
-  'Pola Museum': { stop: ['hakone', 'Pola Museum of Art'] },
-  Pola: { stop: ['hakone', 'Pola Museum of Art'] },
-  'Hakone-Yumoto': { stop: ['hakone', 'Hakone-Yumoto'] },
-  Odawara: { stop: ['hakone', 'Odawara Station'] },
-  'Matsumoto Station': { stop: ['tobira', 'Matsumoto Station'] },
-  // No Utsukushigahara entry: Monday resolved to staying put, so the plateau survives only as a
-  // stop on the bases page and a line in Monday's prose. Nothing on a day sheet names it any more,
-  // and a phrase that matches nothing fails the build rather than sitting here rotting.
+  // Rinnoji opens an hour before everything else in the precinct, which is the fact that shapes
+  // the Nikko day, and it is the bases row rather than the Toshogu card that carries it.
+  Rinnoji: { stop: ['nikko', 'Rinnoji — Sanbutsudo, Taiyuin, Shoyoen'] },
+  'Chuzenji Onsen': { stop: ['nikko', 'Chuzenji Onsen terminal'] },
+  'Nikko Kanaya Hotel': { stop: ['nikko', 'Nikko Kanaya Hotel'] },
+  'JR Nikko': { stop: ['nikko', 'Tobu-Nikko / JR Nikko stations'] },
+  'Tobu-Nikko': { stop: ['nikko', 'Tobu-Nikko / JR Nikko stations'] },
+  'Joren Falls': { stop: ['shuzenji', 'Joren Falls'] },
+  Darumayama: { stop: ['shuzenji', 'Darumayama Kōgen'] },
+  'Niji-no-Sato': { stop: ['shuzenji', 'Shuzenji Niji-no-Sato'] },
+  // Mishima is where the rental car is collected on the way in and dropped on the way out, so it
+  // is a transfer point twice over — the bases row is the thing worth reaching.
+  Mishima: { stop: ['shuzenji', 'Mishima Station'] },
+  'Tokyo Station': { stop: ['tokyo', 'Tokyo Station'] },
   'Kyoto Station': { stop: ['kyoto', 'Kyoto Station'] },
-  'Kansai (KIX)': { stop: ['kyoto', 'Kansai (KIX)'] },
   KIX: { stop: ['kyoto', 'Kansai (KIX)'] },
   Haneda: { stop: ['tokyo', 'Haneda (HND)'] },
 };

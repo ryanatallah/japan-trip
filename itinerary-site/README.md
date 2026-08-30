@@ -26,8 +26,9 @@ The whole `site/` folder is portable: zip it, AirDrop it, drop it on any static 
 | `site/archive.html` | **Archive.** The seven-way comparison: glance table, seven cards, the wish-list matrix, how the choice was framed, what was cut, and the shared foundations. |
 
 Plus `site/<itinerary>.html` for each of the six archived alternates, each banner-marked as *not*
-the plan, and `site/momiji-with-a-detour.html`, a redirect stub at the URL the plan was published
-at before it became the plan.
+the plan; one page per superseded plan, banner-marked as *no longer* the plan and opening with a
+"why this stopped being the plan" section; and `site/momiji-with-a-detour.html`, a redirect stub at
+the URL the plan was published at before it became the plan.
 
 Every photo opens in a lightbox with its caption and a link to where it came from. Arrow keys and
 swipe move through a gallery; `Esc` closes. Light and dark themes; the ◐ button overrides your system
@@ -53,10 +54,19 @@ under the header that names your current section. The list button beside ◐ hid
 | `content/entities.mjs` | Every hotel, restaurant, experience, place: copy, rates, facts, gluten-free notes. Shared by the plan and the archive — copy here must read correctly in both | When a property changes |
 | `content/geo.mjs` | Map coordinates and each route's stops, nights, day trips and travel mode. The plan's key is `plan` | When the route changes |
 | `content/alternates.mjs` | The six archived routes, plus the wish-list and how-to-choose tables | **Frozen** — see below |
+| `content/superseded.mjs` | Plans that *were* the plan and were then displaced. One page each | **Frozen** — append only |
 | `content/shared.mjs` | The foundations as they read across all seven, for the archive only | Rarely |
 | `content/itineraries.mjs` | Compatibility shim: `[plan, ...alternates]`, for `tools/audit.mjs` and the archive's tables | Never |
 | `content/media.json` | Generated. The photo manifest — captions, categories, sources | `tools/process.mjs` |
 | `content/japan-outline.json` | Generated once. Simplified coastline for the route maps | Never |
+
+**A superseded plan is not an alternate.** The six in `alternates.mjs` lost the comparison on
+15 August 2026. An entry in `superseded.mjs` *won* it, was the trip for a while, and was then
+displaced by something that happened afterwards — a ryokan that came back full, a booking that
+could not be held. When the plan is replaced, snapshot the outgoing `plan` object into
+`superseded.mjs` with a `supersededOn` and a `supersededBy` before editing `plan.mjs`, and add its
+old route to `content/geo.mjs` under the new slug so its map still draws. It is then frozen too.
+Superseded plans stay out of `itineraries.mjs`, so the seven-way comparison keeps comparing seven.
 
 **`alternates.mjs` is deliberately frozen.** The six routes hold the dates, costs and verdicts they
 had on the day the decision was made; a comparison stops meaning anything if the losing options keep
@@ -73,7 +83,7 @@ dots for driving, and hollow markers for day trips. No tile server and no networ
 the coastline itself, see the header of `tools/build-geo.mjs`.
 
 ```bash
-node build.mjs          # content + media.json -> site/ (10 pages)
+node build.mjs          # content + media.json -> site/ (14 pages)
 node tools/audit.mjs    # coverage gaps, broken links, external-asset check — must stay at 0 errors
 ```
 
@@ -90,6 +100,17 @@ Those are untracked scratch — `rm -f site/_s-*.html` when you are done.
 3. `node tools/contactsheet.mjs` — writes `site/_qa-N.html`, a labelled grid of every photo with its
    caption and a per-entity coverage check. This is the page to review before trusting a gallery.
 4. `node build.mjs`
+
+**`process.mjs` regenerates `media.json` from `.cache/originals/`, so a full run deletes any entity
+whose originals folder is gone.** `.cache/` is untracked and disposable; `media.json` is tracked and
+is the only record of what has been processed. A scoped run (`node tools/process.mjs slug-a slug-b`)
+touches only those slugs and is safe. A bare run rewrites the whole manifest — and on 23 August 2026
+that silently dropped all 16 `aman-tokyo` entries, whose originals had been deleted at some point,
+while orphaning their files in `site/img/`. **Prefer scoped runs. After any bare run, diff
+`content/media.json` against `git HEAD` and check for entities whose count went to zero** — the
+display copies are still on disk, so the fix is to restore the manifest entries, not to re-source.
+The same run also picked up `palace-hotel-tokyo`, whose originals predate the current entity list;
+that is why `tools/audit.mjs` reports 83 keys against 82 entities.
 
 `.cache/originals/` holds the full-resolution downloads (a few hundred MB). It is not needed to view
 the site and can be deleted; keep it if you may want to re-crop or re-export later.

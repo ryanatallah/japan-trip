@@ -14,6 +14,9 @@ Itinerary 1B — *The Classic, with the Alps*, 15 nights, 6–22 November 2026 �
 To change the plan: edit `itinerary-site/content/plan.mjs`, add an entry to
 `itinerary-site/content/history.mjs`, run `node build.mjs`, commit the rebuilt `site/`, and push
 to `main` — [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) publishes it.
+If the change *replaces* the plan rather than adjusting it, snapshot the outgoing one into
+`itinerary-site/content/superseded.mjs` first — it keeps its own page, frozen at the day it
+stopped being true.
 See [`itinerary-site/README.md`](itinerary-site/README.md) for the full map of what lives where.
 
 The notes below are the original seed for the whole thing.

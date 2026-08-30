@@ -473,6 +473,10 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .glance .c-cost { font-family: var(--serif); font-size: 1.05rem; white-space: nowrap; }
 .compare th[scope="row"] { width: 15%; min-width: 120px; font-weight: 600; color: var(--ink); }
 .compare td { color: var(--ink-2); }
+/* A leg/time/fare table is the inverse shape of a factor comparison — the row label carries the
+   sentence and the two value columns are three words each. Let the first column take the space. */
+.compare-legs th[scope="row"] { width: auto; min-width: 0; }
+.compare-legs td { width: 22%; white-space: nowrap; }
 .costs th[scope="row"] { font-weight: 400; color: var(--ink-2); }
 .costs td { text-align: right; font-family: var(--serif); white-space: nowrap; font-size: 1.02rem; }
 .costs tfoot th, .costs tfoot td { border-top: 2px solid var(--line-2); font-weight: 600; color: var(--ink); font-size: 1.15rem; background: var(--paper-2); }
@@ -703,6 +707,26 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .archnote p { max-width: var(--maxw); margin: 0 auto; padding: .85rem max(1rem, 3vw); font-size: .88rem; color: var(--ink-2); }
 .archnote b { color: var(--ink); }
 .archnote-alt { border-bottom-width: 2px; }
+
+/* A SUPERSEDED plan — one that was the trip and then was not. Deliberately not the gold of the
+   archive note: gold means "one of the seven we compared", this means "this used to be true". */
+.archnote-past { background: color-mix(in oklab, var(--ink-3) 12%, var(--paper-2)); border-bottom: 2px solid color-mix(in oklab, var(--ink-3) 40%, var(--line)); }
+
+.superlist { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: .7rem; margin-top: 1.4rem; }
+.supercard {
+  display: grid; gap: .22rem; padding: 1.1rem 1.2rem; text-decoration: none;
+  border: 1px solid var(--line); border-left: 3px solid color-mix(in oklab, var(--ink-3) 55%, var(--line));
+  border-radius: var(--r-lg); background: color-mix(in oklab, var(--ink-3) 5%, var(--card));
+  transition: border-color .25s, transform .25s var(--ease);
+}
+.supercard:hover { border-color: var(--accent); border-left-color: var(--accent); transform: translateY(-2px); }
+.supercard-when { font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-3); }
+.supercard b { font-family: var(--serif); font-size: 1.08rem; color: var(--ink); font-weight: 600; }
+.supercard em { font-style: normal; font-size: .82rem; color: var(--ink-2); line-height: 1.5; }
+.supercard-cost { font-size: .78rem; color: var(--ink-3); margin-top: .15rem; }
+.jump-past { border-style: dashed !important; color: var(--ink-3) !important; }
+.rec-past { opacity: .72; }
+.rec-past .rec-pick { color: var(--ink-3); }
 
 /* "The plan" badge, used in the glance table and on the archive's card. */
 .tag-plan {

@@ -5,6 +5,7 @@ import { dirname, join } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { entities } from '../content/entities.mjs';
 import { itineraries } from '../content/itineraries.mjs';
+import { superseded } from '../content/superseded.mjs';
 
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const SITE = join(ROOT, 'site');
@@ -23,7 +24,7 @@ const err = [], warn = [];
 
 // 1. every entity referenced by an itinerary exists
 const referenced = new Set();
-for (const it of itineraries) {
+for (const it of [...itineraries, ...superseded]) {
   for (const key of ['stays', 'altStays', 'dining', 'doing', 'places']) (it[key] || []).forEach((s) => referenced.add(s));
   for (const d of it.days) (d.ref || []).forEach((s) => referenced.add(s));
   (it.transport.ref || []).forEach((s) => referenced.add(s));
