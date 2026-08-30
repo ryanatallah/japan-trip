@@ -22,17 +22,17 @@ export const days = [
     date: 'Fri 6', dow: 'Friday', base: null, where: 'In the air',
     title: 'SFO → HND, overnight',
     fixed: [
-      { t: '01:20', what: 'NH107 departs SFO', note: 'Boeing 777-300ER — the aircraft that carries The Room. 11h30 in the air.' },
+      { t: '00:20', what: 'NH107 departs SFO', note: 'Ticketed, PNR E4HX5B. Boeing 777-300ER — the aircraft that carries The Room. 11h30 in the air.' },
     ],
     moves: [],
     noMoves: 'Eleven and a half hours of it.',
     meals: {
       b: { status: 'flight', where: 'On board' },
       l: { status: 'flight', where: 'On board' },
-      d: { status: 'none', where: 'Before you go', note: 'A 01:20 departure means leaving home on Thursday evening. Eat before the airport.' },
+      d: { status: 'none', where: 'Before you go', note: 'A 00:20 departure means leaving home on Thursday evening. Eat before the airport.' },
     },
     notes: [
-      `<strong>This is the detail the itinerary page glosses.</strong> ANA’s own San Francisco–Haneda service is a small-hours departure, not a morning one: <strong>01:20 out of SFO, landing 04:50 the next day</strong>. Booked as "Friday 6 November", it is really a Thursday-night airport run.`,
+      `<strong>This is the detail the itinerary page glosses.</strong> ANA’s own San Francisco–Haneda service is a small-hours departure, not a morning one: <strong>00:20 out of SFO, landing 04:50 the next day</strong> — 12:20 a.m., as ticketed. Booked as "Friday 6 November", it is really a Thursday-night airport run.`,
       `The daytime SFO→HND option is the United-operated codeshare (departs late morning, lands mid-afternoon). It is a different aircraft and a different seat — you would be giving up The Room, which is the entire reason this flight was chosen.`,
     ],
   },
@@ -355,7 +355,7 @@ export const days = [
     fixed: [
       { t: '11:30', what: 'Lunch at FORNI', kind: 'booked', id: 'forni', note: 'Downstairs, garden views, open Sundays with no fixed closing day.' },
       { t: '12:00', what: 'Check out', kind: 'hotel', note: 'Bags to the bell desk before lunch.' },
-      { t: '18:35', what: 'UA KIX→SFO', kind: 'depart', id: 'ua', note: 'The winter-schedule time from 25 October. Verify when you ticket — the summer one is three hours earlier.' },
+      { t: '18:35', what: 'UA34 KIX→SFO', kind: 'depart', id: 'ua', note: 'Ticketed — confirmation NGWXMK, Polaris business, seats 6D and 6G. 10h15 in the air, landing SFO 11:50 the same Sunday. The winter-schedule time is now confirmed rather than assumed.' },
     ],
     moves: [
       { from: 'The hotel', to: 'Kyoto Station', min: 15, mode: 'car', at: '13:30', chain: true },
@@ -364,7 +364,7 @@ export const days = [
     meals: {
       b: { status: 'included', where: 'The hotel' },
       l: { status: 'booked', where: 'FORNI', at: '11:30', note: '¥5,900 to ¥12,900 prix fixe, service and tax included. An Italian kitchen is the most tractable gluten-free room in the building — grilled fish, roast meat, risotto, vegetables, nowhere near the pizza oven.' },
-      d: { status: 'flight', where: 'On board' },
+      d: { status: 'flight', where: 'On board', note: 'A gluten-free meal is requested on Ashly\'s ticket. Re-confirm it at check-in — a request on a booking is not the same as a tray on the cart.' },
     },
     notes: [
       `<strong>The last meal has no travel after it.</strong> That was the argument for Gion Loka under the old plan and it survives the move — eat in the building you are checking out of, walk to the bell desk, get in the car. Seated 11:30, finished by 13:00, out at 13:30.`,
