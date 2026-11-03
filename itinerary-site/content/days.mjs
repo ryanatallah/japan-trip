@@ -246,9 +246,9 @@ export const days = [
     },
     "notes": [
       "<strong>Hirata was declined November 2.</strong> Remove the Ome journey and authorization from committed plans.",
-      "<strong>Akihira in Saitama is a new inquiry through Aman.</strong> November 10 morning preferred; November 8 fallback. No session or transfer confirmed. Accept only a plan that protects dinner and changing time."
+      "<strong>Earlier Akihira inquiry remains a backup.</strong> No withdrawal is evidenced; Hayamitsu on November 20 is now the scheduled priority. Do not accept a duplicate forge booking without coordinating."
     ],
-    "overview": "<strong>NARISAWA 17:30–20:00 — confirmed for two.</strong> Dietary details submitted; kitchen acceptance still to obtain. Morning open pending Aman’s Akihira sword-making inquiry. Hirata declined."
+    "overview": "<strong>NARISAWA 17:30–20:00 — confirmed for two.</strong> Dietary details submitted; kitchen acceptance still to obtain. Morning open. The earlier Akihira inquiry remains a backup; the scheduled sword-making priority is now Hayamitsu on November 20, provisionally reserved."
   },
   {
     "date": "Wed 11",
@@ -696,10 +696,10 @@ export const days = [
       }
     },
     "notes": [
-      "<strong>Masahiro forge at 13:00 is an inquiry.</strong> Mitsui acknowledged forwarding it November 2. They must establish a feasible direct station transfer, luggage storage, interpreter, quote and actual host availability.",
+      "<strong>Earlier Masahiro inquiry remains a backup.</strong> No accepted session or withdrawal is evidenced. The new Hayamitsu provisional reservation occupies November 20.",
       "<strong>The fallback is an easy arrival afternoon.</strong> Check in at Mitsui, explore locally, and choose dinner before adding any evening event."
     ],
-    "overview": "<strong>Transfer to Hotel The Mitsui Kyoto.</strong> Five nights confirmed. A 13:00 Masahiro forge session is an inquiry, subject to arrival, transfer and luggage arrangements. TOKI dinner proposed, not booked."
+    "overview": "<strong>Transfer to Hotel The Mitsui Kyoto.</strong> Five nights confirmed. Afternoon open; the earlier Masahiro inquiry is a backup, with no accepted session. TOKI dinner proposed, not booked."
   },
   {
     "date": "Wed 18",
@@ -746,44 +746,36 @@ export const days = [
       "<strong>Buy the ¥1,100 Subway &amp; Bus 1-Day Pass.</strong> It covers the subway leg and the whole Takao bus section, which was folded into the flat-fare zone in 2021. The bus-only pass was discontinued in 2024.",
       "<strong>Kyoto’s own tourism pages call Takao the earliest colour in the city</strong>, which is the entire argument for this week. Jingo-ji is about 400 steps up from the river, and the clay-disc throw off its terrace is the thing everyone remembers."
     ],
-    "overview": "<strong>Takao proposed, or Arashiyama if Friday’s workshop needs the time.</strong> No personal sightseeing reservation anchors this day. Afternoon, dinner and private onsen remain open."
+    "overview": "<strong>Takao proposed, or Arashiyama and Iwatayama instead.</strong> Friday is now reserved for the Hyogo forge excursion and travel; choose another day for the monkey park. No personal sightseeing reservation anchors today."
   },
   {
     "date": "Thu 19",
     "dow": "Thursday",
     "base": "kyoto",
-    "where": "Ohara and Yase",
-    "title": "Ohara proposed; alternatives pending",
-    "fixed": [
-      {
-        "t": "08:30",
-        "what": "Sanzen-in opens",
-        "kind": "opens",
-        "id": "sanzenin",
-        "note": "To 17:00 in November, last entry 16:30."
-      },
-      {
-        "t": "16:30",
-        "what": "Rurikoin reception closes",
-        "kind": "closes",
-        "note": "Reservation-only through the autumn season, ¥2,000."
-      }
-    ],
+    "where": "Kyoto · kintsugi pending",
+    "title": "Kintsugi move requested; time pending",
+    "fixed": [],
     "moves": [
       {
-        "from": "The hotel",
+        "from": "Hotel The Mitsui",
+        "to": "Akagane Resort",
+        "min": 30,
+        "mode": "car",
+        "note": "Only once the November 19 kintsugi date and sitting are accepted; departure time remains open."
+      },
+      {
+        "from": "Hotel The Mitsui",
         "to": "Sanzen-in, Ohara",
         "min": 52,
         "mode": "bus",
-        "serves": "sanzenin",
-        "note": "Karasuma line to Kokusaikaikan, then Kyoto bus 19."
+        "note": "Alternative outing only if the accepted kintsugi time leaves a workable northern-Kyoto day; not a second scheduled journey."
       },
       {
         "from": "Ohara",
         "to": "Rurikoin",
         "min": 45,
         "mode": "rail",
-        "note": "Only if a timed entry reservation is secured; otherwise remain in Ohara or return to the hotel."
+        "note": "Optional add-on only with a real timed ticket and a schedule compatible with the workshop."
       }
     ],
     "meals": {
@@ -794,7 +786,8 @@ export const days = [
       },
       "l": {
         "status": "open",
-        "where": "Ohara"
+        "where": "Kyoto, around the accepted workshop",
+        "note": "No lunch held. Select the area and time after the kintsugi reply."
       },
       "d": {
         "status": "open",
@@ -803,50 +796,82 @@ export const days = [
       }
     },
     "notes": [
-      "<strong>A nice accident.</strong> The 1703 gate at the front of your hotel was built for the aristocratic court attached to Sanzen-in and moved to Kyoto in 1935. You have walked past it all week; today you see where it came from.",
-      "<strong>Book the private onsen for tonight</strong>, or for Saturday. A hundred square metres in the basement with a mist sauna and its own garden, ¥24,500 an hour, by phone, 48-hour cancellation. After a cold day in Ohara it is the correct decision.",
-      "<strong>November 19 is an alternative on the kintsugi request and Masahiro inquiry.</strong> Rework the sightseeing if a host accepts this date; neither workshop is currently confirmed."
+      "<strong>November 19 only.</strong> Ryan’s November 2 rescheduling email rules out November 20. Wabunka has not accepted the new date or a time.",
+      "<strong>Choose sightseeing after the reply.</strong> Nearby Gion/Higashiyama is the easy combination with Akagane; Ohara and Rurikoin need a larger window and a timed ticket where required.",
+      "<strong>No duplicate forge day.</strong> The earlier Masahiro inquiry is a backup; November 20 Hayamitsu is the scheduled priority, provisionally."
     ],
-    "overview": "<strong>Ohara and Sanzen-in proposed; Rurikoin only with a ticket.</strong> Also supplied as an alternative for kintsugi and the forge: rework sightseeing if either is accepted. Dinner unbooked; Kikunoi declined."
+    "overview": "<strong>Kintsugi move requested for November 19 only.</strong> Await Wabunka’s time and acceptance; no noon appointment is assumed. Keep the day flexible and plan nearby sightseeing around the accepted sitting. Ohara/Rurikoin remain alternatives only if the workshop timing permits. Dinner unbooked."
   },
   {
     "date": "Fri 20",
     "dow": "Friday",
     "base": "kyoto",
-    "where": "Higashiyama · workshop pending",
-    "title": "Kintsugi requested at noon; evening illumination",
+    "where": "Aioi, Hyogo",
+    "title": "Hayamitsu sword making · provisional reservation",
     "fixed": [
       {
-        "t": "12:00",
-        "what": "Heki kintsugi at Akagane Resort 1925 — requested",
+        "t": "13:30",
+        "what": "Kikyo Hayamitsu Forge — provisional workshop",
         "kind": "pending",
-        "id": "heki",
+        "id": "hayamitsu",
         "confirm": true,
-        "note": "No final confirmation. Requested noon–14:00; November 19 alternative; two adults with gold, ¥121,770."
+        "note": "Two participants, tamahagane sword-knife experience, ¥112,000 total. AirRESERVE says temporary reservation; await separate final confirmation. No payment evidenced."
       },
       {
-        "t": "20:30",
-        "what": "Last entry, Eikandō light-up",
-        "kind": "closes",
-        "note": "November 20 is the published 2026 opening night; 17:30–21:00. Optional visit, not a personal reservation."
+        "t": "17:30",
+        "what": "Hayamitsu workshop scheduled finish",
+        "kind": "ends",
+        "note": "Return taxi and actual train still to arrange; do not assume an immediate connection."
       }
     ],
     "moves": [
       {
         "from": "Hotel The Mitsui",
-        "to": "Akagane Resort",
-        "min": 30,
-        "mode": "car",
-        "serves": "heki",
-        "buffer": 30,
-        "note": "Provisional travel budget only if the requested noon workshop is accepted."
-      },
-      {
-        "from": "Akagane Resort",
-        "to": "Eikandō",
+        "to": "Kyoto Station",
         "min": 15,
         "mode": "car",
-        "note": "Optional later journey; leave time for a walk or early dinner."
+        "chain": true,
+        "note": "Planning allowance; reserve the actual train before setting departure."
+      },
+      {
+        "from": "Kyoto Station",
+        "to": "Aioi Station",
+        "min": 70,
+        "mode": "rail",
+        "chain": true,
+        "note": "Aioi city guide gives about 70 minutes from Kyoto by shinkansen. Choose a current service that stops at Aioi; this is not a ticket."
+      },
+      {
+        "from": "Aioi Station",
+        "to": "Kikyo Hayamitsu Forge",
+        "min": 20,
+        "mode": "car",
+        "serves": "hayamitsu",
+        "buffer": 30,
+        "note": "Prearrange taxi; operator gives about 20 minutes to Rakan-no-Sato. Arrival slack included; all departure calculations remain provisional."
+      },
+      {
+        "from": "Kikyo Hayamitsu Forge",
+        "to": "Aioi Station",
+        "min": 20,
+        "mode": "car",
+        "chain": true,
+        "note": "Prebook pickup after the scheduled 17:30 finish."
+      },
+      {
+        "from": "Aioi Station",
+        "to": "Kyoto Station",
+        "min": 70,
+        "mode": "rail",
+        "chain": true,
+        "note": "No return train reserved; wait time can extend the journey."
+      },
+      {
+        "from": "Kyoto Station",
+        "to": "Hotel The Mitsui",
+        "min": 15,
+        "mode": "car",
+        "note": "Budget roughly 2½–3 hours for the full return with transfers; exact arrival depends on actual services."
       }
     ],
     "meals": {
@@ -857,20 +882,21 @@ export const days = [
       },
       "l": {
         "status": "open",
-        "where": "Higashiyama",
-        "note": "Early light lunch before the requested noon workshop, or after it."
+        "where": "Before the forge, Kyoto or Aioi",
+        "note": "Arrange suitable lunch or a packed meal before 13:30; no meal is included in the evidence."
       },
       "d": {
         "status": "open",
-        "where": "Kyoto, around the illumination",
-        "note": "No table held. Choose early dinner or a suitable meal after the visit."
+        "where": "After the return to Kyoto",
+        "note": "No dinner held. Avoid an early fixed sitting; exact return train is not booked."
       }
     },
     "notes": [
-      "<strong>Protect the requested noon appointment, not the old 14:00 assumption.</strong> Wabunka is still processing. November 19 may be confirmed as the supplied alternative.",
-      "<strong>Arashiyama is flexible.</strong> Consider Wednesday instead of Takao, or Saturday instead of Kurama, if today’s workshop is accepted. A short monkey-park morning is only an option with an early start and arranged cross-city taxi."
+      "<strong>The email is provisional.</strong> It explicitly says the reservation is not final and that a separate confirmation will follow. Protect November 20 while awaiting that reply.",
+      "<strong>This is Aioi in Hyogo.</strong> The forge is at Rakan-no-Sato, 28 Uryu, Yano, Aioi. Include both train directions and prebook the rural return taxi.",
+      "<strong>Kintsugi is removed from today.</strong> November 19 only has been requested. Arashiyama and a fixed Eikandō visit no longer fit as daytime plans; keep dinner flexible around the return."
     ],
-    "overview": "<strong>Kintsugi requested 12:00–14:00, awaiting host.</strong> Real gold for both, ¥121,770 requested total; November 19 is an alternative. Keep the noon block free. Eikandō illumination opens tonight; dinner unbooked."
+    "overview": "<strong>Kikyo Hayamitsu Forge, Aioi, Hyogo: 13:30–17:30 provisionally reserved.</strong> Two adults, ¥112,000 total; host confirmation and payment status still pending. Allow the day for Kyoto–Aioi trains and prearranged taxis. Kintsugi is no longer planned today; keep dinner flexible around the return."
   },
   {
     "date": "Sat 21",
@@ -1016,6 +1042,11 @@ export const standing = {
   "sub": "Booking constraints and practical arrangements. Published hours and sample journeys do not establish a reservation.",
   "rows": [
     [
+      "Kikyo Hayamitsu Forge",
+      "Provisional November 20 13:30–17:30, two adults, ¥112,000. Await final confirmation; reserve Kyoto–Aioi trains and taxis both ways.",
+      "Fri 20"
+    ],
+    [
       "Kyudo session",
       "Confirmed November 9 at 09:30 with Yosui; obtain actual dojo address and finish time. No Kyoto archery booking.",
       "Mon 9"
@@ -1037,8 +1068,8 @@ export const standing = {
     ],
     [
       "Heki kintsugi",
-      "Requested November 20 noon–14:00; November 19 alternative. Still pending; ¥121,770 includes gold for two.",
-      "Thu 19, Fri 20"
+      "Move requested for November 19 only; no new time or host acceptance. November 20 is unavailable. Earlier ¥121,770 quote includes gold for two.",
+      "Thu 19"
     ],
     [
       "Owl café, Tokyo",
@@ -1122,12 +1153,12 @@ export const standing = {
     ],
     [
       "Iwatayama monkey park",
-      "9:00–16:30, last entry 16:00, plus a 20-minute climb from the gate.",
-      "Fri 20"
+      "Optional Arashiyama outing; choose November 18 or 21 instead of the Friday forge excursion. Verify entry hours before going.",
+      "Wed 18, Sat 21"
     ],
     [
       "Eikandō",
-      "Day and light-up are separate tickets and the grounds clear between them. Light-up 17:30–21:00, last entry 20:30.",
+      "November 20 illumination is optional only if return from Aioi permits arrival before last entry; do not treat it as a fixed commitment.",
       "Fri 20"
     ],
     [

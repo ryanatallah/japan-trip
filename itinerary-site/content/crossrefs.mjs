@@ -44,6 +44,7 @@ export const crossrefs = {
   'Owl café': { entity: 'akiba-fukurou' },
   'Akiba Fukurou': { entity: 'akiba-fukurou' },
   'Heki kintsugi': { entity: 'heki-kintsugi' },
+  'Kikyo Hayamitsu Forge': { entity: 'hayamitsu-sword' },
   // The workshop is held in the Akagane villa, so on the day this is the name you travel to.
   'Akagane Resort': { entity: 'heki-kintsugi' },
   'Kyudo session': { entity: 'kyudo' },

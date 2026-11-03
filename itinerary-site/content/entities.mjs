@@ -1236,3 +1236,46 @@ Object.assign(entities, {
     "gf": "Adaptation accepted by email September 29; the full ingredient restriction is included in the confirmed booking."
   }
 });
+
+// Reservation details from the November 2 California / November 3 Japan email.
+Object.assign(entities, {
+  "hayamitsu-sword": {
+    "name": "Kikyo Hayamitsu Forge · tamahagane sword-knife making",
+    "type": "experience",
+    "textOnly": true,
+    "location": "Rakan-no-Sato, Aioi, Hyogo",
+    "badges": [
+      "Provisional · Fri 20 · 13:30–17:30",
+      "Final host confirmation pending"
+    ],
+    "rate": "¥56,000/person · ¥112,000 for two incl. tax",
+    "url": "https://www.hayamitsu.com/",
+    "blurb": "Make a small sword knife from tamahagane steel with swordsmith Kikyo Hayamitsu. The operator describes forging, filing, clay application, hardening, sharpening and engraving. This is the new November 20 priority, in Hyogo rather than Kyoto city.",
+    "facts": [
+      [
+        "Reservation status",
+        "Temporary reservation acknowledged by AirRESERVE. The email explicitly says it is not final and a separate confirmation will follow; payment not evidenced."
+      ],
+      [
+        "Date",
+        "November 20, 13:30–17:30; two participants."
+      ],
+      [
+        "Address",
+        "28 Uryu Rakan-guchi, Yano-cho, Aioi-shi, Hyogo 678-0091 (Rakan-no-Sato)."
+      ],
+      [
+        "Transport",
+        "City guide: about 70 minutes Kyoto → Aioi by shinkansen. Forge: about 20 minutes Aioi Station → forge by taxi. Actual trains and both taxis remain unbooked; allow roughly 2½–3 hours door to door."
+      ],
+      [
+        "Before going",
+        "Obtain final acceptance, payment instructions, language support, arrival requirements and the actual return transport."
+      ],
+      [
+        "Evidence",
+        "<a href=\"https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a19fb09184fe4f4\" target=\"_blank\" rel=\"noopener\">Provisional reservation email</a> · <a href=\"https://www.hayamitsu.com/地図-map-access/\" target=\"_blank\" rel=\"noopener\">Forge access</a> · <a href=\"https://www.city.aioi.lg.jp/soshiki/kikakukoho/profile-access.html\" target=\"_blank\" rel=\"noopener\">Aioi city rail guide</a>"
+      ]
+    ]
+  }
+});

@@ -16,6 +16,22 @@
 export const revisions = [
 {
   "date": "2026-11-02",
+  "when": "2 November 2026 · evening update",
+  "title": "Kintsugi requested for November 19 only; Hayamitsu provisionally reserved for November 20",
+  "tags": [
+    "dates",
+    "site"
+  ],
+  "summary": "Ryan’s new email rules out November 20 for kintsugi. AirRESERVE acknowledges a provisional two-person tamahagane sword-knife workshop at Kikyo Hayamitsu in Aioi, Hyogo, November 20 13:30–17:30, ¥112,000 total; a separate final confirmation is still required.",
+  "points": [
+    "Kintsugi: November 19 only requested; no new time or acceptance. Remove the old Friday noon hold.",
+    "November 20 becomes a forge excursion with Kyoto–Aioi trains and prearranged taxis. Keep dinner and Eikandō flexible around the actual return.",
+    "Earlier Akihira and Masahiro inquiries remain backups, with no withdrawal established. No payment or final confirmation for Hayamitsu is inferred.",
+    "Updated the reservation register, plan cards, day sheets, open-time options, issues, base map and route map."
+  ]
+},
+{
+  "date": "2026-11-02",
   "when": "2 November 2026",
   "title": "Confirmed dinners and archery replace old placeholders; every day gains open-time options",
   "tags": [

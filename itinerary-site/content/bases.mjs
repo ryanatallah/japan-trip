@@ -812,11 +812,10 @@ export const bases = [
         "min": 30,
         "mode": "car",
         "hours": "120 minutes, private",
-        "book": "Pending: November 20 noon–14:00, November 19 alternative; real gold included in ¥121,770 request.",
-        "why": "Use actual host confirmation to set the sightseeing day; no afternoon workshop assumed.",
+        "book": "November 19 only requested in Ryan’s November 2 email. No new time, host acceptance or payment established. Old November 20 request superseded.",
+        "why": "Keep nearby sightseeing flexible until the new sitting is accepted.",
         "days": [
-          "Thu 19",
-          "Fri 20"
+          "Thu 19"
         ]
       },
       {
@@ -944,6 +943,24 @@ export const bases = [
           "Sat 21"
         ],
         "confirm": true
+      },
+      {
+        "name": "Kikyo Hayamitsu Forge (Aioi)",
+        "entity": "hayamitsu-sword",
+        "at": [
+          134.446717086,
+          34.8781697732
+        ],
+        "min": 145,
+        "mode": "rail",
+        "via": "Kyoto Station → Aioi by shinkansen (~70 min per city guide), then prearranged taxi (~20 min per forge), plus hotel access and connection allowances.",
+        "hours": "Provisional November 20, 13:30–17:30",
+        "book": "Temporary reservation received for two, ¥112,000 total; await separate final confirmation. No payment evidenced.",
+        "warn": "Substantial day trip into Hyogo. Reserve both trains and both Aioi taxis; do not anchor an early Kyoto dinner to an assumed return.",
+        "confirm": true,
+        "days": [
+          "Fri 20"
+        ]
       }
     ]
   }

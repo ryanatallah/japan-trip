@@ -46,8 +46,8 @@ export const dayOptions = {
     ]),
   ],
   'Tue 10': [
-    window('Morning–about 14:30', 'Open pending the replacement sword inquiry', 'Aman has been asked about Akihira in Saitama. No time, transport or availability is confirmed. Hirata is declined.', [
-      option('Akihira sword-making alternative', 'Accept only a confirmed session and transfer plan that gets you back to Aman to change, then to NARISAWA before 17:30. November 8 is a fallback requiring separate coordination.', 'Await Aman quote + reserve workshop/transport', 'https://experience.tokyoluxey.com/travel/japanese-sword-making-experience-in-saitama'),
+    window('Morning–about 14:30', 'Open Tokyo morning', 'Hayamitsu on November 20 is now the scheduled forge priority, provisionally. The earlier Akihira inquiry remains a backup with no accepted time or withdrawal evidenced.', [
+      option('Akihira backup, only if still wanted', 'Coordinate the earlier inquiry before accepting a duplicate. Any Tokyo workshop would also need to protect NARISAWA at 17:30 and hotel changing time.', 'Coordinate earlier inquiry before accepting', 'https://experience.tokyoluxey.com/travel/japanese-sword-making-experience-in-saitama'),
       option('Yanaka photography or a Tokyo neighbourhood morning', 'The flexible fallback if the forge does not work; keep lunch light before the tasting menu.'),
     ]),
     window('About 14:30–16:30', 'Protected return and preparation buffer', 'Do not fill this with a distant outing. NARISAWA starts at 17:30 and the confirmed dining window ends at 20:00.', [
@@ -126,8 +126,8 @@ export const dayOptions = {
     ]),
   ],
   'Tue 17': [
-    window('Arrival in Kyoto–about 17:00', 'Afternoon open pending the Kameoka inquiry', 'Train and arrival times are still to book. The requested 13:00 forge needs a feasible direct transfer from Kyoto Station and luggage handling.', [
-      option('Masahiro Sword Forge', 'Only if Mitsui confirms the private session, interpreter, total quote and transport. Do not assume the proposed 13:00 start is secured.', 'Await Mitsui + reserve workshop and car', 'https://morinokyoto.jp/masahiro_en/'),
+    window('Arrival in Kyoto–about 17:00', 'Afternoon open after the transfer', 'Train and arrival times are still to book. Hayamitsu on November 20 is now the provisional forge priority; the earlier Masahiro inquiry is a backup.', [
+      option('Masahiro backup, only if still wanted', 'No session is accepted and no withdrawal is evidenced. Coordinate with Mitsui before accepting a second workshop or planning a direct station-to-forge transfer.', 'Coordinate earlier inquiry', 'https://morinokyoto.jp/masahiro_en/'),
       option('Mitsui check-in and a local stroll', 'The easy fallback; explore near Nijo Castle without a cross-city commitment.'),
     ]),
     window('Dinner–evening', 'Kyoto arrival dinner open', 'TOKI at 18:00 was proposed, not booked.', [
@@ -138,7 +138,7 @@ export const dayOptions = {
   'Wed 18': [
     window('09:00–about 15:00', 'Takao proposed · day remains flexible', 'No personal reservation anchors the day. Choose the amount of walking and number of temples on the day.', [
       option('Jingo-ji and Kozan-ji in Takao', 'The existing early-colour plan. Arrange a suitable lunch or picnic through Mitsui.', 'Arrange excursion lunch'),
-      option('Arashiyama and Iwatayama instead', 'Useful if kintsugi takes Friday noon: make a proper west-Kyoto day instead of squeezing the monkey park before a cross-city workshop.'),
+      option('Arashiyama and Iwatayama instead', 'Friday now belongs to the Hyogo forge excursion and travel. Make this a west-Kyoto day if the monkey park is the priority, rather than trying to add it before the forge.'),
     ]),
     window('About 15:30–evening', 'Afternoon and dinner open', 'Return time depends on the excursion. No Kyoto tasting-menu table is confirmed for tonight.', [
       option('Mitsui thermal facilities or private onsen', 'The private onsen needs a separate reservation; a hotel recovery afternoon is the flexible alternative.', 'Reserve private onsen if wanted'),
@@ -146,38 +146,41 @@ export const dayOptions = {
     ]),
   ],
   'Thu 19': [
-    window('Morning–about 16:00', 'North Kyoto, subject to pending alternatives', 'This date was supplied as an alternative for both kintsugi and Masahiro. Rework the sightseeing if either is accepted; do not combine all three.', [
-      option('Ohara and Sanzen-in', 'The flexible base plan. Rurikoin is an add-on only if a timed ticket is secured.'),
-      option('Rurikoin at Yase', 'Reservations are required during November 13–December 6. No ticket found. Do not travel expecting walk-in entry.', 'Timed reservation required', 'https://rurikoin.komyoji.com/'),
-      option('Masahiro at 09:00 or kintsugi if confirmed', 'Pending alternatives, not simultaneous plans. Use the host’s actual accepted time and arrange transfers.', 'Await provider / Mitsui confirmation'),
+    window('Daytime · time to confirm', 'Kintsugi move requested for November 19 only', 'Ryan has told Wabunka that November 20 is no longer available. No November 19 sitting has been accepted; do not assume the old noon–14:00 request carries over.', [
+      option('Mio Heki kintsugi with real gold', 'Keep the day flexible until the host accepts a date and time. Earlier quote ¥121,770 for two including real gold; revised arrangements and payment remain unconfirmed.', 'Await Wabunka date, time and price', 'https://wabunka-lux.jp/experiences/en_hifumi-akagane/'),
+      option('Gion and Higashiyama around the workshop', 'Nearby walks or a hotel break are the easiest options to fit once the Akagane appointment is known.'),
+      option('Ohara and Sanzen-in, if timing permits', 'A larger alternative outing; do not schedule it over the eventual workshop. It is a fallback if kintsugi cannot be arranged.'),
+      option('Rurikoin at Yase', 'Only with a real timed ticket compatible with the accepted workshop. No ticket found; this is an optional northern-Kyoto alternative.', 'Timed reservation required', 'https://rurikoin.komyoji.com/'),
     ]),
-    window('About 16:30–evening', 'Dinner and recovery time open', 'Kikunoi declined the requested dinners. No replacement Japanese tasting menu is confirmed.', [
+    window('Evening, around the accepted sitting', 'Dinner and recovery time open', 'Kikunoi declined the requested dinners. No replacement tasting menu or kintsugi finish time is confirmed.', [
       option('Concierge-arranged Japanese dinner', 'Nakamura, Gion Sasaki, Mizai or Miyamasou were inquiries only. Require availability, dietary acceptance and terms before booking.', 'Return authorization + secure dinner'),
       option('Private onsen at Mitsui', 'Book after dinner time is fixed; a treatment or private bath is not included merely because you are staying.', 'Reserve private onsen'),
     ]),
   ],
   'Fri 20': [
-    window('Morning–about 10:45', 'Open before the requested noon workshop', 'Keep the east side convenient if kintsugi is accepted. Transfer and check-in time come before 12:00.', [
-      option('Gion and Higashiyama photo walk', 'The low-stress morning near Akagane, with an early light lunch.'),
-      option('Iwatayama at opening, only with a tight plan', 'A short monkey-park visit could fit if you leave promptly and have a cross-city taxi arranged. Skip bamboo and Tenryu-ji that morning; Wednesday as an alternative is more relaxed.', 'Arrange taxi + verify workshop timing'),
+    window('After breakfast–about 10:15', 'Short free morning before the Hyogo journey', 'Protect the departure and station buffer. The illustrative journey derives a 10:35 hotel departure, but the actual train must be reserved first.', [
+      option('Mitsui breakfast and preparation', 'An easy hotel morning, with time to prepare suitable lunch and check the workshop instructions.'),
+      option('Brief Nijo neighbourhood stroll', 'Stay near the hotel. Arashiyama is too much to add before this excursion; use November 18 or 21 instead.'),
     ]),
-    window('About 11:00–14:30 held provisionally', 'Kintsugi pending · keep this available', 'Requested 12:00–14:00, with travel either side. If the host confirms November 19 instead, this block becomes free.', [
-      option('Mio Heki kintsugi with real gold', 'Two adults, ¥121,770 requested total. Await the official confirmation before treating it as booked.', 'Await Wabunka confirmation', 'https://wabunka-lux.jp/experiences/en_hifumi-akagane/'),
-      option('Arashiyama day if kintsugi moves', 'Only if November 20 is released; use the day for the monkeys, bamboo and Tenryu-ji rather than retaining an unnecessary east-side hold.'),
+    window('About 10:15–13:30', 'Travel and arrival buffer · not free sightseeing time', 'The workshop is in Aioi, Hyogo. Allow roughly 2½–3 hours from Mitsui including hotel-to-station travel, connections, the shinkansen and the final taxi.', [
+      option('Kyoto Station → Aioi → Rakan-no-Sato', 'City guide: about 70 minutes Kyoto–Aioi by shinkansen. Forge: about 20 minutes from Aioi by taxi. Reserve a service that stops at Aioi and arrange the taxi; do not assume the festival shuttle operates November 20.', 'Reserve train + outbound taxi', 'https://www.hayamitsu.com/地図-map-access/'),
+      option('Lunch before the workshop', 'Arrange a suitable packed meal or a convenient lunch before 13:30; no meal is included in the reservation evidence.', 'Arrange suitable lunch'),
     ]),
-    window('About 14:30–17:15', 'Afternoon open after the provisional workshop', 'Stay on the east side for the planned evening illumination; no second craft booking needed.', [
-      option('Gion, Higashiyama or a hotel break', 'Choose a short walk or downtime depending on energy.'),
-      option('Early dinner before Eikandō', 'No restaurant held. Agree suitable food and a sitting that leaves enough travel time.', 'Reserve dinner'),
+    window('13:30–17:30 held provisionally', 'Kikyo Hayamitsu sword-knife making', 'Two people, ¥112,000 total including tax. AirRESERVE explicitly says this is provisional and not yet a final reservation; no payment is evidenced.', [
+      option('Tamahagane sword-knife workshop', 'Protect this four-hour block while awaiting the separate final confirmation. Confirm language support and arrival requirements with the forge.', 'Await final host confirmation', 'https://www.hayamitsu.com/'),
     ]),
-    window('17:30–evening', 'Eikandō illumination option', 'Official 2026 opening night is November 20; 17:30–21:00, last entry 20:30. Admission is separate from daytime visiting.', [
-      option('Eikandō after dark', 'Plan queues, ticket purchase and dinner order. No personal entry booking is established.', 'Plan evening admission + transport', 'https://ja.kyoto.travel/event/single.php?event_id=5019'),
-      option('Skip the illumination and relax at Mitsui', 'The flexible fallback after a workshop day.'),
+    window('From 17:30 · roughly 2½–3 hours', 'Return to Kyoto · protect the transfer', 'Prearrange the rural pickup and actual return train. Connection waits or a later workshop finish can extend the journey.', [
+      option('Forge → Aioi taxi, then shinkansen to Kyoto', 'Reserve both directions and allow for the transfer back to Mitsui. Avoid an early fixed Kyoto dinner.', 'Prebook return taxi + train'),
+    ]),
+    window('After return, roughly 20:00–21:00 onward', 'Late flexible dinner or hotel evening', 'Exact return is not established. Eikandō’s 20:30 last entry cannot be treated as a dependable after-forge plan.', [
+      option('Suitable hotel dinner or in-room meal', 'Ask Mitsui about late service and dietary options, then keep timing compatible with the actual train.', 'Arrange late meal with Mitsui'),
+      option('Relax and prepare for the farewell day', 'A hotel evening is a useful option after four hours at the forge and the return journey.'),
     ]),
   ],
   'Sat 21': [
     window('Morning–about 15:30', 'Open excursion time · archery already done in Tokyo', 'No Kyoto archery session. Hiramatsu at 18:30 is the fixed commitment today.', [
       option('Kurama and Kibune early', 'The original north-Kyoto plan. Use an early start, allow for queues and return to Mitsui by about 16:30 to change. Avoid extending this into a late afternoon outing.'),
-      option('Arashiyama if not yet visited', 'Alternative to Kurama, especially if Friday kintsugi displaced the monkey park. Start early and allow holiday-weekend queues.'),
+      option('Arashiyama if not yet visited', 'Alternative to Kurama; Friday is now the Hyogo forge excursion. Start early and allow holiday-weekend queues.'),
       option('Quiet central Kyoto instead', 'A flexible hotel-centred day is a useful option before the farewell dinner.'),
     ]),
     window('About 16:00–18:00', 'Return and prepare for dinner', 'Protect this buffer. Book the hotel car to Hiramatsu and allow for Saturday evening traffic.', [

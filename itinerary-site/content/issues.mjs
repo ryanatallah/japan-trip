@@ -21,20 +21,20 @@ export const issues = [
   {
     "id": "kintsugi-pending",
     "kind": "waiting",
-    "title": "Kintsugi: noon November 20 requested, host pending",
+    "title": "Kintsugi: move requested to November 19 only",
     "by": "Await Wabunka reply",
-    "affects": "Thu 19, Fri 20",
-    "body": "Request 25636 is for two on November 20, 12:00–14:00, ¥121,770 including real gold. November 19 was supplied as an alternative that may be confirmed. Latest processing update arrived November 2 California time.",
-    "next": "Use the official accepted date/time when it arrives; then finalize Arashiyama, Ohara and dinner order."
+    "affects": "Thu 19",
+    "body": "Ryan emailed Wabunka November 2 at 20:36 California time: November 20 now conflicts and November 19 is the only available date. Request 25636 remains pending; no new sitting, host acceptance or payment evidenced. The earlier quote was ¥121,770 with real gold for two.",
+    "next": "Await an explicit November 19 date and sitting; confirm the price and then arrange the nearby sightseeing and meals. Do not retain a November 20 hold."
   },
   {
     "id": "sword-replacement",
     "kind": "waiting",
-    "title": "Hirata declined; two replacement inquiries pending",
-    "by": "Await Aman and Mitsui",
-    "affects": "Tue 10, Tue 17, Thu 19",
-    "body": "Hirata request 25635 for November 9 13:00–15:30 was declined November 2; ¥385,000 authorization released with no charge. Aman is checking Akihira in Saitama for November 10 morning, with November 8 fallback. Mitsui acknowledged Masahiro November 17 13:00 / November 19 09:00 inquiry.",
-    "next": "Await actual dates, prices, interpreter and transfer details before selecting a replacement. Protect NARISAWA November 10 and reconcile Kyoto arrival or kintsugi alternatives."
+    "title": "Hayamitsu November 20: provisional reservation, final reply pending",
+    "by": "Await Hayamitsu confirmation",
+    "affects": "Fri 20",
+    "body": "AirRESERVE acknowledges a temporary reservation at Kikyo Hayamitsu Forge, Aioi, Hyogo for November 20 13:30–17:30, two people, ¥112,000 total. The Japanese email explicitly says it is not final and that a separate confirmation will follow. Payment is not evidenced. Earlier Akihira / Masahiro inquiries are backups; no withdrawals are established.",
+    "next": "Obtain final host confirmation and payment instructions, agree language support and arrival details, and reserve Kyoto–Aioi trains plus taxis in both directions. Coordinate earlier inquiries before accepting any duplicate."
   },
   {
     "id": "archery-logistics",
@@ -136,11 +136,11 @@ export const issues = [
   {
     "id": "eikando-day-or-night",
     "kind": "decide",
-    "title": "Fit Eikandō around the accepted workshop and dinner",
-    "by": "Once kintsugi is confirmed",
+    "title": "Eikandō depends on the return from Aioi",
+    "by": "Once actual return transport is fixed",
     "affects": "Fri 20",
-    "body": "Official 2026 illumination opens November 20, 17:30–21:00, last entry 20:30. Kintsugi is requested noon–14:00 that day, with November 19 as an alternative. Dinner is unbooked.",
-    "next": "Choose dinner timing and evening admission after the workshop reply; keep Arashiyama flexible."
+    "body": "November 20 is now occupied by a provisional 13:30–17:30 forge workshop in Aioi plus travel from Kyoto. Eikandō opens 17:30–21:00, last entry 20:30, so it cannot be a fixed early-evening commitment. Kintsugi is requested for November 19 only.",
+    "next": "Keep dinner flexible around the return. Only consider illumination if actual trains and energy leave enough time; otherwise skip it."
   },
   {
     "id": "idp",
@@ -184,8 +184,8 @@ export const issues = [
     "title": "Rurikoin ticket still needed for November 19",
     "by": "Before fixing the northern Kyoto outing",
     "affects": "Thu 19",
-    "body": "The official reservation period is November 13–December 6. No ticket was found. Ohara is still a workable outing without it; November 19 may also be used by a pending workshop alternative.",
-    "next": "Obtain a real timed entry or leave Rurikoin out; do not assume walk-in admission."
+    "body": "Reservation required November 13–December 6; no ticket found. November 19 is now the only date requested for kintsugi, so do not anchor a northern-Kyoto outing before its accepted sitting is known.",
+    "next": "Resolve kintsugi first, then obtain a compatible timed entry or leave Rurikoin out."
   },
   {
     "id": "takkyubin",
