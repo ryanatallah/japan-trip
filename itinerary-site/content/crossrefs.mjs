@@ -36,20 +36,16 @@ export const crossrefs = {
   FORNI: { entity: 'hotel-the-mitsui-kyoto' },
 
   // ── where you eat ─────────────────────────────────────────────────
-  "L'Effervescence": { entity: 'leffervescence' },
-  'Kikunoi Honten': { entity: 'kikunoi-honten' },
-  'Kodaiji Jugyuan': { entity: 'kodaiji-jugyuan' },
+  est: { entity: 'est-tokyo' },
+  NARISAWA: { entity: 'narisawa' },
+  'Hiramatsu Kodaiji': { entity: 'hiramatsu-kodaiji' },
 
   // ── what you do ───────────────────────────────────────────────────
   'Owl café': { entity: 'akiba-fukurou' },
   'Akiba Fukurou': { entity: 'akiba-fukurou' },
-  Picchio: { entity: 'picchio-musasabi' },
-  'Hirata forge': { entity: 'hirata-sword' },
   'Heki kintsugi': { entity: 'heki-kintsugi' },
   // The workshop is held in the Akagane villa, so on the day this is the name you travel to.
   'Akagane Resort': { entity: 'heki-kintsugi' },
-  'Iwatayama monkey park': { entity: 'arashiyama-monkeys' },
-  Iwatayama: { entity: 'arashiyama-monkeys' },
   'Kyudo session': { entity: 'kyudo' },
 
   // ── where you actually are ────────────────────────────────────────
@@ -62,8 +58,6 @@ export const crossrefs = {
   Ohara: { entity: 'sanzen-in-ohara' },
   Rurikoin: { entity: 'rurikoin' },
   Kurama: { entity: 'kurama-kibune' },
-  Kibune: { entity: 'kurama-kibune' },
-  Arashiyama: { entity: 'arashiyama' },
   Eikandō: { entity: 'eikando' },
   'Kodai-ji': { entity: 'kodaiji' },
 

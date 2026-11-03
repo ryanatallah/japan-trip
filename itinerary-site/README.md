@@ -43,6 +43,21 @@ under the header that names your current section. The list button beside ◐ hid
 
 ## Changing the plan
 
+Reservation evidence was reconciled on **November 2, 2026 California time**. The live plan,
+day sheets and issue list distinguish confirmed bookings, pending requests and unbooked options.
+`content/bookings.mjs` holds the reservation register and unavailable/replaced records, with
+links to the supporting email messages. Do not publish payment, cancellation or login links.
+
+`content/day-options.mjs` gives every day approximate open-time blocks and alternatives.
+Each option's `reserve` label explains any advance booking, ticket, reply or transport needed.
+The build requires options for all seventeen days, including protected travel/recovery blocks.
+`content/days.mjs` holds the actual bookings and operating schedule; sample train times and
+pending workshop holds must stay explicitly provisional. Keep both files aligned when dates move.
+
+`plan.entityUpdates` applies current booking details to hotel and experience cards without
+rewriting the frozen archived itineraries. New confirmed restaurant records can be explicitly
+`textOnly` until appropriate venue photographs are sourced.
+
 **Two files, every time.** Edit `content/plan.mjs`, then add an entry to the top of
 `content/history.mjs` describing what moved and why. Then `node build.mjs` and commit the rebuilt
 `site/`.

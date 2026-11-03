@@ -1154,3 +1154,85 @@ export const entities = {
 };
 
 export const entityList = Object.entries(entities).map(([slug, e]) => ({ slug, ...e }));
+
+// Confirmed restaurant records; intentionally text-only until venue images are sourced.
+Object.assign(entities, {
+  "est-tokyo": {
+    "name": "est",
+    "type": "restaurant",
+    "textOnly": true,
+    "location": "Four Seasons Hotel Tokyo at Otemachi",
+    "badges": [
+      "Confirmed · Sun 8 · 18:30"
+    ],
+    "rate": "¥32,000/person · ¥64,000 for two",
+    "url": "https://www.fourseasons.com/otemachi/dining/restaurants/est/",
+    "blurb": "The confirmed Tokyo tasting-menu dinner on the first full day. Nine-course est menu for two; keep the paid owl café at 14:00 and allow a hotel break before dinner.",
+    "facts": [
+      [
+        "Guarantee",
+        "October 4 confirmation requests card details. Verify completion; no November 9 move is confirmed."
+      ],
+      [
+        "Dress",
+        "Smart casual; long-sleeved collared shirt or jacket and closed-toe shoes for gentlemen."
+      ],
+      [
+        "Cancellation",
+        "Email states 50% three days prior, 100% two days prior; date-change terms refer back to the original reservation."
+      ]
+    ],
+    "gf": "Complete course adaptation, including sauces and desserts, accepted without surcharge in the September 28 reply."
+  },
+  "narisawa": {
+    "name": "NARISAWA",
+    "type": "restaurant",
+    "textOnly": true,
+    "location": "2-6-15 Minamiaoyama, Minato-ku, Tokyo",
+    "badges": [
+      "Confirmed · Tue 10 · 17:30–20:00",
+      "Dietary reply needed"
+    ],
+    "rate": "Chef’s Tasting Course · two guests",
+    "url": "https://www.narisawa-yoshihiro.com/",
+    "blurb": "Table reservation confirmed by OMAKASE on October 3. The dinner replaces the unavailable L’Effervescence plan and is the firm end point for any possible Saitama forge outing.",
+    "facts": [
+      [
+        "Booking",
+        "November 10, 17:30 start, 20:00 exit; two guests at a table."
+      ],
+      [
+        "Before dinner",
+        "Obtain explicit acceptance of the complete dietary adaptation; the booking note alone is not a kitchen reply."
+      ]
+    ],
+    "gf": "Ashly’s ingredient restriction, regular soy sauce avoidance and GF tamari acceptance were submitted. Separate acceptance was not found."
+  },
+  "hiramatsu-kodaiji": {
+    "name": "Restaurant Hiramatsu Kodaiji",
+    "type": "restaurant",
+    "textOnly": true,
+    "location": "353 Masuyacho, Higashiyama-ku, Kyoto",
+    "badges": [
+      "Confirmed · Sat 21 · 18:30"
+    ],
+    "rate": "Koudaiji course · ¥72,600 total for two",
+    "url": "https://www.hiramatsurestaurant.jp/hiramatsu-kodaiji/",
+    "blurb": "The confirmed farewell dinner. TableCheck accepted two guests on October 3 for 18:30; older 18:00 proposals and the Jugyuan idea are superseded.",
+    "facts": [
+      [
+        "Payment",
+        "Pay at venue."
+      ],
+      [
+        "Transport",
+        "Arrival by car recorded; reserve the hotel car and return from daytime sightseeing in time to change."
+      ],
+      [
+        "Terms",
+        "Course changes at least one week ahead. Cancellation within 48 hours: 50%; within 24 hours: 100%, per confirmation."
+      ]
+    ],
+    "gf": "Adaptation accepted by email September 29; the full ingredient restriction is included in the confirmed booking."
+  }
+});

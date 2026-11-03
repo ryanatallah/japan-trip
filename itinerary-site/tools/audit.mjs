@@ -40,6 +40,8 @@ for (const [s, e] of Object.entries(entities)) {
 
 // 2. photo coverage
 for (const [slug, e] of Object.entries(entities)) {
+  // Booking records can intentionally be text-only; do not show invented or unrelated photos.
+  if (e.textOnly) continue;
   const list = media[slug] || [];
   const min = MIN[e.type] ?? 3;
   if (!list.length) { err.push(`${slug} (${e.type}) — NO PHOTOS`); continue; }

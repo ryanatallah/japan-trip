@@ -32,6 +32,8 @@ import { bases } from './content/bases.mjs';
 import { days as runDays, standing, legs } from './content/days.mjs';
 import { issues, summary as issueSummary, GROUPS as ISSUE_GROUPS } from './content/issues.mjs';
 import { crossrefs } from './content/crossrefs.mjs';
+import { bookings, unavailable, bookingReview } from './content/bookings.mjs';
+import { dayOptions } from './content/day-options.mjs';
 import { renderMap } from './tools/map.mjs';
 import { placeBase, renderRose } from './tools/basemap.mjs';
 import { dayJourneys, daySummary, sortedFixed, toClock, dur } from './tools/schedule.mjs';
@@ -154,8 +156,9 @@ function strip(refs) {
 
 const badgeHtml = (b = []) => b.map((x) => `<span class="badge${/👍|seeds/i.test(x) ? ' badge-seed' : ''}">${esc(x)}</span>`).join('');
 
-function entityCard(slug, { level = 3 } = {}) {
-  const e = entities[slug];
+function entityCard(slug, { level = 3, current = false } = {}) {
+  const source = entities[slug];
+  const e = source && current ? { ...source, ...plan.entityUpdates?.[slug] } : source;
   if (!e) return `<!-- missing entity ${slug} -->`;
   const H = `h${level}`;
   const facts = e.facts?.length
@@ -175,7 +178,7 @@ function entityCard(slug, { level = 3 } = {}) {
     ${gf}
     ${e.url ? `<p class="src"><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.url.replace(/^https?:\/\/(www\.)?/, '').replace(/\/$/, ''))} ↗</a></p>` : ''}
   </div>
-  <div class="entity-gallery">${gallery(slug)}</div>
+  ${e.textOnly ? '' : `<div class="entity-gallery">${gallery(slug)}</div>`}
 </article>`;
 }
 
@@ -550,13 +553,13 @@ const daysHtml = (it, { runbook = false } = {}) => it.days.map((d) => {
   </div>`;
 }).join('');
 
-function entitySection(id, title, sub, slugs, { level = 3, alt = false, lead = '' } = {}) {
+function entitySection(id, title, sub, slugs, { level = 3, alt = false, lead = '', current = false } = {}) {
   if (!slugs?.length) return '';
   return `<section class="sec${alt ? ' sec-alt' : ''}" id="${id}">
       <h2>${esc(title)}</h2>
       ${sub ? `<p class="sec-sub">${sub}</p>` : ''}
       ${lead}
-      ${slugs.map((s) => entityCard(s, { level })).join('')}
+      ${slugs.map((s) => entityCard(s, { level, current })).join('')}
     </section>`;
 }
 
@@ -588,6 +591,21 @@ const costTable = (it) => `<div class="tablewrap"><table class="costs">
 // foundations" block on the old index is threaded into the sections it belongs to: flights
 // after the map, the gluten-free brief at the head of the dining list, the cost model under
 // the cost table, the booking calendar last, where it is actionable.
+function bookingRegister() {
+  return `<section class="sec sec-alt" id="reservations">
+    <h2>Reservations and requests</h2>
+    <p class="sec-sub">Checked ${esc(bookingReview)}, California time. Appointment times are Japan time. A request, offer or published slot is not a confirmed booking.</p>
+    <div class="booking-list">${bookings.map((b) => `<article class="booking booking-${esc(b.tone)}">
+      <p class="booking-when"><b>${linkDates(b.day)}</b><span>${esc(b.time)}</span></p>
+      <div><h3>${esc(b.name)}</h3><strong class="booking-status">${esc(b.status)}</strong>
+      <p>${esc(b.detail)} ${b.source || b.url ? `<a href="${esc(b.source || b.url)}" target="_blank" rel="noopener">${b.source ? 'Email evidence' : 'Official details'} ↗</a>` : ''}</p></div>
+    </article>`).join('')}</div>
+    <details class="booking-closed"><summary>Unavailable or replaced · ${unavailable.length} records</summary>
+      <ul>${unavailable.map((b) => `<li><b>${esc(b.name)}.</b> ${esc(b.detail)} <a href="${esc(b.source || b.url)}" target="_blank" rel="noopener">Evidence ↗</a></li>`).join('')}</ul>
+    </details>
+  </section>`;
+}
+
 function buildPlan() {
   const it = plan;
   const heroShot = cover(it.hero);
@@ -609,6 +627,8 @@ function buildPlan() {
   ${renderMap(it.slug)}
 </section>
 
+${bookingRegister()}
+
 <section class="sec sec-alt" id="flights">
   <h2>${esc(it.flights.title)}</h2>
   <p class="sec-sub">${esc(it.flights.sub)}</p>
@@ -626,9 +646,10 @@ function buildPlan() {
   ${photoRow(it.transport.ref || [])}
 </section>
 
-${entitySection('stays', 'Where you sleep', 'The biggest single line in the budget, and the thing hardest to judge from a rate. Every property below is shown inside and out.', it.stays)}
+${entitySection('stays', 'Where you sleep', 'Four confirmed stays. Current booking and pre-arrival details appear with each hotel.', it.stays, { current: true })}
 
-${entitySection('dining', 'Where you eat', 'Six of the fifteen dinners are set menus inside a hotel stay. These are the rest — and the gluten-free position on each, which decided more of this list than the stars did.', it.dining, {
+${entitySection('dining', 'Where you eat', 'Three dinners confirmed separately, plus three included at Asaba. Other meals still need arranging; dietary acceptance is tracked separately from the table booking.', it.dining, {
+    current: true,
     lead: `<div class="brief" id="gf">
       <h3>${esc(it.glutenFree.title)}</h3>
       <p class="sub">${esc(it.glutenFree.sub)}</p>
@@ -636,7 +657,7 @@ ${entitySection('dining', 'Where you eat', 'Six of the fifteen dinners are set m
     </div>`,
   })}
 
-${entitySection('doing', 'What you do', 'The experiences — mostly hands-on, mostly things you cannot do anywhere else.', it.doing)}
+${entitySection('doing', 'What you do', 'Paid and confirmed experiences, pending workshop requests and unbooked options are labelled separately.', it.doing, { current: true })}
 ${placesSection(it)}
 
 <section class="sec" id="days">
@@ -819,7 +840,8 @@ function cardShot(slug) {
 }
 
 const PREVIEWS = {};
-for (const [slug, e] of Object.entries(entities)) {
+for (const [slug, source] of Object.entries(entities)) {
+  const e = { ...source, ...plan.entityUpdates?.[slug] };
   PREVIEWS[`index.html#${slug}`] = {
     title: e.name, sub: [e.location, e.rate].filter(Boolean).join(' · '),
     text: summarise(e.blurb), img: cardShot(slug),
@@ -915,6 +937,23 @@ function daySheet(d) {
   // One card, one link per name. The columns render left to right, so the earliest mention a
   // reader's eye reaches is the one that carries it.
   const seen = new Set();
+  const windows = dayOptions[d.date];
+  if (!windows?.length || windows.some((w) => !w.options?.length)) {
+    throw new Error(`Day sheet ${d.date} needs open-time guidance and options, including transfer days.`);
+  }
+  const optionsHtml = `<div class="sheet-open">
+    <h4>Open time &amp; options</h4>
+    <div class="open-windows">${windows.map((w) => `<section class="open-window">
+      <p class="open-time">${esc(w.time)}</p>
+      <h5>${esc(w.title)}</h5>
+      <p class="open-note">${esc(w.note)}</p>
+      <ul class="open-options">${w.options.map((o) => `<li${o.reserve ? ' class="needs-planning"' : ''}>
+        <b>${o.url ? `<a href="${esc(o.url)}" target="_blank" rel="noopener">${esc(o.name)} ↗</a>` : esc(o.name)}</b>
+        ${o.reserve ? `<strong class="advance-label">${esc(o.reserve)}</strong>` : ''}
+        <span>${esc(o.detail)}</span>
+      </li>`).join('')}</ul>
+    </section>`).join('')}</div>
+  </div>`;
 
   const fixedHtml = fixed.length ? `<ol class="fixed">${fixed.map((f) => `<li class="fx fx-${esc(f.kind || 'note')}">
       <span class="fx-t">${esc(f.t)}</span>
@@ -955,10 +994,11 @@ function daySheet(d) {
       <p class="sheet-base"><span class="sheet-dow">${esc(d.dow)}</span>${base
         ? ` · ${d.transfer ? 'ends at' : 'based at'} <a href="bases.html#base-${esc(base.id)}">${esc(base.hotel)}</a> · ${esc(d.where)}`
         : ` · ${esc(d.where)}`}</p>
+      ${d.overview ? `<p class="sheet-overview">${d.overview}</p>` : ''}
     </header>
     <div class="sheet-grid">
       <div class="sheet-col">
-        <h4>Fixed points</h4>
+        <h4>Bookings &amp; time constraints</h4>
         ${fixedHtml}
       </div>
       <div class="sheet-col">
@@ -970,6 +1010,7 @@ function daySheet(d) {
         <ul class="meals">${mealsHtml}</ul>
       </div>
     </div>
+    ${optionsHtml}
     ${d.notes?.length ? `<div class="sheet-notes"><ul class="ticks">${d.notes.map((n) => `<li>${n}</li>`).join('')}</ul></div>` : ''}
   </article>`;
 }
@@ -996,7 +1037,7 @@ function issueCard(i) {
       ${i.resolved ? `<p class="issue-res"><b>Resolved</b> ${i.resolved}</p>` : ''}
       ${i.next ? `<p class="issue-next"><b>Next</b> ${i.next}</p>` : ''}
     </div>
-    ${i.entity ? `<div class="issue-entity">${entityCard(i.entity, { level: 4 })}</div>` : ''}
+    ${i.entity ? `<div class="issue-entity">${entityCard(i.entity, { level: 4, current: !done })}</div>` : ''}
   </article>`;
 }
 
@@ -1132,7 +1173,9 @@ function buildDays() {
   <div class="hero-inner">
     <p class="kicker">Day sheets · ${esc(plan.dates)}</p>
     <h1>How each day actually runs</h1>
-    <p class="hero-sub">Fixed points, journeys and the meal plan, one sheet per day. Times marked <em>leave by</em> are derived — the fixed point minus the journey minus its buffer — so they move on their own if a duration changes, rather than sitting there being quietly wrong.</p>
+    <p class="hero-sub">Your itinerary day by day: confirmed bookings, meals, travel, open time and options. Updated ${esc(bookingReview)}. All times are Japan time.</p>
+    <p class="day-legend"><strong class="advance-label">Arrange in advance</strong> labels reservations, tickets, replies or transport to secure. Open-time blocks are approximate planning budgets; pending holds and transfer time are not spare sightseeing time. Options are alternatives, not extra bookings.</p>
+    <p class="day-legend">Times marked <em>leave by</em> are calculated from the listed journey and buffer. When a train, venue or workshop is still marked <em>confirm</em>, its departure is provisional too. <a href="index.html#reservations">See the reservation register and email evidence.</a></p>
   </div>
 </header>
 
@@ -1160,7 +1203,7 @@ ${sections}
 
   return shell({
     title: 'Day sheets — Japan 2026',
-    desc: `Fixed points, leave-by times and meals for each of the ${runDays.length} days, ${plan.dates}.`,
+    desc: `Daily itineraries, confirmed bookings, open-time blocks and options needing advance planning, ${plan.dates}.`,
     body, page: 'days', section: 'days', rail: true,
   });
 }
@@ -1308,10 +1351,10 @@ function buildRedirect() {
 // ── write ───────────────────────────────────────────────────────────
 mkdirSync(OUT, { recursive: true });
 mkdirSync(join(OUT, 'assets'), { recursive: true });
-writeFileSync(join(OUT, 'index.html'), buildPlan());
-writeFileSync(join(OUT, 'issues.html'), buildIssues());
+writeFileSync(join(OUT, 'index.html'), buildPlan().replace(/[\t ]+$/gm, ''));
+writeFileSync(join(OUT, 'issues.html'), buildIssues().replace(/[\t ]+$/gm, ''));
 writeFileSync(join(OUT, 'bases.html'), buildBases());
-writeFileSync(join(OUT, 'days.html'), buildDays());
+writeFileSync(join(OUT, 'days.html'), buildDays().replace(/[\t ]+$/gm, ''));
 writeFileSync(join(OUT, 'history.html'), buildHistory());
 writeFileSync(join(OUT, 'archive.html'), buildArchive());
 for (const it of alternates) writeFileSync(join(OUT, `${it.slug}.html`), buildItinerary(it));

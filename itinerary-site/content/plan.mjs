@@ -10,122 +10,510 @@
 // Every change here should also get an entry in content/history.mjs.
 
 export const plan = {
-  // `num` and `variantOf` are kept because the archive's comparison tables still key off them.
-  // 1D is the fourth fork of Itinerary 1 — it keeps 1B's flights, its Tokyo week and its Kyoto
-  // dates, and replaces the two stops in between.
-  num: '1D',
-  slug: 'plan',
-  variantOf: 1,
-  decided: '23 August 2026',
-  title: 'The Classic, with Nikko and Izu',
-  tagline: 'Fifteen nights — Tokyo, three at 1,269m on Lake Chuzenji, three in a ryokan founded in 1484 on the Izu peninsula, and the same Kyoto week pointed north at the early colour',
-  dates: 'Fri Nov 6 → Sun Nov 22, 2026',
-  length: '15 nights',
-  route: ['Tokyo · 4n', 'Okunikko · 3n', 'Shuzenji · 3n', 'Kyoto · 5n'],
-  routeNote: 'Open-jaw — in to Tokyo (HND), home from Osaka (KIX), landing 22 November with three clear days before Colorado',
-  cost: '$76,000',
-  costBand: '$76k, both flights in',
-  temp: '32–60°F — Okunikko is the cold part',
-  tempStatus: 'warn',
-  bestFor: 'The version that is actually booked',
-
-  // ── Getting there ────────────────────────────────────────────────
-  flights: {
-    title: 'Getting there',
-    sub: 'Both ends are ticketed. ANA business out, United Polaris home, $19,313 for the two of you — and the 18:35 the last day was built on is now confirmed rather than assumed.',
-    points: [
-      `<strong>Out: ticketed. NH107, Friday 6 November, SFO→HND, 00:20 → 04:50+1.</strong> Business class on a 777-300ER, PNR <strong>E4HX5B</strong>, $9,482.60 for the two of you — $8,430 fare plus $1,052.60 in taxes. Two checked bags each at 32kg. <strong>The fare is non-refundable</strong>; changes are allowed with restrictions at no change fee. Note the real departure time is <strong>12:20 a.m.</strong>, which makes "Friday the 6th" a Thursday-night airport run.`,
-      `<strong>Home: ticketed. UA34, Sunday 22 November, KIX→SFO, 18:35 → 11:50 the same day.</strong> United Polaris business on a 777-200, fare class Z, 10h15 in the air, confirmation <strong>NGWXMK</strong>, seats <strong>6D and 6G</strong>. $9,830.26 for the two of you — $9,663.80 fare plus $166.46 in taxes. Two checked bags each at 32kg, and a gluten-free meal is requested on Ashly's ticket. <em>The budget no longer has an uncosted line in it.</em>`,
-      `<strong>The 18:35 is now a fact rather than a schedule lookup, and that is the part that mattered.</strong> The whole last day was derived from the winter-schedule time that starts 25 October — the 11:30 lunch, the 13:30 car, the Haruka — against a summer schedule that runs three hours earlier. The ticket confirms it. <em>Nothing on Sunday 22 November moves.</em>`,
-      `<strong>Kyoto→KIX on the last morning</strong> is the Haruka limited express, about 75–80 minutes from Kyoto Station. <em>Reserve the seats.</em> 22 November is the middle day of a three-day national holiday and the station will be heavy.`,
-      `<strong>The $2,000 lever is closed, and it is worth knowing it is closed.</strong> Trading down to JAL's older Sky Suite out of SFO — consolidator fares run $3,400–4,800 round trip — was the one place left to take real money out of this trip. Both tickets are now bought, the ANA fare is non-refundable, and the seat for eleven hours is the good one. <em>Flights are $19,313 and that number is final; the trip costs $39,800 more than the one it replaced, and none of the remaining slack is on this line.</em>`,
-    ],
-    ref: ['ana-the-room'],
-  },
-
-  // ── Getting around ───────────────────────────────────────────────
-  transport: {
-    mode: 'Rail, plus two days of car on Izu',
-    text: `The old plan was rail the whole way and said so proudly. This one cannot be: <strong>Okunikko and the Izu peninsula are both places where the sights are strung along roads rather than lines</strong>. So it is rail for every transfer between bases, and a rental car picked up at Mishima on the way into Izu and dropped at Mishima on the way out — which works only because Mishima is on the route anyway.`,
-    points: [
-      `<strong>Saturday 14 November is the hard day, and it is about six hours.</strong> Lake Chuzenji to the Izu peninsula crosses the whole Kanto plain. The routing that works is the bus down the Irohazaka to <em>JR</em> Nikko, Utsunomiya, the Tohoku shinkansen into Tokyo, and the Tokaido on to Mishima. <strong>Not Tobu</strong> — Tobu is quicker on paper but puts you down at Asakusa, and you then cross Tokyo with two cases.`,
-      `<strong>The hired car is not the answer, which is the surprise.</strong> Chugushi to Shuzenji by road is 330–360 km around Tokyo on the Ken-Ō-dō — five to six hours moving, six to seven realistically, at <strong>¥150,000–250,000</strong>. It is no faster than the train and costs seven times as much. It buys door-to-door luggage handling and nothing else.`,
-      `<strong>So forward the bags instead — Nikko straight to Kyoto, past Izu entirely.</strong> Send them on the 12th or 13th rather than the 14th: Okunikko is a mountain address and next-day delivery to Kansai is not guaranteed from it the way it is from a city hotel. Two nights on Izu are done on overnight bags. $15–22 a bag.`,
-      `<strong>The rental car is three days on Izu, from Mishima.</strong> Toyota Rent a Car is two minutes from the shinkansen exit, open 08:00–20:00. You pass through Mishima on the 14th, so the pickup costs nothing in time. <strong>Japan accepts only the 1949 Geneva IDP</strong> — AAA issues it, $20, and it is a physical booklet with no digital version, so an in-branch visit is the only fast route. <em>This has a lead time and it starts now.</em>`,
-      `<strong>Green Car on the trunk route, booked on smartEX.</strong> Mishima→Kyoto is a direct Hikari in 1h51 — six a day, on a clean two-hourly clockface at :46. Reserve rather than turn up: late November is peak season on every train in this plan.`,
-      `<strong>In Kyoto, buy the ¥1,100 Subway &amp; Bus 1-Day Pass for the Takao day.</strong> It covers the whole thing. The bus-only pass was discontinued in 2024 — the combined one is what survives.`,
-    ],
-    ref: ['shinkansen-green-car'],
-  },
-  hero: 'asaba-ryokan',
-  heroCard: ['ritz-carlton-nikko', 'asaba-ryokan', 'hotel-the-mitsui-kyoto'],
-  pitch: `<strong>This is the first version of the trip in which every bed is booked rather than estimated.</strong> Aman Tokyo, the Ritz-Carlton on Lake Chuzenji, Asaba in Shuzenji and Hotel The Mitsui in Kyoto — four confirmations, fifteen nights, and both flights now ticketed too. What changed is the middle: Gora Kadan came back full for 11–13 November, and rebuilding around what could actually be held moved the trip from Hakone and the Northern Alps to <strong>Okunikko and the Izu peninsula</strong> — three nights at each.<br><br><strong>Two of Japan's seven three-Michelin-Key properties are on it.</strong> Asaba, founded in 1484 and run by the same family for ten generations, with a working Noh stage across its pond; and Hotel The Mitsui, on three hundred years of family land facing Nijo Castle, with a hot spring drawn from a thousand metres beneath the building. They are also the two best-evidenced kitchens on the trip for a coeliac guest.<br><br><strong>The Tokyo week survived intact</strong> — the flying squirrels at Karuizawa, the Hirata forge at Ome, L'Effervescence on the only night it opens. <strong>And the Kyoto week still points north</strong>, at Takao, Ohara, Rurikoin, Kurama and Kibune, which colour one to two weeks before the city floor. From the new base that week is <em>better</em> served, not worse: Takao is forty minutes closer and Nijo Castle is across the street.<br><br><strong>What it costs is the headline.</strong> $76,000 against $36,200 — and with the return flight bought those two numbers finally measure the same thing. The lodging line alone nearly tripled, and six half-board dinners became two.`,
-  days: [
-    { date: 'Fri 6', where: '✈', text: 'SFO→HND, ANA The Room. <em>The Friday departure is the one that pays for the fifteenth night.</em>', ref: ['ana-the-room'] },
-    { date: 'Sat 7', where: 'Tokyo', text: 'Land at 04:50, private transfer, gentle evening. <strong>Aman Tokyo</strong> — booked, four nights, confirmation 62649SG260399. <em>The room is not ready until 15:00; the spa and the Imperial Palace East Gardens are the answer.</em>', ref: ['aman-tokyo'] },
-    { date: 'Sun 8', where: 'Tokyo', text: 'A deliberately light first day. Meiji Jingu. <em>The Jingu Gaien ginkgo are still turning this early — they gold up around 20 Nov.</em> Afternoon at <strong>Akiba Fukurou</strong>, the owl café. <em>No dinner booking tonight: L\'Effervescence is closed Sundays.</em>', ref: ['meiji-jingu', 'omotesando-ginkgo', 'akiba-fukurou'] },
-    { date: 'Mon 9', where: 'Karuizawa', text: '<strong>Flying squirrels.</strong> Shinkansen out after lunch, Picchio\'s <strong>musasabi watching tour</strong> at dusk, back in Tokyo by evening. <em>The season ends 30 November, so these are among the last slots of the year.</em>', ref: ['picchio-musasabi'] },
-    { date: 'Tue 10', where: 'Tokyo · Ome', text: '<strong>Hirata sword smithing</strong> — forge a small katana with the husband-and-wife smiths, engraved and shipped home. Back in town for <strong>L\'Effervescence</strong>, 3★, with its printed GF menu. <em>Tuesday is the only night of this Tokyo block it can happen.</em>', ref: ['hirata-sword', 'leffervescence'] },
-    { date: 'Wed 11', where: '→ Okunikko', text: 'Up to <strong>Lake Chuzenji at 1,269m</strong> and the <strong>Ritz-Carlton Nikko</strong> — booked, three nights, confirmation 89324734, a Lake View suite with a balcony. <em>The hotel has its own natural hot spring, which matters more here than it would anywhere else on this trip.</em>', ref: ['ritz-carlton-nikko', 'lake-chuzenji'] },
-    { date: 'Thu 12', where: 'Nikko', text: '<strong>Down the mountain, because that is where the colour is.</strong> <strong>Toshogu</strong> and its Yomeimon gate, Rinnoji, Taiyuin and the cryptomeria avenue; the <strong>Shinkyo</strong> bridge; and <strong>Kanmangafuchi</strong>, a gorge lined with seventy Jizo figures in red bibs. <em>Lower Nikko sits at about 600m and peaks early-to-mid November — you are on it.</em>', ref: ['nikko-toshogu', 'kanmangafuchi'] },
-    { date: 'Fri 13', where: 'Okunikko', text: '<strong>The lake day, and the last one up here.</strong> <strong>Kegon Falls</strong>, the boat across Lake Chuzenji, the Italian and British Embassy villas on the south shore, and Ryuzu Falls up the Senjogahara road. <em>Send the bags to Kyoto today at the latest — this is a mountain address and next-day to Kansai is not a promise.</em>', ref: ['lake-chuzenji'] },
-    { date: 'Sat 14', where: '→ Shuzenji', text: '<strong>The hard day.</strong> Leave at 08:20 — bus down the Irohazaka, JR to Utsunomiya, shinkansen to Tokyo, Tokaido to Mishima, <strong>collect the rental car</strong>, and drive in. About six hours, and you are at <strong>Asaba</strong> by around 14:30 against an 18:00 check-in. Dinner in the room. <em>The Irohazaka jam is an October problem — by now the lake-level colour is finished and the traffic with it.</em>', ref: ['asaba-ryokan'] },
-    { date: 'Sun 15', where: 'Izu', text: '<strong>The car day.</strong> Either the wasabi — Joren Falls, a working tatami-ishi farm, and the <strong>Ikadaba terraces</strong>, fifteen hectares of them and a UNESCO-recognised agricultural heritage — or Fuji, from Darumayama at sunrise and the cape at Toi at dusk. Evening: the <strong>bamboo path</strong> lit to 23:00, with a cut-paper projection from 20:00, three minutes from the door.', ref: ['asaba-ryokan', 'shuzenji-onsen'] },
-    { date: 'Mon 16', where: 'Izu', text: '<strong>Open.</strong> The third Asaba night buys a day with nothing on it — whichever of the wasabi and the Fuji coast Sunday did not take, or the town on foot: the temple, the five bridges, the sutra hall, all inside ten minutes. <em>Deliberately unplanned for now.</em>', ref: ['shuzenji-onsen'] },
-    { date: 'Tue 17', where: '→ Kyoto', text: 'Drop the car at Mishima and take the <strong>09:46 Hikari</strong> — direct, 1h51, Kyoto at 11:37. <strong>Hotel The Mitsui Kyoto</strong>, booked, five nights, confirmation R9GZA4213593. <em>Kikunoi is closed today — the 3rd Tuesday — which is exactly why it is on Thursday.</em> Nijo Castle is across the street if the evening event is running.', ref: ['hotel-the-mitsui-kyoto'] },
-    { date: 'Wed 18', where: 'Kyoto · Takao', text: '<strong>Takao</strong>, and it is forty minutes closer than it was from Gion — two subway stops west to Uzumasa Tenjingawa, then City Bus 8, skipping the Kyoto Station scrum entirely. Jingo-ji up its stone staircase, the clay-disc throw off the terrace, and Kozan-ji below. <em>Kyoto\'s own tourism pages call Takao the earliest colour in the city.</em>', ref: ['takao'] },
-    { date: 'Thu 19', where: 'Kyoto · north', text: '<strong>Ohara</strong> and Sanzen-in\'s moss garden — and the hotel\'s 1703 gate was built for the court attached to this temple, so you sleep behind it and then go and see where it came from. <strong>Rurikoin</strong> at Yase if you hold a reservation. <strong>Kikunoi Honten</strong> in the evening.', ref: ['sanzen-in-ohara', 'rurikoin', 'kikunoi-honten'] },
-    { date: 'Fri 20', where: 'Kyoto · Arashiyama', text: '<strong>Iwatayama monkey park</strong> at opening, then the bamboo grove and Tenryu-ji — fifteen minutes better from here than from Gion. Back east for <strong>Heki kintsugi</strong> in the afternoon and <strong>Eikandō</strong>\'s illumination after it, which is a nine-minute ride to Keage with no change.', ref: ['arashiyama-monkeys', 'arashiyama', 'heki-kintsugi', 'eikando'] },
-    { date: 'Sat 21', where: 'Kyoto', text: '<strong>Kyudo</strong> in the morning, then <strong>Kurama and Kibune</strong> on the Eizan line, and the <strong>Kodaiji Jugyuan</strong> farewell dinner with the illumination next door. <em>This is the highest-risk day of the trip: day one of a three-day national holiday, on a two-car railway that leaves people on platforms in ordinary autumn weather. Go at opening or not at all, and book the hotel car for the evening.</em>', ref: ['kurama-kibune', 'kyudo', 'kodaiji-jugyuan', 'kodaiji'] },
-    { date: 'Sun 22', where: '✈', text: 'A free morning, then <strong>lunch at FORNI</strong> downstairs — 11:30, garden views, no travel between the last meal and the car. Out at 13:30 for the Haruka and <strong>UA34</strong>, KIX→SFO Polaris at 18:35 — ticketed, seats 6D and 6G — landing at SFO 11:50 the same Sunday. Three clear days before Colorado.', ref: ['hotel-the-mitsui-kyoto'] },
+  "num": "1D",
+  "slug": "plan",
+  "variantOf": 1,
+  "decided": "23 August 2026",
+  "title": "The Classic, with Nikko and Izu",
+  "tagline": "Fifteen nights — Tokyo, three at 1,269m on Lake Chuzenji, three in a ryokan founded in 1484 on the Izu peninsula, and the same Kyoto week pointed north at the early colour",
+  "dates": "Fri Nov 6 → Sun Nov 22, 2026",
+  "length": "15 nights",
+  "route": [
+    "Tokyo · 4n",
+    "Okunikko · 3n",
+    "Shuzenji · 3n",
+    "Kyoto · 5n"
   ],
-  stays: ['aman-tokyo', 'ritz-carlton-nikko', 'asaba-ryokan', 'hotel-the-mitsui-kyoto'],
-  dining: ['leffervescence', 'kikunoi-honten', 'kodaiji-jugyuan'],
-  doing: ['hirata-sword', 'picchio-musasabi', 'akiba-fukurou', 'heki-kintsugi', 'arashiyama-monkeys', 'kyudo'],
-  places: ['nikko-toshogu', 'lake-chuzenji', 'kanmangafuchi', 'shuzenji-onsen', 'takao', 'kurama-kibune', 'sanzen-in-ohara', 'rurikoin', 'eikando', 'kodaiji', 'arashiyama', 'gion', 'meiji-jingu', 'omotesando-ginkgo'],
-  costRows: [
-    ['Flights out — NH107 SFO→HND, business, ticketed, non-refundable', '$9,483'],
-    ['Flights home — UA34 KIX→SFO, Polaris business, ticketed', '$9,830'],
-    ['Hotels — Aman 4n $14,640 · Ritz-Carlton Nikko 3n $8,420 · Asaba 3n half board $10,570 · Mitsui 5n $10,790', '$44,420'],
-    ['Dining — three of the fifteen dinners are now inside a room rate, against six on the old plan', '$7,600'],
-    ['Experiences — sword $1,700, kintsugi $600, kyudo $270, Shuzenji washi $200, Mitsui private onsen $165, flying squirrels $170, owl café $60, wasabi $22, monkey park $10', '$3,230'],
-    ['Ground — Green Car, the six-hour transfer, three days of car on Izu, transfers, takkyubin', '$1,300'],
-    ['Temple entries, illuminations and the Kyoto day pass', '$150'],
+  "routeNote": "Open-jaw — in to Tokyo (HND), home from Osaka (KIX), landing 22 November with three clear days before Colorado",
+  "cost": "$76,000",
+  "costBand": "$76k, both flights in",
+  "temp": "32–60°F — Okunikko is the cold part",
+  "tempStatus": "warn",
+  "bestFor": "The version that is actually booked",
+  "flights": {
+    "title": "Getting there",
+    "sub": "Both ends are ticketed. ANA business out, United Polaris home, $19,313 for the two of you — and the 18:35 the last day was built on is now confirmed rather than assumed.",
+    "points": [
+      "<strong>Out: ticketed. NH107, Friday 6 November, SFO→HND, 00:20 → 04:50+1.</strong> Business class on a 777-300ER, PNR <strong>E4HX5B</strong>, $9,482.60 for the two of you — $8,430 fare plus $1,052.60 in taxes. Two checked bags each at 32kg. <strong>The fare is non-refundable</strong>; changes are allowed with restrictions at no change fee. Note the real departure time is <strong>12:20 a.m.</strong>, which makes \"Friday the 6th\" a Thursday-night airport run.",
+      "<strong>Home: ticketed. UA34, Sunday 22 November, KIX→SFO, 18:35 → 11:50 the same day.</strong> United Polaris business on a 777-200, fare class Z, 10h15 in the air, confirmation <strong>NGWXMK</strong>, seats <strong>6D and 6G</strong>. $9,830.26 for the two of you — $9,663.80 fare plus $166.46 in taxes. Two checked bags each at 32kg, and a gluten-free meal is requested on Ashly's ticket. <em>Dining, activities and ground transport still include estimates.</em>",
+      "<strong>The 18:35 is now a fact rather than a schedule lookup, and that is the part that mattered.</strong> The whole last day was derived from the winter-schedule time that starts 25 October — the 11:30 lunch, the 13:30 car, the Haruka — against a summer schedule that runs three hours earlier. The ticket confirms it. <em>Nothing on Sunday 22 November moves.</em>",
+      "<strong>Kyoto→KIX on the last morning</strong> is the Haruka limited express, about 75–80 minutes from Kyoto Station. <em>Reserve the seats.</em> 22 November is the middle day of a three-day national holiday and the station will be heavy.",
+      "<strong>Outbound meal and seats:</strong> ANA’s October 31 email lists seats 9D and 10C, one Japanese pre-order meal and one gluten-intolerant meal. Departure remains 00:20 Friday November 6; go to SFO Thursday evening."
+    ],
+    "ref": [
+      "ana-the-room"
+    ]
+  },
+  "transport": {
+    "mode": "Rail and road · arrangements still to confirm",
+    "text": "The route is fixed; the transport reservations are not yet evidenced. Decide the rental-car or driver arrangement before buying dependent train journeys. All journey times on the day sheets are planning estimates unless identified as ticketed.",
+    "points": [
+      "<strong>Tokyo → Nikko, November 11:</strong> reserve the actual train and hotel transfer, or arrange a driver. The earlier SPACIA X times were a proposal, not tickets.",
+      "<strong>Nikko → Asaba, November 14:</strong> allow roughly six hours and aim for 14:30–15:00 arrival. Choose rail via Utsunomiya, Tokyo and Mishima, or a quoted road transfer. Tell Asaba the final arrival time; it requests taxi details at least three days ahead.",
+      "<strong>Driving permit:</strong> completed per Ryan’s October update. The car itself remains unconfirmed. Compare a Nikko-area pickup with Mishima return against separate Nikko transport and an Izu-only rental.",
+      "<strong>Luggage:</strong> if travelling by rail, arrange Nikko → Mitsui forwarding by November 12/13 and carry three nights of essentials at Asaba. Confirm delivery rather than assuming next-day service.",
+      "<strong>Mishima → Kyoto, November 17:</strong> book a current train after reconciling Asaba breakfast, rental return and station buffer. A possible 13:00 Kameoka forge session needs Mitsui to confirm a feasible direct transfer and luggage handling.",
+      "<strong>Kyoto → KIX, November 22:</strong> reserve the station transfer and Haruka. Aim for KIX around 15:30 for the ticketed 18:35 UA34; 13:30 is the hotel-departure target."
+    ],
+    "ref": [
+      "shinkansen-green-car"
+    ]
+  },
+  "hero": "asaba-ryokan",
+  "heroCard": [
+    "ritz-carlton-nikko",
+    "asaba-ryokan",
+    "hotel-the-mitsui-kyoto"
   ],
-  costTotal: '≈ $76,000',
-
-  costModel: `Per-couple. <strong>Both flights and all four hotels are now facts rather than estimates</strong> — ticketed fares and confirmed totals, not forecasts. That is six of the seven lines below; only dining, experiences and ground are still forecast. <strong>This is the first version of the trip that costs a single number.</strong> FX at ¥150/$.<br><br><strong>The change worth understanding is the dining line, which roughly doubled.</strong> The old plan had six of fifteen dinners inside a room rate — Gora Kadan three times, Myojinkan three times — each a set menu a kitchen had agreed to make gluten-free weeks in advance. This one has two, both at Asaba. The Ritz-Carlton is booked on a Member Flexible Rate whose charge breakdown is room, service and tax with no food line at all, so three dinners and three breakfasts at 1,269m are unbought. <strong>A 5–8% buffer is still not included.</strong>`,
-
-  verdict: `<strong>What you give up, and it is a real loss.</strong> Hakone entirely — the Open-Air Museum, the Pola, Owakudani, the torii standing in Lake Ashi, and the teppanyaki night at Itoh Dining that was the easiest coeliac dinner of the trip. Matsumoto entirely — the 1594 keep and the Kusama collection. And the gorge at 1,050m with the stay-put Monday in it. Six nights of the old plan are gone and nothing here replaces them exactly.<br><br><strong>The honest problem with Okunikko.</strong> The Ritz sits on Lake Chuzenji at 1,269m, and <em>lake-level colour there peaks in early-to-mid October</em>. By 11 November the trees around the hotel are bare and it is near freezing at night. The good foliage on those dates is six hundred metres downhill at Toshogu, which is a forty-minute drive away. This is not a disaster — the hotel is a warm room with a hot spring in a stark winter landscape, and the sightseeing happens down the hill — and dropping to three nights makes it a better-proportioned stop than four did. <strong>14 October is still the date that matters</strong>, because that is when ¥1,330,000 stops being refundable, and the fourth-night correction has to happen before it.<br><br><strong>Izu has the same problem, more mildly.</strong> Shuzenji peaks late November into early December; 2024 did not crest until the first week of December. On 14–17 November expect ten to thirty per cent. What you get instead is thin crowds, three nights rather than two, and a ryokan that is the point of the stop regardless.<br><br><strong>What you actually get.</strong> Two of Japan's seven three-Key properties, back to back with Aman. An inn founded in 1484 with a Noh stage over its pond, and the best-documented coeliac kitchen on the trip. A hot spring in the basement of your Kyoto hotel after the cold mountain days. And a Kyoto week that the base change made <em>better</em> — Takao forty minutes closer, Arashiyama fifteen, Nijo Castle across the street, and two Michelin restaurants inside a ten-minute walk.<br><br><strong>And the thing that has not changed at all.</strong> Takao, Kurama, Kibune, Ohara and Rurikoin are all at their best precisely when you are there, and all of them are skipped by most visitors, who are off chasing the central temples. That was the argument for these dates in August and it survives the replan untouched.`,
-  verdictTone: 'warn',
-
-  // ── Gluten-free ──────────────────────────────────────────────────
-  glutenFree: {
-    title: 'Gluten-free, kitchen by kitchen',
-    sub: 'For Ashly. The replan made this harder, not easier: six set dinners inside a hotel stay became three, and three nights at 1,269m are now bought à la carte in a place with almost no alternative dining.',
-    points: [
-      `<strong>Say 小麦アレルギー — wheat allergy — not "gluten-free."</strong> Japanese kitchens treat アレルギー as a medical instruction; グルテンフリー alone reads as a wellness preference and is taken far less seriously. セリアック病 is accurate but poorly recognised by restaurant staff. And note that <strong>Japan has no mandatory allergen labelling for restaurant food</strong>, only for packaged goods — which is why the advance letter does more work than reading a menu on the night.`,
-      `<strong>Asaba is the best-evidenced kitchen on the trip</strong>, and the one with the tightest deadline. It is specifically cited in the ryokan literature as having a celiac-specific <em>written confirmation</em> track record; dinner is served in-room, so there is no shared buffet and one server owns every course; and omakase means the meal is built from scratch rather than adapted. <strong>But full prepayment is required at reservation</strong> — so the gluten-free answer has to arrive before the money does, not four to six weeks out like everything else.`,
-      `<strong>The Ritz-Carlton Nikko is the exposure.</strong> Three nights, room-only, at altitude, in an area with very little else within reach on a November evening. Ask Marriott whether a dining-inclusive rate exists for those nights — in the same call that cuts the fourth night — at this price point it usually does — and send the brief naming <em>every restaurant on the property separately</em>, because each kitchen is its own answer.`,
-      `<strong>Hotel The Mitsui has a real process and an honest disclaimer.</strong> Allergies are taken at booking and re-checked at the table, and there is a hypoallergenic menu covering all eight mandatory allergens including wheat. But one kitchen and one dishwashing line serve every outlet, the hotel says plainly it cannot guarantee an allergen-free plate, and it reserves the right to refuse a booking for a severe allergy. <strong>No first-hand coeliac report about TOKI or FORNI exists anywhere</strong> — a gap, not a reassurance. FORNI is the more tractable: an Italian kitchen gives you grilled fish, roast meat, risotto and vegetables without going near the pizza oven.`,
-      `<strong>Kikunoi has no gluten-free field on a reservation form, because it has no form.</strong> Booking is phone or email only — +81 75-561-0015, honten@kikunoi.co.jp. Let the Mitsui concierge do it; a three-Key hotel will have the relationship. There is likewise no first-hand coeliac report about Kikunoi, so ask for a written reply rather than assuming.`,
-      `<strong>The mechanics, for a kaiseki kitchen.</strong> Dashi itself is fine — katsuobushi and kombu carry no wheat. The risks are <strong>shoyu</strong>, which is roughly half wheat by grist and is the single biggest hidden vector; <strong>barley miso</strong> (rice miso is generally safe); the <strong>fried course</strong>, which almost every kaiseki sequence has, and its shared oil; and <strong>soba</strong>, which is a wheat blend unless it is juwari, and even then is boiled in shared water. Ask for <strong>たまり醤油（小麦不使用）</strong> by name and carry certified packets.`,
-      `<strong>Shuzenji is a soba town, which for a coeliac means the local food is largely off-limits.</strong> There is exactly one dedicated gluten-free restaurant — Vieni KANDA, whose chef has a wheat allergy himself and mills pasta from pea and brown-rice flour — and <strong>it is closed Mondays and Tuesdays</strong>. With the stay now running Saturday to Tuesday, <strong>Sunday the 15th is the one day it opens</strong>. The restaurant itself warns that the building previously housed a ramen shop and a bakery. All three dinners are at Asaba regardless.`,
-      `<strong>Corrections to the old brief.</strong> "Little Bird" is in Tokyo, not Kyoto — there is no Kyoto branch and there never was. The Kyoto fallbacks that do exist are <strong>Kushikura Honten</strong>, charcoal yakitori thirteen minutes' walk from the hotel where everything can be ordered shio-yaki rather than tare, and <strong>Toshoan</strong>, a dedicated gluten-free kitchen nine minutes from Nijo Castle. <strong>Sézanne still explicitly refuses gluten-free requests.</strong>`,
-      `<strong>Send the brief in early October</strong> — except Asaba, which goes now. A detailed reply naming the dishes it would change is the signal a kitchen has understood; "no problem, we will accommodate" usually means it heard "no bread."`,
+  "pitch": "<strong>Four bases, fifteen nights, both flights ticketed.</strong> Aman Tokyo November 7–11, Ritz-Carlton Nikko November 11–14, Asaba November 14–17 and Hotel The Mitsui Kyoto November 17–22. The Ritz stay was shortened successfully on September 1; there is no double-booked fourth night.<br><br><strong>The booked experiences now shape the days.</strong> Owl café November 8 at 14:00, est at 18:30, Tokyo archery November 9 at 09:30, NARISAWA November 10 at 17:30 and Hiramatsu Kodaiji November 21 at 18:30. Hirata sword making was declined; replacement inquiries are pending. Kintsugi is requested for November 20 at noon, with November 19 as an alternative.<br><br><strong>The landscapes remain the reason for the route.</strong> Lower Nikko’s shrines and gorge, three nights at Asaba on Izu, and a Kyoto week with Takao, Ohara, Arashiyama and Kurama as flexible outings. The <a href=\"days.html\">day sheets</a> distinguish fixed bookings, provisional holds and open time, with options for each gap.",
+  "days": [
+    {
+      "date": "Fri 6",
+      "where": "✈",
+      "text": "<strong>NH107, 00:20 SFO → 04:50 Saturday at Haneda.</strong> Business class ticketed. Go to the airport Thursday night.",
+      "ref": [
+        "ana-the-room"
+      ]
+    },
+    {
+      "date": "Sat 7",
+      "where": "Tokyo",
+      "text": "<strong>Aman arrival and recovery.</strong> Four-night stay confirmed; early room access requested but not guaranteed. Spa facilities from 06:30 and breakfast from 07:00, extra charge. A 10:00 massage alternative is offered, not booked.",
+      "ref": [
+        "aman-tokyo"
+      ]
+    },
+    {
+      "date": "Sun 8",
+      "where": "Tokyo",
+      "text": "<strong>Akiba Fukurou 14:00</strong> for two, paid; arrive 13:50. <strong>est 18:30</strong> confirmed with dietary adaptation; verify card guarantee. Meiji Jingu or a local walk in the morning.",
+      "ref": [
+        "akiba-fukurou",
+        "est-tokyo",
+        "meiji-jingu"
+      ]
+    },
+    {
+      "date": "Mon 9",
+      "where": "Tokyo",
+      "text": "<strong>Kyudo Japan with Yosui, 09:30 — confirmed and paid (¥40,000 for two).</strong> Verify dojo address and finish time. Afternoon and dinner open; Picchio is an unbooked option only if the archery finish and transfers work.",
+      "ref": [
+        "kyudo",
+        "picchio-musasabi"
+      ]
+    },
+    {
+      "date": "Tue 10",
+      "where": "Tokyo",
+      "text": "<strong>NARISAWA 17:30–20:00 — confirmed for two.</strong> Dietary details submitted; kitchen acceptance still to obtain. Morning open pending Aman’s Akihira sword-making inquiry. Hirata declined.",
+      "ref": [
+        "narisawa"
+      ]
+    },
+    {
+      "date": "Wed 11",
+      "where": "→ Okunikko",
+      "text": "<strong>Transfer to Ritz-Carlton Nikko.</strong> Three nights confirmed, November 11–14; ¥1,263,127 total. Train/driver and all three dinners still to arrange. Gentle lake afternoon if arrival permits.",
+      "ref": [
+        "ritz-carlton-nikko",
+        "lake-chuzenji"
+      ]
+    },
+    {
+      "date": "Thu 12",
+      "where": "Nikko",
+      "text": "<strong>Lower Nikko sightseeing, flexible:</strong> Rinnoji, Toshogu, the bridge and Kanmangafuchi. Arrange transport and lunch; teppanyaki dinner remains a request.",
+      "ref": [
+        "nikko-toshogu",
+        "kanmangafuchi"
+      ]
+    },
+    {
+      "date": "Fri 13",
+      "where": "Okunikko",
+      "text": "<strong>Choose the lake and villas, a nature outing, or a shorter hotel day.</strong> Confirm seasonal services and route conditions with Ritz. Forward bags if taking trains to Izu; dinner unbooked.",
+      "ref": [
+        "lake-chuzenji"
+      ]
+    },
+    {
+      "date": "Sat 14",
+      "where": "→ Shuzenji",
+      "text": "<strong>Long transfer to Asaba.</strong> Aim for check-in from 14:30; exact transport not booked. Three-night stay prepaid with dinner and breakfast. Confirm dinner and the Japanese drum performance time.",
+      "ref": [
+        "asaba-ryokan"
+      ]
+    },
+    {
+      "date": "Sun 15",
+      "where": "Izu",
+      "text": "<strong>Open Izu day.</strong> Choose wasabi country, Fuji viewpoints or a quieter Shuzenji day. Arrange transport; Vieni KANDA Sunday lunch is an unbooked option. Asaba dinner included.",
+      "ref": [
+        "asaba-ryokan",
+        "shuzenji-onsen"
+      ]
+    },
+    {
+      "date": "Mon 16",
+      "where": "Izu",
+      "text": "<strong>Fully flexible.</strong> Optional washi workshop, Asaba-arranged cultural class, the other Izu excursion or ryokan time. These need their own bookings; no extra activity confirmed.",
+      "ref": [
+        "shuzenji-onsen"
+      ]
+    },
+    {
+      "date": "Tue 17",
+      "where": "→ Kyoto",
+      "text": "<strong>Transfer to Hotel The Mitsui Kyoto.</strong> Five nights confirmed. A 13:00 Masahiro forge session is an inquiry, subject to arrival, transfer and luggage arrangements. TOKI dinner proposed, not booked.",
+      "ref": [
+        "hotel-the-mitsui-kyoto"
+      ]
+    },
+    {
+      "date": "Wed 18",
+      "where": "Kyoto · flexible",
+      "text": "<strong>Takao proposed, or Arashiyama if Friday’s workshop needs the time.</strong> No personal sightseeing reservation anchors this day. Afternoon, dinner and private onsen remain open.",
+      "ref": [
+        "takao",
+        "arashiyama-monkeys"
+      ]
+    },
+    {
+      "date": "Thu 19",
+      "where": "Kyoto · north",
+      "text": "<strong>Ohara and Sanzen-in proposed; Rurikoin only with a ticket.</strong> Also supplied as an alternative for kintsugi and the forge: rework sightseeing if either is accepted. Dinner unbooked; Kikunoi declined.",
+      "ref": [
+        "sanzen-in-ohara",
+        "rurikoin"
+      ]
+    },
+    {
+      "date": "Fri 20",
+      "where": "Kyoto · Higashiyama",
+      "text": "<strong>Kintsugi requested 12:00–14:00, awaiting host.</strong> Real gold for both, ¥121,770 requested total; November 19 is an alternative. Keep the noon block free. Eikandō illumination opens tonight; dinner unbooked.",
+      "ref": [
+        "heki-kintsugi",
+        "eikando"
+      ]
+    },
+    {
+      "date": "Sat 21",
+      "where": "Kyoto",
+      "text": "<strong>Hiramatsu Kodaiji 18:30 — confirmed for two.</strong> Kurama/Kibune early, Arashiyama or central Kyoto are alternatives for the day. Archery is already booked in Tokyo on the 9th. Prebook the dinner car.",
+      "ref": [
+        "hiramatsu-kodaiji",
+        "kurama-kibune"
+      ]
+    },
+    {
+      "date": "Sun 22",
+      "where": "✈",
+      "text": "<strong>Free morning; FORNI 11:30 lunch proposed, not booked.</strong> Target hotel departure 13:30 and KIX around 15:30. <strong>UA34 18:35 → SFO 11:50</strong>, ticketed; station transfer and train still to reserve.",
+      "ref": [
+        "hotel-the-mitsui-kyoto"
+      ]
+    }
+  ],
+  "stays": [
+    "aman-tokyo",
+    "ritz-carlton-nikko",
+    "asaba-ryokan",
+    "hotel-the-mitsui-kyoto"
+  ],
+  "dining": [
+    "est-tokyo",
+    "narisawa",
+    "hiramatsu-kodaiji"
+  ],
+  "doing": [
+    "akiba-fukurou",
+    "kyudo",
+    "heki-kintsugi",
+    "picchio-musasabi",
+    "arashiyama-monkeys"
+  ],
+  "places": [
+    "nikko-toshogu",
+    "lake-chuzenji",
+    "kanmangafuchi",
+    "shuzenji-onsen",
+    "takao",
+    "kurama-kibune",
+    "sanzen-in-ohara",
+    "rurikoin",
+    "eikando",
+    "kodaiji",
+    "arashiyama",
+    "gion",
+    "meiji-jingu",
+    "omotesando-ginkgo"
+  ],
+  "costRows": [
+    [
+      "Flights out — NH107 SFO→HND, business, ticketed, non-refundable",
+      "$9,483"
     ],
-  },
-
-  // ── Booking calendar ─────────────────────────────────────────────
-  bookNow: {
-    title: 'Book this now',
-    sub: 'Standing at 30 August 2026. Both flights and all four hotels are done — this is everything still open, ordered by when the window shuts.',
-    groups: [
-      ['Today', '<strong>Call Marriott and cut the Ritz-Carlton to three nights.</strong> The confirmation runs to Sunday 15 November, but Asaba is booked and paid from Saturday the 14th — the night of the 14th is double-booked at ¥332,500. It is free to change until 14 October and expensive after. <strong>And start the International Driving Permit</strong> — Japan accepts only the 1949 Geneva version, AAA issues it as a physical booklet with no digital option, and an in-branch visit is the only way to get it inside a week.'],
-      ['This week', '<strong>The rental car at Mishima</strong> for 14–17 November — Toyota Rent a Car at the shinkansen exit, and confirm those dates directly because the branch calendar shows scattered closures. <strong>Picchio\'s musasabi tour for Monday 9 November</strong>: the season ends 30 November and these are the last slots of the year. <strong>The Hirata forge (Tue 10)</strong> via Wabunka. <strong>Mio Heki\'s kintsugi (Fri 20)</strong>, with the real-gold option.'],
-      ['Late August – early September', '<strong>Kikunoi Honten for Thursday 19 November</strong> — phone or email only, or through the Mitsui concierge. <strong>L\'Effervescence for Tuesday 10 November</strong> via Pocket Concierge; the only night of the Tokyo block it opens. <strong>Kodaiji Jugyuan for Saturday 21 November.</strong> <strong>FORNI for Sunday 22 at 11:30</strong>, the last lunch. And <strong>the Mitsui private onsen</strong> for the 19th or the 21st, by phone, 48-hour cancellation.'],
-      ['Phone calls that unblock a day', '<strong>Niji-no-Sato, 0558-72-7111</strong> — is it open on Tuesday 17 November, and do the 2026 light-up dates again start around the 15th? <strong>Shuzenji Washi, 050-3699-4284</strong> — which weekdays does the English session run in November? <strong>Vieni KANDA, 0558-73-2500</strong> — can they serve a coeliac given the building\'s history? Each of these decides part of a day.'],
-      ['Early October — and one hard deadline', '<strong>14 October is when ¥1,330,000 stops being refundable at the Ritz-Carlton.</strong> That is also the deadline for cutting the erroneous fourth night, so make the call by the 7th with a week of slack. Also: <strong>Rurikoin</strong>, whose 2026 season runs 1 October – 13 December with reservation required through the peak window; the <strong>gluten-free brief</strong> to every remaining kitchen; and the <strong>takkyubin</strong> plan, arranged at check-in in Nikko on the 11th for collection on the 13th.'],
+    [
+      "Flights home — UA34 KIX→SFO, Polaris business, ticketed",
+      "$9,830"
     ],
+    [
+      "Hotels — four confirmed stays; Ritz revised to ¥1,263,127 for three nights",
+      "≈ $44,421"
+    ],
+    [
+      "Dining — three of the fifteen dinners are now inside a room rate, against six on the old plan",
+      "$7,600"
+    ],
+    [
+      "Activities — budget allowance; replacement sword quotes pending; kintsugi request ¥121,770 incl. gold; owl café ¥7,600 paid",
+      "$3,230 allowance"
+    ],
+    [
+      "Ground — Green Car, the six-hour transfer, three days of car on Izu, transfers, takkyubin",
+      "$1,300"
+    ],
+    [
+      "Temple entries, illuminations and the Kyoto day pass",
+      "$150"
+    ]
+  ],
+  "costTotal": "≈ $76,000",
+  "costModel": "Per couple, using the existing planning exchange rate of ¥150/$. Both flights are ticketed and the hotel stays confirmed. Ritz’s corrected three-night total is ¥1,263,127. The roughly $76,000 total remains a planning budget: dining, activities and transport are not a settled invoice. Asaba includes three dinners and three breakfasts. The declined Hirata ¥385,000 authorization was released with no charge; replacement forging is unquoted. Kintsugi’s pending request is ¥121,770 including real gold; it has not been counted as a completed payment. A 5–8% contingency is not included.",
+  "verdict": "<strong>The route is settled; the days retain room to choose.</strong> Tokyo has the confirmed dinners, owl café and archery. Nikko is a lake-and-onsen base with lower-elevation shrine and gorge outings; ask the hotel about current weather and routes before choosing the longer nature day. Three prepaid nights at Asaba allow one excursion and one slower or craft-focused day. Kyoto’s main open choices are how to fit the pending workshops around Takao, Ohara, Arashiyama and Kurama.<br><br><strong>Protect the bookings that are real.</strong> Keep est November 8, NARISAWA November 10 and Hiramatsu November 21 at their confirmed times. The forge alternatives and kintsugi may change the sightseeing, but have not yet done so. The day sheets make those dependencies visible without filling every free hour.",
+  "verdictTone": "warn",
+  "glutenFree": {
+    "title": "Ashly’s dietary brief and kitchen replies",
+    "sub": "Avoid gluten-containing ingredients, including regular soy sauce. Gluten-free tamari is fine; she is not celiac and cross-contact is not a concern. Communicate the actual requirement.",
+    "points": [
+      "<strong>est:</strong> accepted adaptation of the entire course, including sauces and desserts, with no surcharge. November 8 at 18:30 confirmed; card guarantee completion to verify.",
+      "<strong>Hiramatsu:</strong> accepted gluten-free adaptation September 29; the detailed restriction is recorded on the confirmed November 21 at 18:30 reservation.",
+      "<strong>NARISAWA:</strong> reservation confirmed; restrictions were submitted. A submitted note is not a separate kitchen acceptance, so obtain that reply before dinner.",
+      "<strong>Asaba:</strong> accepted gluten-free meals in August and asked about gluten-free soy sauce. Its November 1 pre-arrival email requests both guests’ final restrictions, arrival time and transport. Reply with the full ingredient brief and any dislikes now.",
+      "<strong>Aman:</strong> dietary details shared with dining; hotel says it can adapt dishes and offers a gluten-free in-room menu. Make restaurant-specific arrangements for any table selected.",
+      "<strong>Ritz Nikko:</strong> willing to modify dishes, but its September reply requested clarification about ingredients, seasonings and cross-contact. No individual dinner or full-menu acceptance found. Resolve all three dinners and excursion lunches.",
+      "<strong>Mitsui:</strong> restriction noted, but the concierge authorization form is still outstanding in the evidence reviewed. Obtain acceptance for every restaurant booked; TOKI, FORNI and the Japanese tasting-menu inquiries are not confirmed meals.",
+      "<strong>New preference recorded on the kintsugi request:</strong> Ashly prefers no raw fish. Include this when selecting Nikko sushi or any other raw-fish-led meal; do not treat it as an additional allergy."
+    ]
   },
+  "bookNow": {
+    "title": "What still needs arranging",
+    "sub": "Reviewed November 2, 2026 California time. All appointment times are Japan time. Confirmed bookings are listed separately above.",
+    "groups": [
+      [
+        "Before departure",
+        "<strong>Verify est’s card guarantee, obtain NARISAWA kitchen acceptance and return Mitsui’s authorization form.</strong> Reply to Asaba with final dietary details, check-in time and transport. Confirm the archery dojo and finish time."
+      ],
+      [
+        "Await replies",
+        "<strong>Kintsugi:</strong> November 20 noon–14:00 requested, November 19 alternative. <strong>Sword replacements:</strong> Akihira via Aman for November 10 morning; Masahiro via Mitsui for November 17 at 13:00 or November 19 at 09:00. No replacement is confirmed."
+      ],
+      [
+        "Choose and reserve",
+        "<strong>All three Nikko dinners; Kyoto dinners November 17–20; FORNI departure lunch; excursion lunches.</strong> Pair each reservation with written ingredient acceptance. Spa treatments, private onsen, washi and guided outings need separate reservations if selected."
+      ],
+      [
+        "Transport",
+        "<strong>Secure actual intercity trains, rental/driver plan, local transfers, luggage forwarding and the Hiramatsu dinner car.</strong> The driving permit is done. Old sample train numbers and times are not bookings."
+      ],
+      [
+        "Activity choices",
+        "<strong>Picchio is unbooked.</strong> November 9 could fit after archery only if the finish and transport work; November 8 conflicts with est. <strong>Rurikoin needs a ticket.</strong> Keep optional illumination visits and Arashiyama flexible around the accepted workshop date."
+      ]
+    ]
+  },
+  "entityUpdates": {
+    "aman-tokyo": {
+      "badges": [
+        "Confirmed · 7–11 Nov",
+        "Palace-facing requested / acknowledged"
+      ],
+      "rate": "¥2,196,320 for four nights · existing confirmed total",
+      "gf": "Ashly’s ingredient restriction and cross-contact tolerance were clarified in September and shared with dining. Hotel offers a gluten-free in-room menu; coordinate each restaurant table.",
+      "facts": [
+        [
+          "Stay",
+          "Four nights, November 7–11; reconfirmed October 18. Early check-in remains subject to availability."
+        ],
+        [
+          "Arrival",
+          "Spa facilities from 06:30, breakfast from 07:00 at extra charge."
+        ],
+        [
+          "Spa",
+          "10:00 November 7 hot stone + Grounding alternatives offered, not accepted."
+        ],
+        [
+          "Room",
+          "Palace-facing room acknowledged in the August reply."
+        ]
+      ]
+    },
+    "ritz-carlton-nikko": {
+      "badges": [
+        "Confirmed · 11–14 Nov",
+        "Three nights · amendment complete",
+        "Natural hot spring"
+      ],
+      "rate": "¥1,263,127 for three nights, tax and service included",
+      "facts": [
+        [
+          "Amendment confirmed",
+          "September 1 hotel reply shortened November 11–15 to November 11–14. There is no extra November 14 night to cancel."
+        ],
+        [
+          "Room",
+          "Lake View Suite, balcony; room-only rate."
+        ],
+        [
+          "Dining",
+          "All three dinners and breakfasts still need individual arrangements and dietary clarification."
+        ],
+        [
+          "Activities",
+          "October 30 inquiry about archery, other activities and hiking advice is awaiting a reply."
+        ],
+        [
+          "Transfers",
+          "Reserve the actual Tokyo arrival and Izu departure arrangements."
+        ]
+      ],
+      "gf": "Hotel can modify dishes but requested precise ingredient and seasoning details. Clarify regular soy sauce avoidance, GF tamari acceptance and cross-contact tolerance; obtain a reply for each dinner."
+    },
+    "asaba-ryokan": {
+      "gf": "Gluten-free meals accepted in August; GF soy sauce question and final restrictions should be reconfirmed in response to the November 1 pre-arrival email.",
+      "facts": [
+        [
+          "Confirmed",
+          "November 14–17, three nights, prepaid ¥1,585,450; three dinners and breakfasts included."
+        ],
+        [
+          "Arrival",
+          "Check-in from 14:30. Reply with estimated arrival and transportation."
+        ],
+        [
+          "November 14 performance",
+          "45-minute Japanese drum performance; ¥6,325 per person included in the prepayment request. Confirm exact start and dinner order."
+        ],
+        [
+          "Transfers offered November 1",
+          "Shuzenji station ¥3,300 each way; Mishima ¥18,700 each way. Request at least three days ahead; neither is booked."
+        ],
+        [
+          "Optional activities",
+          "Washi, tea ceremony, ikebana, massage, e-bikes and guided excursions can be requested; no extra activity is reserved."
+        ],
+        [
+          "Baths / works",
+          "Earlier renovation warning has not been resolved in the correspondence reviewed. Ask what facilities will be available rather than inferring that works have overrun."
+        ]
+      ]
+    },
+    "hotel-the-mitsui-kyoto": {
+      "gf": "Ashly’s ingredient restriction is noted in the October 4 reply. Return the concierge authorization and obtain restaurant-specific acceptance. No TOKI or FORNI booking has been evidenced.",
+      "facts": [
+        [
+          "Stay",
+          "November 17–22, five nights confirmed. Breakfast inclusion should be checked against the booked rate."
+        ],
+        [
+          "Concierge",
+          "Authorization form requested; November 2 reply says it will be returned, not that it has been received."
+        ],
+        [
+          "Dining",
+          "Hiramatsu November 21 at 18:30 confirmed independently. Remaining Kyoto dinners and departure lunch open."
+        ],
+        [
+          "Private onsen",
+          "Optional separate reservation; no appointment found."
+        ],
+        [
+          "Sword inquiry",
+          "Masahiro November 17 13:00 / November 19 09:00 requested; front desk acknowledged forwarding to concierge."
+        ]
+      ]
+    },
+    "kyudo": {
+      "location": "Tokyo · actual dojo address to confirm",
+      "badges": [
+        "Confirmed · Mon 9 at 09:30"
+      ],
+      "rate": "¥40,000 total for two · paid",
+      "facts": [
+        [
+          "Booking",
+          "Kyudo Workshop with Yosui, November 9 at 09:30; two participants, ¥40,000 total paid via Stripe per invoice SI-2026000041."
+        ],
+        [
+          "Before going",
+          "Obtain the actual dojo address, arrival instructions and finish time. The invoice’s contact address is not established as the dojo."
+        ],
+        [
+          "Kyoto",
+          "No November 21 archery session; that morning is open."
+        ]
+      ]
+    },
+    "akiba-fukurou": {
+      "badges": [
+        "Paid · Sun 8 at 14:00",
+        "Arrive 13:50"
+      ],
+      "rate": "¥7,600 total for two",
+      "facts": [
+        [
+          "Booking",
+          "November 8 at 14:00, two adults, paid by card; forwarded confirmation October 21."
+        ],
+        [
+          "Arrival",
+          "Arrive at least 10 minutes early; no entry once the session begins."
+        ]
+      ]
+    },
+    "heki-kintsugi": {
+      "badges": [
+        "Awaiting host",
+        "Nov 20 noon requested",
+        "Nov 19 alternative"
+      ],
+      "rate": "¥121,770 requested total for two · real gold included",
+      "facts": [
+        [
+          "Request",
+          "Wabunka 25636; November 20, 12:00–14:00 requested, with November 19 as an alternative."
+        ],
+        [
+          "Materials",
+          "¥94,710 base + ¥27,060 for gold powder for both participants."
+        ],
+        [
+          "Status",
+          "October 30 request and November 2 California processing update; no final confirmation or established payment."
+        ]
+      ]
+    },
+    "picchio-musasabi": {
+      "badges": [
+        "Unbooked option",
+        "Check archery finish before choosing"
+      ],
+      "rate": "From ¥3,500 per adult · date-dependent",
+      "facts": [
+        [
+          "Published November 9 timing",
+          "16:15–17:45; wildlife may affect finish time. Published timing does not establish seats."
+        ],
+        [
+          "Scheduling",
+          "November 9 only if the confirmed morning archery and transfers allow. November 8 conflicts with est after return travel."
+        ],
+        [
+          "Booking",
+          "Tour, reserved trains and local transfers still to arrange. No confirmation found."
+        ]
+      ]
+    }
+  }
 };

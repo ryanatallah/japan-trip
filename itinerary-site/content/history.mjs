@@ -14,6 +14,24 @@
 //   points  optional bullets, for the detail that would clog the summary
 
 export const revisions = [
+{
+  "date": "2026-11-02",
+  "when": "2 November 2026",
+  "title": "Confirmed dinners and archery replace old placeholders; every day gains open-time options",
+  "tags": [
+    "dining",
+    "dates",
+    "site"
+  ],
+  "summary": "Reconciled the active site against booking emails and Ryan’s update. Actual restaurant and activity times now anchor the day sheets; unavailable venues and pending requests no longer appear as confirmed plans.",
+  "points": [
+    "est November 8 18:30; NARISAWA November 10 17:30–20:00; Hiramatsu November 21 18:30. Paid owl café November 8 14:00 and confirmed Tokyo archery November 9 09:30.",
+    "Hirata declined; Akihira and Masahiro replacement inquiries pending. Kintsugi requested November 20 noon–14:00 with gold, November 19 alternative; host confirmation pending.",
+    "Nikko amendment confirmed September 1: November 11–14, ¥1,263,127 inclusive. Driving permit already completed per Ryan. Both flights remain ticketed.",
+    "Each day sheet now includes a short itinerary overview, open-time blocks, options and prominent advance-arrangement labels. Transfer buffers and provisional holds are identified explicitly.",
+    "Reservation register links to evidence and distinguishes confirmation from dietary acceptance, guarantees, offers and unbooked options. Remaining hotel, meal and transport arrangements stay visible."
+  ]
+},
   {
     date: '2026-08-30',
     when: '30 August 2026',

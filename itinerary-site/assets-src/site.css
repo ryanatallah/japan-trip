@@ -925,6 +925,45 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
 .sheet-title { font-weight: 600; }
 .sheet-base { margin: .2rem 0 0; font-size: .8rem; color: var(--ink-3); }
 .sheet-dow { text-transform: uppercase; letter-spacing: .1em; font-size: .7rem; }
+.sheet-overview { max-width: 76ch; margin: .85rem 0 .1rem; font-size: .96rem; line-height: 1.6; color: var(--ink-2); }
+.day-legend { max-width: 78ch; font-size: .9rem; color: var(--ink-2); line-height: 1.65; }
+.sheet-open { border-top: 1px solid var(--line); margin-top: 1.35rem; padding-top: 1.1rem; }
+.sheet-open > h4 { margin: 0 0 .85rem; font-family: var(--sans); font-size: .72rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.open-windows { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1rem; align-items: start; }
+.open-window { border: 1px solid var(--line); border-radius: 8px; padding: 1rem 1.1rem; background: var(--paper-2); min-width: 0; }
+.open-time { margin: 0 0 .3rem; color: var(--accent); font-weight: 650; font-size: .82rem; font-variant-numeric: tabular-nums; }
+.open-window h5 { font: 600 1rem/1.4 var(--sans); margin: 0 0 .45rem; color: var(--ink); }
+.open-note { font-size: .83rem; line-height: 1.55; color: var(--ink-3); margin: 0 0 .8rem; }
+.open-options { list-style: none; margin: 0; padding: 0; display: grid; gap: .8rem; }
+.open-options li { border-left: 2px solid var(--line); padding-left: .75rem; font-size: .86rem; line-height: 1.55; }
+.open-options li.needs-planning { border-left: 3px solid var(--gold); }
+.open-options li > b { display: block; color: var(--ink); font-weight: 600; }
+.open-options li > span { display: block; color: var(--ink-2); margin-top: .18rem; }
+.advance-label { display: inline-block; padding: .15rem .45rem; margin: .25rem 0; border-radius: 4px; color: var(--ink); background: color-mix(in oklab, var(--gold) 22%, var(--paper)); border: 1px solid color-mix(in oklab, var(--gold) 55%, var(--line)); font: 650 .7rem/1.4 var(--sans); }
+.fx-pending .fx-t { color: var(--gold); }
+.booking-list { border-top: 1px solid var(--line); }
+.booking { display: grid; grid-template-columns: 11rem minmax(0, 1fr); gap: 1.2rem; padding: 1.1rem 0; border-bottom: 1px solid var(--line); }
+.booking-when { margin: 0; font-size: .9rem; }
+.booking-when b, .booking-when span { display: block; }
+.booking-when span { margin-top: .2rem; font-size: .8rem; color: var(--ink-3); }
+.booking h3 { font: 600 1.05rem/1.4 var(--sans); margin: 0 .5rem .2rem 0; }
+.booking-status { font: 650 .72rem/1.5 var(--sans); color: var(--ink-2); }
+.booking-confirmed .booking-status { color: var(--moss); }
+.booking-pending .booking-status { color: var(--accent); }
+.booking div > p { margin: .35rem 0 0; font-size: .89rem; line-height: 1.6; color: var(--ink-2); }
+.booking-closed { margin-top: 1.3rem; font-size: .89rem; line-height: 1.6; }
+.booking-closed summary { cursor: pointer; font-weight: 600; }
+.booking-closed li { margin: .7rem 0; }
+@media (max-width: 700px) {
+  .open-windows { grid-template-columns: 1fr; }
+  .booking { grid-template-columns: 1fr; gap: .45rem; }
+  .booking-when b, .booking-when span { display: inline; }
+  .booking-when span { margin-left: .5rem; }
+}
+@media print {
+  .open-window { break-inside: avoid; }
+  .advance-label { background: none; border: 1px solid currentColor; }
+}
 .sheet-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1rem, 2.5vw, 2rem); }
 .sheet-col h4 { font-family: var(--sans); font-size: .68rem; text-transform: uppercase; letter-spacing: .12em; color: var(--ink-3); margin: 0 0 .6rem; }
 .sheet-col .none { font-size: .87rem; color: var(--ink-3); font-style: italic; margin: 0; }
@@ -1016,7 +1055,8 @@ tbody tr:last-child td, tbody tr:last-child th { border-bottom: 0; }
   .nav, .itinbar, .outline, .ol-scrim, .crumb, .subnav, .pager, .theme, .lightbox, .hero-jump { display: none !important; }
   body { background: #fff; color: #000; padding-left: 0 !important; }
   .shot { break-inside: avoid; }
-  .sheet, .base { break-inside: avoid; border-color: #ccc; }
+  .sheet { break-inside: auto; border-color: #ccc; }
+  .sheet-head, .sheet-col, .base { break-inside: avoid; border-color: #ccc; }
   .rosefig { position: static; }
 }
 
