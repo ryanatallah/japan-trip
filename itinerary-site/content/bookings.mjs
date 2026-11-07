@@ -1,9 +1,18 @@
-// Reconciled against Gmail and Ryan's updates on 2 November 2026, California time.
+// Reconciled November 2 California time; Toyota confirmation added November 8 Japan time.
 // Sources are message links, never payment, cancellation or authentication links.
-export const bookingReview = '2 November 2026';
+export const bookingReview = '8 November 2026 Japan time (rental); other reservations reviewed 2 November California time';
 const mail = (id) => `https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/${id}`;
 
 export const bookings = [
+  {
+    "day": "Wed 11 – Tue 17",
+    "time": "10:30 pickup → 16:00 return",
+    "name": "Toyota Rent a Car · Lexus RX Hybrid LXC2",
+    "status": "Confirmed · online payment selected",
+    "tone": "confirmed",
+    "detail": "Reservation 99950312100. November 11 10:30 pickup: Tokyo Sta. Nihonbashi Ext. Shop, Trust Tower N Wing B2, 1-8-1 Marunouchi; 03-5220-2220. November 17 16:00 return: Horikawa Shop, 503-1 Anenishihorikawa-cho, Kyoto. ¥392,716 incl. tax, including ¥37,950 one-way surcharge and ¥23,100 winter-equipment line. Automatic, non-smoking; winter tires required, 4WD not required. Compensation, NOC exemption, car-model option and ETC card selected; card supply subject to availability. Online credit-card payment selected, not evidence of a settled charge. Covers Tokyo → Nikko → Izu → Kyoto and local driving during the rental; later Kyoto / Aioi / KIX travel remains separate.",
+    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1b8339689d2dde"
+  },
   {
     "day": "Sun 8",
     "time": "14:00",

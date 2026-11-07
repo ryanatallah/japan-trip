@@ -594,7 +594,7 @@ const costTable = (it) => `<div class="tablewrap"><table class="costs">
 function bookingRegister() {
   return `<section class="sec sec-alt" id="reservations">
     <h2>Reservations and requests</h2>
-    <p class="sec-sub">Checked ${esc(bookingReview)}, California time. Appointment times are Japan time. A request, offer or published slot is not a confirmed booking.</p>
+    <p class="sec-sub">Checked ${esc(bookingReview)}. Appointment times are Japan time. A request, offer or published slot is not a confirmed booking.</p>
     <div class="booking-list">${bookings.map((b) => `<article class="booking booking-${esc(b.tone)}">
       <p class="booking-when"><b>${linkDates(b.day)}</b><span>${esc(b.time)}</span></p>
       <div><h3>${esc(b.name)}</h3><strong class="booking-status">${esc(b.status)}</strong>

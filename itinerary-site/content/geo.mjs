@@ -61,17 +61,16 @@ export const routes = {
   plan: {
     stops: [
       { id: 'tokyo', nights: 4, at: 'right' },
-      { id: 'chuzenji', nights: 3, mode: 'rail', at: 'top' },
-      { id: 'shuzenji', nights: 3, mode: 'rail', at: 'bottom' },
-      { id: 'kyoto', nights: 5, mode: 'rail', at: 'left' },
+      { id: 'chuzenji', nights: 3, mode: 'road', at: 'top' },
+      { id: 'shuzenji', nights: 3, mode: 'road', at: 'bottom' },
+      { id: 'kyoto', nights: 5, mode: 'road', at: 'left' },
     ],
     trips: [
       { from: 'tokyo', to: 'karuizawa', mode: 'rail', at: 'top' },
       { from: 'chuzenji', to: 'nikko', mode: 'road', at: 'right' },
-      { from: 'shuzenji', to: 'mishima', mode: 'rail', at: 'right' },
       { from: 'kyoto', to: 'hayamitsu', mode: 'rail', at: 'bottom' },
     ],
-    inOut: 'Fly in to Tokyo (HND), out of Osaka (KIX) — the Nikko→Izu leg crosses the whole Kanto plain',
+    inOut: 'Fly in to Tokyo (HND), out of Osaka (KIX) — confirmed Toyota connects Tokyo, Nikko, Izu and Kyoto, November 11–17',
   },
 
   // Superseded 23 August 2026. This was the plan's route until Gora Kadan came back full;

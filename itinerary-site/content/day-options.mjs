@@ -58,24 +58,22 @@ export const dayOptions = {
     ]),
   ],
   'Wed 11': [
-    window('After arrival–15:00 check-in', 'Lake time if the transfer allows', 'The Tokyo–Nikko journey is not booked in the evidence reviewed. An 11:30 hotel arrival is a target under the earlier rail plan, not a guarantee.', [
-      option('Hotel lunch and a short lakeshore walk', 'The easiest arrival option; leave bags with the concierge.'),
-      option('Kegon Falls', 'A nearby alternative if daylight and weather allow. Ask the hotel about access and current conditions; do not add a mountain hike.'),
+    window('Morning–10:30', 'Checkout and confirmed Toyota pickup', 'Collect the rental at Tokyo Sta. Nihonbashi Ext. Shop at 10:30. Check out of Aman first and allow time to find the B2 counter.', [
+      option('Breakfast and pack at Aman', 'Bring licence, completed IDP and passport / entry evidence. Use a short taxi with luggage to Trust Tower N Wing, 1-8-1 Marunouchi.', 'Prepare documents + luggage'),
     ]),
-    window('15:00–dinner', 'No timed activity booked', 'Unpack and keep the first mountain afternoon light.', [
-      option('Hotel onsen and lake views', 'A warm, low-effort option after the transfer.'),
-      option('Hotel cultural or guided activity', 'Ritz has been asked for its activity programme; do not assume archery, hiking gear or a guide is included.', 'Await Ritz reply + reserve chosen activity'),
+    window('After pickup–about 15:00', 'Drive to Ritz-Carlton Nikko', 'The rental is confirmed; 3–4 hours driving is an estimate, with handover, lunch and traffic time additional. Target hotel check-in around 15:00.', [
+      option('Direct road transfer with a food stop', 'Ask Aman for suitable food and Ritz for current road conditions and parking. SPACIA X and the station transfer are replaced.', 'Confirm parking + route conditions'),
     ]),
-    window('Dinner and evening', 'First Nikko dinner still open', 'Lakehouse was proposed around 17:30, not confirmed.', [
-      option('Lakehouse', 'Ask for the actual sitting and full dietary acceptance; keep a hotel-dining fallback.', 'Reserve dinner'),
-      option('Hotel stargazing, if offered', 'Ask whether an activity runs during your stay and whether a separate booking is needed.', 'Ask Ritz in advance'),
+    window('After arrival–dinner', 'Gentle lake afternoon; dinner unbooked', 'Leave time to unpack and recover. Lakehouse around 17:30 was proposed, not confirmed.', [
+      option('Onsen, lakeshore or nearby Kegon Falls', 'Choose only what arrival time and daylight allow.'),
+      option('Lakehouse dinner', 'Obtain the actual sitting and dietary acceptance; keep a hotel-dining fallback.', 'Reserve dinner'),
     ]),
   ],
   'Thu 12': [
     window('08:00–about 16:00', 'Flexible sightseeing day · no tour booked', 'Rinnoji, Toshogu, Shinkyo and Kanmangafuchi are the proposed route. Opening and last-entry times are constraints, not personal reservations.', [
       option('Shrine precinct and gorge photography', 'Do the paid shrine entries earlier; leave the gorge and outside bridge views for later daylight. Ask Ritz about current route and wildlife conditions.'),
       option('Tamozawa villa instead of another shrine', 'A quieter alternative within the lower-Nikko day; choose rather than stacking every site.'),
-      option('Private sightseeing driver / guide and lunch', 'Useful for connecting stops and avoiding a rushed return. Nikko Kanaya lunch is a candidate only, with diet and table to confirm.', 'Arrange driver/guide + lunch'),
+      option('Rental-car sightseeing and optional guide', 'The Toyota is confirmed. Check parking and road conditions; a guide and Nikko Kanaya lunch need separate reservations and dietary agreement.', 'Arrange lunch + guide if wanted'),
     ]),
     window('After return–evening', 'Onsen and unbooked dinner', 'Leave the evening free until the hotel confirms restaurant service.', [
       option('Teppanyaki if the counter is serving', 'November 12 is a request, not a reservation. If unavailable, ask Ritz for an appropriate alternative.', 'Reserve counter + confirm dietary menu'),
@@ -88,14 +86,14 @@ export const dayOptions = {
       option('Odashiro / Senjugahama nature outing', 'Alternative to the cruise. Ask about current access, suitable route and a guide; do not treat the old bus times as booked transport.', 'Arrange guide/transport if chosen'),
       option('Kegon Falls and a hotel afternoon', 'The shorter-weather-window fallback.'),
     ]),
-    window('About 15:30–evening', 'Open for packing, onsen and dinner', 'Protect time for luggage forwarding and tomorrow’s long transfer.', [
+    window('About 15:30–evening', 'Open for packing, onsen and dinner', 'Pack for tomorrow’s long drive; the same confirmed rental continues to Asaba and Kyoto.', [
       option('Sushi counter or another hotel dinner', 'No reservation established; Ashly’s preference to avoid raw fish also needs discussing before choosing sushi.', 'Reserve dinner + agree suitable menu'),
-      option('Forward bags to Mitsui', 'If travelling by rail, arrange collection by today at the latest and confirm delivery for November 17. Carry three nights of essentials.', 'Arrange hotel-to-hotel forwarding'),
+      option('Pack for the road transfer', 'Carry bags in the confirmed rental if they fit. Forwarding to Mitsui is optional; confirm delivery only if choosing that service.', 'Check luggage fit + optional forwarding'),
     ]),
   ],
   'Sat 14': [
-    window('Morning–mid-afternoon', 'Transfer block · no spare excursion time', 'Nikko to Asaba is a substantial move. Earlier rail times and the Mishima rental are proposals; exact transport must be secured.', [
-      option('Keep the transfer simple', 'Reserve the chosen trains, car or driver, and tell Asaba your arrival time. Avoid adding sightseeing between bases.', 'Book transport + notify Asaba'),
+    window('Morning–mid-afternoon', 'Transfer block · no spare excursion time', 'Nikko to Asaba is a substantial move. The Toyota is confirmed. Allow roughly 6–7 hours with breaks, leaving around 08:00 to target 14:30–15:00 arrival.', [
+      option('Keep the transfer simple', 'Drive the same car directly to Asaba. Confirm road conditions, parking and arrival; keep sightseeing off this long transfer day.', 'Notify Asaba + confirm route'),
     ]),
     window('After check-in–dinner', 'Flexible Asaba arrival', 'Asaba confirms check-in from 14:30. Final arrival, dinner and drum-performance times remain to be agreed.', [
       option('Bath, tea and settle into the ryokan', 'Use the property rather than planning another drive.'),
@@ -104,9 +102,9 @@ export const dayOptions = {
     ]),
   ],
   'Sun 15': [
-    window('After breakfast–about 16:30', 'Open Izu day · choose a route', 'Neither a car outing nor a guided excursion is booked. Leave time for Asaba dinner.', [
+    window('After breakfast–about 16:30', 'Open Izu day · choose a route', 'The Toyota rental is confirmed and available. Choose a self-drive route; guided visits remain unbooked. Leave time for Asaba dinner.', [
       option('Wasabi landscape and Joren Falls', 'Use public viewpoints; farm entry or a hands-on visit needs its own arrangement. Ask Asaba about current guided availability rather than relying on the old three-week-notice proposal.', 'Arrange guide/farm access if wanted'),
-      option('Fuji views via Darumayama or the west coast', 'Choose according to weather and available transport. This is an alternative to the wasabi route.', 'Secure rental or sightseeing driver'),
+      option('Fuji views via Darumayama or the west coast', 'Use the confirmed rental and choose according to weather. This is an alternative to the wasabi route; check road access and parking.'),
       option('Vieni KANDA lunch', 'Sunday lunch is the useful slot under the restaurant’s usual hours. Ask Asaba to verify service and dietary ingredients.', 'Reserve lunch in advance', 'https://vienikanda.com/'),
     ]),
     window('After dinner', 'Optional local evening', 'No fixed evening activity beyond the included ryokan meal.', [
@@ -118,7 +116,7 @@ export const dayOptions = {
     window('After breakfast–about 16:30', 'A full unbooked day in Izu', 'The most flexible day of the trip. Choose one craft, excursion or a quiet day at Asaba.', [
       option('Shuzenji washi workshop', '90 minutes; English programme ¥15,000 per person for two or more. Book the actual sitting; paper is shipped after drying.', 'Advance reservation required', 'https://shuzenjiwashi.com/en/workshop/'),
       option('Private tea ceremony or ikebana through Asaba', 'Asaba quoted ¥63,250 per person for either class on November 1. No slot is held.', 'Ask Asaba for availability + reserve'),
-      option('The Izu route not taken Sunday', 'Wasabi, coast or Fuji views, depending on weather and transport.', 'Arrange driver/guide if needed'),
+      option('The Izu route not taken Sunday', 'The rental is available for wasabi country, coast or Fuji views according to weather. Guided visits need their own arrangement.', 'Arrange guide if wanted'),
       option('Shuzenji temple, bridges and ryokan time', 'The low-commitment alternative; arrange lunch because Vieni KANDA is normally closed Monday.'),
     ]),
     window('After dinner', 'Last Asaba evening', 'Pack and confirm breakfast against the next morning’s actual departure.', [
@@ -126,13 +124,16 @@ export const dayOptions = {
     ]),
   ],
   'Tue 17': [
-    window('Arrival in Kyoto–about 17:00', 'Afternoon open after the transfer', 'Train and arrival times are still to book. Hayamitsu on November 20 is now the provisional forge priority; the earlier Masahiro inquiry is a backup.', [
-      option('Masahiro backup, only if still wanted', 'No session is accepted and no withdrawal is evidenced. Coordinate with Mitsui before accepting a second workshop or planning a direct station-to-forge transfer.', 'Coordinate earlier inquiry', 'https://morinokyoto.jp/masahiro_en/'),
-      option('Mitsui check-in and a local stroll', 'The easy fallback; explore near Nijo Castle without a cross-city commitment.'),
+    window('Around 08:00–16:00', 'Drive to Kyoto and return the Toyota', 'Leave Asaba early. Allow roughly 5–6 hours on the road plus breaks, fuel and return paperwork; the Horikawa Shop return is booked for 16:00.', [
+      option('Direct drive with food and rest stops', 'Target Kyoto around 14:00–15:00 and coordinate Mitsui luggage drop. No Mishima return or train is needed; do not add a forge workshop.', 'Arrange early breakfast + check route'),
+    ]),
+    window('After rental return–dinner', 'Mitsui check-in and a quiet arrival', 'The 15:00 room time is a check-in opening, not a guaranteed arrival. Keep sightseeing flexible until the car is returned.', [
+      option('Hotel time or a short Nijo neighbourhood walk', 'Take a short taxi or walk from Horikawa Shop after returning the car. Allow time to change before dinner.'),
+      option('Coordinate the earlier Masahiro inquiry', 'It remains a backup with no accepted session or withdrawal. Hayamitsu November 20 is the provisional priority.', 'Coordinate earlier inquiry'),
     ]),
     window('Dinner–evening', 'Kyoto arrival dinner open', 'TOKI at 18:00 was proposed, not booked.', [
-      option('TOKI dinner at the hotel', 'Obtain dietary acceptance and a real sitting before treating this as a plan.', 'Reserve dinner', 'https://www.hotelthemitsui.com/en/kyoto/restaurants-bar/toki/'),
-      option('Nijo Castle evening event', 'Optional after dinner if the 2026 event and entry time fit. A separate evening ticket is needed.', 'Check programme + buy correct evening ticket', 'https://nijo-jocastle.city.kyoto.lg.jp/event/castlefes2026/?lang=en'),
+      option('TOKI dinner at Mitsui', 'Obtain dietary acceptance and an actual sitting.', 'Reserve dinner', 'https://www.hotelthemitsui.com/en/kyoto/restaurants-bar/toki/'),
+      option('Local evening or hotel recovery', 'Keep this optional after the long drive; the rental has now ended.'),
     ]),
   ],
   'Wed 18': [

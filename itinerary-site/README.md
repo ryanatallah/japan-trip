@@ -48,6 +48,11 @@ day sheets and issue list distinguish confirmed bookings, pending requests and u
 `content/bookings.mjs` holds the reservation register and unavailable/replaced records, with
 links to the supporting email messages. Do not publish payment, cancellation or login links.
 
+Toyota confirmation was added on **November 8, 2026 Japan time**. The same rental covers
+Tokyo → Nikko → Izu → Kyoto, November 11 at 10:30 through November 17 at 16:00. The active
+day sheets and route map use road travel for those moves; the later Aioi excursion and KIX
+transfer retain separate rail and taxi arrangements.
+
 `content/day-options.mjs` gives every day approximate open-time blocks and alternatives.
 Each option's `reserve` label explains any advance booking, ticket, reply or transport needed.
 The build requires options for all seventeen days, including protected travel/recovery blocks.

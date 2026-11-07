@@ -15,6 +15,24 @@
 
 export const revisions = [
 {
+  "date": "2026-11-08",
+  "when": "8 November 2026 · Japan time",
+  "title": "Toyota confirmed for every hotel-base move, Tokyo to Kyoto",
+  "tags": [
+    "route",
+    "cost",
+    "site"
+  ],
+  "effect": "¥392,716 rental · planning total ≈ $78,600",
+  "summary": "Toyota reservation 99950312100 confirms a Lexus RX Hybrid from Tokyo Sta. Nihonbashi Ext. November 11 at 10:30 to Kyoto Horikawa November 17 at 16:00. One continuous rental covers Tokyo → Nikko → Asaba / Izu → Kyoto and local driving between pickup and return.",
+  "points": [
+    "<a href=\"https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1b8339689d2dde\">Toyota confirmation</a> received November 7 UTC / November 8 Japan time. Automatic, non-smoking LXC2; winter tires requested, 4WD not required. Compensation, NOC exemption, car-model option and ETC card selected; ETC supply is subject to shop availability. Online payment is selected, with no settled charge established.",
+    "The SPACIA X, Nikko station transfer, Mishima pickup/return and Mishima–Kyoto train proposals are replaced. Luggage forwarding becomes optional; the day sheets protect the long November 14 and 17 drives and the 16:00 Kyoto return.",
+    "¥392,716 includes tax, the ¥37,950 one-way surcharge and ¥23,100 winter-equipment line. About $2,618 at ¥150/$ is now a separate rental line. The former $1,300 ground allowance is retained provisionally for remaining rail, transfers, fuel, tolls and parking and needs repricing; rounded budget ≈ $78,600.",
+    "The rental ends November 17. Kyoto local travel, the November 20 Aioi forge excursion and November 22 KIX transfer remain separate; no later rail or taxi booking is inferred. Updated the plan, reservation register, day sheets, open-time guidance, base notes, route map and issues."
+  ]
+},
+{
   "date": "2026-11-02",
   "when": "2 November 2026 · evening update",
   "title": "Kintsugi requested for November 19 only; Hayamitsu provisionally reserved for November 20",

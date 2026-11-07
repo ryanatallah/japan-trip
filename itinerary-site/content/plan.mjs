@@ -25,8 +25,8 @@ export const plan = {
     "Kyoto · 5n"
   ],
   "routeNote": "Open-jaw — in to Tokyo (HND), home from Osaka (KIX), landing 22 November with three clear days before Colorado",
-  "cost": "$76,000",
-  "costBand": "$76k, both flights in",
+  "cost": "$78,600",
+  "costBand": "$78.6k, flights and rental included",
   "temp": "32–60°F — Okunikko is the cold part",
   "tempStatus": "warn",
   "bestFor": "The version that is actually booked",
@@ -45,20 +45,19 @@ export const plan = {
     ]
   },
   "transport": {
-    "mode": "Rail and road · arrangements still to confirm",
-    "text": "The route is fixed; the transport reservations are not yet evidenced. Decide the rental-car or driver arrangement before buying dependent train journeys. All journey times on the day sheets are planning estimates unless identified as ticketed.",
+    "mode": "Toyota rental confirmed · Tokyo → Nikko → Izu → Kyoto",
+    "text": "One continuous rental covers every move between the four hotel bases, plus local driving in Nikko and Izu. Toyota reservation 99950312100 runs November 11 at 10:30 to November 17 at 16:00, Japan time. The November 20 Aioi excursion and November 22 airport transfer are after the car is returned and still need their own arrangements. Driving times below are planning allowances, not live traffic estimates.",
     "points": [
-      "<strong>Tokyo → Nikko, November 11:</strong> reserve the actual train and hotel transfer, or arrange a driver. The earlier SPACIA X times were a proposal, not tickets.",
-      "<strong>Nikko → Asaba, November 14:</strong> allow roughly six hours and aim for 14:30–15:00 arrival. Choose rail via Utsunomiya, Tokyo and Mishima, or a quoted road transfer. Tell Asaba the final arrival time; it requests taxi details at least three days ahead.",
-      "<strong>Driving permit:</strong> completed per Ryan’s October update. The car itself remains unconfirmed. Compare a Nikko-area pickup with Mishima return against separate Nikko transport and an Izu-only rental.",
-      "<strong>Luggage:</strong> if travelling by rail, arrange Nikko → Mitsui forwarding by November 12/13 and carry three nights of essentials at Asaba. Confirm delivery rather than assuming next-day service.",
-      "<strong>Mishima → Kyoto, November 17:</strong> reserve the actual train after reconciling breakfast, rental return and station buffer. The earlier Masahiro inquiry is now a backup, not a second scheduled forge visit.",
-      "<strong>Kyoto → Aioi → Hayamitsu, November 20:</strong> reserve a current shinkansen connection and taxis at Aioi in both directions. Aioi’s official guide gives about 70 minutes from Kyoto by shinkansen; the forge says about 20 minutes from Aioi by taxi. With station access, connections and arrival slack, budget roughly 2½–3 hours each way. These are planning allowances, not tickets.",
-      "<strong>Kyoto → KIX, November 22:</strong> reserve the station transfer and Haruka. Aim for KIX around 15:30 for the ticketed 18:35 UA34; 13:30 is the hotel-departure target."
+      "<strong>Pick up Wednesday November 11, 10:30:</strong> Tokyo Sta. Nihonbashi Ext. Shop, Trust Tower N Wing, B2 parking lot, 1-8-1 Marunouchi, Chiyoda-ku, Tokyo 100-0005; telephone 03-5220-2220. Check out of Aman first, collect the car and drive to The Ritz-Carlton Nikko. Allow roughly 3–4 hours on the road plus pickup, food and traffic buffers; target the 15:00 hotel check-in. The SPACIA X and Nikko station-transfer proposals are replaced.",
+      "<strong>The car:</strong> LXC2 class, Lexus RX Hybrid (from November 2022), automatic, non-smoking. Winter tires are requested; 4WD is not required. Liability compensation and NOC exemption / Toyota W Plan are selected, along with the car-model option and an ETC card. ETC card supply is subject to shop availability; tolls are separate from the rental price.",
+      "<strong>Nikko → Asaba, Saturday November 14:</strong> drive the same car door to door. Allow roughly 6–7 hours including breaks and traffic; an early departure around 08:00 targets 14:30–15:00 arrival, with check-in by 18:00. Tell Asaba the road-arrival plan and confirm dinner, parking and the drum-performance time. No Mishima pickup, intercity train connections or mandatory luggage forwarding.",
+      "<strong>Nikko and Izu outings:</strong> use the rental for lower Nikko, lake access, wasabi country and Fuji or coastal viewpoints. Check mountain-road conditions with Ritz; winter tires do not establish 4WD. The Senjugahama corridor remains closed to private cars, so its seasonal shuttle still needs checking. Carry bags in the car if they fit; forwarding is optional.",
+      "<strong>Asaba → Kyoto, Tuesday November 17:</strong> drive directly to Kyoto; allow roughly 5–6 hours on the road plus stops, refuelling and return paperwork. Plan to leave around 08:00 and reach Kyoto around 14:00–15:00. Return by <strong>16:00 at Horikawa Shop</strong>, 503-1 Anenishihorikawa-cho, Nakagyo-ku, Kyoto 604-8264, on Nishihorikawa-dori just north of Sanjo. Coordinate bags with Mitsui and take a short taxi or walk after return. No Mishima → Kyoto train is needed.",
+      "<strong>Reservation and cost:</strong> <a href=\"https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1b8339689d2dde\">Toyota email confirmation</a>, reservation <strong>99950312100</strong>, <strong>¥392,716 including tax</strong> (about $2,618 at the planning rate). This includes the ¥37,950 one-way surcharge and ¥23,100 winter-equipment line. Online credit-card payment is selected; the email does not establish that the charge has settled. Bring the valid driving licence, 1949 Geneva IDP and passport with evidence of entry. The driving permit is already completed per Ryan’s update.",
+      "<strong>Kyoto → Aioi → Hayamitsu, November 20:</strong> the rental has ended. After host confirmation, reserve a current shinkansen connection and taxis at Aioi in both directions. Allow roughly 2½–3 hours each way including station access, connections and arrival slack; no tickets are established.",
+      "<strong>Kyoto → KIX, November 22:</strong> the rental has ended. Reserve the station transfer and Haruka; target hotel departure 13:30 and KIX around 15:30 for ticketed UA34 at 18:35. Kyoto local transfers and the Hiramatsu dinner car also remain separate."
     ],
-    "ref": [
-      "shinkansen-green-car"
-    ]
+    "ref": []
   },
   "hero": "asaba-ryokan",
   "heroCard": [
@@ -66,7 +65,7 @@ export const plan = {
     "asaba-ryokan",
     "hotel-the-mitsui-kyoto"
   ],
-  "pitch": "<strong>Four bases, fifteen nights, both flights ticketed.</strong> Aman Tokyo November 7–11, Ritz-Carlton Nikko November 11–14, Asaba November 14–17 and Hotel The Mitsui Kyoto November 17–22. The Ritz stay was shortened successfully on September 1; there is no double-booked fourth night.<br><br><strong>The booked experiences now shape the days.</strong> Owl café November 8 at 14:00, est at 18:30, Tokyo archery November 9 at 09:30, NARISAWA November 10 at 17:30 and Hiramatsu Kodaiji November 21 at 18:30. Hirata was declined; Kikyo Hayamitsu in Aioi is now provisionally reserved for November 20, 13:30–17:30, subject to host confirmation. Kintsugi has been requested for November 19 only; a new time and acceptance are pending.<br><br><strong>The landscapes remain the reason for the route.</strong> Lower Nikko’s shrines and gorge, three nights at Asaba on Izu, and a Kyoto week with Takao, Ohara, Arashiyama and Kurama as flexible outings. The <a href=\"days.html\">day sheets</a> distinguish fixed bookings, provisional holds and open time, with options for each gap.",
+  "pitch": "<strong>Four bases, fifteen nights, both flights ticketed.</strong> Aman Tokyo November 7–11, Ritz-Carlton Nikko November 11–14, Asaba November 14–17 and Hotel The Mitsui Kyoto November 17–22. The Ritz stay was shortened successfully on September 1; there is no double-booked fourth night.<br><br><strong>One confirmed car connects all four bases.</strong> Toyota’s Lexus RX Hybrid rental runs Tokyo Station November 11 at 10:30 → Kyoto Horikawa November 17 at 16:00, covering Nikko and Izu in between. The former SPACIA X, Mishima rental and Mishima–Kyoto rail proposals are replaced.<br><br><strong>The booked experiences now shape the days.</strong> Owl café November 8 at 14:00, est at 18:30, Tokyo archery November 9 at 09:30, NARISAWA November 10 at 17:30 and Hiramatsu Kodaiji November 21 at 18:30. Hirata was declined; Kikyo Hayamitsu in Aioi is now provisionally reserved for November 20, 13:30–17:30, subject to host confirmation. Kintsugi has been requested for November 19 only; a new time and acceptance are pending.<br><br><strong>The landscapes remain the reason for the route.</strong> Lower Nikko’s shrines and gorge, three nights at Asaba on Izu, and a Kyoto week with Takao, Ohara, Arashiyama and Kurama as flexible outings. The <a href=\"days.html\">day sheets</a> distinguish fixed bookings, provisional holds and open time, with options for each gap.",
   "days": [
     {
       "date": "Fri 6",
@@ -114,7 +113,7 @@ export const plan = {
     {
       "date": "Wed 11",
       "where": "→ Okunikko",
-      "text": "<strong>Transfer to Ritz-Carlton Nikko.</strong> Three nights confirmed, November 11–14; ¥1,263,127 total. Train/driver and all three dinners still to arrange. Gentle lake afternoon if arrival permits.",
+      "text": "<strong>Toyota pickup 10:30 near Tokyo Station, then drive to Ritz-Carlton Nikko.</strong> Lexus RX Hybrid confirmed through November 17 in Kyoto. Target 15:00 hotel check-in; allow pickup time and traffic. All three Nikko dinners still to arrange.",
       "ref": [
         "ritz-carlton-nikko",
         "lake-chuzenji"
@@ -123,7 +122,7 @@ export const plan = {
     {
       "date": "Thu 12",
       "where": "Nikko",
-      "text": "<strong>Lower Nikko sightseeing, flexible:</strong> Rinnoji, Toshogu, the bridge and Kanmangafuchi. Arrange transport and lunch; teppanyaki dinner remains a request.",
+      "text": "<strong>Lower Nikko sightseeing by rental car, flexible:</strong> Rinnoji, Toshogu, the bridge and Kanmangafuchi. Arrange lunch and check parking and road conditions; teppanyaki dinner remains a request.",
       "ref": [
         "nikko-toshogu",
         "kanmangafuchi"
@@ -132,7 +131,7 @@ export const plan = {
     {
       "date": "Fri 13",
       "where": "Okunikko",
-      "text": "<strong>Choose the lake and villas, a nature outing, or a shorter hotel day.</strong> Confirm seasonal services and route conditions with Ritz. Forward bags if taking trains to Izu; dinner unbooked.",
+      "text": "<strong>Choose the lake and villas, a nature outing, or a shorter hotel day.</strong> The rental is available; private-car restrictions still apply to Senjugahama. Check seasonal services and route conditions with Ritz. Keep luggage for tomorrow’s drive; dinner unbooked.",
       "ref": [
         "lake-chuzenji"
       ]
@@ -140,7 +139,7 @@ export const plan = {
     {
       "date": "Sat 14",
       "where": "→ Shuzenji",
-      "text": "<strong>Long transfer to Asaba.</strong> Aim for check-in from 14:30; exact transport not booked. Three-night stay prepaid with dinner and breakfast. Confirm dinner and the Japanese drum performance time.",
+      "text": "<strong>Drive the booked Toyota from Nikko to Asaba.</strong> Allow roughly 6–7 hours including breaks; depart around 08:00 to target 14:30–15:00 check-in. Three-night stay prepaid with meals. Confirm arrival, parking, dinner and drum-performance timing.",
       "ref": [
         "asaba-ryokan"
       ]
@@ -148,7 +147,7 @@ export const plan = {
     {
       "date": "Sun 15",
       "where": "Izu",
-      "text": "<strong>Open Izu day.</strong> Choose wasabi country, Fuji viewpoints or a quieter Shuzenji day. Arrange transport; Vieni KANDA Sunday lunch is an unbooked option. Asaba dinner included.",
+      "text": "<strong>Open Izu day with the confirmed rental car.</strong> Choose wasabi country, Fuji viewpoints or a quieter Shuzenji day. Vieni KANDA Sunday lunch is an unbooked option; Asaba dinner included.",
       "ref": [
         "asaba-ryokan",
         "shuzenji-onsen"
@@ -157,7 +156,7 @@ export const plan = {
     {
       "date": "Mon 16",
       "where": "Izu",
-      "text": "<strong>Fully flexible.</strong> Optional washi workshop, Asaba-arranged cultural class, the other Izu excursion or ryokan time. These need their own bookings; no extra activity confirmed.",
+      "text": "<strong>Fully flexible.</strong> Optional washi workshop, Asaba-arranged cultural class, the other Izu excursion or ryokan time. These need their own bookings; no extra activity confirmed. The confirmed rental remains available for an optional Izu outing.",
       "ref": [
         "shuzenji-onsen"
       ]
@@ -165,7 +164,7 @@ export const plan = {
     {
       "date": "Tue 17",
       "where": "→ Kyoto",
-      "text": "<strong>Transfer to Hotel The Mitsui Kyoto.</strong> Five nights confirmed. Afternoon open; the earlier Masahiro inquiry is a backup, with no accepted session. TOKI dinner proposed, not booked.",
+      "text": "<strong>Drive Asaba → Kyoto; Toyota Horikawa return by 16:00.</strong> Leave around 08:00 with breaks, fuel and return buffer; target Kyoto around 14:00–15:00. Coordinate Mitsui luggage and check-in. No Mishima train; TOKI dinner remains unbooked.",
       "ref": [
         "hotel-the-mitsui-kyoto"
       ]
@@ -272,16 +271,20 @@ export const plan = {
       "$3,230 allowance"
     ],
     [
-      "Ground — Green Car, the six-hour transfer, three days of car on Izu, transfers, takkyubin",
-      "$1,300"
+      "Toyota rental — Tokyo November 11 → Kyoto November 17; confirmed ¥392,716 incl. tax",
+      "≈ $2,618"
+    ],
+    [
+      "Other ground — retained provisional allowance for airport / Kyoto transfers, Aioi rail and taxis, fuel, tolls and parking; reprice after route checks",
+      "$1,300 allowance"
     ],
     [
       "Temple entries, illuminations and the Kyoto day pass",
       "$150"
     ]
   ],
-  "costTotal": "≈ $76,000",
-  "costModel": "Per couple, using the existing planning exchange rate of ¥150/$. Both flights are ticketed and the hotel stays confirmed. Ritz’s corrected three-night total is ¥1,263,127. The roughly $76,000 total remains a planning budget: dining, activities and transport are not a settled invoice. Asaba includes three dinners and three breakfasts. The declined Hirata ¥385,000 authorization was released with no charge; Hayamitsu is provisionally reserved at ¥112,000 for two, with no payment evidenced. Kintsugi is now requested for November 19 only; its earlier ¥121,770 quote includes real gold, but the revised date, time and price are not accepted. Neither workshop is counted as a completed payment. A 5–8% contingency is not included.",
+  "costTotal": "≈ $78,600",
+  "costModel": "Per couple, using the existing planning exchange rate of ¥150/$. Both flights are ticketed and the hotel stays confirmed. Ritz’s corrected three-night total is ¥1,263,127. Toyota’s confirmed ¥392,716 rental adds about $2,618 at that rate. The former $1,300 ground allowance is retained provisionally for remaining rail, local / airport transfers, fuel, tolls and parking; it is no longer an estimate of the rental itself and needs repricing. The rounded total is now about $78,600. Dining, activities and remaining ground costs are still allowances, not a settled invoice. Online rental payment is selected, but a settled charge is not established. Asaba includes three dinners and three breakfasts. The declined Hirata ¥385,000 authorization was released with no charge; Hayamitsu is provisionally reserved at ¥112,000 for two, with no payment evidenced. Kintsugi is now requested for November 19 only; its earlier ¥121,770 quote includes real gold, but the revised date, time and price are not accepted. Neither workshop is counted as a completed payment. A 5–8% contingency is not included.",
   "verdict": "<strong>The route is settled; the days retain room to choose.</strong> Tokyo has the confirmed dinners, owl café and archery. Nikko is a lake-and-onsen base with lower-elevation shrine and gorge outings; ask the hotel about current weather and routes before choosing the longer nature day. Three prepaid nights at Asaba allow one excursion and one slower or craft-focused day. Kyoto’s main open choices are how to fit the pending workshops around Takao, Ohara, Arashiyama and Kurama.<br><br><strong>Protect the bookings that are real.</strong> Keep est November 8, NARISAWA November 10 and Hiramatsu November 21 at their confirmed times. Hayamitsu now occupies November 20 plus travel, provisionally; kintsugi has been requested for November 19 only. Keep nearby sightseeing flexible until those host replies arrive. The day sheets make those dependencies visible without filling every free hour.",
   "verdictTone": "warn",
   "glutenFree": {
@@ -300,7 +303,7 @@ export const plan = {
   },
   "bookNow": {
     "title": "What still needs arranging",
-    "sub": "Reviewed November 2, 2026 California time. All appointment times are Japan time. Confirmed bookings are listed separately above.",
+    "sub": "Reservations reviewed November 2 California time; Toyota rental added November 8, 2026 Japan time. All appointment times are Japan time. Confirmed bookings are listed separately above.",
     "groups": [
       [
         "Before departure",
@@ -316,7 +319,7 @@ export const plan = {
       ],
       [
         "Transport",
-        "<strong>Secure actual intercity trains, rental/driver plan, local transfers, luggage forwarding and the Hiramatsu dinner car.</strong> The driving permit is done. Old sample train numbers and times are not bookings. <strong>November 20:</strong> secure Kyoto–Aioi trains and both Aioi taxis after host confirmation; protect the full excursion day."
+        "<strong>Toyota is confirmed for all hotel-base moves, November 11–17.</strong> Prepare licence, completed IDP and passport; confirm hotel parking, luggage fit and road timings. Tell Asaba the arrival plan and protect the November 17 16:00 Horikawa return. Arrange Kyoto local transfers and the Hiramatsu dinner car separately. <strong>November 20:</strong> reserve Kyoto–Aioi trains and both taxis after host confirmation. <strong>November 22:</strong> reserve the station transfer and Haruka. Fuel, tolls and parking remain additional."
       ],
       [
         "Activity choices",
@@ -377,7 +380,7 @@ export const plan = {
         ],
         [
           "Transfers",
-          "Reserve the actual Tokyo arrival and Izu departure arrangements."
+          "Confirmed Toyota rental: drive from Tokyo November 11 and onward to Asaba November 14. Confirm parking and current road conditions with Ritz."
         ]
       ],
       "gf": "Hotel can modify dishes but requested precise ingredient and seasoning details. Clarify regular soy sauce avoidance, GF tamari acceptance and cross-contact tolerance; obtain a reply for each dinner."
@@ -391,15 +394,15 @@ export const plan = {
         ],
         [
           "Arrival",
-          "Check-in from 14:30. Reply with estimated arrival and transportation."
+          "Check-in from 14:30. Arrive by the confirmed Toyota rental November 14; reply with the road-arrival estimate and confirm parking, dinner and performance timing."
         ],
         [
           "November 14 performance",
           "45-minute Japanese drum performance; ¥6,325 per person included in the prepayment request. Confirm exact start and dinner order."
         ],
         [
-          "Transfers offered November 1",
-          "Shuzenji station ¥3,300 each way; Mishima ¥18,700 each way. Request at least three days ahead; neither is booked."
+          "Departure November 17",
+          "Drive the same Toyota to Kyoto; plan an early breakfast and departure, with fuel and handover buffer before the 16:00 Horikawa Shop return."
         ],
         [
           "Optional activities",

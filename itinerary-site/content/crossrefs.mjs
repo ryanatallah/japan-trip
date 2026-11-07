@@ -66,16 +66,10 @@ export const crossrefs = {
   // Rinnoji opens an hour before everything else in the precinct, which is the fact that shapes
   // the Nikko day, and it is the bases row rather than the Toshogu card that carries it.
   Rinnoji: { stop: ['nikko', 'Rinnoji — Sanbutsudo, Taiyuin, Shoyoen'] },
-  'Chuzenji Onsen': { stop: ['nikko', 'Chuzenji Onsen terminal'] },
   'Nikko Kanaya Hotel': { stop: ['nikko', 'Nikko Kanaya Hotel'] },
-  'JR Nikko': { stop: ['nikko', 'Tobu-Nikko / JR Nikko stations'] },
-  'Tobu-Nikko': { stop: ['nikko', 'Tobu-Nikko / JR Nikko stations'] },
   'Joren Falls': { stop: ['shuzenji', 'Joren Falls'] },
   Darumayama: { stop: ['shuzenji', 'Darumayama Kōgen'] },
   'Niji-no-Sato': { stop: ['shuzenji', 'Shuzenji Niji-no-Sato'] },
-  // Mishima is where the rental car is collected on the way in and dropped on the way out, so it
-  // is a transfer point twice over — the bases row is the thing worth reaching.
-  Mishima: { stop: ['shuzenji', 'Mishima Station'] },
   'Tokyo Station': { stop: ['tokyo', 'Tokyo Station'] },
   'Kyoto Station': { stop: ['kyoto', 'Kyoto Station'] },
   KIX: { stop: ['kyoto', 'Kansai (KIX)'] },
