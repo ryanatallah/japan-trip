@@ -1,6 +1,6 @@
 // Reconciled against Gmail and Ryan's updates on 2 November 2026, California time.
 // Sources are message links, never payment, cancellation or authentication links.
-export const bookingReview = '2 November 2026';
+export const bookingReview = '10 November 2026 (sushi and workshops; other items retain prior review)';
 const mail = (id) => `https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/${id}`;
 
 export const bookings = [
@@ -50,22 +50,31 @@ export const bookings = [
     "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a196f26ccd34b86"
   },
   {
+    "day": "Wed 18",
+    "time": "18:00",
+    "name": "Sushi Iwa · Kyoto",
+    "status": "Confirmed · meal payable at venue",
+    "tone": "confirmed",
+    "detail": "Confirmed November 18 at 18:00 for two, non-smoking counter, under Atallah Ryan. Course listed at ¥34,650 per person (¥69,300 for two); meal payable at the restaurant. AutoReserve fee ¥8,640 paid separately. Cancellation within 48 hours: 100% plus 10% handling fee. Dietary adaptation and cooked alternatives are not established by this confirmation. Address: Shimo-Tsumekasuyamachi-dori, Kawaramachi, Shimogyo Ward; 075-371-9303.",
+    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1bb5cc3fb6856e"
+  },
+  {
     "day": "Thu 19",
-    "time": "Time to confirm",
+    "time": "14:00–16:00",
     "name": "Mio Heki kintsugi · Akagane",
-    "status": "Move requested · awaiting host",
-    "tone": "pending",
-    "detail": "Ryan’s November 2 email says November 19 is now the only available date; November 20 is unavailable. Wabunka request 25636 remains pending, with no new time or host acceptance. Earlier ¥121,770 quote includes real gold for two; price/payment for the revised date is not confirmed.",
-    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a19fb1f5e781139"
+    "status": "Confirmed · paid",
+    "tone": "confirmed",
+    "detail": "Confirmed and paid: November 19, 14:00–16:00, two participants at Akagane Resort Kyoto Higashiyama 1925, 400-1 Kinencho. Wabunka booking 25636; ¥121,770 including real gold for both and English interpretation. Arrive on time; over 15 minutes late is a no-show without refund. Cancellation charges apply from November 9 at 14:00 JST; rescheduling is no longer allowed.",
+    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1b4a8aeb17850e"
   },
   {
     "day": "Fri 20",
     "time": "13:30–17:30",
     "name": "Kikyo Hayamitsu Forge · Aioi, Hyogo",
-    "status": "Provisional reservation · host confirmation pending",
-    "tone": "pending",
-    "detail": "Two participants; tamahagane sword-knife workshop, ¥56,000 each, ¥112,000 total including tax. AirRESERVE email explicitly says this is a provisional reservation and a separate confirmation will follow. Payment is not evidenced. Protect the workshop and Kyoto–Aioi travel blocks; this is a Hyogo excursion, not a Kyoto-city activity.",
-    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a19fb09184fe4f4"
+    "status": "Confirmed · payment to verify",
+    "tone": "confirmed",
+    "detail": "Confirmed by the separate November 3 AirRESERVE email: November 20, 13:30–17:30, two participants, ¥112,000 including tax, booking 105PHCHAG. Payment is not evidenced. Arrange language support, arrival requirements, Kyoto–Aioi trains and both taxis.",
+    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1a011891931a29"
   },
   {
     "day": "Sat 21",
@@ -88,20 +97,20 @@ export const bookings = [
   {
     "day": "Tue 10 preferred",
     "time": "Morning requested",
-    "name": "Akihira sword making · Saitama",
-    "status": "Earlier inquiry · backup only",
+    "name": "TOKYO LUXEY sword making · Kamakura",
+    "status": "Quoted backup · not accepted",
     "tone": "pending",
-    "detail": "TOKYO LUXEY alternative; November 8 is a fallback requiring changes around the paid owl café and est. Available times and quotation requested before booking; no host reply or booking yet. Hayamitsu November 20 is now the scheduled priority. No withdrawal of this earlier inquiry is evidenced; coordinate before accepting a duplicate workshop.",
-    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a19f59098cd1853"
+    "detail": "Aman’s November 3 reply places the experience in Kamakura. Sample 10:00–18:30 day with 13:30–15:00 workshop; ¥400,000 excluding tax for two including eight-hour car and English guide. Not booked; the sample return conflicts with NARISAWA at 17:30. Hayamitsu is confirmed.",
+    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1a1668a2e763fc"
   },
   {
     "day": "Tue 17 / Thu 19",
     "time": "13:00 / 09:00 requested",
     "name": "Masahiro Sword Forge · Kameoka",
-    "status": "Earlier inquiry · backup only",
+    "status": "Direct booking required · no reservation",
     "tone": "pending",
-    "detail": "Private two-person kogatana workshop with interpreter. November 17 depends on a feasible direct station transfer and luggage handling; November 19 is an alternative. No availability, price or booking confirmed. Hayamitsu November 20 is now the scheduled priority. No withdrawal of this earlier inquiry is evidenced; coordinate before accepting a duplicate workshop.",
-    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a19dee33027b2c7"
+    "detail": "Mitsui replied November 6 that Masahiro does not accept third-party concierge reservations; book directly by website or phone if still wanted. Hayamitsu November 20 is confirmed, so avoid a duplicate.",
+    "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1b06c43a2aa777"
   },
   {
     "day": "Mon 9 option",
@@ -127,7 +136,7 @@ export const bookings = [
     "name": "Remaining Kyoto dinners",
     "status": "Not booked",
     "tone": "open",
-    "detail": "TOKI on November 17 and Japanese tasting menus November 18–20 remain requests or options. Return Mitsui’s authorization form; the November 2 reply says it will be returned, which does not establish that it has been submitted.",
+    "detail": "Sushi Iwa November 18 at 18:00 and Hiramatsu November 21 at 18:30 are confirmed. November 17, 19 and 20 remain open; Mitsui authorization form submission is not evidenced.",
     "source": "https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a19d76a8beaf28b"
   },
   {

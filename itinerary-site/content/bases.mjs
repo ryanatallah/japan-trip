@@ -812,8 +812,8 @@ export const bases = [
         "min": 30,
         "mode": "car",
         "hours": "120 minutes, private",
-        "book": "November 19 only requested in Ryan’s November 2 email. No new time, host acceptance or payment established. Old November 20 request superseded.",
-        "why": "Keep nearby sightseeing flexible until the new sitting is accepted.",
+        "book": "Confirmed and paid November 19, 14:00–16:00; two participants, ¥121,770 including real gold and English interpretation.",
+        "why": "Plan nearby sightseeing around the confirmed 14:00–16:00 workshop.",
         "days": [
           "Thu 19"
         ]
@@ -954,8 +954,8 @@ export const bases = [
         "min": 145,
         "mode": "rail",
         "via": "Kyoto Station → Aioi by shinkansen (~70 min per city guide), then prearranged taxi (~20 min per forge), plus hotel access and connection allowances.",
-        "hours": "Provisional November 20, 13:30–17:30",
-        "book": "Temporary reservation received for two, ¥112,000 total; await separate final confirmation. No payment evidenced.",
+        "hours": "Confirmed November 20, 13:30–17:30",
+        "book": "Confirmed for two, ¥112,000 total; booking 105PHCHAG. Payment not evidenced.",
         "warn": "Substantial day trip into Hyogo. Reserve both trains and both Aioi taxis; do not anchor an early Kyoto dinner to an assumed return.",
         "confirm": true,
         "days": [

@@ -1,6 +1,15 @@
 // Current tasks reconciled November 2, 2026; resolved items retain historical context.
 export const issues = [
   {
+    "id": "sushi-iwa-diet",
+    "kind": "book",
+    "title": "Sushi Iwa: verify dietary adaptation and cooked options",
+    "by": "Before November 18 dinner",
+    "affects": "Wed 18 · 18:00",
+    "body": "Confirmed November 18 at 18:00 for two, non-smoking counter, under Atallah Ryan. Course listed at ¥34,650 per person (¥69,300 for two); meal payable at the restaurant. AutoReserve fee ¥8,640 paid separately. Cancellation within 48 hours: 100% plus 10% handling fee. Dietary adaptation and cooked alternatives are not established by this confirmation.",
+    "next": "Confirm gluten-containing ingredient avoidance, gluten-free tamari, and Ashly’s preference for no raw fish with the restaurant or concierge."
+  },
+  {
     "id": "dinner-guarantees",
     "kind": "book",
     "title": "Verify est guarantee and NARISAWA dietary reply",
@@ -15,26 +24,26 @@ export const issues = [
     "title": "Return Mitsui authorization and secure remaining Kyoto meals",
     "by": "Now",
     "affects": "Tue 17 – Sun 22",
-    "body": "November 2 reply says the authorization form will be returned, which does not prove submission. No TOKI, Japanese tasting-menu, November 18–20 dinner or FORNI departure-lunch confirmation found. Hiramatsu November 21 at 18:30 is already booked.",
+    "body": "Sushi Iwa November 18 at 18:00 and Hiramatsu November 21 at 18:30 are confirmed. TOKI November 17, dinners November 19–20 and FORNI departure lunch remain unconfirmed; Mitsui authorization submission is not evidenced.",
     "next": "Return the form and obtain exact tables, dietary acceptance and terms for the outstanding meals; preserve Hiramatsu."
   },
   {
     "id": "kintsugi-pending",
-    "kind": "waiting",
-    "title": "Kintsugi: move requested to November 19 only",
-    "by": "Await Wabunka reply",
+    "kind": "book",
+    "title": "Kintsugi confirmed and paid: protect the appointment",
+    "by": "November 19 · arrive before 14:00",
     "affects": "Thu 19",
-    "body": "Ryan emailed Wabunka November 2 at 20:36 California time: November 20 now conflicts and November 19 is the only available date. Request 25636 remains pending; no new sitting, host acceptance or payment evidenced. The earlier quote was ¥121,770 with real gold for two.",
-    "next": "Await an explicit November 19 date and sitting; confirm the price and then arrange the nearby sightseeing and meals. Do not retain a November 20 hold."
+    "body": "Confirmed and paid: November 19, 14:00–16:00, two participants at Akagane Resort Kyoto Higashiyama 1925, 400-1 Kinencho. Wabunka booking 25636; ¥121,770 including real gold for both and English interpretation. Arrive on time; over 15 minutes late is a no-show without refund. Cancellation charges apply from November 9 at 14:00 JST; rescheduling is no longer allowed.",
+    "next": "Plan lunch and nearby sightseeing around 14:00–16:00; bring booking ID 25636."
   },
   {
     "id": "sword-replacement",
-    "kind": "waiting",
-    "title": "Hayamitsu November 20: provisional reservation, final reply pending",
-    "by": "Await Hayamitsu confirmation",
+    "kind": "book",
+    "title": "Hayamitsu confirmed: arrange transport and payment details",
+    "by": "Before November 20",
     "affects": "Fri 20",
-    "body": "AirRESERVE acknowledges a temporary reservation at Kikyo Hayamitsu Forge, Aioi, Hyogo for November 20 13:30–17:30, two people, ¥112,000 total. The Japanese email explicitly says it is not final and that a separate confirmation will follow. Payment is not evidenced. Earlier Akihira / Masahiro inquiries are backups; no withdrawals are established.",
-    "next": "Obtain final host confirmation and payment instructions, agree language support and arrival details, and reserve Kyoto–Aioi trains plus taxis in both directions. Coordinate earlier inquiries before accepting any duplicate."
+    "body": "Confirmed by the separate November 3 AirRESERVE email: November 20, 13:30–17:30, two participants, ¥112,000 including tax, booking 105PHCHAG. Payment is not evidenced. Arrange language support, arrival requirements, Kyoto–Aioi trains and both taxis.",
+    "next": "Reserve Kyoto–Aioi trains and both taxis; verify payment method, language support and arrival instructions."
   },
   {
     "id": "archery-logistics",
@@ -139,7 +148,7 @@ export const issues = [
     "title": "Eikandō depends on the return from Aioi",
     "by": "Once actual return transport is fixed",
     "affects": "Fri 20",
-    "body": "November 20 is now occupied by a provisional 13:30–17:30 forge workshop in Aioi plus travel from Kyoto. Eikandō opens 17:30–21:00, last entry 20:30, so it cannot be a fixed early-evening commitment. Kintsugi is requested for November 19 only.",
+    "body": "November 20 is occupied by a confirmed 13:30–17:30 forge workshop in Aioi plus travel from Kyoto. Eikandō opens 17:30–21:00, last entry 20:30, so it cannot be a fixed early-evening commitment. Kintsugi is confirmed November 19, 14:00–16:00.",
     "next": "Keep dinner flexible around the return. Only consider illumination if actual trains and energy leave enough time; otherwise skip it."
   },
   {
@@ -184,8 +193,8 @@ export const issues = [
     "title": "Rurikoin ticket still needed for November 19",
     "by": "Before fixing the northern Kyoto outing",
     "affects": "Thu 19",
-    "body": "Reservation required November 13–December 6; no ticket found. November 19 is now the only date requested for kintsugi, so do not anchor a northern-Kyoto outing before its accepted sitting is known.",
-    "next": "Resolve kintsugi first, then obtain a compatible timed entry or leave Rurikoin out."
+    "body": "Reservation required November 13–December 6; no ticket found. Kintsugi is confirmed November 19, 14:00–16:00; keep northern Kyoto for another day.",
+    "next": "Obtain a timed entry on another day if wanted; preserve November 19 kintsugi."
   },
   {
     "id": "takkyubin",

@@ -1245,8 +1245,8 @@ Object.assign(entities, {
     "textOnly": true,
     "location": "Rakan-no-Sato, Aioi, Hyogo",
     "badges": [
-      "Provisional · Fri 20 · 13:30–17:30",
-      "Final host confirmation pending"
+      "Confirmed · Fri 20 · 13:30–17:30",
+      "Payment and transport to verify"
     ],
     "rate": "¥56,000/person · ¥112,000 for two incl. tax",
     "url": "https://www.hayamitsu.com/",
@@ -1254,7 +1254,7 @@ Object.assign(entities, {
     "facts": [
       [
         "Reservation status",
-        "Temporary reservation acknowledged by AirRESERVE. The email explicitly says it is not final and a separate confirmation will follow; payment not evidenced."
+        "Final confirmation received November 3, booking 105PHCHAG. Two participants confirmed; payment not evidenced."
       ],
       [
         "Date",
@@ -1270,12 +1270,15 @@ Object.assign(entities, {
       ],
       [
         "Before going",
-        "Obtain final acceptance, payment instructions, language support, arrival requirements and the actual return transport."
+        "Verify payment instructions, language support, arrival requirements and the actual return transport."
       ],
       [
         "Evidence",
-        "<a href=\"https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a19fb09184fe4f4\" target=\"_blank\" rel=\"noopener\">Provisional reservation email</a> · <a href=\"https://www.hayamitsu.com/地図-map-access/\" target=\"_blank\" rel=\"noopener\">Forge access</a> · <a href=\"https://www.city.aioi.lg.jp/soshiki/kikakukoho/profile-access.html\" target=\"_blank\" rel=\"noopener\">Aioi city rail guide</a>"
+        "<a href=\"https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1a011891931a29\" target=\"_blank\" rel=\"noopener\">Final reservation confirmation</a> · <a href=\"https://www.hayamitsu.com/地図-map-access/\" target=\"_blank\" rel=\"noopener\">Forge access</a> · <a href=\"https://www.city.aioi.lg.jp/soshiki/kikakukoho/profile-access.html\" target=\"_blank\" rel=\"noopener\">Aioi city rail guide</a>"
       ]
     ]
   }
 });
+
+// AutoReserve confirmation received November 8; no payment or account links published.
+Object.assign(entities, {'sushi-iwa': {name:'Sushi Iwa · Kyoto',type:'restaurant',textOnly:true,location:'Shimogyo, Kyoto',badges:['Confirmed · Wed 18 · 18:00','Non-smoking counter · two'],rate:'¥34,650/person · meal payable at venue',blurb:'Confirmed dinner for two under Atallah Ryan. Return from sightseeing in time for the 18:00 counter reservation.',facts:[['Address','Shimo-Tsumekasuyamachi-dori, Kawaramachi, Shimogyo Ward, Kyoto; 075-371-9303.'],['Payment','¥69,300 course total for two, payable at the restaurant. AutoReserve reservation fee ¥8,640 paid separately.'],['Cancellation','Within 48 hours: 100% plus 10% handling fee.'],['Dietary arrangements','Gluten-free adaptation and cooked alternatives remain to verify; Ashly prefers no raw fish.'],['Evidence','<a href="https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1bb5cc3fb6856e">AutoReserve confirmation</a>']]}});

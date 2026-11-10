@@ -15,6 +15,21 @@
 
 export const revisions = [
 {
+  "date": "2026-11-10",
+  "when": "10 November 2026",
+  "title": "Sushi Iwa booked; kintsugi paid and Hayamitsu confirmed",
+  "tags": [
+    "dining",
+    "dates",
+    "site"
+  ],
+  "summary": "Reconciled the November 3–8 confirmation emails: Sushi Iwa November 18 at 18:00 for two; kintsugi November 19 at 14:00–16:00 paid ¥121,770 including gold; Hayamitsu November 20 at 13:30–17:30 confirmed for two, ¥112,000, payment to verify.",
+  "points": [
+    "Updated the reservation register, plan, experience cards, day sheets, options and issues. Sushi meal is payable at venue; ¥8,640 reservation fee paid.",
+    "Sushi dietary acceptance and forge transport/language/payment remain outstanding. Mitsui cannot book Masahiro through a third party; Aman’s TOKYO LUXEY alternative is a quoted Kamakura day, not a confirmed Saitama booking."
+  ]
+},
+{
   "date": "2026-11-02",
   "when": "2 November 2026 · evening update",
   "title": "Kintsugi requested for November 19 only; Hayamitsu provisionally reserved for November 20",

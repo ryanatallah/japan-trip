@@ -714,6 +714,13 @@ export const days = [
         "kind": "opens",
         "id": "jingoji",
         "note": "To 16:00. Kozan-ji runs 8:30–17:00."
+      },
+      {
+        "t": "18:00",
+        "what": "Sushi Iwa · confirmed dinner for two",
+        "kind": "booked",
+        "id": "sushi-iwa",
+        "note": "Confirmed November 18 at 18:00 for two, non-smoking counter, under Atallah Ryan. Course listed at ¥34,650 per person (¥69,300 for two); meal payable at the restaurant. AutoReserve fee ¥8,640 paid separately. Cancellation within 48 hours: 100% plus 10% handling fee. Dietary adaptation and cooked alternatives are not established by this confirmation."
       }
     ],
     "moves": [
@@ -737,45 +744,44 @@ export const days = [
         "where": "Takao"
       },
       "d": {
-        "status": "open",
-        "where": "Nakagyo",
-        "note": "Nijojo Furuta, one star and charcoal-grilled, is seven minutes on foot. Reservation only, on TableCheck."
+        "status": "booked",
+        "where": "Sushi Iwa · 18:00",
+        "note": "Confirmed November 18 at 18:00 for two, non-smoking counter, under Atallah Ryan. Course listed at ¥34,650 per person (¥69,300 for two); meal payable at the restaurant. AutoReserve fee ¥8,640 paid separately. Cancellation within 48 hours: 100% plus 10% handling fee. Dietary adaptation and cooked alternatives are not established by this confirmation."
       }
     },
     "notes": [
       "<strong>Buy the ¥1,100 Subway &amp; Bus 1-Day Pass.</strong> It covers the subway leg and the whole Takao bus section, which was folded into the flat-fare zone in 2021. The bus-only pass was discontinued in 2024.",
       "<strong>Kyoto’s own tourism pages call Takao the earliest colour in the city</strong>, which is the entire argument for this week. Jingo-ji is about 400 steps up from the river, and the clay-disc throw off its terrace is the thing everyone remembers."
     ],
-    "overview": "<strong>Takao proposed, or Arashiyama and Iwatayama instead.</strong> Friday is now reserved for the Hyogo forge excursion and travel; choose another day for the monkey park. No personal sightseeing reservation anchors today."
+    "overview": "<strong>Takao proposed, or Arashiyama and Iwatayama instead.</strong> Friday is now reserved for the Hyogo forge excursion and travel; choose another day for the monkey park. No personal sightseeing reservation anchors today. <strong>Sushi Iwa dinner confirmed at 18:00 for two.</strong> Return from sightseeing in time to change and travel to the restaurant."
   },
   {
     "date": "Thu 19",
     "dow": "Thursday",
     "base": "kyoto",
-    "where": "Kyoto · kintsugi pending",
-    "title": "Kintsugi move requested; time pending",
-    "fixed": [],
+    "where": "Kyoto · Higashiyama",
+    "title": "Traditional kintsugi with Mio Heki",
+    "fixed": [
+      {
+        "t": "14:00",
+        "what": "Mio Heki kintsugi · confirmed and paid",
+        "kind": "booked",
+        "id": "heki-kintsugi",
+        "note": "Confirmed and paid: November 19, 14:00–16:00, two participants at Akagane Resort Kyoto Higashiyama 1925, 400-1 Kinencho. Wabunka booking 25636; ¥121,770 including real gold for both and English interpretation. Arrive on time; over 15 minutes late is a no-show without refund. Cancellation charges apply from November 9 at 14:00 JST; rescheduling is no longer allowed."
+      },
+      {
+        "t": "16:00",
+        "what": "Kintsugi scheduled finish",
+        "kind": "ends"
+      }
+    ],
     "moves": [
       {
         "from": "Hotel The Mitsui",
         "to": "Akagane Resort",
         "min": 30,
         "mode": "car",
-        "note": "Only once the November 19 kintsugi date and sitting are accepted; departure time remains open."
-      },
-      {
-        "from": "Hotel The Mitsui",
-        "to": "Sanzen-in, Ohara",
-        "min": 52,
-        "mode": "bus",
-        "note": "Alternative outing only if the accepted kintsugi time leaves a workable northern-Kyoto day; not a second scheduled journey."
-      },
-      {
-        "from": "Ohara",
-        "to": "Rurikoin",
-        "min": 45,
-        "mode": "rail",
-        "note": "Optional add-on only with a real timed ticket and a schedule compatible with the workshop."
+        "note": "Allow additional traffic and arrival buffer before the confirmed 14:00 workshop."
       }
     ],
     "meals": {
@@ -786,8 +792,8 @@ export const days = [
       },
       "l": {
         "status": "open",
-        "where": "Kyoto, around the accepted workshop",
-        "note": "No lunch held. Select the area and time after the kintsugi reply."
+        "where": "Higashiyama before the workshop",
+        "note": "Finish lunch in time for the 14:00 appointment."
       },
       "d": {
         "status": "open",
@@ -796,26 +802,24 @@ export const days = [
       }
     },
     "notes": [
-      "<strong>November 19 only.</strong> Ryan’s November 2 rescheduling email rules out November 20. Wabunka has not accepted the new date or a time.",
-      "<strong>Choose sightseeing after the reply.</strong> Nearby Gion/Higashiyama is the easy combination with Akagane; Ohara and Rurikoin need a larger window and a timed ticket where required.",
-      "<strong>No duplicate forge day.</strong> The earlier Masahiro inquiry is a backup; November 20 Hayamitsu is the scheduled priority, provisionally."
+      "Confirmed and paid: November 19, 14:00–16:00, two participants at Akagane Resort Kyoto Higashiyama 1925, 400-1 Kinencho. Wabunka booking 25636; ¥121,770 including real gold for both and English interpretation. Arrive on time; over 15 minutes late is a no-show without refund. Cancellation charges apply from November 9 at 14:00 JST; rescheduling is no longer allowed.",
+      "<strong>Nearby Gion and Higashiyama fit around the workshop.</strong> Keep Ohara and Rurikoin for another day; dinner remains unbooked."
     ],
-    "overview": "<strong>Kintsugi move requested for November 19 only.</strong> Await Wabunka’s time and acceptance; no noon appointment is assumed. Keep the day flexible and plan nearby sightseeing around the accepted sitting. Ohara/Rurikoin remain alternatives only if the workshop timing permits. Dinner unbooked."
+    "overview": "<strong>Kintsugi confirmed and paid: 14:00–16:00 at Akagane.</strong> Two participants, ¥121,770 including real gold and English interpretation. Plan nearby sightseeing and lunch around the appointment; dinner remains open."
   },
   {
     "date": "Fri 20",
     "dow": "Friday",
     "base": "kyoto",
     "where": "Aioi, Hyogo",
-    "title": "Hayamitsu sword making · provisional reservation",
+    "title": "Hayamitsu sword making · confirmed",
     "fixed": [
       {
         "t": "13:30",
-        "what": "Kikyo Hayamitsu Forge — provisional workshop",
-        "kind": "pending",
+        "what": "Kikyo Hayamitsu Forge · confirmed workshop",
+        "kind": "booked",
         "id": "hayamitsu",
-        "confirm": true,
-        "note": "Two participants, tamahagane sword-knife experience, ¥112,000 total. AirRESERVE says temporary reservation; await separate final confirmation. No payment evidenced."
+        "note": "Confirmed by the separate November 3 AirRESERVE email: November 20, 13:30–17:30, two participants, ¥112,000 including tax, booking 105PHCHAG. Payment is not evidenced. Arrange language support, arrival requirements, Kyoto–Aioi trains and both taxis."
       },
       {
         "t": "17:30",
@@ -894,9 +898,9 @@ export const days = [
     "notes": [
       "<strong>The email is provisional.</strong> It explicitly says the reservation is not final and that a separate confirmation will follow. Protect November 20 while awaiting that reply.",
       "<strong>This is Aioi in Hyogo.</strong> The forge is at Rakan-no-Sato, 28 Uryu, Yano, Aioi. Include both train directions and prebook the rural return taxi.",
-      "<strong>Kintsugi is removed from today.</strong> November 19 only has been requested. Arashiyama and a fixed Eikandō visit no longer fit as daytime plans; keep dinner flexible around the return."
+      "<strong>Kintsugi is removed from today.</strong> November 19 at 14:00–16:00 is confirmed and paid. Arashiyama and a fixed Eikandō visit no longer fit as daytime plans; keep dinner flexible around the return."
     ],
-    "overview": "<strong>Kikyo Hayamitsu Forge, Aioi, Hyogo: 13:30–17:30 provisionally reserved.</strong> Two adults, ¥112,000 total; host confirmation and payment status still pending. Allow the day for Kyoto–Aioi trains and prearranged taxis. Kintsugi is no longer planned today; keep dinner flexible around the return."
+    "overview": "<strong>Kikyo Hayamitsu Forge, Aioi, Hyogo: confirmed 13:30–17:30.</strong> Two participants, ¥112,000; payment still to verify. Reserve trains and both rural taxis. Keep dinner flexible around the return."
   },
   {
     "date": "Sat 21",

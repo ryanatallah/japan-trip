@@ -55,8 +55,6 @@ export const crossrefs = {
   Toshogu: { entity: 'nikko-toshogu' },
   Takao: { entity: 'takao' },
   'Jingo-ji': { entity: 'takao' },
-  'Sanzen-in, Ohara': { entity: 'sanzen-in-ohara' },
-  Ohara: { entity: 'sanzen-in-ohara' },
   Rurikoin: { entity: 'rurikoin' },
   Kurama: { entity: 'kurama-kibune' },
   Eikandō: { entity: 'eikando' },

@@ -66,7 +66,7 @@ export const plan = {
     "asaba-ryokan",
     "hotel-the-mitsui-kyoto"
   ],
-  "pitch": "<strong>Four bases, fifteen nights, both flights ticketed.</strong> Aman Tokyo November 7–11, Ritz-Carlton Nikko November 11–14, Asaba November 14–17 and Hotel The Mitsui Kyoto November 17–22. The Ritz stay was shortened successfully on September 1; there is no double-booked fourth night.<br><br><strong>The booked experiences now shape the days.</strong> Owl café November 8 at 14:00, est at 18:30, Tokyo archery November 9 at 09:30, NARISAWA November 10 at 17:30 and Hiramatsu Kodaiji November 21 at 18:30. Hirata was declined; Kikyo Hayamitsu in Aioi is now provisionally reserved for November 20, 13:30–17:30, subject to host confirmation. Kintsugi has been requested for November 19 only; a new time and acceptance are pending.<br><br><strong>The landscapes remain the reason for the route.</strong> Lower Nikko’s shrines and gorge, three nights at Asaba on Izu, and a Kyoto week with Takao, Ohara, Arashiyama and Kurama as flexible outings. The <a href=\"days.html\">day sheets</a> distinguish fixed bookings, provisional holds and open time, with options for each gap.",
+  "pitch": "<strong>Four bases, fifteen nights, both flights ticketed.</strong> Aman Tokyo November 7–11, Ritz-Carlton Nikko November 11–14, Asaba November 14–17 and Hotel The Mitsui Kyoto November 17–22. The Ritz stay was shortened successfully on September 1; there is no double-booked fourth night.<br><br><strong>The booked experiences now shape the days.</strong> Owl café November 8 at 14:00, est at 18:30, Tokyo archery November 9 at 09:30, NARISAWA November 10 at 17:30 and Hiramatsu Kodaiji November 21 at 18:30. Hirata was declined; Kikyo Hayamitsu in Aioi is now confirmed for November 20, 13:30–17:30. Kintsugi is confirmed and paid for November 19, 14:00–16:00, ¥121,770 for two including gold.<br><br><strong>The landscapes remain the reason for the route.</strong> Lower Nikko’s shrines and gorge, three nights at Asaba on Izu, and a Kyoto week with Takao, Ohara, Arashiyama and Kurama as flexible outings. The <a href=\"days.html\">day sheets</a> distinguish fixed bookings, provisional holds and open time, with options for each gap. <strong>Sushi Iwa is confirmed November 18 at 18:00 for two.</strong>",
   "days": [
     {
       "date": "Fri 6",
@@ -106,7 +106,7 @@ export const plan = {
     {
       "date": "Tue 10",
       "where": "Tokyo",
-      "text": "<strong>NARISAWA 17:30–20:00 — confirmed for two.</strong> Dietary details submitted; kitchen acceptance still to obtain. Morning open. The earlier Akihira inquiry remains a backup; the scheduled sword-making priority is now Hayamitsu on November 20, provisionally reserved.",
+      "text": "<strong>NARISAWA 17:30–20:00 — confirmed for two.</strong> Dietary details submitted; kitchen acceptance still to obtain. Morning open. The earlier Akihira inquiry remains a backup; the scheduled sword-making priority is now Hayamitsu on November 20, confirmed.",
       "ref": [
         "narisawa"
       ]
@@ -173,16 +173,17 @@ export const plan = {
     {
       "date": "Wed 18",
       "where": "Kyoto · flexible",
-      "text": "<strong>Takao proposed, or Arashiyama and Iwatayama instead.</strong> Friday is now reserved for the Hyogo forge excursion and travel; choose another day for the monkey park. No personal sightseeing reservation anchors today.",
+      "text": "<strong>Takao proposed, or Arashiyama and Iwatayama instead.</strong> Friday is now reserved for the Hyogo forge excursion and travel; choose another day for the monkey park. No personal sightseeing reservation anchors today. <strong>Sushi Iwa dinner confirmed at 18:00 for two.</strong> Return from sightseeing in time to change and travel to the restaurant.",
       "ref": [
         "takao",
-        "arashiyama-monkeys"
+        "arashiyama-monkeys",
+        "sushi-iwa"
       ]
     },
     {
       "date": "Thu 19",
-      "where": "Kyoto · workshop pending",
-      "text": "<strong>Kintsugi move requested for November 19 only.</strong> Await Wabunka’s time and acceptance; no noon appointment is assumed. Keep the day flexible and plan nearby sightseeing around the accepted sitting. Ohara/Rurikoin remain alternatives only if the workshop timing permits. Dinner unbooked.",
+      "where": "Kyoto · kintsugi confirmed",
+      "text": "<strong>Kintsugi confirmed and paid: 14:00–16:00 at Akagane.</strong> Two participants, ¥121,770 including real gold and English interpretation. Plan nearby sightseeing and lunch around the appointment; dinner remains open.",
       "ref": [
         "heki-kintsugi",
         "gion",
@@ -192,7 +193,7 @@ export const plan = {
     {
       "date": "Fri 20",
       "where": "Aioi · Hyogo",
-      "text": "<strong>Kikyo Hayamitsu Forge, Aioi, Hyogo: 13:30–17:30 provisionally reserved.</strong> Two adults, ¥112,000 total; host confirmation and payment status still pending. Allow the day for Kyoto–Aioi trains and prearranged taxis. Kintsugi is no longer planned today; keep dinner flexible around the return.",
+      "text": "<strong>Kikyo Hayamitsu Forge, Aioi, Hyogo: confirmed 13:30–17:30.</strong> Two participants, ¥112,000; payment still to verify. Reserve trains and both rural taxis. Keep dinner flexible around the return.",
       "ref": [
         "hayamitsu-sword"
       ]
@@ -222,6 +223,7 @@ export const plan = {
     "hotel-the-mitsui-kyoto"
   ],
   "dining": [
+    "sushi-iwa",
     "est-tokyo",
     "narisawa",
     "hiramatsu-kodaiji"
@@ -268,7 +270,7 @@ export const plan = {
       "$7,600"
     ],
     [
-      "Activities — budget allowance; Hayamitsu provisional ¥112,000; kintsugi earlier quote ¥121,770 incl. gold, new date pending; owl café ¥7,600 paid",
+      "Activities — budget allowance; Hayamitsu confirmed ¥112,000, payment to verify; kintsugi ¥121,770 paid incl. gold; owl café ¥7,600 paid",
       "$3,230 allowance"
     ],
     [
@@ -281,8 +283,8 @@ export const plan = {
     ]
   ],
   "costTotal": "≈ $76,000",
-  "costModel": "Per couple, using the existing planning exchange rate of ¥150/$. Both flights are ticketed and the hotel stays confirmed. Ritz’s corrected three-night total is ¥1,263,127. The roughly $76,000 total remains a planning budget: dining, activities and transport are not a settled invoice. Asaba includes three dinners and three breakfasts. The declined Hirata ¥385,000 authorization was released with no charge; Hayamitsu is provisionally reserved at ¥112,000 for two, with no payment evidenced. Kintsugi is now requested for November 19 only; its earlier ¥121,770 quote includes real gold, but the revised date, time and price are not accepted. Neither workshop is counted as a completed payment. A 5–8% contingency is not included.",
-  "verdict": "<strong>The route is settled; the days retain room to choose.</strong> Tokyo has the confirmed dinners, owl café and archery. Nikko is a lake-and-onsen base with lower-elevation shrine and gorge outings; ask the hotel about current weather and routes before choosing the longer nature day. Three prepaid nights at Asaba allow one excursion and one slower or craft-focused day. Kyoto’s main open choices are how to fit the pending workshops around Takao, Ohara, Arashiyama and Kurama.<br><br><strong>Protect the bookings that are real.</strong> Keep est November 8, NARISAWA November 10 and Hiramatsu November 21 at their confirmed times. Hayamitsu now occupies November 20 plus travel, provisionally; kintsugi has been requested for November 19 only. Keep nearby sightseeing flexible until those host replies arrive. The day sheets make those dependencies visible without filling every free hour.",
+  "costModel": "Per couple, using the existing planning exchange rate of ¥150/$. Both flights are ticketed and the hotel stays confirmed. Ritz’s corrected three-night total is ¥1,263,127. The roughly $76,000 total remains a planning budget: dining, activities and transport are not a settled invoice. Asaba includes three dinners and three breakfasts. The declined Hirata ¥385,000 authorization was released with no charge; Hayamitsu is confirmed at ¥112,000 for two, with no payment evidenced. Kintsugi November 19, 14:00–16:00 is confirmed and ¥121,770 paid including real gold. Hayamitsu is confirmed but payment is not evidenced. Sushi Iwa is ¥69,300 for two payable at venue, plus ¥8,640 reservation fee already paid. A 5–8% contingency is not included.",
+  "verdict": "<strong>The route is settled; the days retain room to choose.</strong> Tokyo has the confirmed dinners, owl café and archery. Nikko is a lake-and-onsen base with lower-elevation shrine and gorge outings; ask the hotel about current weather and routes before choosing the longer nature day. Three prepaid nights at Asaba allow one excursion and one slower or craft-focused day. Kyoto’s main open choices are how to fit the confirmed workshops around Takao, Ohara, Arashiyama and Kurama.<br><br><strong>Protect the bookings that are real.</strong> Keep est November 8, NARISAWA November 10 and Hiramatsu November 21 at their confirmed times. Hayamitsu is confirmed November 20 plus travel; kintsugi is confirmed November 19, 14:00–16:00. Keep nearby sightseeing compatible with both appointments. The day sheets make those dependencies visible without filling every free hour.",
   "verdictTone": "warn",
   "glutenFree": {
     "title": "Ashly’s dietary brief and kitchen replies",
@@ -308,11 +310,11 @@ export const plan = {
       ],
       [
         "Await replies",
-        "<strong>Kintsugi:</strong> November 19 only requested; await a new sitting and acceptance. <strong>Hayamitsu:</strong> November 20, 13:30–17:30 provisional reservation for two, ¥112,000; await the separate final confirmation and payment instructions. Earlier Akihira / Masahiro inquiries are backups; coordinate rather than accepting a duplicate."
+        "<strong>Kintsugi:</strong> confirmed and paid November 19, 14:00–16:00, ¥121,770 for two including gold. <strong>Hayamitsu:</strong> confirmed November 20, 13:30–17:30 for two, ¥112,000; verify payment instructions and arrange trains and taxis. Earlier Akihira / Masahiro inquiries are backups; coordinate rather than accepting a duplicate."
       ],
       [
         "Choose and reserve",
-        "<strong>All three Nikko dinners; Kyoto dinners November 17–20; FORNI departure lunch; excursion lunches.</strong> Pair each reservation with written ingredient acceptance. Spa treatments, private onsen, washi and guided outings need separate reservations if selected."
+        "<strong>All three Nikko dinners; Kyoto dinners November 17, 19 and 20; FORNI departure lunch; excursion lunches.</strong> Pair each reservation with written ingredient acceptance. Spa treatments, private onsen, washi and guided outings need separate reservations if selected."
       ],
       [
         "Transport",
@@ -424,7 +426,7 @@ export const plan = {
         ],
         [
           "Dining",
-          "Hiramatsu November 21 at 18:30 confirmed independently. Remaining Kyoto dinners and departure lunch open."
+          "Hiramatsu November 21 at 18:30 confirmed independently. Sushi Iwa November 18 at 18:00 also confirmed; other Kyoto dinners and departure lunch open."
         ],
         [
           "Private onsen",
@@ -432,7 +434,7 @@ export const plan = {
         ],
         [
           "Sword inquiry",
-          "Masahiro November 17 13:00 / November 19 09:00 requested; front desk acknowledged forwarding to concierge."
+          "Mitsui replied November 6: Masahiro requires direct website or phone booking; concierge cannot reserve. Hayamitsu November 20 is confirmed."
         ]
       ]
     },
@@ -476,22 +478,18 @@ export const plan = {
     },
     "heki-kintsugi": {
       "badges": [
-        "Move requested · Nov 19 only",
-        "New time / host acceptance pending"
+        "Confirmed · Thu 19 · 14:00–16:00",
+        "Paid · gold for two"
       ],
-      "rate": "Earlier quote ¥121,770 for two · revised date pending",
+      "rate": "¥121,770 total · paid",
       "facts": [
         [
-          "Latest request",
-          "Ryan emailed November 2: November 19 is now the only available date; November 20 is unavailable."
+          "Booking",
+          "Confirmed and paid: November 19, 14:00–16:00, two participants at Akagane Resort Kyoto Higashiyama 1925, 400-1 Kinencho. Wabunka booking 25636; ¥121,770 including real gold for both and English interpretation. Arrive on time; over 15 minutes late is a no-show without refund. Cancellation charges apply from November 9 at 14:00 JST; rescheduling is no longer allowed."
         ],
         [
-          "Time",
-          "No new sitting is confirmed or assumed. The old November 20 noon–14:00 request is superseded."
-        ],
-        [
-          "Materials / price",
-          "Earlier ¥121,770 quote included real gold for both. Reconfirm the revised date, time and price; no payment evidenced."
+          "Evidence",
+          "<a href=\"https://mail.google.com/mail/u/?authuser=ryan%40ha.family#all/1a1b4a8aeb17850e\">Wabunka confirmation</a>"
         ]
       ]
     },
