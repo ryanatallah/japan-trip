@@ -1,4 +1,4 @@
-// Operating schedule reviewed November 2, 2026. Open-time options live in day-options.mjs.
+// Operating schedule reviewed November 2; rental and affected journeys updated November 8, 2026 Japan time. Open-time options live in day-options.mjs.
 export const days = [
   {
     "date": "Fri 6",
@@ -255,54 +255,44 @@ export const days = [
     "dow": "Wednesday",
     "base": "nikko",
     "where": "→ Okunikko",
-    "title": "Up to the lake",
+    "title": "Collect the Toyota, then up to the lake",
     "fixed": [
       {
-        "t": "09:00",
-        "what": "SPACIA X departs Asakusa",
-        "kind": "depart",
-        "id": "spacia",
-        "note": "Illustrative earlier rail plan, not a ticket. Verify a current departure and reserve seats, then update these times.",
-        "confirm": true
+        "t": "10:30",
+        "what": "Toyota rental pickup · Tokyo Sta. Nihonbashi Ext. Shop",
+        "kind": "booked",
+        "id": "toyota",
+        "note": "Confirmed reservation 99950312100; Lexus RX Hybrid LXC2. Trust Tower N Wing B2 parking lot, 1-8-1 Marunouchi; 03-5220-2220. Bring licence, IDP and passport. Allow handover time before driving."
       },
       {
         "t": "12:00",
-        "what": "Check out of Aman Tokyo",
+        "what": "Aman checkout deadline · leave before rental pickup",
         "kind": "hotel",
-        "note": "You leave three and a half hours before check-out. Settle the bill the night before."
+        "note": "Settle the bill and collect all bags before heading to Toyota for 10:30; this is the checkout deadline, not the planned departure."
       },
       {
         "t": "15:00",
-        "what": "Room available at the Ritz-Carlton Nikko",
+        "what": "Room available at The Ritz-Carlton Nikko",
         "kind": "hotel",
-        "note": "Arrival depends on the chosen transfer; leave bags with the concierge if the room is not ready."
+        "note": "Target arrival around check-in; actual driving time depends on traffic, breaks and mountain-road conditions."
       }
     ],
     "moves": [
       {
         "from": "Aman Tokyo",
-        "to": "Asakusa",
-        "min": 20,
+        "to": "Toyota · Tokyo Sta. Nihonbashi Ext. Shop",
+        "min": 15,
         "mode": "car",
-        "serves": "spacia",
-        "buffer": 25,
-        "note": "Taxi, about ¥3,000. Otemachi has no Ginza line platform, so the subway means a long underground walk plus a change — not with two large cases."
+        "serves": "toyota",
+        "buffer": 20,
+        "note": "Short taxi with luggage; allow time to find the Trust Tower N Wing B2 counter. Travel time is a planning estimate."
       },
       {
-        "from": "Asakusa",
-        "to": "Tobu-Nikko",
-        "min": 110,
-        "mode": "rail",
-        "at": "09:00",
-        "chain": true,
-        "note": "Sample SPACIA X journey only; no ticket established. Confirm actual service and seats."
-      },
-      {
-        "from": "Tobu-Nikko",
-        "to": "The hotel",
-        "min": 30,
+        "from": "Toyota · Tokyo Station",
+        "to": "The Ritz-Carlton Nikko",
+        "min": 240,
         "mode": "car",
-        "note": "Arrange a hotel shuttle or driver matched to the actual train; no transfer confirmed."
+        "note": "Confirmed rental, self-drive. Rough 3–4 hour road allowance, with pickup, lunch and traffic time additional. Aim for 15:00 check-in; no SPACIA X or station transfer."
       }
     ],
     "meals": {
@@ -312,8 +302,8 @@ export const days = [
       },
       "l": {
         "status": "open",
-        "where": "On the train or at the lake",
-        "note": "GOEN CAFÉ in car 1 does Nikko craft beer and trout rillette. Nothing substantial."
+        "where": "Before departure or an expressway stop",
+        "note": "Arrange suitable food with Aman; there is no train café on the new route."
       },
       "d": {
         "status": "open",
@@ -326,9 +316,10 @@ export const days = [
       "<strong>Mount Nantai’s climbing season ends today</strong>, 25 April to 11 November. The gate is locked from tomorrow. Ask whether the closing ceremony happens at Chugushi — that would be a genuine ritual two hundred metres from the room.",
       "<strong>You gain 1,269 metres.</strong> Tokyo will be around 17°C; the ten-day normal here is a high of 8.4°C and a low of 0.1°C.",
       "<strong>Stay amendment complete.</strong> September 1 hotel reply confirms November 11–14, ¥1,263,127 inclusive.",
-      "<strong>Hotel activities and hiking advice requested October 30.</strong> Await the current programme and any guide or equipment arrangements."
+      "<strong>Hotel activities and hiking advice requested October 30.</strong> Await the current programme and any guide or equipment arrangements.",
+      "<strong>Rental confirmed.</strong> Winter tires, compensation and NOC exemption are selected; 4WD is not required. Check current Irohazaka conditions with Ritz and confirm parking. ETC card supply is subject to shop availability; tolls are additional."
     ],
-    "overview": "<strong>Transfer to Ritz-Carlton Nikko.</strong> Three nights confirmed, November 11–14; ¥1,263,127 total. Train/driver and all three dinners still to arrange. Gentle lake afternoon if arrival permits."
+    "overview": "<strong>Toyota pickup 10:30 near Tokyo Station, then drive to Ritz-Carlton Nikko.</strong> Lexus RX Hybrid confirmed through November 17 in Kyoto. Target 15:00 hotel check-in; allow pickup time and traffic. All three Nikko dinners still to arrange."
   },
   {
     "date": "Thu 12",
@@ -376,7 +367,7 @@ export const days = [
         "mode": "car",
         "serves": "rinnoji",
         "buffer": 20,
-        "note": "Drive or let the hotel drive. The bus is 36–40 minutes each way and the last-entry times are unforgiving."
+        "note": "Use the confirmed rental. Allow for parking and walking from the car; ask Ritz about current mountain-road conditions. The 40-minute drive remains an estimate."
       }
     ],
     "meals": {
@@ -405,7 +396,7 @@ export const days = [
       "<strong>Taiyuin is the one people underrate.</strong> Iemitsu’s mausoleum takes about a fifth of Toshogu’s footfall, and black lacquer under deep cedar suits flat November light in a way that Toshogu’s gold leaf does not. It is inside the ¥1,000 set.",
       "<strong>Route conditions:</strong> ask Ritz for current trail and wildlife guidance before deciding on gorge or forest walks."
     ],
-    "overview": "<strong>Lower Nikko sightseeing, flexible:</strong> Rinnoji, Toshogu, the bridge and Kanmangafuchi. Arrange transport and lunch; teppanyaki dinner remains a request."
+    "overview": "<strong>Lower Nikko sightseeing by rental car, flexible:</strong> Rinnoji, Toshogu, the bridge and Kanmangafuchi. Arrange lunch and check parking and road conditions; teppanyaki dinner remains a request."
   },
   {
     "date": "Fri 13",
@@ -435,7 +426,8 @@ export const days = [
         "min": 16,
         "mode": "car",
         "serves": "lowbus",
-        "buffer": 15
+        "buffer": 15,
+        "note": "Use the rental to reach Akanuma; leave it in the permitted parking area. The Senjugahama corridor is closed to private cars, and seasonal shuttle operation must still be verified."
       }
     ],
     "meals": {
@@ -455,72 +447,40 @@ export const days = [
     },
     "notes": [
       "<strong>Cutting to three nights makes this the one full Okunikko day, so it has to choose.</strong> Either the <strong>¥500 low-emission bus</strong> — the Senjugahama corridor is closed to private cars, the operator pitches it as a wildlife platform because animals flee hikers but tolerate a vehicle, and it reaches the <em>Lady of Odashiro</em>, a lone white birch that is a Japanese photography pilgrimage. Or the <strong>lake by boat</strong>: the ¥2,200 unlimited pass calls at the Embassy Villas pier, where the British villa was Ernest Satow's 1896 retreat and its tea room runs to a 14:30 last order.",
-      "<strong>The bags go to Kyoto today at the latest.</strong> Okunikko is a mountain address and next-day to Kansai is not the promise it is from a city hotel. Address them to Hotel The Mitsui for the 17th and do Izu on overnight bags — tomorrow has five connections in it.",
-      "<strong>Pack tonight.</strong> Tomorrow starts at 08:20."
+      "<strong>The luggage can stay with you.</strong> The same rental continues from Ritz to Asaba and Kyoto. Confirm that both guests’ bags fit; hotel-to-hotel forwarding is an optional convenience, not a prerequisite for five rail connections.",
+      "<strong>Pack tonight.</strong> Plan an early start around 08:00 for tomorrow’s long drive; confirm the road estimate and Asaba arrival time."
     ],
-    "overview": "<strong>Choose the lake and villas, a nature outing, or a shorter hotel day.</strong> Confirm seasonal services and route conditions with Ritz. Forward bags if taking trains to Izu; dinner unbooked."
+    "overview": "<strong>Choose the lake and villas, a nature outing, or a shorter hotel day.</strong> The rental is available; private-car restrictions still apply to Senjugahama. Check seasonal services and route conditions with Ritz. Keep luggage for tomorrow’s drive; dinner unbooked."
   },
   {
     "date": "Sat 14",
     "dow": "Saturday",
     "base": "shuzenji",
     "where": "→ Shuzenji, Izu",
-    "title": "The long one",
+    "title": "Door to door from Nikko to Asaba",
     "fixed": [
       {
         "t": "14:30",
         "what": "Target arrival at Asaba",
         "kind": "hotel",
         "id": "asaba",
-        "note": "The earliest check-in they take. Aim at this, not at the deadline."
+        "note": "Check-in starts at 14:30; target 14:30–15:00 after the drive. Tell Asaba your actual arrival estimate."
       },
       {
         "t": "18:00",
         "what": "Latest check-in at Asaba",
         "kind": "closes",
-        "note": "A hard edge, not a guideline — and dinner is a kaiseki with a seating time. Three and a half hours of slack between the target and the deadline is the right amount on a day with five connections."
+        "note": "Latest check-in; protect dinner and the drum performance by agreeing the evening schedule. Traffic can extend the drive."
       }
     ],
     "moves": [
       {
-        "from": "The hotel",
-        "to": "Chuzenji Onsen",
-        "min": 8,
+        "from": "The Ritz-Carlton Nikko",
+        "to": "Asaba, Shuzenji",
+        "min": 390,
         "mode": "car",
-        "at": "08:20",
-        "chain": true
-      },
-      {
-        "from": "Chuzenji Onsen",
-        "to": "JR Nikko",
-        "min": 40,
-        "mode": "bus",
-        "chain": true,
-        "note": "Downhill is 36–40 minutes; the 50 quoted everywhere is the climb. ¥1,250."
-      },
-      {
-        "from": "JR Nikko",
-        "to": "Tokyo",
-        "min": 100,
-        "mode": "rail",
-        "chain": true,
-        "note": "Via Utsunomiya and the Tohoku shinkansen. Not Tobu — Tobu is quicker but strands you at Asakusa with the cases."
-      },
-      {
-        "from": "Tokyo",
-        "to": "Mishima",
-        "min": 50,
-        "mode": "rail",
-        "chain": true,
-        "note": "Tokaido shinkansen. Every Kodama stops at Mishima and some Hikari do; Nozomi does not."
-      },
-      {
-        "from": "Mishima",
-        "to": "Asaba",
-        "min": 75,
-        "mode": "car",
-        "serves": "asaba",
-        "note": "Collect the rental car at the Toyota desk two minutes from the shinkansen exit, then about 45 minutes over the hills. Half an hour of that is paperwork."
+        "at": "08:00",
+        "note": "Same confirmed Toyota, door to door. Rough 6–7 hour planning allowance including breaks; verify the route and traffic before leaving. No trains, Mishima pickup or second rental."
       }
     ],
     "meals": {
@@ -531,8 +491,8 @@ export const days = [
       },
       "l": {
         "status": "open",
-        "where": "Tokyo Station",
-        "note": "The only decent option on this route. Buy it as you pass through."
+        "where": "En route · expressway stop or packed lunch",
+        "note": "Ask Ritz for suitable food before departure; allow time to stop and eat."
       },
       "d": {
         "status": "included",
@@ -541,11 +501,11 @@ export const days = [
       }
     },
     "notes": [
-      "<strong>Six hours, five connections, and the whole width of the Kanto plain.</strong> Leaving at 08:20 puts you at Asaba around 14:30 — inside the 18:00 check-in with time to bathe before dinner. <em>Leaving after eleven does not.</em>",
-      "<strong>The Nikko stay already ends today.</strong> Amendment confirmed September 1; Asaba November 14–17 prepaid.",
-      "<strong>Transport remains unbooked in the evidence reviewed.</strong> The 08:20 / 14:30 outline is a planning target. Reconcile actual tickets or driver, car pickup and Asaba’s evening performance before finalizing."
+      "<strong>One car replaces the five-connection rail proposal.</strong> Leave around 08:00, allow roughly 6–7 hours with stops and target 14:30–15:00. The rental is confirmed; the drive duration is an estimate.",
+      "<strong>The Nikko stay ends today.</strong> September 1 amendment confirmed; Asaba November 14–17 is prepaid.",
+      "<strong>Notify Asaba.</strong> Confirm road arrival, parking, dinner and November 14 drum-performance timing. Keep sightseeing off this transfer day."
     ],
-    "overview": "<strong>Long transfer to Asaba.</strong> Aim for check-in from 14:30; exact transport not booked. Three-night stay prepaid with dinner and breakfast. Confirm dinner and the Japanese drum performance time."
+    "overview": "<strong>Drive the booked Toyota from Nikko to Asaba.</strong> Allow roughly 6–7 hours including breaks; depart around 08:00 to target 14:30–15:00 check-in. Three-night stay prepaid with meals. Confirm arrival, parking, dinner and drum-performance timing."
   },
   {
     "date": "Sun 15",
@@ -575,7 +535,7 @@ export const days = [
         "min": 30,
         "mode": "car",
         "at": "09:00",
-        "note": "Two shapes for the day — the wasabi run south, or Fuji to the west. With three nights you no longer have to choose between them."
+        "note": "Use the confirmed Toyota rental. Choose the wasabi run south or Fuji viewpoints to the west according to weather; parking, tickets and any guided visits remain separate."
       }
     ],
     "meals": {
@@ -598,7 +558,7 @@ export const days = [
       "<strong>The evening is free and very good.</strong> Sixty lamps on the bamboo path from sunset to 23:00, five red bridges in a twenty-minute loop, and Tokko-no-yu lit mid-river. <em>You cannot bathe in Tokko-no-yu</em> — it lost its legal status as a bathhouse. The free foot baths are on the far bank.",
       "<strong>Wasabi visits are optional.</strong> Public viewpoints do not establish farm entry or a hands-on appointment. Ask Asaba about current guided availability."
     ],
-    "overview": "<strong>Open Izu day.</strong> Choose wasabi country, Fuji viewpoints or a quieter Shuzenji day. Arrange transport; Vieni KANDA Sunday lunch is an unbooked option. Asaba dinner included."
+    "overview": "<strong>Open Izu day with the confirmed rental car.</strong> Choose wasabi country, Fuji viewpoints or a quieter Shuzenji day. Vieni KANDA Sunday lunch is an unbooked option; Asaba dinner included."
   },
   {
     "date": "Mon 16",
@@ -628,7 +588,8 @@ export const days = [
     "notes": [
       "<strong>This day exists because Asaba came back with three nights instead of one.</strong> It is deliberately unplanned. Whichever of the wasabi run and the Fuji coast Sunday did not take, it goes here — and if the weather decides otherwise, the whole town is inside ten minutes on foot: Shuzen-ji temple and its treasure hall, the five red bridges, Shigetsuden, and the bamboo path.",
       "<strong>Niji-no-Sato is nominally closed on Tuesdays</strong>, so if the momiji light-up is the thing you want, tonight is the safer of the two remaining evenings.",
-      "<strong>Optional craft day:</strong> washi needs a reserved sitting; Asaba also offered private tea or ikebana at ¥63,250 per person, plus massage, e-bikes and guided excursions. None is booked."
+      "<strong>Optional craft day:</strong> washi needs a reserved sitting; Asaba also offered private tea or ikebana at ¥63,250 per person, plus massage, e-bikes and guided excursions. None is booked.",
+      "<strong>The booked rental remains available.</strong> Choose an Izu outing if wanted; prepare luggage and an early breakfast for tomorrow’s drive and 16:00 Kyoto return."
     ],
     "overview": "<strong>Fully flexible.</strong> Optional washi workshop, Asaba-arranged cultural class, the other Izu excursion or ryokan time. These need their own bookings; no extra activity confirmed."
   },
@@ -637,57 +598,49 @@ export const days = [
     "dow": "Tuesday",
     "base": "kyoto",
     "where": "→ Kyoto",
-    "title": "Down the Tokaido",
+    "title": "Drive to Kyoto and return the Toyota",
     "fixed": [
-      {
-        "t": "09:46",
-        "what": "Proposed Mishima → Kyoto train",
-        "kind": "depart",
-        "id": "hikari",
-        "note": "Earlier 09:46 / 11:37 outline only. Recheck the current service and reconcile breakfast, rental return and station buffer before reserving.",
-        "confirm": true
-      },
       {
         "t": "15:00",
         "what": "Room available at Hotel The Mitsui",
-        "kind": "hotel"
+        "kind": "hotel",
+        "note": "Coordinate luggage drop around the drive and rental return. Arrival before check-in is not guaranteed."
+      },
+      {
+        "t": "16:00",
+        "what": "Toyota rental return · Horikawa Shop, Kyoto",
+        "kind": "booked",
+        "id": "toyota-return",
+        "note": "Confirmed reservation 99950312100. 503-1 Anenishihorikawa-cho, Nakagyo-ku; Nishihorikawa-dori north of Sanjo. Arrive with fuel and return paperwork time to spare; no Mishima return."
       }
     ],
     "moves": [
       {
         "from": "Asaba",
-        "to": "Mishima",
-        "min": 50,
+        "to": "Toyota Horikawa Shop, Kyoto",
+        "min": 360,
         "mode": "car",
-        "serves": "hikari",
-        "buffer": 25,
-        "note": "Drop the rental at the branch by the shinkansen exit. The buffer absorbs the return paperwork."
+        "at": "08:00",
+        "note": "Self-drive in the confirmed Toyota. Rough 5–6 hours on the road; allow extra time for food, traffic, refuelling and return paperwork before 16:00. Target Kyoto around 14:00–15:00; coordinate any Mitsui luggage stop."
       },
       {
-        "from": "Mishima",
-        "to": "Kyoto",
-        "min": 111,
-        "mode": "rail",
-        "chain": true
-      },
-      {
-        "from": "Kyoto Station",
-        "to": "The hotel",
+        "from": "Toyota Horikawa Shop",
+        "to": "Hotel The Mitsui Kyoto",
         "min": 15,
         "mode": "car",
-        "note": "Taxi up Horikawa, about ¥2,000."
+        "note": "Short taxi after return, or walk if luggage permits. Confirm the preferred luggage drop with Mitsui; this final transfer is separate from the rental."
       }
     ],
     "meals": {
       "b": {
-        "status": "open",
-        "where": "Hotel The Mitsui",
-        "note": "Check breakfast inclusion and dietary arrangements against the booked rate."
+        "status": "included",
+        "where": "Asaba",
+        "note": "Arrange early breakfast around the proposed 08:00 road departure."
       },
       "l": {
         "status": "open",
-        "where": "Kyoto",
-        "at": "12:15"
+        "where": "En route to Kyoto",
+        "note": "Arrange suitable packed food or a road stop; no 12:15 Kyoto lunch is fixed."
       },
       "d": {
         "status": "open",
@@ -696,10 +649,12 @@ export const days = [
       }
     },
     "notes": [
-      "<strong>Masahiro requires direct booking.</strong> Mitsui cannot reserve through a third party; no Masahiro session is booked. The confirmed Hayamitsu reservation occupies November 20.",
-      "<strong>The fallback is an easy arrival afternoon.</strong> Check in at Mitsui, explore locally, and choose dinner before adding any evening event."
+      "<strong>The 16:00 Horikawa return is booked.</strong> Recheck the driving estimate, leave early and allow for fuel and handover. No Mishima–Kyoto train or station pickup is part of this route.",
+      "<strong>Masahiro requires direct booking.</strong> Mitsui cannot reserve through a third party; no session is booked. Do not fit a workshop into this drive and return day; Hayamitsu is confirmed for November 20.",
+      "<strong>Keep arrival simple.</strong> Coordinate bags and check-in with Mitsui, then choose dinner before adding an evening event."
+
     ],
-    "overview": "<strong>Transfer to Hotel The Mitsui Kyoto.</strong> Five nights confirmed. Afternoon open; the earlier Masahiro inquiry is a backup, with no accepted session. TOKI dinner proposed, not booked."
+    "overview": "<strong>Drive Asaba → Kyoto; Toyota Horikawa return by 16:00.</strong> Leave around 08:00 with breaks, fuel and return buffer; target Kyoto around 14:00–15:00. Coordinate Mitsui luggage and check-in. No Mishima train; TOKI dinner remains unbooked."
   },
   {
     "date": "Wed 18",
@@ -896,7 +851,7 @@ export const days = [
       }
     },
     "notes": [
-      "<strong>The email is provisional.</strong> It explicitly says the reservation is not final and that a separate confirmation will follow. Protect November 20 while awaiting that reply.",
+      "<strong>Final confirmation received November 3.</strong> Booking 105PHCHAG confirms November 20, 13:30–17:30 for two. Payment, language support and transport still need verification.",
       "<strong>This is Aioi in Hyogo.</strong> The forge is at Rakan-no-Sato, 28 Uryu, Yano, Aioi. Include both train directions and prebook the rural return taxi.",
       "<strong>Kintsugi is removed from today.</strong> November 19 at 14:00–16:00 is confirmed and paid. Arashiyama and a fixed Eikandō visit no longer fit as daytime plans; keep dinner flexible around the return."
     ],
@@ -1081,11 +1036,6 @@ export const standing = {
       "Sun 8"
     ],
     [
-      "SPACIA X reservations",
-      "The one-month booking window is already open. Reserve the chosen current service; the earlier example is not a ticket.",
-      "Wed 11"
-    ],
-    [
       "Ritz-Carlton onsen",
       "05:30–23:00, closed 12:00–14:00 for cleaning. Free and unlimited — but the Lake View Suite bath is ordinary hot water, not onsen. There is no bookable private bath except as a spa add-on.",
       "Wed 11 – Fri 13"
@@ -1122,13 +1072,13 @@ export const standing = {
     ],
     [
       "Asaba check-in",
-      "14:30–18:00, check-out 11:30. No shuttle — a taxi from Shuzenji station is 7 minutes. Paid in full on 27 August.",
+      "14:30–18:00, check-out 11:30. Arrive by the confirmed rental on November 14; agree arrival, parking, dinner and performance timing. Stay paid in full August 27.",
       "Sat 14"
     ],
     [
       "The rental car",
-      "Toyota at Mishima, 08:00–20:00, two minutes from the shinkansen exit. Needs the 1949 Geneva IDP plus licence and passport — all three, or no car. The branch calendar shows scattered closures.",
-      "Sat 14 – Tue 17"
+      "Confirmed Toyota 99950312100: Lexus RX Hybrid LXC2, Tokyo Sta. Nihonbashi Ext. November 11 10:30 → Kyoto Horikawa November 17 16:00; ¥392,716 incl. tax. Winter tires, compensation, NOC exemption and ETC card selected; 4WD not required, ETC supply subject to availability. Bring 1949 Geneva IDP, licence and passport / entry evidence. Fuel, tolls and parking are additional.",
+      "Wed 11 – Tue 17"
     ],
     [
       "Vieni KANDA",
@@ -1139,11 +1089,6 @@ export const standing = {
       "Niji-no-Sato",
       "Nominally closed Tuesdays, except in peak season, and the light-up period counts as peak season. Nobody will confirm it in writing. Phone 0558-72-7111.",
       "Sun 15, Mon 16"
-    ],
-    [
-      "Hikari from Mishima",
-      "Reserve a current service; the earlier 09:46 / 11:37 example is not a ticket. Reconcile breakfast and rental return before choosing.",
-      "Tue 17"
     ],
     [
       "Rurikoin",

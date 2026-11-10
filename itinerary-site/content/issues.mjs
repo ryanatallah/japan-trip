@@ -1,4 +1,4 @@
-// Current tasks reconciled November 2, 2026; resolved items retain historical context.
+// Tasks reconciled November 2; rental logistics updated November 8, 2026 Japan time.
 export const issues = [
   {
     "id": "sushi-iwa-diet",
@@ -8,6 +8,17 @@ export const issues = [
     "affects": "Wed 18 · 18:00",
     "body": "Confirmed November 18 at 18:00 for two, non-smoking counter, under Atallah Ryan. Course listed at ¥34,650 per person (¥69,300 for two); meal payable at the restaurant. AutoReserve fee ¥8,640 paid separately. Cancellation within 48 hours: 100% plus 10% handling fee. Dietary adaptation and cooked alternatives are not established by this confirmation.",
     "next": "Confirm gluten-containing ingredient avoidance, gluten-free tamari, and Ashly’s preference for no raw fish with the restaurant or concierge."
+
+  },
+  {
+    "id": "rental-road-logistics",
+    "kind": "book",
+    "title": "Prepare the confirmed Toyota pickup and hotel arrivals",
+    "by": "Before November 11 pickup",
+    "affects": "Wed 11 – Tue 17",
+    "body": "Toyota rental 99950312100 is confirmed: Tokyo Sta. Nihonbashi Ext. November 11 10:30 → Kyoto Horikawa November 17 16:00, ¥392,716 incl. tax. It covers all hotel-base moves. Winter tires and ETC card are selected, but 4WD is not required and ETC card supply is subject to shop availability. Online payment is selected; a settled charge is not evidenced.",
+    "next": "Prepare licence, completed IDP and passport / entry evidence; confirm luggage fit and hotel parking. Check road timings and weather with Ritz, tell Asaba the November 14 arrival plan, and arrange early breakfast plus fuel / return buffer for the November 17 16:00 Horikawa deadline. Kyoto local transfers, Aioi November 20 and KIX November 22 still need separate arrangements."
+
   },
   {
     "id": "dinner-guarantees",
@@ -58,10 +69,10 @@ export const issues = [
     "id": "asaba-final-details",
     "kind": "book",
     "title": "Reply to Asaba’s November 1 pre-arrival questions",
-    "by": "Before arrival; taxi at least three days ahead",
+    "by": "Before arrival",
     "affects": "Sat 14 – Tue 17",
     "body": "Three nights are prepaid and gluten-free meals were accepted. Asaba requests both guests’ final restrictions, check-in time and transport. November 14 drum performance time and dinner sequence still need agreement.",
-    "next": "Send final details, reconfirm the performance and meals, and ask which baths or renovation works will affect the stay. Optional classes and treatments need their own bookings."
+    "next": "Send final dietary details and planned road arrival in the confirmed Toyota; agree parking, the performance and meals, and ask which baths or renovation works will affect the stay. Optional classes and treatments need their own bookings."
   },
   {
     "id": "nikko-fourth-night",
@@ -88,7 +99,7 @@ export const issues = [
     "by": "Before booking dependent trains or car",
     "affects": "Sat 14",
     "body": "Asaba is prepaid from November 14; Nikko checkout is already amended to that date. The six-hour rail outline and Mishima rental were proposals. Compare the actual rental/driver options, settle luggage handling, and target arrival from 14:30.",
-    "next": "Secure the chosen transport, then tell Asaba the arrival time and method. Ask for a taxi at least three days ahead if needed."
+    "resolved": "Toyota confirmation received November 8 Japan time: reservation 99950312100, Lexus RX Hybrid, Tokyo Station November 11 10:30 → Kyoto Horikawa November 17 16:00, ¥392,716 incl. tax. The same rental covers all three hotel-base moves and local Nikko / Izu driving. SPACIA X, the Mishima pickup/return and Mishima–Kyoto train proposals are replaced. Luggage forwarding is optional; arrival, parking and road timings still need coordinating."
   },
   {
     "id": "nikko-cancel-deadline",

@@ -192,7 +192,7 @@ export const bases = [
     "checkIn": "15:00",
     "checkOut": "12:00",
     "checkConfirm": true,
-    "lede": "<strong>The governing fact here is daylight, not distance.</strong> On 13 November the sun rises at 06:16 and sets at 16:36 — and every paid site in the shrine precinct is shut by 16:00, Shinkyo by 15:30. So the whole of your golden hour happens after you have been locked out of everything you paid for. The schedule that works inverts the usual one: <strong>Rinnoji opens at 08:00 and is the only World Heritage site you can enter in raking light</strong>; Toshogu opens at 09:00, not the 08:00 the older guidebooks say; and the last ninety minutes of the day belong to <strong>Kanmangafuchi and Shinkyo, which are free and never close</strong>.<br><br>The second fact is elevation. You sleep at 1,269m where the colour finished in October, and the colour you came for is six hundred metres downhill. That forty-minute bus is not a chore on this trip — it is the sightseeing. <em>Drive it rather than bus it: two hundred minutes of a ten-hour day is a lot to give away against unforgiving last-entry times.</em>",
+    "lede": "<strong>The governing fact here is daylight, not distance.</strong> On 13 November the sun rises at 06:16 and sets at 16:36 — and every paid site in the shrine precinct is shut by 16:00, Shinkyo by 15:30. So the whole of your golden hour happens after you have been locked out of everything you paid for. The schedule that works inverts the usual one: <strong>Rinnoji opens at 08:00 and is the only World Heritage site you can enter in raking light</strong>; Toshogu opens at 09:00, not the 08:00 the older guidebooks say; and the last ninety minutes of the day belong to <strong>Kanmangafuchi and Shinkyo, which are free and never close</strong>.<br><br>The second fact is elevation. You sleep at 1,269m where the colour finished in October, and the colour you came for is six hundred metres downhill. That forty-minute bus is not a chore on this trip — it is the sightseeing. <em>Drive it rather than bus it: two hundred minutes of a ten-hour day is a lot to give away against unforgiving last-entry times.</em><br><br><strong>The rental is confirmed.</strong> Collect it in Tokyo November 11 and keep it through Izu to Kyoto November 17. Use it for permitted Nikko roads and parking; the Senjugahama corridor still requires the seasonal shuttle. Confirm weather and road conditions with Ritz.",
     "pois": [
       {
         "name": "Futarasan Chugushi",
@@ -411,7 +411,7 @@ export const bases = [
     ],
     "checkIn": "14:30",
     "checkOut": "11:30",
-    "lede": "Three nights at Asaba, November 14–17. The town’s temple, bridges and bamboo path are easy to explore on foot. Wasabi country and Fuji or coastal viewpoints need a rental or arranged driver; neither is confirmed. Asaba’s November 1 reply offers transfers, guided excursions and optional cultural activities. Settle the transport and dinner times before selecting an outing.",
+    "lede": "Three nights at Asaba, November 14–17. The town’s temple, bridges and bamboo path are easy to explore on foot. The confirmed Toyota rental continues from Nikko through Izu to Kyoto, so wasabi country, Fuji viewpoints and the coast are accessible by car. Guided farm access and cultural activities still need their own arrangements. Agree arrival, parking and meals with Asaba; leave early November 17 for the 16:00 Horikawa return in Kyoto.",
     "pois": [
       {
         "name": "Tokko-no-yu",
@@ -615,21 +615,6 @@ export const bases = [
         "days": [
           "Sun 15",
           "Mon 16"
-        ]
-      },
-      {
-        "name": "Mishima Station",
-        "at": [
-          138.911,
-          35.127
-        ],
-        "min": 45,
-        "mode": "car",
-        "via": "Or 35 minutes on the Sunzu line from Shuzenji station, ¥550",
-        "why": "Where the car comes from and goes back to, and where the Hikari to Kyoto leaves from.",
-        "days": [
-          "Sat 14",
-          "Tue 17"
         ]
       },
       {
