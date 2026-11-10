@@ -248,7 +248,7 @@ export const days = [
       "<strong>Hirata was declined November 2.</strong> Remove the Ome journey and authorization from committed plans.",
       "<strong>Earlier Akihira inquiry remains a backup.</strong> No withdrawal is evidenced; Hayamitsu on November 20 is now the scheduled priority. Do not accept a duplicate forge booking without coordinating."
     ],
-    "overview": "<strong>NARISAWA 17:30–20:00 — confirmed for two.</strong> Dietary details submitted; kitchen acceptance still to obtain. Morning open. The earlier Akihira inquiry remains a backup; the scheduled sword-making priority is now Hayamitsu on November 20, provisionally reserved."
+    "overview": "<strong>NARISAWA 17:30–20:00 — confirmed for two.</strong> Dietary details submitted; kitchen acceptance still to obtain. Morning open. The earlier Akihira inquiry remains a backup; the scheduled sword-making priority is now Hayamitsu on November 20, confirmed."
   },
   {
     "date": "Wed 11",
@@ -696,7 +696,7 @@ export const days = [
       }
     },
     "notes": [
-      "<strong>Earlier Masahiro inquiry remains a backup.</strong> No accepted session or withdrawal is evidenced. The new Hayamitsu provisional reservation occupies November 20.",
+      "<strong>Masahiro requires direct booking.</strong> Mitsui cannot reserve through a third party; no Masahiro session is booked. The confirmed Hayamitsu reservation occupies November 20.",
       "<strong>The fallback is an easy arrival afternoon.</strong> Check in at Mitsui, explore locally, and choose dinner before adding any evening event."
     ],
     "overview": "<strong>Transfer to Hotel The Mitsui Kyoto.</strong> Five nights confirmed. Afternoon open; the earlier Masahiro inquiry is a backup, with no accepted session. TOKI dinner proposed, not booked."

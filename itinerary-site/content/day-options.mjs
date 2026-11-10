@@ -49,7 +49,7 @@ export const dayOptions = {
   {
     "time": "Morning–about 14:30",
     "title": "Open Tokyo morning",
-    "note": "Hayamitsu on November 20 is now the scheduled forge priority, provisionally. The earlier Akihira inquiry remains a backup with no accepted time or withdrawal evidenced.",
+    "note": "Hayamitsu on November 20 is now the confirmed forge priority. The earlier Akihira inquiry remains a backup with no accepted time or withdrawal evidenced.",
     "options": [
       {
         "name": "TOKYO LUXEY Kamakura backup · not booked",
@@ -164,7 +164,7 @@ export const dayOptions = {
   {
     "time": "Arrival in Kyoto–about 17:00",
     "title": "Afternoon open after the transfer",
-    "note": "Train and arrival times are still to book. Hayamitsu on November 20 is now the provisional forge priority; the earlier Masahiro inquiry is a backup.",
+    "note": "Train and arrival times are still to book. Hayamitsu on November 20 is now the confirmed forge priority; the earlier Masahiro inquiry is a backup.",
     "options": [
       {
         "name": "Masahiro requires direct booking",
